@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1047" MadCap:lastWidth="1195">
+    <head>
+        <link href="../../Resources/TableStyles/HelpFileTableStylesheet.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Asset Dependency Import</title>
+        <link rel="StyleSheet" href="../../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <h3>
+            <img src="../../Images/Logo Images/3esi_manage.png" align="right" border="0" class="HeaderLogo" />
+        </h3>
+        <h2>Asset Dependency Import</h2>
+        <h3>Import Properties</h3>
+        <p>The various settings for Import.exe can be defined in a Properties (text) 
+ file. This file can then be used as part of the calling argument.</p>
+        <p class="example">For example: <b>&gt; import -p properties.txt</b></p>
+        <p>In this case, all of the required parameters for import.exe will need 
+ to be included in the file Properties.txt. </p>
+        <table style="width: 91.391%;mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');" cellspacing="0" width="91.391%" class="TableStyle-HelpFileTableStylesheet">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <thead>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th bgcolor="#800000" width="7.221%" class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-Header1">
+                        <p>&#160;</p>
+                    </th>
+                    <th bgcolor="#800000" width="4.779%" class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p style="color: #ffffff;font-weight: bold;text-align: center;font-style: normal;" align="center">File Syntax</p>
+                    </th>
+                    <th colspan="1" rowspan="1" bgcolor="#800000" width="20.43%" class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p style="color: #ffffff;font-weight: bold;text-align: center;" align="center">Options</p>
+                    </th>
+                    <th colspan="1" rowspan="1" bgcolor="#800000" width="27.986%" class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;text-align: center;" align="center"><span style="font-weight: bold;color: #ffffff;">Description</span>
+                        </p>
+                    </th>
+                    <th bgcolor="#800000" width="15.002%" class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;text-align: center;font-style: italic;" align="center">switch (3)</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="7.221%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>Input</p>
+                    </td>
+                    <td width="4.779%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-style: normal;">Type</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.43%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>asset-dependency:text/csv</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="27.986%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>import OPEX in a CSV format</p>
+                    </td>
+                    <td width="15.002%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p style="font-style: italic;">-t</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td bgcolor="#C0C0C0" width="7.221%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>Output</p>
+                    </td>
+                    <td width="4.779%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-style: normal;"><span style="font-style: normal;">OutFile</span>
+                        </p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.43%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>rejects.csv (for example)</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="27.986%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>file for rejected lines</p>
+                    </td>
+                    <td width="15.002%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>-o</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="7.221%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>Database</p>
+                    </td>
+                    <td width="4.779%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-style: normal;">Server</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.43%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>SERVER[:PORT]/DATABASE</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="27.986%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>the connection information (<span style="font-weight: bold;">1</span>)</p>
+                    </td>
+                    <td width="15.002%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p style="font-style: italic;">-d</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td colspan="1" rowspan="1" bgcolor="#C0C0C0" width="7.221%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="4.779%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-style: normal;">Port</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.43%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="27.986%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="15.002%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p style="font-style: italic;">&#160;</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td colspan="1" rowspan="1" bgcolor="#C0C0C0" width="7.221%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="4.779%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-style: normal;">DatabaseName</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.43%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="27.986%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="15.002%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p style="font-style: italic;">&#160;</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td bgcolor="#C0C0C0" width="7.221%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>&#160;</p>
+                    </td>
+                    <td width="4.779%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-style: normal;">DatabaseInstance</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.43%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="27.986%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>use database instance</p>
+                    </td>
+                    <td width="15.002%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p style="font-style: italic;">-i</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="7.221%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td width="4.779%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-style: normal;">UseNamedPipes</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.43%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="27.986%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>use named pipes</p>
+                    </td>
+                    <td width="15.002%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p style="font-style: italic;">-n</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td bgcolor="#C0C0C0" width="7.221%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>&#160;</p>
+                    </td>
+                    <td width="4.779%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-style: normal;">Username</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.43%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>USERNAME:PASSWORD</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="27.986%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>use credentials USERNAME and PASSWORD</p>
+                    </td>
+                    <td width="15.002%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p style="font-style: italic;">-u</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td colspan="1" rowspan="1" bgcolor="#C0C0C0" width="7.221%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="4.779%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-style: normal;">Password</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.43%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="27.986%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="15.002%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p style="font-style: italic;">&#160;</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td bgcolor="#C0C0C0" width="7.221%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body3">
+                        <p>&#160;</p>
+                    </td>
+                    <td width="4.779%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p style="font-style: normal;">File</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.43%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p>opex.csv (for example)</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="27.986%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                    <td width="15.002%" class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body3">
+                        <p style="font-style: italic;">&#160;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p class="note"><span style="font-weight: bold;">Note: </span>The flags HEADER and VERIFY 
+ do not exist for the Asset Dependency Import.</p>
+        <h3>CSV Import Format</h3>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');" cellspacing="0" width="100%" class="TableStyle-HelpFileTableStylesheet">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <thead>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th bgcolor="#800000" width="17.824%" class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-Header1">
+                        <p style="color: #ffffff;font-weight: bold;text-align: center;" align="center">Column</p>
+                    </th>
+                    <th colspan="1" rowspan="1" bgcolor="#800000" width="12.647%" class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p style="color: #ffffff;font-weight: bold;text-align: center;font-style: normal;" align="center">Optional</p>
+                    </th>
+                    <th bgcolor="#800000" width="46.702%" class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p style="color: #ffffff;font-weight: bold;text-align: center;font-style: normal;" align="center"><span>Description</span>
+                        </p>
+                    </th>
+                    <th bgcolor="#800000" width="22.827%" class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-Header1">
+                        <p style="color: #ffffff;font-weight: bold;text-align: center;font-style: normal;" align="center">Notes</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="17.824%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>action</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="12.647%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                    <td width="46.702%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>describes the action of the import</p>
+                    </td>
+                    <td width="22.827%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p><span style="font-weight: bold;">always</span><span> "dependsOnAsset"</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td bgcolor="#C0C0C0" width="17.824%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>budget</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="12.647%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                    <td width="46.702%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>name of an existing budget</p>
+                    </td>
+                    <td width="22.827%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="17.824%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>project</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="12.647%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                    <td width="46.702%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>name of a project within the budget</p>
+                    </td>
+                    <td width="22.827%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td bgcolor="#C0C0C0" width="17.824%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>asset</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="12.647%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                    <td width="46.702%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>name of the asset to update</p>
+                    </td>
+                    <td width="22.827%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="17.824%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>depends on asset</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="12.647%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="text-align: center;" align="center">Y</p>
+                    </td>
+                    <td width="46.702%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>name of the parent asset to assign to the asset being updated</p>
+                    </td>
+                    <td width="22.827%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td bgcolor="#C0C0C0" width="17.824%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body3">
+                        <p>depends on asset offset</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="12.647%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p style="text-align: center;" align="center">Y</p>
+                    </td>
+                    <td width="46.702%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p>offset from the start of the parent asset</p>
+                    </td>
+                    <td width="22.827%" class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p style="font-weight: bold;">Notes:</p>
+        <p>If the 'depends on asset' column is set to null it will clear an existing 
+ dependency for an asset.</p>
+        <p>If the 'depends on asset' column is not null the parent asset must be 
+ within the same budget as the asset being updated and the 'depends on 
+ asset offset' must be specified.</p>
+    </body>
+</html>

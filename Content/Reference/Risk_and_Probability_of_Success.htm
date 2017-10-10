@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1261" MadCap:lastWidth="1195">
+    <head><title>Risk and Probability of Success</title>
+        <link rel="StyleSheet" href="../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <p>
+            <img src="../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />
+        </p>
+        <h1>
+            <MadCap:concept term="Risk and Probability of Success" />Dependency, Risk and Probability of Success</h1>
+        <p>Dependency is a mechanism to relate one Measure to a particular Expenditure. 
+ This is accomplished using the Dependencies Tab of a Project for Expenditure, 
+ Production, Resource, and OPEX entries.</p>
+        <p>Selecting a Dependent On expenditure will:</p>
+        <ul>
+            <li class="Bullets"><span style="font-weight: bold;">Enforce 
+ Date Rules</span>
+            </li>
+            <ul style="list-style-type: circle;">
+                <li class="Bullets">If End -&gt; Start 
+ linkage is selected, the Start Date for the Measure will be <span style="font-weight: bold;">No 
+ Earlier Than</span> the End Date of the previous measure.</li>
+                <li class="Bullets">If Start -&gt; Start 
+ linkage is selected, the Start Date for the Measure will be <span style="font-weight: bold;">No 
+ Earlier Than</span> the Start Date of the previous measure</li>
+            </ul>
+            <li class="Bullets" style="font-weight: bold;">Calculate 
+ NPD% and NPS% (Net Probability of Doing and Net Probability of Success)</li>
+            <ul style="list-style-type: circle;">
+                <li class="Bullets">NPD% and NPS% are calculated 
+ based on 4 factors</li>
+                <ol>
+                    <li class="Bullets"><span style="font-weight: bold;">AF%</span> <span style="font-weight: bold;">(Activity Factor)</span> – this is the 
+ probability that the activity occurs and will cap the NPD% and NPS% for 
+ all subsequent measures in the chain.</li>
+                    <li class="Bullets"><span style="font-weight: bold;">OP%</span> <span style="font-weight: bold;">(Outcome Probability)</span> – this is 
+ the probability that once an activity is started, it will complete successfully.</li>
+                    <li class="Bullets">Failure – If this 
+ value is checked, the correlated expenditure will only occur when its 
+ parent node in the dependency chain fails. Thus, any <span style="font-weight: bold;">AF%</span> 
+ or <span style="font-weight: bold;">OP%</span> values entered for this 
+ activity will only effect calculations if the parent entity fails.</li>
+                    <li class="Bullets"><span style="font-weight: bold;">Reset 
+ NPD%</span> - If this value is checked, the <span style="font-weight: bold;">NPD%</span> 
+ for that dependency chain is reset to 100% at that measure level.</li>
+                </ol>
+            </ul>
+        </ul>
+        <p>&#160;</p>
+        <p>There are 3 primary reasons for utilizing Risk and/or Dependencies:</p>
+        <ol>
+            <li class="NumberedList">Establishing 
+ a <span style="font-weight: bold;">consistent Schedule</span> within a 
+ Project. This prevents an Onstream Date being Forecast prior to the Completion.</li>
+            <li class="NumberedList">Project <span style="font-weight: bold;">Comparison</span> or <span style="font-weight: bold;">Evaluation</span> 
+ - it is a way of levelling two Projects - high risk and high production, 
+ versus lower risk and less production.</li>
+            <li class="NumberedList">Providing a more 
+ <span style="font-weight: bold;">accurate Forecast</span> of the company's 
+ (business unit, asset team) plan for the coming year, or position at the 
+ end of the year, since it is <span style="font-weight: bold;">unlikely</span> 
+ that all activities will be successful (production impact) and not all 
+ capital will be spent (Completion and Tie-In won't occur for a dry well).</li>
+        </ol>
+        <p><a href="#Probability_of_Doing">Net Probability of Doing</a>
+        </p>
+        <p><a href="#Failure_State">The Failure State</a>
+        </p>
+        <h3>&#160;</h3>
+        <h3><a name="Probability_of_Doing"></a>Probability of 
+ Doing (PD%) and Net Probability of Doing (NPD%)</h3>
+        <p>When using Measure chains to 'calculate' the Probability of Success 
+ for the various outcomes, it is necessary to <span style="font-weight: bold;">enter</span> 
+ the AF% and/or OP% for each of the expenditures in the chain.</p>
+        <ul>
+            <li class="Bullets">Generally the AF%/OP% for 
+ a particular Expenditure will be the historical 'average' of similar activities 
+ in a particular area. </li>
+            <li class="Bullets">The AF% represents the 
+ probability of successfully starting the item in the chain while the OP% 
+ represents successfully completing the item in the chain. For example:</li>
+        </ul>
+        <ol>
+            <li class="NumberedList">The AF% of the 
+ Drill expense is 100% - it is planned to be done. Since it's the first 
+ expenditure in the chain, it's <span style="font-weight: bold;">NPD%</span> 
+ is 100%</li>
+            <li class="NumberedList">The OP% of the 
+ Drill expense might be 80% - its likelihood of occurring is the average 
+ success rate of drills in that area.</li>
+            <li class="NumberedList">The NPD% and 
+ NPS% of the Drill expense are 100% and 80% respectively.</li>
+            <li class="NumberedList">The OP% of the 
+ Completion expense might be 90%. This represents the historical success 
+ rate of the Casing activity in that area.</li>
+            <li class="NumberedList">The NPS% of the 
+ Completion expense is 72% - &#160;<span style="font-weight: bold;">NPS%</span> 
+ Drill x <span style="font-weight: bold;">OP%</span> Completion.</li>
+            <li class="NumberedList">The OP% of the 
+ Tie-In expense might be 100%. If the Completion activity begins, Tie-In 
+ will as well.</li>
+            <li class="NumberedList">The NPS% of the 
+ Tie-In expense is also 72% - &#160;<span style="font-weight: bold;">NPS%</span> 
+ Completion x <span style="font-weight: bold;">OP%</span> Tie-In.</li>
+        </ol>
+        <p>&#160;</p>
+        <p>Whenever a <span style="font-weight: bold;">Risked Expenditure</span> 
+ value is being <span style="font-weight: bold;">calculated,</span> the 
+ Gross Amount for the period is multiplied by the <span style="font-weight: bold;">current</span> 
+ NPS% for the Expenditure.</p>
+        <h3>&#160;</h3>
+        <h3><a name="Failure_State"></a>Branching Chains - the 
+ Failure Case</h3>
+        <p>Generally there are Abandonment costs associated with an unsuccessful 
+ Drilling activity. This particular Expenditure is identified by the Negative 
+ flag, and will be made Dependent on the most appropriate Expenditure in 
+ the Chain (for example the Drill or the Case).</p>
+        <p>The AF% of the <span style="font-weight: bold;">failure</span> Expenditure 
+ will be 100% - its likelihood of occurring is captured in the historical 
+ averages of the preceding expenditures. Since the 'failure' branch of 
+ the chain is applicable only when Risk is being used:</p>
+        <ul>
+            <li>An Expenditure with a negative flag will only 
+ be 'calculated' when a Risked (Gross or Net Risked) is selected for the 
+ calculations.</li>
+        </ul>
+    </body>
+</html>

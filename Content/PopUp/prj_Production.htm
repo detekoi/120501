@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Project Relationships: Production</title>
+        <link rel="StyleSheet" href="../Resources/Stylesheets/popUp.css" />
+    </head>
+    <body>
+        <h3>Production</h3>
+        <p>Each Production Segment must be associated against an Asset.</p>
+        <ul>
+            <li class="Bullets">The Production Segment 
+ is <span style="font-weight: bold;font-style: italic;">initialized</span> 
+ with the <span style="font-weight: bold;">WI%</span> and <span style="font-weight: bold;">POS%</span> 
+ of the Asset</li>
+        </ul>
+        <p>A Production Segment can be made <span style="font-weight: bold;">Dependent</span> 
+ on an Expenditure, in which case:</p>
+        <ul>
+            <li class="Bullets">&#160;The 
+ POS% is <span style="font-weight: bold;font-style: italic;">calculated</span> 
+ as the <span style="font-weight: bold;">NPD%</span> of that Expenditure.</li>
+            <li class="Bullets">Updates to that NPD% will 
+ <span style="font-style: italic;">propagate</span> to the Production Segment.</li>
+            <li class="Bullets">The OnStream Date for the 
+ Segment must be <span style="font-weight: bold;">later than</span> the 
+ End Date of that Expenditure.</li>
+        </ul>
+    </body>
+</html>

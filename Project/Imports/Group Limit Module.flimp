@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MsWordImport
+  PreserveSourceStyles="false"
+  KeepSourceLinks="false"
+  ConvertInlineFormatting="true"
+  AddContinuedLinks="false"
+  AddContinuedFromLinks="false"
+  ContinuedLinkFormat="(continued in {title})"
+  ContinuedFromLinkFormat="(continued from {title})"
+  UseMaxCharLimit="false"
+  UseMinCharLimit="true"
+  MaxCharLimit="10000"
+  MinCharLimit="50"
+  FilenameLength="24"
+  GeneratePageLayouts="false"
+  UseFirstHeadingAsTopicTitle="true"
+  LastCollectTime="2017-04-18T18:58:12.9292291-06:00"
+  ProjectName="esi.manage Help File"
+  ProjectFolder="C:\Work\Help (git)\e.m. help file v3\esi.manage Help File\"
+  AutoSync="false"
+  AutoFitTables="false"
+  UseHeaderRows="false"
+  LastImport="2017-04-18T19:00:24.9002291-06:00">
+  <Files>
+    <Url
+      Source="../../../../../../Users/cktuckey/Downloads/Group Limit Module.docx"
+      AbsoluteSource="file:///C:/Users/cktuckey/Downloads/Group Limit Module.docx" />
+  </Files>
+  <ExcludedFiles />
+  <CollectedSourceFiles />
+  <SkippedSourceFiles />
+  <GeneratedFiles>
+    <Url
+      Source="../../Content/Resources/Images/Group Limit Module/Group Economic Limit.png"
+      TimeStamp="4/18/2017 6:59:24 PM" />
+    <Url
+      Source="../../Content/Resources/Images/Group Limit Module/Group Economic Limit_1.png"
+      TimeStamp="4/18/2017 6:59:24 PM" />
+    <Url
+      Source="../../Content/Resources/Images/Group Limit Module/Group Economic Limit_2.png"
+      TimeStamp="4/18/2017 6:59:24 PM" />
+    <Url
+      Source="../../Content/Group Limit Module/Group Economic Limit.htm"
+      TimeStamp="4/18/2017 6:59:25 PM" />
+    <Url
+      Source="../TOCs/Group Limit Module.fltoc"
+      TimeStamp="4/18/2017 6:59:25 PM" />
+    <Url
+      Source="../../Content/Resources/MasterPages/Group Limit Module.flmsp"
+      TimeStamp="4/18/2017 6:59:25 PM" />
+    <Url
+      Source="../../Content/Resources/Stylesheets/Group Limit Module.css"
+      TimeStamp="4/18/2017 6:59:25 PM" />
+  </GeneratedFiles>
+  <ParagraphStyles>
+    <Map
+      From="Heading 1"
+      To="h1.Heading 1" />
+    <Map
+      From="Heading 2"
+      To="h2.Heading 2" />
+    <Map
+      From="Heading 3"
+      To="h3.Heading 3" />
+  </ParagraphStyles>
+  <CharacterStyles>
+    <Map
+      From="Hyperlink"
+      To="a.(MS Word Style)" />
+  </CharacterStyles>
+  <NewTopicStyles />
+  <UsedParagraphStyles>
+    <StyleName
+      Name="Heading 2" />
+    <StyleName
+      Name="Heading 3" />
+  </UsedParagraphStyles>
+  <UsedCharacterStyles>
+    <StyleName
+      Name="Heading 2 Char" />
+  </UsedCharacterStyles>
+</MsWordImport>

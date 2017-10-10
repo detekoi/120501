@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1359" MadCap:lastWidth="966">
+    <head>
+    </head>
+    <body>
+        <h1>Custom Tab</h1>
+        <p>The costume tab woks in conjunction with esi.manage's <b>Measure Allocation</b> features for the custom economics engine. Within the custom tab you are able to select a group of projects based on a hierarchy attribute to group projects and execute the logic in the specified model. </p>
+        <p>Possible use cases include but are not limited to:</p>
+        <ul>
+            <li>Cost Allocation for Facility Hubs.</li>
+            <li>Royalties Allocation for ring fence fiscal regimes.</li>
+            <li>Any calculations that requires measures to be aggregated at a specific level before individual asset level calculation. </li>
+        </ul>
+        <p>
+            <img src="../../Images/_project_editor_custom_tab.png" />
+        </p>
+        <p><b>Parameters</b>
+        </p>
+        <ul>
+            <li><b>Name:</b> - a given name to the allocation model<br /></li>
+            <li><b>Asset:</b> - the asset that will group all the project conforming the group</li>
+            <li><b>Group:</b> - The hierarchy attribute that describes the group</li>
+            <li><b>Model:</b> - The excel file with the custom Allocation Model</li>
+            <li><b>Parameters:</b> - An optional parameters file to pass to the model</li>
+        </ul>
+        <h3>Allocation Model</h3>
+        <p>The allocation model adheres to the same format and rules as the regular custom excel economic models. <a href="../../Custom Economic Calculations/Custom Economic Calculations.htm">See Custom Economic Calculations</a></p>
+        <p>The main difference is that the Allocation Models have 2 main tabs for performing the calculations and a new row type called <b>INN</b>:</p>
+        <p>
+            <img src="../../Images/_project_editor_custom_tab_excel_model.png" />
+        </p>
+        <ul>
+            <li><b>Group:</b> - values brought into the model with the <b>Type</b>(column A) <b>INN</b> will be the consolidation of all the projects described by the group attribute. The row type <b>IN</b> its still available and will bring in the values from the project where the model is attached. <br />In the group tab you should perform all the high level calculations that will the be sent to all assets that are members of the allocation group.</li>
+            <li><b>Member</b>- calculations in this tab are executed after the group calculations and repeated for each asset  of the group. In other words, the Group calculations are done for the asset where the model is attached and the Member calculations are done for all assets whose project has the hierarchy attribute describing the group. You are free to point the calculations in the Member sheet to values in the Group sheet.</li>
+        </ul>
+    </body>
+</html>

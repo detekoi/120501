@@ -1,0 +1,188 @@
+Try 'exportMeasure --help' for more information.
+NAME
+  exportMeasure - export measure data
+
+SYNOPSIS
+  exportMeasure -p PARAMETERFILE [FILE]
+  exportMeasure --params PARAMETERFILE [FILE]
+  exportMeasure [OPTIONS] [-x NAME [OPTIONS]]... [-c NAME [OPTIONS]]... STARTDATE INTERVALS PERIODICITY PROJECTSET
+  
+DESCRIPTION
+  exportMeasure computes measure data for the PROJECTSET from the STARTDATE for
+  the number of INTERVALS with a PERIODICITY.  Columns are defined with the -c 
+  option or the -x option. -x is deprecated and maintained for backwards
+  compatibility. Both -x and -c handle the same set of options. The difference
+  between -x and -c is that columns defined with -x occur in the ouput BEFORE
+  the date, and columns defined with -c occurs AFTER the date. By default 
+  exportMeasure outputs to standard output.
+
+GENERAL OPTIONS
+  Output Control
+    -o --output FILE                          write data to FILE
+    -A --append                               append to FILE
+    -g --group GROUP                          add group
+    -h --header                               include header
+       --filter FILTER:V1,V2...               use the FILTER and only include
+    -p --pivot                                pivot the columns into a group 
+                                              column. Output will have a single
+                                              value column.
+    -z --suppress-zeroes                      do not write rows where all
+                                              column values are zero
+    -y --fiscal-year                          use fiscal year configuration
+                                              when computing periods.
+    -s --since DATE                           include only the projects that 
+                                              have changed since DATE.
+       --exclude-user USERNAME                used in combination with -s
+                                              option to exclude changes
+                                              made by USERNAME.                
+
+  Database Options
+       --dbEnv DB_ENVIRONMENT_NAME            use database environment to connect to database 
+    -d --database SERVER[:PORT]/DATABASE      use database connection details 
+    -i --instance INSTANCE                    use database instance
+    -n --namedpipe                            use named pipes
+    -u --user USERNAME:PASSWORD               use credentials USERNAME and 
+
+COLUMN OPTIONS
+    -m --measure MEASURE                      use MEASURE, with -c or -x
+    -N --named-column COLUMN_NAME             use COLUMN_NAME, with -c or -x
+  
+  Definition Options, Predefined or Ad Hoc:
+
+    Predefined:
+    -t --type MEASURE_TYPE                    use MEASURE_TYPE
+    -e --definition MEASURE_DEFINITION        use MEASURE_DEFINITION
+
+    Ad Hoc:
+    -b --basis BASIS                          use BASIS
+    -v --version VERSION                      use VERSION
+    -R --risk                                 apply risk
+    -S --shrinkage                            apply shrinkage
+    -F --financial                            use financial actual values
+       --curtailment                          apply curtailment
+    -G --reserve-progression TIME_SELECTOR    use TIME_SELECTOR (default: no reserve progression)
+
+    Additional Modifiers, Predefined or Ad Hoc:
+    -D --downtime DOWNTIME_VARIANT            use DOWNTIME_VARIANT (default: NONE)
+    -V --reserve TRUNCATE_VARIANT             use TRUNCATE_VARIANT for reserves (default: ECONOMIC)
+    -T --truncate-production TRUNCATE_VARIANT use TRUNCATE_VARIANT for production (default: CALCULATED)
+    -C --activity ACTIVITY_VARIANT            use ACTIVITY_VARIANT (default: END_OF_PERIOD)
+    -E --currency-escalation-file CURESCFILE  use CURESCFILE (default: no escalation)
+       --consolidation RESERVE_CONSOLIDATION  use RESERVE_CONSOLIDATION
+       --economicLimitConsolidation RESERVE_CONSOLIDATION
+    -P --pricescenario PRICE_SCENARIO         use PRICE_SCENARIO
+    -X --currency-exchange-file CUREXFILE     use CUREXFILE
+       --real-base-date YEARMONTH             apply real conversion
+       --scale-file SCALEFILE                 use SCALEFILE (default: no scaling)
+
+  Blending Options
+    -a --last-actual DATE                     use last actual DATE
+    -f --last-field DATE                      use last field estimate DATE
+    -M --match-forecast                       blend with match to forecast 
+
+  Other Options
+    -U --unit UNIT                            convert to UNIT
+    -l --daily                                convert to daily rate
+       --column-filter FILTER:V1,V2...        use the FILTER on this column and
+                                              only include records with one of 
+                                              the values V1, V2...
+  
+DEFINITIONS 
+  When SERVER is unspecified localhost will be assumed.
+  When PORT is unspecified 1433 will be assumed.
+
+  A PARAMETERFILE may have any of the above command line arguments. The file
+  can comment lines, all comment lines are ignored.  A comment line begins with
+  '\\' or '#'.  Newlines in the file are treated like whitespace.
+
+  ACTIVITY_VARIANT: START_OF_PERIOD|END_OF_PERIOD
+
+  DOWNTIME_VARIANT: NONE|SCHEDULED|UNSCHEDULED|ALL
+
+  BASIS: GROSS|NET|NET_NET
+
+  COLUMN_NAME: AFE|EAC|END_DATE
+
+  DATE: yyyy-MM-dd
+
+  FILTER: is the name of a predefined filter.  The VALUE specified in the option
+  is a list of values that you want to appear in the report.  Each FILTER will
+  interpret the value list in it own way.  The supported filter are:
+    CAPEX.TYPE               CURRENCY.ASENTERED      PRODUCT
+    CAPEX.CATEGORY           OPEX.TYPE               
+
+  GROUP: can has two forms, one for built in groups and another for custom
+  groups.
+
+    The built in groups are:
+      AFE.MANAGER            CAPEX.CATEGORY             PROJECT.CODE
+      AFE.NAME               CAPEX.SEQUENCE             PROJECT.MANAGER
+      AFE.STATUS             CAPEX.TYPE                 PROJECT.NAME
+      ASSET.CODE             OPEX.CATEGORY              PROJECT.STATUS
+      ASSET.NAME             OPEX.TYPE
+      ASSET.RIGRELEASEDATE   PRODUCT.CATEGORY
+      ASSET.SPUDDATE         PRODUCT.NAME
+      ASSET.UWI              PRODUCTION.ONSTREAM
+      BUDGET.NAME            PRODUCTION.SEQUENCE
+
+    Custom groups are defined by the custom attributes and project hierarchy in 
+    esi.manage configuration. When grouping with a custom group supply one of 
+    the following: 
+      CUSTOM=ATTRIBUTE_NAME                   Project hierarchy attribute with 
+                                              name ATTRIBUTE_NAME
+      CUSTOM=BUDGET:ATTRIBUTE_NAME            Budget custom attribute with name
+                                              ATTRIBUTE_NAME
+      CUSTOM=PROJECT:ATTRIBUTE_NAME           Project custom attribute with
+                                              name ATTRIBUTE_NAME
+      CUSTOM=ASSET:ATTRIBUTE_NAME             Asset custom attribute with name
+                                              ATTRIBUTE_NAME
+  INTERVALS: NUMBER
+  
+  MEASURE: ACTIVITY|EXPENDITURE|OPEX|PRODUCTION|RIG_RELEASE|RESERVES|
+           RESOURCE_COST|REVENUE
+           
+  MEASURE_DEFINITION: must be a supported measure definition for the requested 
+  measure.  The names of these definitions can be changed in the esi.manage
+  configuration, but their original names are:
+    Production Definitions: Gross Risked Raw, Gross Risked Shrunk, Gross Unrisked Raw,
+                            Gross Unrisked Shrunk, Net Risked After Royalty, Net Risked Raw,
+                            Net Risked Sales, Net Unrisked After Royalty, Net Unrisked Raw,
+                            Net Unrisked Sales
+    Capital Definitions:    Unrisked Gross, Unrisked Net, Risked Net, Risked Gross
+
+  MEASURE_TYPE: must be a supported measure type for the requested measure.
+  The names of these types can be changed in the esi.manage configuration, but their original
+  names are:
+    Production Types: Actuals, Blended, Field Est, Fin Actls, Fin Blend, Forecast
+    Capital Types:    Actuals, Blended, Field Est, Forecast
+  
+  NUMBER: 0,1,2,etc...
+
+  PERIODICY: D|M|Q|Y
+
+  PRICE_SCENARIO: must be a supported price scenario.  The available price scenarios are 
+  defined in esi.manage configuration.
+
+  PROJECTSET: /[Private|Public][/FOLDER]...[/PROJECT_SET]
+  
+  RESERVE_CONSOLIDATION: [RESERVE_CATEGORY:]NAME must be a supported reserve
+  consolidation, to use a global consolidation do not supply a reserve category. The
+  available consolidations are defined in esi.manage configuration. The default value is
+  "Expected Value"; do not supply a value for this option to use the default.
+  
+  TRUNCATE_VARIANT: CALCULATED|ECONOMIC
+    CALCULATED                            calculated from associated production
+    ECONOMIC                              as calculated, except truncated at economic limit date
+    
+  TIME_SELECTOR: ALL|DATE
+    ALL                                   the reserve progression as of date matched the reporting period.
+    DATE                                  the reserve progression as of date is DATE (see DATE)
+
+  UNIT: the format of the unit depends on it type.  For currency based measure
+  you must supply a valid currency abbreviation as defined in esi.manage 
+  configuration.  For production based measure you must provide a valid 
+  PRODUCT:VOLUME as defined in esi.manage configuration.
+
+  VERSION: FORECAST|FIELD_ESTIMATE|ACTUAL|FINANCIAL_ACTUAL|BLENDED
+  
+  YEARMONTH: the year month expressed in the format yyyy-MM.

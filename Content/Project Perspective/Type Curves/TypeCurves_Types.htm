@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="7322" MadCap:lastWidth="1400">
+    <head><title>Project Template Scheduler Overview</title>
+        <link rel="StyleSheet" href="../../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <script type="text/javascript" language="JavaScript1.2" src="../../Archived/ehlpdhtm.js">
+        </script>
+        <map name="MAP295907548" id="MAP295907548">
+            <area shape="rect" coords="815, 59, 855, 95" href="../../PopUp/DM_Project.htm" title="Project Access" target="_popup" />
+            <area shape="rect" coords="877, 57, 927, 98" href="../../PopUp/DM_DatesTypes.htm" title="Data Type and Period" target="_popup" />
+            <area shape="rect" coords="10, 80, 609, 140" href="../../PopUp/DM_Columns.htm" title="Configurable Columns" width="300" height="600" target="_popup" />
+        </map>
+        <h3>
+            <img src="../../Images/Logo Images/3esi_manage.png" align="right" border="0" class="HeaderLogo" />
+        </h3>
+        <h2>Types of Type Curves</h2>
+        <p>Three types of Type Curves can be created in the Project Perspective:</p>
+        <h3>&#160;</h3>
+        <h3>Production Type Curves</h3>
+        <p>Creating a Production Type Curve is similar to creating a Production in the Project Editor. Unlike creating a Production, different Production Type Curves appear in separate tabs and must be created separately. In addition, Price Profiles do not need to be specified when creating a Production Type Curve. Both Compound Production Type Curves and Derived Production Type Curves can be created.</p>
+        <p>For details on the creation of Production curves, refer to <a href="../../Project Editor/Production/Production.htm">Production</a> within the Project Editor section in the table of contents of this help document.</p>
+        <h3>&#160;</h3>
+        <h3>Compound Production Type Curve</h3>
+        <p>When the 'Add Compound Production Type Curve' button is selected, the following screen appears in a new tab:</p>
+        <p>
+            <img src="../../Images/TypeCurves_Type_1.png" />
+        </p>
+        <p>&#160;</p>
+        <p>These options can be configured for the Compound Production Type Curve added:</p>
+        <ul>
+            <li><b>Name: </b>name of the compound production type curve</li>
+            <li><b>Product:</b> specify the type of product for the type curve (oil, gas, water, etc.)</li>
+            <li><b>Production Rate:</b> specify units of the production rate </li>
+            <li><b>Sample Onstream Date: </b>start date of the production curve</li>
+        </ul>
+        <p>The Compound Production type curves can then be created using the same method as Production curves in the Project Editor. Below is an example of a completed Compound Production Type Curve:</p>
+        <p>
+            <img src="../../Images/TypeCurves_Type_2.png" />
+        </p>
+        <h3>&#160;</h3>
+        <h3>Derived Production Type Curve</h3>
+        <p>Derived Productions are dependent on existing Compound Productions. They can be created, but can only be used to forecast a secondary Production (as a By-Product or an Associated Product). When the 'Add Derived Production Type Curve' button is selected, the following screen appears in a new tab:</p>
+        <p>
+            <img src="../../Images/TypeCurves_Type_3.png" />
+        </p>
+        <p>&#160;</p>
+        <p>These options can be configured for the Derived Production Type Curve added:</p>
+        <ul>
+            <li><b>Name:</b> name of the derived production type curve</li>
+            <li><b>Derived Product:</b> specify the type of derived product  (oil, gas, water, etc.)</li>
+            <li><b>Primary Product:</b>
+                <ul style="list-style-type: circle;">
+                    <li> Specify the type of primary product the derived product is dependent upon</li>
+                    <li>Specify the units of the derived product and primary product</li>
+                    <li>Specify the derived product as a By-Product or an Associated Product</li>
+                </ul>
+            </li>
+            <li><b>Production Rate: </b>specify units of the production rate of the derived product</li>
+            <li><b>Sample Onstream Date: </b>start date of the production curve</li>
+            <li style="font-weight: normal;"><span style="font-weight: bold;">Start Event:</span>whether the derived production rates are relative to the primary production onstream date, or to a calendar start date</li>
+        </ul>
+        <p>The Derived Production type curves can then be created using the same method as Production curves in the Project Editor. Below is an example of a completed Derived Production Type Curve:</p>
+        <p>
+            <img src="../../Images/TypeCurves_Type_4.png" />
+        </p>
+        <h3>&#160;</h3>
+        <h3>Expenditure Type Curves</h3>
+        <p>Creating an Expenditure Type Curve is similar to creating an Expenditure in the Project Editor. Unlike creating a Production, different Production Type Curves appear in separate tabs and must be created separately. In addition, the options for creating an Expenditure Type Curve is slightly simplified, as the Expenditure Category is not required prior to selecting the Expenditure Type, and details such as Working Interest are not considered.</p>
+        <p>For details on the creation of Expenditures, refer to <a href="../../Project Editor/Expenditures/Expenditures.htm">Expenditures</a> within the Project Editor section in the table of contents of this help document.</p>
+        <p>When the 'Add Expenditure Type Curve' button is selected, the following screen appears in a new tab:</p>
+        <p>
+            <img src="../../Images/TypeCurves_Type_5.png" />
+        </p>
+        <p>&#160;</p>
+        <p>These options can be configured for the Expenditure Type Curve added:</p>
+        <ul>
+            <li><b>Name:</b> name of the expenditure type curve</li>
+            <li><b>Currency:</b> specify the currency of the expenditure to be reported in</li>
+            <li><b>Expenditure Type:</b> specify the type of expenditure (drill, completion, workover, etc.)</li>
+            <li><b>Sample Start Date:</b> start date of the expenditure</li>
+        </ul>
+        <p>The Expenditure type curves can then be created using the same method as Expenditures in the Project Editor. Below is an example of a completed Expenditure Type Curve:</p>
+        <p>
+            <img src="../../Images/TypeCurves_Type_6.png" />
+        </p>
+        <h3>&#160;</h3>
+        <h3>Royalty Type Curves</h3>
+        <p>Creating a Royalty Type Curve is similar to creating a Royalty Burden in the Project Editor. Unlike creating a Production, different Production Type Curves appear in separate tabs and must be created separately.</p>
+        <p>For details on the creation of <a href="../../Project Editor/Burdens/Royalties.htm">Royalty</a> Burdens, refer to <a href="../../Project Editor/Burdens/Project_Burdens.htm">Burdens</a> within the Project Editor section in the table of contents of this help document.</p>
+        <p>When the 'Add Royalty Type Curve' button is selected, the following screen appears in a new tab:</p>
+        <p>
+            <img src="../../Images/TypeCurves_Type_7.png" />
+        </p>
+        <p>&#160;</p>
+        <p>These options can be configured for the Royalty Type Curve added:</p>
+        <ul>
+            <li><b>Name:</b> name of the royalty type curve</li>
+            <li><b>Product:</b> specify the product type that the royalty is applicable to (oil, gas, etc.)</li>
+            <li><b>Start Date:</b> start date of the royalty</li>
+        </ul>
+        <p>The Royalty type curves can then be created using the same method as Royalty Burdens in the Project Editor. Below is an example of a completed Royalty Type Curve:</p>
+        <p>
+            <img src="../../Images/TypeCurves_Type_8.png" />
+        </p>
+    </body>
+</html>

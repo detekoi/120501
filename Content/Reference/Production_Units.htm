@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="4060" MadCap:lastWidth="1403">
+    <head><title>Production Units</title>
+        <link rel="stylesheet" href="../Resources/Stylesheets/default.css" type="text/css" />
+        <style>
+p.whs1
+{
+	text-align: right;
+}
+li.whs1
+{
+	text-align: right;
+}
+img_whs2
+{
+	border: none;
+	width: 36px;
+	height: 44px;
+	float: none;
+	border-style: none;
+}
+p.whs3
+{
+	font-weight: bold;
+	font-size: 14pt;
+}
+li.whs3
+{
+	font-weight: bold;
+	font-size: 14pt;
+}
+p.whs4
+{
+	font-weight: normal;
+}
+li.whs4
+{
+	font-weight: normal;
+}
+p.whs5
+{
+	font-weight: normal;
+	font-size: 12pt;
+}
+li.whs5
+{
+	font-weight: normal;
+	font-size: 12pt;
+}
+p.whs6
+{
+	font-weight: normal;
+	font-size: 14pt;
+}
+li.whs6
+{
+	font-weight: normal;
+	font-size: 14pt;
+}
+img_whs7
+{
+	border: none;
+	width: 539px;
+	height: 310px;
+	float: none;
+	border-style: none;
+}
+p.whs8
+{
+	font-size: 12pt;
+	font-weight: bold;
+}
+li.whs8
+{
+	font-size: 12pt;
+	font-weight: bold;
+}
+img_whs9
+{
+	border: none;
+	width: 29px;
+	height: 28px;
+	float: none;
+	border-style: none;
+}
+ol.whs10
+{
+	list-style: decimal;
+}
+img_whs11
+{
+	border: none;
+	width: 26px;
+	height: 26px;
+	float: none;
+	border-style: none;
+}
+
+</style>
+        <style>
+div.WebHelpPopupMenu
+{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 4;
+	visibility: hidden;
+}
+
+</style>
+        <script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">/*<![CDATA[*/
+<!--
+ if (navigator.appName !="Netscape")
+ { document.write("<link rel='stylesheet' href='default.css'>");}
+ //-->
+/*]]>*/</script> <script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">/*<![CDATA[*/
+<!--
+ function reDo() {
+ if (innerWidth != origWidth || innerHeight != origHeight)
+ location.reload();
+ }
+ if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+ origWidth = innerWidth;
+ origHeight = innerHeight;
+ onresize = reDo;
+ }
+ onerror = null; 
+ //-->
+/*]]>*/</script> <script type="text/javascript" language="javascript1.2" src="../Archived/whmsg.js"></script> <script type="text/javascript" language="javascript" src="../Archived/whver.js"></script> <script type="text/javascript" language="javascript1.2" src="../Archived/whproxy.js"></script> <script type="text/javascript" language="javascript1.2" src="../Archived/whutils.js"></script> <script type="text/javascript" language="javascript1.2" src="../Archived/whtopic.js"></script></head>
+    <body>
+        <script type="text/javascript" language="JavaScript1.2" src="../Archived/ehlpdhtm.js">
+        </script>
+        <img src="../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />
+        <h1>
+            <MadCap:concept term="Production Units" />Production Units Overview</h1>
+        <p>Defining the Production Units and Conversions involves multiple Configuration 
+ screens. The unit conversion infrastructure is based on the following 
+ fundamentals:</p>
+        <ol>
+            <li class="NumberedList"><span style="font-weight: bold;">Products</span> 
+ (Gas and NonGas) can be represented in both <span style="font-weight: bold;">Volumetric</span> 
+ and <span style="font-weight: bold;">Quality</span> terms.</li>
+            <li class="NumberedList">The fundamental 
+ Volumetric unit is <span style="font-weight: bold;">m3</span>.</li>
+            <li class="NumberedList">The fundamental 
+ Quality units are:</li>
+            <ol style="list-style-type: lower-roman;">
+                <li class="NumberedList">For Gas - 
+ <span style="font-weight: bold;">J (joule)</span>.</li>
+                <li class="NumberedList">For NonGas 
+ - <span style="font-weight: bold;">kg (kilograms)</span></li>
+            </ol>
+            <li class="NumberedList">A specific Unit 
+ will be either a <span style="font-weight: bold;">Gas</span>, <span style="font-weight: bold;">NonGas</span> 
+ or <span style="font-weight: bold;">Equivalence</span> unit. For Gas or 
+ NonGas units, the unit is either Volumetric or Quality. For example:</li>
+            <ul>
+                <li class="NumberedList"><span style="font-weight: bold;">mcf</span> 
+ is a Gas Unit that is associated with / converted to <span style="font-weight: bold;">m3</span>.</li>
+                <li class="NumberedList"><span style="font-weight: bold;">btu</span> 
+ is a Gas Unit that is associated with / converted to <span style="font-weight: bold;">Joules</span>.</li>
+                <li class="NumberedList"><span style="font-weight: bold;">bbl</span> 
+ is a NonGas unit that is associated with / converted to <span style="font-weight: bold;">m3</span>.</li>
+                <li class="NumberedList"><span style="font-weight: bold;">T</span> 
+ (Metric Tonne) is a NonGas unit that is associated with / converted to 
+ <span style="font-weight: bold;">kg</span>.</li>
+            </ul>
+            <li class="NumberedList">An Equivalence 
+ unit allows conversion between Product Categories.</li>
+            <ul>
+                <li class="NumberedList">These are 
+ expressed as conversion factors to <span style="font-weight: bold;">boe</span>.</li>
+            </ul>
+            <li class="NumberedList"><span style="font-weight: bold;">Product 
+ Quality Units</span> and conversions are defined in terms of the <span style="font-weight: bold;">Fundamental Units</span>:</li>
+            <ol style="list-style-type: lower-roman;">
+                <li class="NumberedList">For Gas - 
+ conversion to <span style="font-weight: bold;">J/m3</span>.</li>
+                <li class="NumberedList">For NonGas 
+ - conversion to <span style="font-weight: bold;">kg/m3</span>.</li>
+            </ol>
+            <li class="NumberedList"><span style="font-weight: bold;">Products</span> 
+ are defined in terms of:</li>
+            <ul>
+                <li class="NumberedList">Their default 
+ Equivalence conversion (from an appropriate Volume unit to <span style="font-weight: bold;">boe</span>)</li>
+                <li class="NumberedList">Their default 
+ <span style="font-weight: bold;">Quality conversion</span> (to an appropriate 
+ <span style="font-weight: bold;">Product Quality unit</span>)</li>
+            </ul>
+        </ol>
+        <p>&#160;</p>
+        <h3>The Configuration sequence is:</h3>
+        <p>Create the <span style="font-weight: bold;">Production Units</span>:</p>
+        <ul>
+            <li class="Bullets"><span style="font-weight: bold;">Abbreviation</span> 
+ (what will be displayed in any drop down list)</li>
+            <li class="Bullets"><span style="font-weight: bold;">Description</span> 
+ - a text field that will be displayed in Report Headers.</li>
+        </ul>
+        <ol>
+            <li class="NumberedList">For a <span style="font-weight: bold;">Gas</span> 
+ product:</li>
+            <ul>
+                <li class="Bullets">Volumetric conversion 
+ to <span style="font-weight: bold;">m3</span></li>
+                <li class="Bullets">Energy conversion to 
+ <span style="font-weight: bold;">J</span></li>
+            </ul>
+            <li class="NumberedList">For a <span style="font-weight: bold;">Non-Gas</span> 
+ product (liquids, solids)</li>
+            <ul>
+                <li class="Bullets">Volumetric conversion 
+ to <span style="font-weight: bold;">m3</span></li>
+                <li class="Bullets">Mass conversion to 
+ <span style="font-weight: bold;">kg</span></li>
+            </ul>
+            <li class="NumberedList">For an <span style="font-weight: bold;">Equivalence</span> unit</li>
+            <ul>
+                <li class="Bullets">Conversion factor to 
+ <span style="font-weight: bold;">boe</span></li>
+            </ul>
+        </ol>
+        <p>Enter the desired <span style="font-weight: bold;">Product Qualities 
+ Units</span></p>
+        <ol>
+            <li class="NumberedList">For Gas products:</li>
+            <ul>
+                <li class="Bullets"><span style="font-weight: bold;">Description</span> 
+ - a text field that will be displayed in appropriate drop down lists</li>
+                <li class="Bullets">Conversion factor to 
+ <span style="font-weight: bold;">J/m3</span></li>
+            </ul>
+            <li class="NumberedList">For NonGas products:</li>
+            <ul>
+                <li class="Bullets"><span style="font-weight: bold;">Description</span> 
+ - a text field that will be displayed in appropriate drop down lists</li>
+                <li class="Bullets">Conversion factor to 
+ <span style="font-weight: bold;">kg/m3</span></li>
+            </ul>
+        </ol>
+        <p>Create the <span style="font-weight: bold;">Products</span>. For each 
+ Product:</p>
+        <ul>
+            <ul>
+                <li class="Bullets"><span style="font-weight: bold;">Bookable</span> 
+ - whether the production will be included in any metric calculations</li>
+                <li class="Bullets"><span style="font-weight: bold;">Category</span> 
+ - the Category the Product belongs to (typically Gas, Liquids or Other)</li>
+                <li class="Bullets"><span style="font-weight: bold;">Energy</span> 
+ - identifies that the Product's Quality will be based on Energy units</li>
+                <li class="Bullets"><span style="font-weight: bold;">Units/boe</span> 
+ - the conversion factor for the product to the base equivalence unit (boe)</li>
+                <li class="Bullets"><span style="font-weight: bold;">Unit</span> 
+ - the unit that corresponds to the Units/boe conversion factor</li>
+                <li class="Bullets"><span style="font-weight: bold;">Quality</span> 
+ - the default Quality for the product</li>
+                <li class="Bullets"><span style="font-weight: bold;">Quality 
+ Unit</span> - the Product Quality Unit (defined above) that corresponds 
+ to the Quality conversion.</li>
+            </ul>
+        </ul>
+        <p>Define the required production <span style="font-weight: bold;">Rate 
+ units</span></p>
+        <ul>
+            <ul>
+                <li class="Bullets"><span style="font-weight: bold;">Abbreviation</span> 
+ - what will appear in drop down lists</li>
+                <li class="Bullets"><span style="font-weight: bold;">Description</span> 
+ - for information purposes</li>
+                <li class="Bullets"><span style="font-weight: bold;">Volume</span> 
+ - a selection of existing Production units</li>
+                <li class="Bullets"><span style="font-weight: bold;">Time</span> 
+ - the corresponding period for the unit - Daily and Monthly are most common</li>
+            </ul>
+        </ul>
+        <p>Note that a Monthly rate is converted to an equivalent Daily Rate for 
+ production calculations.</p>
+        <h3>&#160;</h3>
+        <h3><a name="Production_Unit_Configuration"></a>Production 
+ Units</h3>
+        <p>
+            <img src="../Images/production_units.png" />
+        </p>
+        <p>&#160;</p>
+        <p class="note"><strong style="font-weight: normal;"><span style="font-weight: bold;">Note:</span><span style="font-weight: normal;"> 
+ a Unit can only have </span><span style="font-weight: bold;">one conversion</span><span style="font-weight: normal;"> entered, it is either a </span><span style="font-weight: bold;">Volumetric</span><span style="font-weight: normal;"> unit (converts to m3), </span><span style="font-weight: bold;">Quality</span><span style="font-weight: normal;"> (converts to J or kg), or </span><span style="font-weight: bold;">Equivalence</span><span style="font-weight: normal;"> (converts to boe). </span></strong>
+        </p>
+        <p style="font-weight: normal;"><strong style="font-weight: normal;"><span style="font-weight: normal;">The column that the conversion 
+ is entered in defines what type of Unit it is (Volumetric or Quality), 
+ and how this unit will be utilized within the conversion infrastructure. 
+ The m3 (energy) and m3 (mass) headers indicate which column to enter the 
+ Volumetric conversion factor into: a Gas unit is entered under </span><span style="font-weight: bold;">m3 (energy)</span><span style="font-weight: normal;"> 
+ and Non-Gas unit under </span><span style="font-weight: bold;">m3 (mass)</span><span style="font-weight: normal;">.</span></strong>
+        </p>
+        <p style="font-weight: normal;"><strong><span style="font-weight: normal;">With 
+ the exception of Equivalence units, the conversion factors entered on 
+ this page should be standard conversions. When providing Volumetric conversions, 
+ they should all use the same Reference state, i.e.; mcf and mmcf should 
+ be factors of 1000 and 1000000 to the cf conversion.</span></strong>
+        </p>
+        <p style="font-weight: normal;"><strong style="font-weight: bold;"><span style="font-weight: normal;">Equivalence units will be based on your company's 
+ practice, however, similar units (</span><span style="font-weight: bold;">mcfe</span><span style="font-weight: normal;"> and </span><span style="font-weight: bold;">mmcfe</span><span style="font-weight: normal;"> or </span><span style="font-weight: bold;">mboe</span><span style="font-weight: normal;"> and </span><span style="font-weight: bold;">mmboe</span><span style="font-weight: normal;">) should be numerically consistent.</span></strong>
+        </p>
+        <p style="font-weight: normal;">&#160;</p>
+        <h3>Product Quality Units</h3>
+        <p>esi.manage uses <span style="font-weight: bold;">J/m3</span> (Gas) and 
+ <span style="font-weight: bold;">kg/m3</span> (Non-Gas) as the internal 
+ Quality Units. Your company may require the ability to report in other 
+ Quality Units, such as btu, GJ, kg or lb. &#160;</p>
+        <p>The Product Qualities table is where you will provide the conversion 
+ between your companies desired units, and the internal units. When creating 
+ a <span style="font-weight: bold;"><a href="../Configuration Perspective/Budget-Project/Product.htm" target="_popup">Product</a>,</span>  you will need to specify the default 
+ Quality in terms of either an internal unit, or a unit defined here.</p>
+        <p>
+            <img src="../Images/Product_Quality.png" style="border: none;width: 377px;height: 159px;float: none;border-style: none;border-style: none;" width="377" height="159" border="0" />
+        </p>
+        <p>&#160;</p>
+        <h3>Products</h3>
+        <p>Individual Products are defined in terms of:</p>
+        <ol>
+            <li class="NumberedList"><span style="font-weight: bold;">Bookable</span> 
+ - whether the Product is to participate in metric (Lifting Cost, F&amp;D) 
+ calculations.</li>
+            <li class="NumberedList"><span style="font-weight: bold;">Energy</span> 
+ - indicates whether the Quality will be represented in <span style="font-weight: bold;">Energy</span> 
+ or <span style="font-weight: bold;">Mass</span> units.</li>
+            <li class="NumberedList"><span style="font-weight: bold;">Units/boe, 
+ Unit</span> &#160;- 
+ the Base unit for the particular Product and its conversion to the base 
+ Equivalence Unit (boe).</li>
+            <li class="NumberedList"><span style="font-weight: bold;">Quality, 
+ Unit</span> - the conversion of the Product to an existing Quality Unit.</li>
+        </ol>
+        <p>&#160;</p>
+        <p>
+            <img src="../Images/Con2.PNG" class="img_whs5" />
+        </p>
+        <p>&#160;</p>
+        <h3>Production Rate Units</h3>
+        <p><span style="font-weight: bold;">Production Rate</span> Units are used 
+ as part of Forecasting a Production segment, the Abbreviations will appear 
+ in the drop down list to specify the Rate that corresponds to the IP. 
+ </p>
+        <p>The <span style="font-weight: bold;">Description</span> is the label 
+ that will appear when reporting Production as a Daily Rate.</p>
+        <p>&#160;</p>
+        <p>
+            <img src="../Images/Con6.PNG" class="img_whs5" />
+        </p>
+        <p>&#160;</p>
+        <p class="note"><b>Note:</b> Monthly rate units will be interpreted 
+ based on the Average Number of Days in a month.</p>
+        <h3>&#160;</h3>
+        <h3>Reporting Production</h3>
+        <p>A given Production stream can be reported in two ways, depending on 
+ the Product Category:</p>
+        <ul>
+            <li class="Bullets"><span style="font-weight: bold;">Gas</span> 
+ - Volumetric or Energy</li>
+            <li class="Bullets"><span style="font-weight: bold;">Non-Gas 
+ (Liquid or Other)</span> - Volumetric or Mass </li>
+        </ul>
+        <p>In addition, there are Equivalence Units which allow for cross category 
+ reporting - for example Reporting the entire production in terms of a 
+ Gas (mcfe) or Liquid (boe). These units will only have a "notional" 
+ representation of Quality - for example a GJe unit would be based on a 
+ "standard" Heat Content for both Gas and Non-Gas.</p>
+        <p>&#160;</p>
+    </body>
+</html>

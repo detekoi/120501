@@ -1,0 +1,571 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="6" MadCap:lastHeight="4727" MadCap:lastWidth="730">
+    <head>
+        <link href="../../Resources/TableStyles/HelpFileTableStylesheet.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h2 class="Heading2">Group Economic Limit<img src="../../Images/Logo Images/3esi_manage.png" align="right" border="0" class="HeaderLogo" /></h2>
+        <h3 class="Heading3">Overview</h3>
+        <p>Previously, the economic limit calculations in esi.manage occurred at the well. Based on the Truncation Method for the Analysis Case, each asset had its economic limit determined. Cost only assets were not truncated. From a reporting perspective, the individual Hierarchy nodes in the Fiscal model collected the truncated cash flows for all of the assets below that node, and would calculate an economic limit for the node based on the aggregated cash flows. This process continued up the Hierarchy tree. </p>
+        <p>The Group Economic Limit calculation option available in esi.manage introduces a new Group behaviour. Based on the selected Hierarchy node(s) – which can be different than the Hierarchy used for the Fiscal Model, the economic limit that is calculated at a Group node is then “propagated” through the child assets of the node such that the resultant cash flow for any asset (and by association, the node itself) will be the minimum of the Group, and the individual asset.</p>
+        <p>When multiple Hierarchy nodes are involved in the particular analysis, it is the truncated cash flow that is propagated up to the next level. The end result is that, for a particular asset, its economic limit (and cashflows) will be the minimum of its economic limit date and the minimum date for any Group Limit nodes above it.</p>
+        <p>Note that: by enabling Group Economic Limit in the Configuration, this becomes a Group Concern, the same as Curtailment and Price Tiers. Regardless of how many projects are selected from a particular budget (and the selected Analysis Case has Truncation being calculated), all of the Projects that are within the Group Hierarchy tree will be solved. Only the selected projects will be reported, but their results will be based on the calculation methodology described above.</p>
+        <p>Cost Only assets still require the Cost Only flag to be turned on, otherwise they will be truncated immediately. </p>
+        <h3 class="Heading3">Configuration of Group Economic Limit</h3>
+        <p>Group Economic Limit is “configured” within the Fiscal Modelling node in the esi.manage Configuration.</p>
+        <p>All of the available Hierarchy trees can be selected for performing the Group Calculations.</p>
+        <p>
+            <img src="../../Resources/Images/Group Limit Module/Group Economic Limit.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 268px;" />
+        </p>
+        <p>If there are node(s) within the Tree that you don’t want the Group behaviour applied to, you can add these by selecting the green + symbol:</p>
+        <p>
+            <img src="../../Resources/Images/Group Limit Module/Group Economic Limit_1.png" style="visibility: visible;mso-wrap-style: square;width: 553px;height: 211px;" />
+        </p>
+        <p>With this configuration, assets that fall within the selected Hierarchy will be calculated as normal, however, the cash flow that is propagated up to nodes above (Area 6) will not be truncated at the Group Limit, and the Economic Limit date calculated at hierarchy nodes further up the tree will not be “propagated” down through projects under the exclusion node.</p>
+        <p>In most situations, a single Hierarchy will be selected. The option exists to use multiple Hierarchies for the Economic Limit Grouping, however, you must ensure that the calculation paths between the two Hierarchies do not overlap. This will require the use of the exclusion option to exclude nodes such that any Project (and its asset) will only be dealt with under one path.</p>
+        <h3 class="Heading3">Examples of Group Limit interaction</h3>
+        <p>For the following illustration, a hierarchy tree as illustrated below is being used to describe the calculations.</p>
+        <p>
+            <img src="../../Resources/Images/Group Limit Module/Group Economic Limit_2.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 292px;" />
+        </p>
+        <p>Projects from area 6ab and 6d are being used.</p>
+        <h3 class="Heading3">Area 6d Only</h3>
+        <p>There are ~40 projects in this area, with a subset being Cost Only assets. Only the top level information is being shown. In the following tables, the Maximum Economic Limit date is based on the Nodes being shown, plus all of the assets in the case.</p>
+        <p>With Truncation turned off:</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');" class="TableStyle-HelpFileTableStylesheet" cellspacing="0">
+            <tbody>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>Maximum Economic Limit Date</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>31-Jan-59</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>Economic Limit</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>326 Analysis Case - Documentation</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>31-Jul-48</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>(selected projects)</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>31-Jul-48</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>Documentation</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>31-Jul-48</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>Area 6</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>31-Jul-48</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body2">
+                        <p>Area 6.d</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body2">
+                        <p>31-Jul-48</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>With Truncation turned on in the analysis case, and no exclusions configured, the Economic Limit dates of all the assets has been set to the Minimum of the asset economic limit date, and the Group date:</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');" class="TableStyle-HelpFileTableStylesheet" cellspacing="0">
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                    <p>Maximum Economic Limit Date</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                    <p>31-Jul-48</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                    <p>&#160;</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                    <p>Economic Limit</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                    <p>326 Analysis Case - Documentation</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                    <p>31-Jul-48</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                    <p>(selected projects)</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                    <p>31-Jul-48</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                    <p>Documentation</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                    <p>31-Jul-48</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                    <p>Area 6</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                    <p>31-Jul-48</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                    <p>Area 6.d</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                    <p>31-Jul-48</p>
+                </td>
+            </tr>
+        </table>
+        <p>&#160;</p>
+        <p>Excluding 6d in the Configuration gives the same results, as there is no other nodes to interact with. </p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');" class="TableStyle-HelpFileTableStylesheet" cellspacing="0">
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                    <p>Maximum Economic Limit Date</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                    <p>31-Jul-48</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                    <p>&#160;</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                    <p>Economic Limit</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                    <p>326 Analysis Case - Documentation</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                    <p>31-Jul-48</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                    <p>(selected projects)</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                    <p>31-Jul-48</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                    <p>Documentation</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                    <p>31-Jul-48</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                    <p>Area 6</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                    <p>31-Jul-48</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                    <p>Area 6.d</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                    <p>31-Jul-48</p>
+                </td>
+            </tr>
+        </table>
+        <p>&#160;</p>
+        <h3 class="Heading3">Area 6ab Only</h3>
+        <p>There are ~65 projects in this area, with a subset being Cost Only assets. Only the top level information is being shown. In the following tables, the Maximum Economic Limit date is based on the Nodes being shown, plus all of the assets in the case.</p>
+        <p>With Truncation turned off:</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');" class="TableStyle-HelpFileTableStylesheet" cellspacing="0">
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                    <p>Maximum Economic Limit Date</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                    <p>31-Jan-59</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                    <p>&#160;</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                    <p>Economic Limit</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                    <p>326 Analysis Case - Documentation</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                    <p>31-Jul-56</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                    <p>(selected projects)</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                    <p>31-Jul-56</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                    <p>Documentation</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                    <p>31-Jul-56</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                    <p>Area 6</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                    <p>31-Jul-56</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                    <p>Area 6.ab</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                    <p>31-Jul-56</p>
+                </td>
+            </tr>
+        </table>
+        <p>&#160;</p>
+        <p>With Truncation turned on in the analysis case, and no exclusions configured, the Economic Limit dates of all the assets has been set to the Minimum of the asset economic limit date, and the Group date:</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');" class="TableStyle-HelpFileTableStylesheet" cellspacing="0">
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                    <p>Maximum Economic Limit Date</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                    <p>31-Jul-56</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                    <p>&#160;</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                    <p>Economic Limit</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                    <p>326 Analysis Case - Documentation</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                    <p>31-Jul-56</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                    <p>(selected projects)</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                    <p>31-Jul-56</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                    <p>Documentation</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                    <p>31-Jul-56</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                    <p>Area 6</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                    <p>31-Jul-56</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                    <p>Area 6.ab</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                    <p>31-Jul-56</p>
+                </td>
+            </tr>
+        </table>
+        <p>&#160;</p>
+        <p>Excluding 6d in the Configuration gives the same results, as the selected projects are peers of that node. </p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');" class="TableStyle-HelpFileTableStylesheet" cellspacing="0">
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                    <p>Maximum Economic Limit Date</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                    <p>31-Jul-56</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                    <p>&#160;</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                    <p>Economic Limit</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                    <p>326 Analysis Case - Documentation</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                    <p>31-Jul-56</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                    <p>(selected projects)</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                    <p>31-Jul-56</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                    <p>Documentation</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                    <p>31-Jul-56</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                    <p>Area 6</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                    <p>31-Jul-56</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                    <p>Area 6.ab</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                    <p>31-Jul-56</p>
+                </td>
+            </tr>
+        </table>
+        <p>&#160;</p>
+        <h3 class="Heading3">Area 6ab and 6d</h3>
+        <p>In a Budget that both sets of projects used above: </p>
+        <p>With Truncation turned on in the analysis case, and Area 6d being excluded, the Economic Limit dates are as shown below:</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');" class="TableStyle-HelpFileTableStylesheet" cellspacing="0">
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                    <p>Maximum Economic Limit Date</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                    <p>28-Feb-53</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                    <p>Maximum Economic Limit Date - 6ab</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                    <p>28-Feb-53</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                    <p>Maximum Economic Limit Date - 6d</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                    <p>28-Feb-53</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                    <p>&#160;</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                    <p>Economic Limit</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                    <p>326 Analysis Case - Documentation</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                    <p>28-Feb-53</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                    <p>(selected projects)</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                    <p>28-Feb-53</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                    <p>Documentation</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                    <p>28-Feb-53</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                    <p>Area 6</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                    <p>28-Feb-53</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                    <p>Area 6.ab</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                    <p>28-Feb-53</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                    <p>Area 6.d</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                    <p>31-Jul-48</p>
+                </td>
+            </tr>
+        </table>
+        <p>&#160;</p>
+        <p>The calculated Economic Limit for Area 6.d is Jul-48, however the Maximum Economic Limit date for all of the Assets within that area is Feb-53. Since this area has been excluded, no Economic Limit dates from above will be populated downwards. However, the aggregate Cash flow (with the individual wells being calculated at their Economic Limit – but no at the Group Limit) has been propagated up to Area 6, and subsequently resulted in the Economic Limit date for Area 6.ab moving from Jul-56 to Feb-53.</p>
+        <p>Removing the Exclusion node from generates the following results:</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');" class="TableStyle-HelpFileTableStylesheet" cellspacing="0">
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                    <p>Maximum Economic Limit Date</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                    <p>31-Jul-56</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                    <p>Maximum Economic Limit Date - 6ab</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                    <p>31-Jul-56</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                    <p>Maximum Economic Limit Date - 6d</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                    <p>31-Jul-48</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                    <p>all with exclude one level up</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                    <p>Economic Limit</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                    <p>326 Analysis Case - Documentation</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                    <p>31-Jul-56</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                    <p>(selected projects)</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                    <p>31-Jul-56</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                    <p>Documentation</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                    <p>31-Jul-56</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                    <p>Area 6</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                    <p>31-Jul-56</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                    <p>Area 6.ab</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                    <p>31-Jul-56</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                    <p>Area 6.d</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                    <p>31-Jul-48</p>
+                </td>
+            </tr>
+        </table>
+        <p>&#160;</p>
+        <p>The impact is that wells in 6d are now being truncated at the Group limit (Area 6.d), and because the Cash Flow that is propagated up is Truncated from 6d, it has a different impact at the top most level, such that the Minimum Economic Limit date in 6ab returns back to Jul-56.</p>
+    </body>
+</html>

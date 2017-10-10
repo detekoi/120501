@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="3" MadCap:lastHeight="3537" MadCap:lastWidth="1265">
+    <head><title></title>
+        <link href="../Resources/Stylesheets/HelpFileStylesheet2.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2>
+            <img src="../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />Mappings Tab</h2>
+        <p>
+            <img src="../Resources/Images/New EDL/Mappings_Overview.png" />
+        </p>
+        <p>The mappings tab is where the data is defined and the data that will be mapped to Excel is identified. To properly populate the mappings tab, an understanding of what is in the Excel Workbook is required. </p>
+        <h3>Mappings</h3>
+        <p>There are three sections to this tab. The left most area is where attributes are added to be mapped. The attributes are arranged in a tree format where attributes lower down the tree are linked to the branches above it.</p>
+        <p>
+            <img src="../Resources/Images/New EDL/Mappings_Tree.png" />
+        </p>
+        <p>
+            <img src="../Resources/Images/New EDL/Tree_Icons.png" />
+        </p>
+        <p>Attributes can be added using the green plus icon, or right-clicking and selecting the same icon.</p>
+        <p>Attributes can be moved around within the tree using the compass icon, or clicking and dragging attributes around.</p>
+        <p>Attributes can be sorted alphabetically using the sort icon.</p>
+        <p>Attributes can be removed using the red x icon.</p>
+        <p>&#160;</p>
+        <p>There are different icons for different types of attributes and tree commands which are as follows:</p>
+        <p>
+            <img src="../Resources/Images/ExcelTemplates1/03000001.png" style="visibility: visible;mso-wrap-style: square;width: 22px;height: 17px;" />: Top level object and sub-objects. Objects will contain nested attributes, sub-objects, and arrays. Nesting gives the input data-structure a tree shape. These attributes are not directly defined.</p>
+        <p>
+            <img src="../Resources/Images/ExcelTemplates1/03000002.png" style="visibility: visible;mso-wrap-style: square;width: 25px;height: 16px;" />: Array of objects attribute. Arrays can define a repeat structure to load numerous values into a single attribute. Houses key and regular attributes. </p>
+        <p> <img src="../Resources/Images/New EDL/Command_Icon.png" /> : Command. Defines the type of template that is being created.</p>
+        <p>
+            <img src="../Resources/Images/ExcelTemplates1/03000004.png" style="visibility: visible;mso-wrap-style: square;width: 25px;height: 17px;" />: Attribute. Where values can be assigned to.</p>
+        <p> <img src="../Resources/Images/New EDL/Condition_Icon.png" /> : Condition. Attributes nested below a condition must meet the condition to be loaded.</p>
+        <p> <img src="../Resources/Images/New EDL/Repeat_Icon.png" /> : Repeat. Creates a repeating pattern for the attributes that are nested below.</p>
+        <p> <img src="../Resources/Images/New EDL/Distinct_Icon.png" /> : Distinct. Creates a relationship for nested attributes to roll up into a single attribute.</p>
+        <p> <img src="../Resources/Images/New EDL/Merge_Icon.png" /> : Merge. Used with Distinct to merge data into the single attribute.</p>
+        <p> <img src="../Resources/Images/New EDL/Variable_Icon.png" /> : Variable. Creates a variable that can be used and referenced by other attributes.</p>
+        <h3>Properties</h3>
+        <p>The properties section defines the rules in which to load data. Information can be loaded through a direct cell reference, a default value, or utilizing a formula. Different nodes in the mapping tree will have different properties available to them.</p>
+        <p>
+            <img src="../Resources/Images/New EDL/Properties.png" />
+        </p>
+        <p>
+            <img src="../Resources/Images/New EDL/Properties_Icons.png" />
+        </p>
+        <p>When using the Cell Default Value Scalar Type, the <b>Copy cell address from excel</b> icon can be used. There is a shortcut for this action by clicking <b>CTRL+F1</b>.</p>
+        <p>When using the Formula Scalar Type, the expression builder can be used by selecting the <b>Edit Formula</b> icon.</p>
+        <h3>Preview</h3>
+        <p>The preview will display the values that are being read from the properties. It is a good place to revise the template and ensure it is working as intended.</p>
+        <p>
+            <img src="../Resources/Images/New EDL/Preview.png" />
+        </p>
+        <p>Each attribute has been limited to display only the first 10 iterations it finds. This was implemented to increase the performance of the preview. Therefore, only the first 10 projects are displayed, only the first 10 values of a time series are displayed, only the first 10 dates of a series are displayed, etc. This is annotated by a yellow warning sign over the truncated attribute's icon.</p>
+        <p>Errors will be displayed over an incident attribute with a red icon. Hovering over the attribute will display the error.</p>
+        <p>
+            <img src="../Resources/Images/New EDL/Preview_error.png" />
+        </p>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="1"
+  Comment="New Target"
+  Type="WebHelp2"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  Skin="/Project/Skins/Black(HTML5).flskn"
+  MasterToc="/Project/TOCs/HelpFileTOC.fltoc"
+  MasterStylesheet="/Content/Resources/Stylesheets/HelpFileStylesheet.css"
+  GetLatestBeforeCompile="true"
+  DefaultUrl="/Content/Overview.htm"
+  OutputFile="3.14.1_Help.chm"
+  AliasFile="/Project/Advanced/esi.flali"
+  ConditionTagExpression="include[Primary.Online or Primary.Print] "
+  BrowseSequence="/Project/Advanced/esi.flbrs">
+  <PrintedOutput
+    CollapseMargins="true" />
+</CatapultTarget>

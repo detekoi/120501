@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1263" MadCap:lastWidth="1195">
+    <head>
+        <link href="../../Resources/TableStyles/HelpFileTableStylesheet.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Currency Exchange Import File</title>
+        <link rel="StyleSheet" href="../../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <h3>
+            <img src="../../Images/Logo Images/3esi_manage.png" align="right" border="0" class="HeaderLogo" />
+        </h3>
+        <h2>External Currency Exchange Import File</h2>
+        <p>There are three different line types for a Currency Exchange File Import.</p>
+        <ol style="list-style: decimal;list-style-type: decimal;">
+            <li><span style="font-weight: bold;">File </span>- 
+ identifies the currency file to be defined</li>
+            <li><span style="font-weight: bold;">Currency</span> 
+ - identifies the currency being defined by following details</li>
+            <li><span style="font-weight: bold;">Detail - </span>defines 
+ the currency conversion rate for a particular date</li>
+        </ol>
+        <p>&#160;</p>
+        <p>Each line type has a different layout.</p>
+        <h3>File Line Type Layout</h3>
+        <table style="width: 72.234%;mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');" cellspacing="0" width="72.234%" class="TableStyle-HelpFileTableStylesheet">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Column #</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Description</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Notes</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Optional</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="14.039%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>1</p>
+                    </td>
+                    <td width="18.994%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>line type</p>
+                    </td>
+                    <td width="53.228%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>always "File"</p>
+                    </td>
+                    <td width="13.739%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td bgcolor="#C0C0C0" width="14.039%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>2</p>
+                    </td>
+                    <td width="18.994%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>file abbreviation</p>
+                    </td>
+                    <td width="53.228%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>abbreviation of the file being defined</p>
+                    </td>
+                    <td width="13.739%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="14.039%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>3</p>
+                    </td>
+                    <td width="18.994%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>file description</p>
+                    </td>
+                    <td width="53.228%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>description of the file being defined</p>
+                    </td>
+                    <td width="13.739%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td bgcolor="#C0C0C0" width="14.039%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body3">
+                        <p>4</p>
+                    </td>
+                    <td width="18.994%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p>base currency</p>
+                    </td>
+                    <td width="53.228%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p>base currency, abbreviation of a configured currency unit</p>
+                    </td>
+                    <td width="13.739%" class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body3">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h3>Currency Line Type Layout</h3>
+        <table style="width: 72.234%;mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');" cellspacing="0" width="72.234%" class="TableStyle-HelpFileTableStylesheet">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Column #</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Description</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Notes</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Optional</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="14.039%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>1</p>
+                    </td>
+                    <td width="18.994%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>line type</p>
+                    </td>
+                    <td width="53.228%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>always "Currency"</p>
+                    </td>
+                    <td width="13.739%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td bgcolor="#C0C0C0" width="14.039%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body3">
+                        <p>2</p>
+                    </td>
+                    <td width="18.994%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p>currency</p>
+                    </td>
+                    <td width="53.228%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p>abbreviation of a configured currency unit</p>
+                    </td>
+                    <td width="13.739%" class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body3">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h3>Detail Line Type Layout</h3>
+        <table style="width: 72.234%;mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');" cellspacing="0" width="72.234%" class="TableStyle-HelpFileTableStylesheet">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Column #</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Description</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Notes</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;"><span style="font-weight: bold;color: #ffffff;">Optional</span>
+                        </p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="14.039%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>1</p>
+                    </td>
+                    <td width="18.994%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>line type</p>
+                    </td>
+                    <td width="53.228%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>always "Detail"</p>
+                    </td>
+                    <td width="13.739%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td bgcolor="#C0C0C0" width="14.039%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>2</p>
+                    </td>
+                    <td width="18.994%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>date</p>
+                    </td>
+                    <td width="53.228%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>date specified in YYYY-MM format (e.g. 2010-01)</p>
+                    </td>
+                    <td width="13.739%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="14.039%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body2">
+                        <p>3</p>
+                    </td>
+                    <td width="18.994%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2">
+                        <p>conversion (X)</p>
+                    </td>
+                    <td width="53.228%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2">
+                        <p>1 base currency = X current currency</p>
+                    </td>
+                    <td width="13.739%" class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body2">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h3>Sample multi-line CSV</h3>
+        <table style="width: 80%;mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');" cellspacing="0" width="80%" class="TableStyle-HelpFileTableStylesheet">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Line Type</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p>&#160;</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p>&#160;</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-Header1">
+                        <p>&#160;</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="25%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>File</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>myfile</p>
+                    </td>
+                    <td width="25%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>My Currency Exchange File</p>
+                    </td>
+                    <td width="25%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>CAD</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td colspan="1" rowspan="1" bgcolor="#C0C0C0" width="25%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>Currency</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>CAD</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="25%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="25%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td colspan="1" rowspan="1" bgcolor="#C0C0C0" width="25%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>Detail</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>2010-01</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="25%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>1</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="25%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td bgcolor="#C0C0C0" width="25%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>Currency</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>USD</p>
+                    </td>
+                    <td width="25%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                    <td width="25%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="25%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>Detail</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>2010-01</p>
+                    </td>
+                    <td width="25%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>0.99</p>
+                    </td>
+                    <td width="25%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td bgcolor="#C0C0C0" width="25%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>Detail</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>2010-06</p>
+                    </td>
+                    <td width="25%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>1.01</p>
+                    </td>
+                    <td width="25%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="25%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>Detail</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>2015-01</p>
+                    </td>
+                    <td width="25%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>0.98</p>
+                    </td>
+                    <td width="25%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td bgcolor="#C0C0C0" width="25%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>Currency</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>JPY</p>
+                    </td>
+                    <td width="25%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                    <td width="25%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="25%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>Detail</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>2010-01</p>
+                    </td>
+                    <td width="25%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>76.13</p>
+                    </td>
+                    <td width="25%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td bgcolor="#C0C0C0" width="25%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>Detail</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>2010-06</p>
+                    </td>
+                    <td width="25%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>78.24</p>
+                    </td>
+                    <td width="25%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="25%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body2">
+                        <p>Detail</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2">
+                        <p>2015-01</p>
+                    </td>
+                    <td width="25%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2">
+                        <p>74.32</p>
+                    </td>
+                    <td width="25%" class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+    </body>
+</html>

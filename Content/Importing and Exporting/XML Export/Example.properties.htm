@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="3" MadCap:lastHeight="3626" MadCap:lastWidth="1234">
+    <head><title>Example.properties</title>
+        <link rel="StyleSheet" href="../../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <h1>
+            <img src="../../Images/Logo Images/3esi_manage.png" align="right" border="0" class="HeaderLogo" />
+        </h1>
+        <h2>Example.properties</h2>
+        <p style="font-family: 'Lucida Console', monospace;">##########################################################################</p>
+        <p style="font-family: 'Lucida Console', monospace;">#(c) Copyright 3ES 
+ Innovation Inc. 2008, 2009, 2010. &#160;All 
+ rights reserved.</p>
+        <p style="font-family: 'Lucida Console', monospace;">#</p>
+        <p style="font-family: 'Lucida Console', monospace;"># esi.manage Project 
+ Export Configuration</p>
+        <p style="font-family: 'Lucida Console', monospace;">#</p>
+        <p style="font-family: 'Lucida Console', monospace;"># This file is used 
+ to configure the properties of the project export.</p>
+        <p style="font-family: 'Lucida Console', monospace;"># The file must match 
+ the required format in this sample.</p>
+        <p style="font-family: 'Lucida Console', monospace;">#</p>
+        <p style="font-family: 'Lucida Console', monospace;"># Using the export 
+ requires all of the properties currently not commented</p>
+        <p style="font-family: 'Lucida Console', monospace;"># out to be correctly 
+ filled in (ie: DatabaseName, ExportFile, etc.).</p>
+        <p style="font-family: 'Lucida Console', monospace;">##########################################################################</p>
+        <p style="font-family: 'Lucida Console', monospace;">#########################################################################</p>
+        <p style="font-family: 'Lucida Console', monospace;">########## SQL Server 
+ Database Settings #################################</p>
+        <p style="font-family: 'Lucida Console', monospace;">#########################################################################</p>
+        <p style="font-family: 'Lucida Console', monospace;"># Named Pipes:</p>
+        <p style="font-family: 'Lucida Console', monospace;"># &#160;&#160;&#160;(Y/N) 
+ Y=Yes, N=No. &#160;(Default:N).</p>
+        <p style="font-family: 'Lucida Console', monospace;">UseNamedPipes = N</p>
+        <p style="font-family: 'Lucida Console', monospace;"># Port: </p>
+        <p style="font-family: 'Lucida Console', monospace;"># &#160;&#160;&#160;Database 
+ port. &#160;(Default:1433).</p>
+        <p style="font-family: 'Lucida Console', monospace;">Port = 1432</p>
+        <p style="font-family: 'Lucida Console', monospace;"># DatabaseName:</p>
+        <p style="font-family: 'Lucida Console', monospace;"># &#160;&#160;Name 
+ of the SQL database.</p>
+        <p style="font-family: 'Lucida Console', monospace;">DatabaseName = GENERIC_PEEP_INTEGRATION_392</p>
+        <p style="font-family: 'Lucida Console', monospace;"># DatabaseInstance:</p>
+        <p style="font-family: 'Lucida Console', monospace;"># &#160;&#160;&#160;If 
+ applicable, specify the instance to connect to.</p>
+        <p style="font-family: 'Lucida Console', monospace;">#DatabaseInstance 
+ = MSSQL2005</p>
+        <p style="font-family: 'Lucida Console', monospace;"># Server:</p>
+        <p style="font-family: 'Lucida Console', monospace;"># &#160;&#160;&#160;Name 
+ of the SQL Server</p>
+        <p style="font-family: 'Lucida Console', monospace;">Server = localhost</p>
+        <p style="font-family: 'Lucida Console', monospace;"># Password:</p>
+        <p style="font-family: 'Lucida Console', monospace;"># &#160;&#160;&#160;Plain 
+ text password for the db access.</p>
+        <p style="font-family: 'Lucida Console', monospace;"># &#160;&#160;&#160;May 
+ be unspecified for NT Authentication. &#160;</p>
+        <p style="font-family: 'Lucida Console', monospace;">#Password = password</p>
+        <p style="font-family: 'Lucida Console', monospace;"># Username:</p>
+        <p style="font-family: 'Lucida Console', monospace;"># &#160;&#160;&#160;Plain 
+ text user id for db access. &#160;</p>
+        <p style="font-family: 'Lucida Console', monospace;"># &#160;&#160;&#160;May 
+ be unspecified for NT Authentication.</p>
+        <p style="font-family: 'Lucida Console', monospace;">#Username = username 
+ </p>
+        <p style="font-family: 'Lucida Console', monospace;">#########################################################################</p>
+        <p style="font-family: 'Lucida Console', monospace;">########### Export 
+ specific settings ####################################</p>
+        <p style="font-family: 'Lucida Console', monospace;">#########################################################################</p>
+        <p style="font-family: 'Lucida Console', monospace;"># Job:</p>
+        <p style="font-family: 'Lucida Console', monospace;"># &#160;&#160;The 
+ name of the export job to run.</p>
+        <p style="font-family: 'Lucida Console', monospace;"># &#160;&#160;The 
+ name must match that of an export job defined within esi.manage.</p>
+        <p style="font-family: 'Lucida Console', monospace;">Job = MyExportJob</p>
+        <p style="font-family: 'Lucida Console', monospace;"># Since:</p>
+        <p style="font-family: 'Lucida Console', monospace;"># &#160;&#160;To 
+ restrict the set of projects to those that have changed since</p>
+        <p style="font-family: 'Lucida Console', monospace;"># &#160;&#160;a 
+ given date, set the following parameter</p>
+        <p style="font-family: 'Lucida Console', monospace;"># &#160;&#160;Must 
+ appear in format yyyy-mm-dd.</p>
+        <p style="font-family: 'Lucida Console', monospace;"># Since = 2011-01-01</p>
+        <p style="font-family: 'Lucida Console', monospace;"># OutputPath:</p>
+        <p style="font-family: 'Lucida Console', monospace;"># &#160;&#160;The 
+ pathname of the output file. &#160;Normally, 
+ the file extension</p>
+        <p style="font-family: 'Lucida Console', monospace;"># &#160;&#160;should 
+ by ".xml".</p>
+        <p style="font-family: 'Lucida Console', monospace;"># &#160;&#160;Backslashes 
+ must be doubled, e.g. c:\\temp\\export.xml</p>
+        <p style="font-family: 'Lucida Console', monospace;">OutputPath = C:\\temp\\export.xml</p>
+        <p style="font-family: 'Lucida Console', monospace;">#########################################################################</p>
+        <p style="font-family: 'Lucida Console', monospace;">########### Override 
+ Export Controller ##################################</p>
+        <p style="font-family: 'Lucida Console', monospace;">#########################################################################</p>
+        <p style="font-family: 'Lucida Console', monospace;"># Override Project 
+ Sets (True/ False) (Default: False)</p>
+        <p style="font-family: 'Lucida Console', monospace;">ProjectSet_Override 
+ = False</p>
+        <p style="font-family: 'Lucida Console', monospace;">#########################################################################</p>
+        <p style="font-family: 'Lucida Console', monospace;">########### Override 
+ Export Settings ####################################</p>
+        <p style="font-family: 'Lucida Console', monospace;">#########################################################################</p>
+        <p style="font-family: 'Lucida Console', monospace;"># Project Sets:</p>
+        <p style="font-family: 'Lucida Console', monospace;"># &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;The 
+ name of the project sets that the user would like to include in the export</p>
+        <p style="font-family: 'Lucida Console', monospace;"># &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Each 
+ name must match a project set defined within esi.manage, seperated by 
+ a comma.</p>
+        <p style="font-family: 'Lucida Console', monospace;"># &#160;&#160;Project 
+ Sets must not contain any commas. Leading and trailing spaces for each 
+ project set are acceptable.</p>
+        <p style="font-family: 'Lucida Console', monospace;">ProjectSets = MyExportJob</p>
+        <p style="font-family: 'Lucida Console', monospace;"># Production Parameters 
+ </p>
+        <p style="font-family: 'Lucida Console', monospace;"># Time Series Parameters 
+ - All three must be set, otherwise none of the parameters will not be 
+ used.</p>
+        <p style="font-family: 'Lucida Console', monospace;"># &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Start 
+ Date - Must appear in the format yyyy-mm-dd</p>
+        <p style="font-family: 'Lucida Console', monospace;"># &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Interval 
+ - Y (Year), Q (Quarter), M (Month), W (Week), D (Day).</p>
+        <p style="font-family: 'Lucida Console', monospace;"># &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Duration 
+ - Length of time relative to the interval. Must be an integer</p>
+        <p style="font-family: 'Lucida Console', monospace;">Production_Start_Date 
+ = 2011-01-01</p>
+        <p style="font-family: 'Lucida Console', monospace;">Production_Interval 
+ = M</p>
+        <p style="font-family: 'Lucida Console', monospace;">Production_Duration 
+ = 12</p>
+        <p style="font-family: 'Lucida Console', monospace;"># Date Blending Parameters 
+ - Both parameters must be set, otherwise either will not be used.</p>
+        <p style="font-family: 'Lucida Console', monospace;"># &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Last 
+ Actuals Date = Must appear in the format yyyy-mm-dd</p>
+        <p style="font-family: 'Lucida Console', monospace;"># &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Last 
+ Field Estimate Date = Must appear in the format yyyy-mm-dd</p>
+        <p style="font-family: 'Lucida Console', monospace;">Production_LastActual_Date 
+ = 2010-01-01</p>
+        <p style="font-family: 'Lucida Console', monospace;">Production_LastFieldEstimate_Date 
+ = 2010-01-01</p>
+        <p style="font-family: 'Lucida Console', monospace;"># Capital Expenditure 
+ Parameters </p>
+        <p style="font-family: 'Lucida Console', monospace;"># Time Series Parameters 
+ - All three must be set, otherwise none of the parameters will not be 
+ used.</p>
+        <p style="font-family: 'Lucida Console', monospace;"># &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Start 
+ Date - Should appear in the format yyyy-mm-dd</p>
+        <p style="font-family: 'Lucida Console', monospace;"># &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Interval 
+ - Y (Year), Q (Quarter), M (Month), W (Week), D (Day).</p>
+        <p style="font-family: 'Lucida Console', monospace;"># &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Duration 
+ - Length of time relative to the interval. Must be an integer</p>
+        <p style="font-family: 'Lucida Console', monospace;">Capital_Start_Date 
+ = 2010-01-01</p>
+        <p style="font-family: 'Lucida Console', monospace;">Capital_Interval = 
+ M</p>
+        <p style="font-family: 'Lucida Console', monospace;">Capital_Duration = 
+ 12</p>
+        <p style="font-family: 'Lucida Console', monospace;"># Date Blending Parameter</p>
+        <p style="font-family: 'Lucida Console', monospace;"># &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Last 
+ Actuals Date = Must appear in the format yyyy-mm-dd</p>
+        <p style="font-family: 'Lucida Console', monospace;">Capital_LastActual_Date 
+ = 2010-01-01</p>
+        <p style="font-family: 'Lucida Console', monospace;"># Operational Expenditure 
+ Parameters </p>
+        <p style="font-family: 'Lucida Console', monospace;"># Time Series Parameters 
+ - All three must be set, otherwise none of the parameters will not be 
+ used.</p>
+        <p style="font-family: 'Lucida Console', monospace;"># &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Start 
+ Date - Should appear in the format yyyy-mm-dd</p>
+        <p style="font-family: 'Lucida Console', monospace;"># &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Interval 
+ - Y (Year), Q (Quarter), M (Month), W (Week), D (Day).</p>
+        <p style="font-family: 'Lucida Console', monospace;"># &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Duration 
+ - Length of time relative to the interval. Must be an integer.</p>
+        <p style="font-family: 'Lucida Console', monospace;">Operational_Start_Date 
+ = 2010-01-01</p>
+        <p style="font-family: 'Lucida Console', monospace;">Operational_Interval 
+ = W</p>
+        <p style="font-family: 'Lucida Console', monospace;">Operational_Duration 
+ = 52</p>
+        <p style="font-family: 'Lucida Console', monospace;"># Date Blending Parameters 
+ - Both parameters must be set, otherwise either will not be used.</p>
+        <p style="font-family: 'Lucida Console', monospace;"># &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Last 
+ Actuals Date = Must appear in the format yyyy-mm-dd</p>
+        <p style="font-family: 'Lucida Console', monospace;"># &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Last 
+ Field Estimate Date = Must appear in the format yyyy-mm-dd</p>
+        <p style="font-family: 'Lucida Console', monospace;">Operational_LastActual_Date 
+ = 2010-01-01</p>
+        <p style="font-family: 'Lucida Console', monospace;">Operational_LastFieldEstimate_Date 
+ = 2010-01-01</p>
+    </body>
+</html>

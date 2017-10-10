@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1338" MadCap:lastWidth="895" MadCap:conditionTagExpression="exclude[Primary.Online or Primary.Print] ">
+    <head><title>Baseline Fixed Opex</title>
+        <link rel="StyleSheet" href="../../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <script type="text/javascript" language="JavaScript1.2" src="../ehlpdhtm.js">
+        </script>
+        <h3>
+            <img src="../../Images/Logo Images/3esi_manage.png" style="width: 36px; height: 44px;" width="36" height="44" align="right" border="0" class="HeaderLogo" />
+        </h3>
+        <h2>Baseline Fixed OPEX</h2>
+        <p>If Production Baseline 
+ has been enabled, two additional Data elements are added to the Fixed 
+ OPEX table.</p>
+        <p>&#160;</p>
+        <ul style="list-style: disc;" type="disc">
+            <li>The <span style="font-weight: bold;">Asset Baseline 
+ Type</span> is a read-only field and indicates what Type of Baseline modelling 
+ has been specified for this Asset. </li>
+            <li>The <span style="font-weight: bold;">Baseline</span> 
+ element is a Boolean and indicates the Fixed OPEX Segment that will represent 
+ the Base (existing) Operating Expense profile.</li>
+        </ul>
+        <p>
+            <img src="../../Images/Baseline - Fixed Opex 1.png" style="border: none;float: none;border-style: none;border-style: none;" border="0" />
+        </p>
+        <p>&#160;</p>
+        <p class="note"><b>Note:</b> the Fixed OPEX Table is used for OPEX Actuals and Field Estimates 
+ - the Baseline Flag has no impact to OPEX calculations that are using 
+ Field Estimates or Actuals (including Blended). This is described below.</p>
+        <p>As with Production, when Baseline is enabled for an Asset, it is only 
+ the <span style="font-style: italic;">calculated</span> Uplift OPEX that 
+ is Reported or used in Metric calculations. </p>
+        <p>&#160;</p>
+        <p>
+            <MadCap:toggler targets="t1">See Also </MadCap:toggler>
+        </p>
+        <div MadCap:targetName="t1">
+            <p><a href="../../Project Editor/Project_Relationships.htm">Asset Relationship</a>
+            </p>
+            <p><a href="../../Reference/Opex_Calculations.htm">OPEX Calculations</a>
+            </p>
+            <p><a href="../../Reference/Production_Calculations.htm">Production Calculations</a>
+            </p>
+        </div>
+        <p>&#160;</p>
+        <h3>For <span style="font-weight: bold;">Total 
+ Uplift Modelling</span></h3>
+        <ol style="list-style: decimal;list-style-type: decimal;">
+            <li>The Fixed OPEX entry that is marked as <span style="font-weight: bold;">Baseline</span> 
+ represents an Operating Expense for the Asset in the Baseline state.</li>
+            <li>A corresponding Fixed OPEX Entry (of the same 
+ OPEX Type and Asset, and Product if it has been defined for the Baseline 
+ entry) that includes the Base amount, plus the expected Uplift amount.</li>
+        </ol>
+        <p>&#160;</p>
+        <p>For a report on a Forecast Basis, the <span style="font-weight: bold;">Uplift 
+ OPEX</span> is the delta between the two.</p>
+        <p><span style="font-weight: bold;">Note that</span>:</p>
+        <ol style="list-style: decimal;list-style-type: decimal;">
+            <li>The <span style="font-weight: bold;">Start Date</span> 
+ for the Uplift (non Baseline) OPEX item indicates when Uplift OPEX will 
+ be reported - it is not based on the Onstream Date of an associated Uplift 
+ production segment.</li>
+            <li>It is <span style="font-weight: bold;">necessary</span> 
+ to define the Baseline Operating Expense as this value is used in Blended 
+ OPEX reporting as the Value that is reported is the Uplift amount (described 
+ below).</li>
+        </ol>
+        <p>&#160;</p>
+        <h3>Calculations with <span style="font-weight: bold;">Actuals</span> 
+ or <span style="font-weight: bold;">Field Estimates</span> (including 
+ <span style="font-weight: bold;">Blended</span>)</h3>
+        <p>When Actuals or Field Estimates have been entered against the Asset, 
+ the Baseline Flag on these entries is not used. </p>
+        <p>What is reported is the entered <span style="font-weight: bold;">Actuals</span> <span style="font-style: italic;">less</span> the <span style="font-weight: bold;">calculated 
+ Baseline</span> amount for the corresponding period. For example:</p>
+        <ol style="list-style: decimal;list-style-type: decimal;">
+            <li><span style="font-weight: bold;">Baseline</span> 
+ OPEX = 100 / month</li>
+            <li><span style="font-weight: bold;">Uplift</span> 
+ OPEX = 120 / month (Total Uplift).</li>
+            <li><span style="font-weight: bold;">Actuals</span> 
+ = 135 </li>
+            <li>An OPEX report on a <span style="font-weight: bold;">Forecast 
+ Basis</span> would report <span style="font-weight: bold;">20</span></li>
+            <li>An OPEX report on an <span style="font-weight: bold;">Actual 
+ Basis</span> (including Blended) would report <span style="font-weight: bold;">35</span> 
+ (135 - 100).</li>
+        </ol>
+    </body>
+</html>

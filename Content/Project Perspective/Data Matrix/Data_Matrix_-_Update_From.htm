@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="1680" MadCap:lastWidth="879">
+    <head><title>Data Matrix - Update From</title>
+        <link rel="StyleSheet" href="../../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <h3>
+            <img src="../../Images/Logo Images/3esi_manage.png" align="right" border="0" class="HeaderLogo" />
+        </h3>
+        <h2>Data Matrix - Update From</h2>
+        <p>In addition to Changing data within the Matrix directly, you have the 
+ option of <span style="font-weight: bold;">Updating the Forecast</span> 
+ from either Field Estimates or Financial Actuals, &#160;including 
+ AFE Actuals and Field Estimates.</p>
+        <p>The Update Forecast <img src="../../Images/gold_bar_gearwheel.png" style="border: none;border-style: none;float: none;width: 24px;height: 28px;" width="24" height="28" border="0" /> button will open the following dialogue:</p>
+        <p>
+            <img src="../../Images/Update Forecast.PNG" />
+        </p>
+        <p>&#160;</p>
+        <ol>
+            <li class="NumberedList">If you have selected 
+ a <span style="font-weight: bold;">number of Edited cells</span>, this 
+ will be indicated in the Dialogue.</li>
+            <li class="NumberedList">The <span style="font-weight: bold;">Update 
+ Source</span> determines what will be the source for the Forecast Update 
+ (Field Estimates or Actuals).</li>
+            <li class="NumberedList">You can toggle 
+ the <span style="font-weight: bold;">Update All</span> option, in which 
+ case all cells with data will be changed. </li>
+            <ul>
+                <li class="NumberedList">Note that 
+ if Expenditures (or OPEX Items) were originally scheduled on a <span style="font-weight: bold;">Yearly 
+ Basis</span>, and you are working with the Matrix on a <span style="font-weight: bold;">Monthly 
+ Basis</span>, the Update function will change the schedule based on what 
+ is displayed in the Matrix, even if a particular value hasn't been edited. 
+ </li>
+                <li class="NumberedList">In addition, 
+ the Update All option will apply to <span style="font-weight: bold;">all 
+ Data</span> within the Matrix - i.e.; if Filtering has been applied it 
+ has not removed the data from the Matrix, only the display. </li>
+            </ul>
+        </ol>
+        <p>
+            <img src="../../Images/Update Forecast Date.PNG" />
+        </p>
+        <p>&#160;</p>
+        <p>You also have the option of applying logic to <span style="font-weight: bold;">Maintain 
+ Totals</span> up to a certain point in time.</p>
+        <ol>
+            <li class="NumberedList">Maintain Total 
+ will determine the delta between the current Forecast Total (for an Expenditure), 
+ and what the new Total will be after Updating the Forecast from the Actuals.
+ </li>
+            <ul>
+                <li class="NumberedList">This <span style="font-weight: bold;">delta</span> is then applied to the Period 
+ beyond the Update window (periods that there are Actuals for), such that 
+ the Total Forecast Amount doesn't change.</li>
+            </ul>
+            <li class="NumberedList">Selecting <span style="font-weight: bold;">Until End Of</span> (in conjunction with Maintain 
+ Total) will apply this logic, but only up to the selected date (appropriate 
+ for multi-year Expenditures where you are wanting to control the adjustments 
+ to within the current year). </li>
+            <ul>
+                <li class="NumberedList">For example, 
+ if there is a 3 year Expenditure at 10,000,000 per year, and the Actuals 
+ for the first six months of the year are 4,000,000, selecting Maintain 
+ Total to Dec 2010 will apportion the Delta (1,000,000) over the remainder 
+ of this year.</li>
+            </ul>
+        </ol>
+        <p style="font-weight: normal;">The option <b>Source Date Until</b> specifies to which date the source's data will be copied over the forecast data. It works in conjunction with the Maintain Totals option. The drop down menu housing the dates is inclusive. </p>
+        <ul>
+            <li style="font-weight: normal;">This proves useful, for example, if 8 months of source data are available but only the first 6 months are to be updated.</li>
+        </ul>
+        <p style="font-weight: normal;">&#160;</p>
+        <p style="font-weight: normal;">There has been another option added within the Update Actual with Field Estimates, this is the Convert Nominal to Real option, this will covert the Nominal values within the Data Matrix into Real Values. </p>
+    </body>
+</html>

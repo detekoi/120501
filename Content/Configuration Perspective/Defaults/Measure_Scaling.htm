@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="4419" MadCap:lastWidth="1397">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <img src="../../Images/Logo Images/3esi_manage.png" align="right" border="0" class="HeaderLogo" />Measure Scaling</h1>
+        <p>Scale Files are used to scale measures when running Analysis Cases, Expenditure Analysis, Opex Analysis or Production Analysis.</p>
+        <p>The Measure Scale works by selecting a hierarchy type from the drop down menu, and then one or more specific values of that hierarchy type on which selected measure or measures (Expenditures, Opex, Production) will be scaled when using this Scale File in an Analysis.</p>
+        <p>Any number of Scale Files can be configured combining Measure Scale Hierarchies values and Measures.</p>
+        <p>
+            <img src="../../Images/MeasureScaling1.png" />
+        </p>
+        <p>&#160;</p>
+        <h3>To create a Scale File:</h3>
+        <ol>
+            <li>Open Configuration &gt; Defaults &gt; Measure Scale.<br /><img src="../../Images/Default_custom_picklist1.png" /></li>
+            <li style="text-align: left;">Select the Hierarchy node against which to define the scaling.<br /><img src="../../Images/measure_scaling2.png" /></li>
+            <li>Select which node in the desired hierarchy the scale will be defined at.<br /><img src="../../Images/measure_scaling3.png" /></li>
+            <li>Click on the plus sign.<br /><img src="../../Images/measure_scaling4.png" /></li>
+            <li>Give it a name.<br /><img src="../../Images/_example_scalefile.png" /></li>
+            <li>Now the new Scale File is defined and is selectable in Scale File drop down menu.<br /><img src="../../Images/measure_scaling6.png" /></li>
+            <li>Once a file is selected, scales cab be defined against measures.The Scaling Factor is entered as a factor of the measure. For example, a factor of 1, (which is the default factor in a newly created Scale File) will leave the measure as it is. A factor of 2, would double the measure value, a factor of 0.5 would halve the measure value, and so on.<br />Any scaling factor can be applied in any measure and type measure combination.<br />Note that the measures that have a scaling factor applied, would be marked with a pen beside it.<br /><img src="../../Images/measure_scaling8.png" /></li>
+        </ol>
+        <p>Scales can be defined at lower levels in the hierarchy. In this case, the scaling that are defined will be compound with the scales defined in levels above.</p>
+        <p>I.e, if a scale of 1.15 is defined at a certain level and in the level above a scale of 0.85 is defined, the effective scale would not be 1.15, but 0.9775 (1.15 * 0.85 = 0.9775 )</p>
+        <p>To show the effective measure (this is, the result of inheriting and combining scales from levels above) the button “Effective Scale”   must be clicked. <br />If the button is unclicked, the number shown will be the defined in that particular level (‘1’ by default).</p>
+        <p>In the following example (see next screenshot), we have defined for Region “USA” and country “US” the Scale factor of 1.15 for all Expenditure Types, except for the Completion type in which we have defined a Scale Factor of  0.85.</p>
+        <p>If the button “Effective Scale”    is unclicked, the values shown are the ones defined in that particular level (‘1.15’ for all Types, ‘0.85’ for “Completion” type, and the defaulted ‘1’ for the rest)</p>
+        <p>
+            <img src="../../Images/effectivescales.png" />
+        </p>
+        <p>But if the button “Effective Scale”   is clicked, the numbers shown will be the result of inheriting and combining all scales that apply.</p>
+        <p>In this case the “All Types” will show ‘1.15’ (because we entered it) and the rest will show 1.15 (because they inherited and combined it with ‘1’, 1.15 * 1 = 1.15). The type “Completion” will show 0.9775 (because we it will inherit 1.15 from All Types, and combined it with the 0.85 that we entered, so 1.15 * 0.85 = 0.9775).</p>
+        <p>The Effective Scale are the actual numbers that will be applied in the Analysis when this particular Scale File will be used.</p>
+        <p>Note that when the button “Effective Scale”   is clicked, the table is read only.</p>
+        <p>
+            <img src="../../Images/effectivescales1.png" />
+        </p>
+    </body>
+</html>

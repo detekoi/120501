@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1147" MadCap:lastWidth="1484">
+    <head><title>Product Qualities</title>
+        <link rel="StyleSheet" href="../../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <script type="text/javascript" language="JavaScript1.2" src="../../Archived/ehlpdhtm.js">
+        </script>
+        <h3>
+            <img src="../../Images/Logo Images/3esi_manage.png" align="right" border="0" class="HeaderLogo" />
+        </h3>
+        <h1>Product Qualities</h1>
+        <p>esi.manage uses <span style="font-weight: bold;">J/m3</span> (Gas) and 
+ <span style="font-weight: bold;">kg/m3</span> (Non-Gas) as the internal 
+ Quality Units. Your company may require the ability to report in other 
+ Quality Units, such as btu, GJ, kg or lb. &#160;</p>
+        <p>The Product Qualities table is where you will provide the conversion 
+ between your companies desired units, and the internal units. When creating 
+ a <span style="font-weight: bold;"><a href="Product.htm" target="_popup">Product</a>,</span> you will need to specify the default 
+ Quality in terms of either an internal unit, or a unit defined here.</p>
+        <p>
+            <MadCap:toggler targets="t1">See Also </MadCap:toggler>
+        </p>
+        <div MadCap:targetName="t1">
+            <p><a href="../../Reference/Production_Calculations.htm">Production Calculations</a>
+            </p>
+            <p><a href="../../Reference/Production_Units.htm">Production Units</a>
+            </p>
+        </div>
+        <p>The entries in the Product Qualities table are used to convert from 
+ the fundamental esi.manage unit ratios to some user defined ratio.</p>
+        <p class="warning"><b>WARNING:</b> The Description field is merely text for descriptive purposes 
+ only. It plays no role in any calculations. </p>
+        <p>However, it is best practice to enter text that describes the conversion. 
+ For instance, the table claims that 37,447.9 J / m3 = 1 btu / cf. The 
+ conversion factor was calculated (and should be calculated) based on data 
+ from the Production Units table. This is how the foregoing conversion 
+ was calculated:</p>
+        <p>(1 btu/cf)×(1055.056 J/btu)/(0.02817399 m^3/cf)=37,447.9J/m^3 </p>
+        <p>The J / btu and m3 / cf conversion factors come from the Production 
+ Units table. The btu / cf factor was included to make the units work out. 
+ </p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../Images/Product_Quality.png" style="border: none;float: none;border-style: none;border-style: none;" border="0" />
+        </p>
+        <p>&#160;</p>
+        <p class="NumberedList" style="font-weight: bold;"><span><span><strong style="font-weight: bold;"><span><span><strong style="font-weight: bold;"><a href="../../PopUp/cfg_Context_Menu.htm" target="_popup">Table Options</a></strong></span></span></strong></span></span>
+        </p>
+        <h3>&#160;</h3>
+        <h3><strong style="font-weight: bold;">To Add A Product Quality Unit</strong>
+        </h3>
+        <ol>
+            <li style="font-family: Arial, sans-serif;" class="NumberedList"><span style="font-family: Arial, sans-serif;">Scroll 
+ to the last line in the table (it will be empty).</span>
+            </li>
+            <li style="font-family: Arial, sans-serif;" class="NumberedList"><span style="font-family: Arial, sans-serif;">Enter 
+ the Description (up to 50 characters).</span>
+            </li>
+            <li style="font-family: Arial, sans-serif;" class="NumberedList"><span style="font-family: Arial, sans-serif;">Define 
+ the conversion to the appropriate internal Quality Unit.</span>
+            </li>
+        </ol>
+        <h3>&#160;</h3>
+        <h3>Changing a Product Quality Unit</h3>
+        <p>Once a <span style="font-weight: bold;">Product Quality Unit</span> 
+ has been used, the only options are to change the Description or change 
+ the default conversion.</p>
+        <p class="note"><b>Note:</b> that changing the conversion will not affect any Production Data 
+ that has been entered based on a previous conversion. </p>
+        <p><strong style="font-weight: bold;"><span style="font-weight: bold;">Deleting</span> <span style="font-weight: normal;">a Product Quality that is in use 
+ is not allowed.</span></strong>
+        </p>
+    </body>
+</html>

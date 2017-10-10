@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="2038" MadCap:lastWidth="1484">
+    <head><title>Expenditure Depreciation</title>
+        <link rel="StyleSheet" href="../../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <img src="../../Images/Logo Images/3esi_manage.png" align="right" border="0" class="HeaderLogo" />
+        <h1>Expenditure Depreciation</h1>
+        <p>Depreciation is configured for each Expenditure Type. It can be configured 
+ for each Global Jurisdiction and / or at the project level. </p>
+        <h3>&#160;</h3>
+        <h3>Project 
+ Level Depreciation</h3>
+        <p>For each project expenditure item, Users can provide Salvage Value, Depreciation Delay, and Tangible %. The remaining requirements for depreciation calculations are provided in the Configuration perspective (Defaults / Fiscal Model).</p>
+        <p>
+            <img src="../../Images/EconomicAnalysisPAR13383Salvage.png" />
+        </p>
+        <p>The <b>Salvage Value</b> defines the terminal value of the Expenditure, which is not subject to Depreciation. As such, the portion of the Expenditure which can be depreciated is the Gross Expenditure Amount, less the Salvage value</p>
+        <p>The <b>'delay'</b> is the number of years after the 'event' that the depreciation starts from.</p>
+        <p>Depreciation is applied separately to tangible and intangible assets. The tangible and intangible type is the depreciation type. If using a <b>declining balance</b> type, you will also need to enter in the <b>annual decline % (Configuration perspective)</b></p>
+        <p>For <b>straight-line depreciation</b>, the <b>useful life</b> will be taken.</p>
+        <p>There are three types of convention.</p>
+        <ol>
+            <li>Mid Month (Assumes asset came on stream and depreciation started mid way through the month)</li>
+            <li>Mid Quarter (Assumes asset came on stream and depreciations started mid way through the quarter)</li>
+            <li>Mid Year (Assumes asset came on streama nd depreciation started mid way through the year)</li>
+        </ol>
+        <p>For <b>Unit of Production</b> depreciation, a UOP group will have to be set.  This will determine which other projects Expenditures and Production to apply the depreciation to.</p>
+        <p><b>Depreciation Use in esi.manage</b>
+        </p>
+        <p>Depreciation is used in four places in the application:</p>
+        <ul>
+            <li>Tax depreciation</li>
+            <li>DD&amp;A ("book depreciation"&#160;from the enterprise assumptions page found under Configuration&gt;System&gt;Miscellaneous)</li>
+            <li>Custom burdens with capital terms</li>
+            <li>NPR&#160;Calculation for PRRT, NPR being a custom burden</li>
+        </ul>
+        <p><b>Manual Depreciation</b>
+        </p>
+        <p>Manual depreciation is expressed as percentage, instead of absolute value. It is relative to a selected event, instead of using absolute dates.</p>
+        <p>Manual depreciation is applied from the first day of fiscal year when selected event happens. Consider for example, you select from "end of expenditure", fiscal year starts in on July 1, 2015, and the expenditure ends on March 31, 2015 – the depreciation starts on July 1, 2014.</p>
+        <p>There are no business rules enforced when entering manual depreciation: you are free to depreciate over 100% of the total expense; you are free to enter negative numbers; you are free to enter declining cumulative numbers (same as negative incremental numbers).</p>
+        <p>Note that per-expenditure entries will override all entries in the hierarchy.</p>
+        <p>Manual depreciation can be added at the Project level or at a Hierarchy node (via the Fiscal Model).</p>
+        <p>In order to access the manual depreciation table, choose Tangible Type = Manual, or Intangible Type=Manual.</p>
+        <p>
+            <img src="../../Images/_edit_cap_dep.png" style="width: 930px;height: 316px;" />
+        </p>
+        <p>The Manual Expenditure Depreciation Schedule can then be filled out.</p>
+        <p>
+            <img src="../../Images/_manual_depreciation.png" />
+        </p>
+    </body>
+</html>

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Ranking Metrics</title>
+        <link rel="StyleSheet" href="../Resources/Stylesheets/popUp.css" />
+    </head>
+    <body>
+        <h3>Ranking Metrics</h3>
+        <p>Metrics are a way of evaluating the Projects; what can be selected as 
+ a Metric are:</p>
+        <ul>
+            <li class="Bullets"><span style="font-weight: bold;">Measures</span> 
+ - Capital, Production</li>
+            <li class="Bullets"><span style="font-weight: bold;">Performance 
+ Metrics</span> - Exit Rate, F&amp;D, Lifting Cost</li>
+            <li class="Bullets"><span style="font-weight: bold;">Economic</span> 
+ Metrics - NPV, DROI, IRR, etc.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Attributes</span> 
+ - any Project attribute that has been configured to be Rankable.</li>
+        </ul>
+        <p>For most metrics you will need to specify the period that the Metric 
+ is to be evaluated over. This duration is comprised of:</p>
+        <ul>
+            <li class="Bullets"><span style="font-weight: bold;">Milestone</span> 
+ - this identifies how the Start Date for the metric should be determined 
+ on a Project by Project basis. Some of the options include: Budget Start 
+ Date, Custom Milestone, Earliest Project Date, First Onstream Date, etc.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Offset</span> 
+ - how many Intervals are to be calculated from the selected Milestone 
+ for each project.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Interval</span> 
+ - the periodicity (Days, Months, Years) that is to be used in conjunction 
+ with the Milestone and the Offset.</li>
+        </ul>
+        <p>Most metrics can be calculated as <span style="font-weight: bold;">Risked</span> 
+ or <span style="font-weight: bold;">UnRisked</span>. </p>
+        <p>For metrics that require Revenue, a <span style="font-weight: bold;">Price 
+ File</span> can be selected.</p>
+        <p>To support the calculation of the <span style="font-weight: bold;">Score</span> 
+ for each Project there is the ability to specify:</p>
+        <ul>
+            <li class="Bullets"><span style="font-weight: bold;">Weight</span> 
+ - relative weighting between Metrics.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Ceiling</span> 
+ and <span style="font-weight: bold;">Floor</span> - a way to control the 
+ interval used for calculating the Score - metric values that fall outside 
+ of the Ceiling or Floor don't skew the results.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Target</span> 
+ - specify a Target for the metric (i.e., allowed Capital Spend for the 
+ current Budget Year). The Gap between Target and Result is reported in 
+ the Summary.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Score</span> 
+ - metrics can be calculated and used for Targets, but not contribute to 
+ the Score for each Project. For example, Capital is often a Metric with 
+ a Target, but may not be scored for each Project.</li>
+        </ul>
+    </body>
+</html>

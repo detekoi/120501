@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MsWordImport
+  PreserveSourceStyles="false"
+  KeepSourceLinks="false"
+  ConvertInlineFormatting="true"
+  AddContinuedLinks="false"
+  AddContinuedFromLinks="false"
+  ContinuedLinkFormat="(continued in {title})"
+  ContinuedFromLinkFormat="(continued from {title})"
+  UseMaxCharLimit="false"
+  UseMinCharLimit="true"
+  MaxCharLimit="10000"
+  MinCharLimit="50"
+  FilenameLength="24"
+  GeneratePageLayouts="false"
+  UseFirstHeadingAsTopicTitle="true"
+  LastCollectTime="2014-11-09T15:25:55.8569375-07:00"
+  ProjectName="Help File"
+  ProjectFolder="\\cgyfile1\Shared\Flare\"
+  AutoSync="false"
+  AutoFitTables="false"
+  Stylesheet="../../Content/Resources/Stylesheets/HelpFileStylesheet.css"
+  LastImport="2014-11-09T15:26:40.9879375-07:00">
+  <Files>
+    <Url
+      Source="../../../../Documentation/Flare/Completed Word Docs/ExcelTemplates.docx"
+      AbsoluteSource="file://cgyfile1/Documentation/Flare/Completed Word Docs/ExcelTemplates.docx" />
+  </Files>
+  <ExcludedFiles />
+  <CollectedSourceFiles />
+  <SkippedSourceFiles />
+  <GeneratedFiles>
+    <Url
+      Source="../../Content/Resources/Images/ExcelTemplates1/03000007.png"
+      TimeStamp="09/11/2014 3:26:31 PM" />
+    <Url
+      Source="../../Content/ExcelTemplates1/Excel Template Perspective.htm"
+      TimeStamp="09/11/2014 3:26:32 PM" />
+    <Url
+      Source="../../Content/Resources/Images/ExcelTemplates1/03000008.png"
+      TimeStamp="09/11/2014 3:26:31 PM" />
+    <Url
+      Source="../../Content/Resources/Images/ExcelTemplates1/03000009.png"
+      TimeStamp="09/11/2014 3:26:31 PM" />
+    <Url
+      Source="../../Content/Resources/Images/ExcelTemplates1/0300000A.png"
+      TimeStamp="09/11/2014 3:26:31 PM" />
+    <Url
+      Source="../../Content/Resources/Images/ExcelTemplates1/0300000B.png"
+      TimeStamp="09/11/2014 3:26:31 PM" />
+    <Url
+      Source="../../Content/ExcelTemplates1/Enabling the Excel Template.htm"
+      TimeStamp="09/11/2014 3:26:32 PM" />
+    <Url
+      Source="../../Content/Resources/Images/ExcelTemplates1/0300000C.png"
+      TimeStamp="09/11/2014 3:26:31 PM" />
+    <Url
+      Source="../../Content/Resources/Images/ExcelTemplates1/0300000D.png"
+      TimeStamp="09/11/2014 3:26:31 PM" />
+    <Url
+      Source="../../Content/Resources/Images/ExcelTemplates1/0300000E.png"
+      TimeStamp="09/11/2014 3:26:31 PM" />
+    <Url
+      Source="../../Content/ExcelTemplates1/EDL Interface.htm"
+      TimeStamp="09/11/2014 3:26:32 PM" />
+    <Url
+      Source="../../Content/ExcelTemplates1/Overview tab.htm"
+      TimeStamp="09/11/2014 3:26:32 PM" />
+    <Url
+      Source="../../Content/Resources/Images/ExcelTemplates1/0300000F.png"
+      TimeStamp="09/11/2014 3:26:31 PM" />
+    <Url
+      Source="../../Content/Resources/Images/ExcelTemplates1/03000001.png"
+      TimeStamp="09/11/2014 3:26:31 PM" />
+    <Url
+      Source="../../Content/Resources/Images/ExcelTemplates1/03000002.png"
+      TimeStamp="09/11/2014 3:26:31 PM" />
+    <Url
+      Source="../../Content/Resources/Images/ExcelTemplates1/03000003.png"
+      TimeStamp="09/11/2014 3:26:31 PM" />
+    <Url
+      Source="../../Content/Resources/Images/ExcelTemplates1/03000004.png"
+      TimeStamp="09/11/2014 3:26:31 PM" />
+    <Url
+      Source="../../Content/Resources/Images/ExcelTemplates1/03000005.png"
+      TimeStamp="09/11/2014 3:26:31 PM" />
+    <Url
+      Source="../../Content/Resources/Images/ExcelTemplates1/03000006.png"
+      TimeStamp="09/11/2014 3:26:31 PM" />
+    <Url
+      Source="../../Content/Resources/Images/ExcelTemplates1/03000010.png"
+      TimeStamp="09/11/2014 3:26:31 PM" />
+    <Url
+      Source="../../Content/Resources/Images/ExcelTemplates1/03000011.png"
+      TimeStamp="09/11/2014 3:26:31 PM" />
+    <Url
+      Source="../../Content/ExcelTemplates1/Attributes tab.htm"
+      TimeStamp="09/11/2014 3:26:32 PM" />
+    <Url
+      Source="../../Content/Resources/Images/ExcelTemplates1/03000012.png"
+      TimeStamp="09/11/2014 3:26:31 PM" />
+    <Url
+      Source="../../Content/Resources/Images/ExcelTemplates1/03000013.png"
+      TimeStamp="09/11/2014 3:26:31 PM" />
+    <Url
+      Source="../../Content/Resources/Images/ExcelTemplates1/03000014.png"
+      TimeStamp="09/11/2014 3:26:31 PM" />
+    <Url
+      Source="../../Content/Resources/Images/ExcelTemplates1/03000015.png"
+      TimeStamp="09/11/2014 3:26:31 PM" />
+    <Url
+      Source="../../Content/Resources/Images/ExcelTemplates1/03000016.png"
+      TimeStamp="09/11/2014 3:26:31 PM" />
+    <Url
+      Source="../../Content/Resources/Images/ExcelTemplates1/03000017.png"
+      TimeStamp="09/11/2014 3:26:31 PM" />
+    <Url
+      Source="../../Content/ExcelTemplates1/Series Tab.htm"
+      TimeStamp="09/11/2014 3:26:32 PM" />
+    <Url
+      Source="../../Content/Resources/Images/ExcelTemplates1/03000018.png"
+      TimeStamp="09/11/2014 3:26:31 PM" />
+    <Url
+      Source="../../Content/Resources/Images/ExcelTemplates1/03000019.png"
+      TimeStamp="09/11/2014 3:26:31 PM" />
+    <Url
+      Source="../../Content/ExcelTemplates1/Translations Tab.htm"
+      TimeStamp="09/11/2014 3:26:32 PM" />
+    <Url
+      Source="../../Content/Resources/Images/ExcelTemplates1/0300001A.png"
+      TimeStamp="09/11/2014 3:26:31 PM" />
+    <Url
+      Source="../../Content/Resources/Images/ExcelTemplates1/0300001B.png"
+      TimeStamp="09/11/2014 3:26:31 PM" />
+    <Url
+      Source="../../Content/Resources/Images/ExcelTemplates1/0300001C.png"
+      TimeStamp="09/11/2014 3:26:31 PM" />
+    <Url
+      Source="../../Content/Resources/Images/ExcelTemplates1/0300001D.png"
+      TimeStamp="09/11/2014 3:26:31 PM" />
+    <Url
+      Source="../../Content/ExcelTemplates1/User Parameters Tab.htm"
+      TimeStamp="09/11/2014 3:26:32 PM" />
+    <Url
+      Source="../../Content/Resources/Images/ExcelTemplates1/0300001E.png"
+      TimeStamp="09/11/2014 3:26:31 PM" />
+    <Url
+      Source="../../Content/Resources/Images/ExcelTemplates1/0300001F.png"
+      TimeStamp="09/11/2014 3:26:31 PM" />
+    <Url
+      Source="../../Content/ExcelTemplates1/Problems Pane.htm"
+      TimeStamp="09/11/2014 3:26:32 PM" />
+    <Url
+      Source="../../Content/Resources/Images/ExcelTemplates1/03000020.png"
+      TimeStamp="09/11/2014 3:26:31 PM" />
+    <Url
+      Source="../../Content/ExcelTemplates1/Preview Pane.htm"
+      TimeStamp="09/11/2014 3:26:32 PM" />
+    <Url
+      Source="../../Content/Resources/Images/ExcelTemplates1/03000021.png"
+      TimeStamp="09/11/2014 3:26:31 PM" />
+    <Url
+      Source="../../Content/ExcelTemplates1/JSON Files.htm"
+      TimeStamp="09/11/2014 3:26:32 PM" />
+    <Url
+      Source="../../Content/Resources/Images/ExcelTemplates1/03000022.png"
+      TimeStamp="09/11/2014 3:26:31 PM" />
+    <Url
+      Source="../../Content/Resources/Images/ExcelTemplates1/03000023.png"
+      TimeStamp="09/11/2014 3:26:32 PM" />
+    <Url
+      Source="../../Content/Resources/Images/ExcelTemplates1/03000024.png"
+      TimeStamp="09/11/2014 3:26:32 PM" />
+    <Url
+      Source="../../Content/Resources/Images/ExcelTemplates1/03000025.png"
+      TimeStamp="09/11/2014 3:26:32 PM" />
+    <Url
+      Source="../../Content/ExcelTemplates1/Importing Data Using a Template.htm"
+      TimeStamp="09/11/2014 3:26:32 PM" />
+    <Url
+      Source="../../Content/ExcelTemplates1/Entering Formulas.htm"
+      TimeStamp="09/11/2014 3:26:32 PM" />
+    <Url
+      Source="../../Content/ExcelTemplates1/Expression Evaluation.htm"
+      TimeStamp="09/11/2014 3:26:32 PM" />
+    <Url
+      Source="../../Content/ExcelTemplates1/General Functions.htm"
+      TimeStamp="09/11/2014 3:26:32 PM" />
+    <Url
+      Source="../TOCs/ExcelTemplates1.fltoc"
+      TimeStamp="09/11/2014 3:26:32 PM" />
+    <Url
+      Source="../../Content/Resources/MasterPages/ExcelTemplates1.flmsp"
+      TimeStamp="09/11/2014 3:26:32 PM" />
+    <Url
+      Source="../../Content/Resources/Stylesheets/HelpFileStylesheet2.css"
+      TimeStamp="09/11/2014 3:26:32 PM" />
+  </GeneratedFiles>
+  <ParagraphStyles>
+    <Map
+      From="Heading 1"
+      To="h1" />
+    <Map
+      From="Heading 2"
+      To="h2" />
+    <Map
+      From="Heading 3"
+      To="h3" />
+    <Map
+      From="Heading 4"
+      To="h4.Heading 4" />
+    <Map
+      From="Heading 5"
+      To="h5.Heading 5" />
+    <Map
+      From="Heading 6"
+      To="h6.Heading 6" />
+  </ParagraphStyles>
+  <CharacterStyles>
+    <Map
+      From="Hyperlink"
+      To="a.(MS Word Style)" />
+    <Map
+      From="Strong"
+      To="b" />
+  </CharacterStyles>
+  <NewTopicStyles>
+    <StyleName
+      Name="Heading 1" />
+    <StyleName
+      Name="Heading 2" />
+    <StyleName
+      Name="Heading 3" />
+  </NewTopicStyles>
+  <UsedParagraphStyles>
+    <StyleName
+      Name="Heading 1" />
+    <StyleName
+      Name="Heading 2" />
+    <StyleName
+      Name="Heading 3" />
+    <StyleName
+      Name="List Paragraph" />
+    <StyleName
+      Name="Normal - Definition" />
+  </UsedParagraphStyles>
+  <UsedCharacterStyles>
+    <StyleName
+      Name="Heading 3 Char" />
+    <StyleName
+      Name="Strong" />
+  </UsedCharacterStyles>
+</MsWordImport>

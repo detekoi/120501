@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="3" MadCap:lastHeight="1139" MadCap:lastWidth="1497">
+    <head><title>Dependency Offsets</title>
+        <link rel="StyleSheet" href="../../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <h1>
+            <img src="../../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />Dependency Offsets</h1>
+        <p>Offsets are the difference between the Start date of one measure, and 
+ the Start/End date of the measure it is Dependent on. &#160;Whether 
+ or not the Linkage is Start -&gt; Start or End -&gt; Start determines 
+ if the Offset is between Start Dates, or Start and End Date.</p>
+        <p style="font-weight: bold;">&#160;</p>
+        <h3>Match Offsets</h3>
+        <p>The Desired Offset can be edited within the Dependency screen, and can 
+ be used to reflect travel time of a Rig, delay in starting Production, 
+ or any other gap in time between measures. &#160;Any 
+ Desired Offset that does not match the Actual Offset will be highlighted 
+ in yellow.</p>
+        <p>In the following example, Oil production of Asset 1 is initially set 
+ to begin the day after Equipment and Tie-in is completed. &#160;There 
+ will be a 2 day delay before beginning production to test the tie-in to 
+ the pipeline, and so a 2 day Desired offset is entered.</p>
+        <p>
+            <img src="../../Images/dependency_desired_offset_pre.png" style="border: none;width: 734px;height: 165px;float: none;" width="734" height="165" border="0" />
+        </p>
+        <p>&#160;</p>
+        <p>In order for this Desired Offset to become the Actual Offset and change 
+ the dates of the Dependent measures, you must "Match Desired Offset" 
+ <img src="../../Images/dependency_match_desired_offset_button.png" style="border: none;float: none;width: 20px;height: 22px;" width="20" height="22" border="0" />. &#160;This 
+ will push the Desired Offset into the Actual Offset field and the dates 
+ will change accordingly. &#160;This 
+ will only push the change for the selected measure. &#160;Notice 
+ how the Desired Offset for 40 - Workover is 0 days, but the Actual Offset 
+ remains at 1 day.</p>
+        <p>
+            <img src="../../Images/dependency_desired_offset_post.png" style="border: none;width: 733px;height: 158px;float: none;" width="733" height="158" border="0" />
+        </p>
+        <p>&#160;</p>
+        <p>Selecting the "Match Actual Offset" button <img src="../../Images/dependency_actual_offset_button.png" style="border: none;width: 19px;height: 23px;float: none;" width="19" height="23" border="0" />will 
+ have the opposite effect. &#160;By 
+ selecting this option for the measure 40 - Workover, I will get the following 
+ result.</p>
+        <p>
+            <img src="../../Images/dependency_actual_offset_post.png" style="border: none;width: 733px;height: 159px;float: none;" width="733" height="159" border="0" />
+        </p>
+        <p>&#160;</p>
+        <h3><span style="font-weight: bold;">Synchronize Dependency Offsets</span>
+        </h3>
+        <p>Synchronizing Dependency Offsets is the same as Matching Desired Offset, 
+ except that <span style="font-weight: bold;font-style: italic;">all measures</span><span> 
+ will have the Actual Offset changed to match the Desired Offset.</span></p>
+    </body>
+</html>

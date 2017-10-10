@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="947" MadCap:lastWidth="866" MadCap:conditionTagExpression="exclude[Primary.Online or Primary.Print] ">
+    <head><title>Production Baseline Configuration</title>
+        <link rel="StyleSheet" href="../../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <h3>
+            <img src="../../Images/Logo Images/3esi_manage.png" style="width: 36px; height: 44px;" width="36" height="44" align="right" border="0" class="HeaderLogo" />
+        </h3>
+        <h2>Production Baseline Configuration</h2>
+        <p>If Production Baseline 
+ has been enabled, an additional Data element is added to the Production 
+ table. &#160;</p>
+        <ul>
+            <li class="Bullets">The <span style="font-weight: bold;">Baseline</span> 
+ element is a Boolean and indicates the Production Segment that will represent 
+ the Base (existing) production profile </li>
+        </ul>
+        <p class="note"><b>Note:</b> this column is	at the end of the row by default</p>
+        <p>
+            <img src="../../Images/baseline - production 1.png" style="border: none;border-style: none;width: 866px;height: 133px;float: none;border-style: none;" width="866" height="133" border="0" />
+        </p>
+        <p>Only one Production segment can be identified per Asset/ Production 
+ SubCategory / Zone combination.</p>
+        <p>&#160;</p>
+        <h3>Uplift Segments</h3>
+        <p>An uplift segment is configured as any other Production segment. However, 
+ the interpretation of some elements has particular significance when modelling 
+ Baseline.</p>
+        <ul style="list-style: disc;" type="disc">
+            <li class="Bullets"><span style="font-weight: bold;">Baseline 
+ Flag</span> is False - which indicates that this is an Uplift segment 
+ (you will not be allowed to tag more than one Asset/Product combination 
+ as the Baseline segment).</li>
+            <li class="Bullets"><span style="font-weight: bold;">IP</span> 
+ - the Initial Production Rate.</li>
+            <ul style="list-style-type: circle;">
+                <li class="Bullets">If Total Uplift, this 
+ IP <span style="font-weight: bold;">must</span> include the Base production. 
+ For accurate modelling, this value should be the sum of the Base Production 
+ Daily Rate (at the anticipated Uplift Onstream Date), plus whatever incremental 
+ production is anticipated from the activity.</li>
+            </ul>
+            <li class="Bullets"><span style="font-weight: bold;">OnStream 
+ Date</span> - indicates when the Uplift is Forecast to come Onstream. 
+ No Production will be reported prior to the earliest Onstream Date for 
+ the Uplift Segments.</li>
+            <li class="Bullets"><span style="font-weight: bold;">OffStream 
+ Date / Rate</span> - the implication of these values is dependant on which 
+ type of Uplift (Total or Incremental) is being used.</li>
+            <ul style="list-style-type: circle;">
+                <li class="Bullets">As Total Uplift includes 
+ the Base, there will be NO production reported after the Onstream Date/Rate 
+ for the Uplift Segment.</li>
+            </ul>
+        </ul>
+        <ol style="list-style: decimal;list-style-type: decimal;">
+            <li class="NumberedList">Multiple Uplift 
+ segments can be created against the same Asset/Product.</li>
+            <li class="NumberedList"><span style="font-weight: bold;">Gaps</span> 
+ and <span style="font-weight: bold;">Overlaps</span> are allowed between 
+ segments. If there is an overlap in the Dates (the Offstream Date for 
+ the first Uplift segment is later than the Onstream Date of the second 
+ Uplift segment), the Uplift contributions are additive.</li>
+            <ul>
+                <li class="NumberedList">If Total 
+ Uplift is being used, and both Uplift Segments include the Base in their 
+ IP's, the Reported Uplift production will likely be larger by the Base 
+ contribution during the overlap period. For example: Baseline = 100, Uplift 
+ 1 = 120, Uplift 2 = 130. With no overlap in dates between Uplift Segment 
+ 1 and 2, the reported Uplift amount will be 20 and then 30. If there is 
+ an overlap, the reported Uplift will be 150 during the overlap period. 
+ This <span style="font-weight: bold;">may not</span> be the anticipated 
+ result.</li>
+            </ul>
+        </ol>
+        <p>See <span style="font-weight: normal;">Uplift 
+ Production Calculations</span></p>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="346" MadCap:lastWidth="868">
+    <head><title>Shift Date Function</title>
+        <link rel="StyleSheet" href="../Resources/Stylesheets/popUp.css" />
+    </head>
+    <body>
+        <h3>Shift Date Function</h3>
+        <p>There are many places in esi.manage that provide the ability to Move 
+ the dates of a Project or Asset. All of these tools utilize the same routine:</p>
+        <ol>
+            <li class="NumberedList">The Earliest 
+ Date (Project or Asset, depending on what is being shifted) is first determined 
+ from all appropriate Measures (Expenditures, Production, Reserves and 
+ OPEX). This date is displayed as the Start Date within the Project Details.</li>
+            <li class="NumberedList">The Shift Dates 
+ feature allows you to shift by a Number of Days, or select a new Earliest 
+ Start Date.</li>
+            <li class="NumberedList">If Earliest State 
+ is supplied, it will be used with the existing Start Date from 1 to determine 
+ a corresponding Number of Days.</li>
+            <li class="NumberedList">This value is 
+ applied to all Forecast Data dates within the Project (or Asset).</li>
+        </ol>
+        <p><b>Note that:</b>
+        </p>
+        <ol>
+            <li class="NumberedList">Actuals data 
+ is not changed.</li>
+            <li class="NumberedList">Any entry whose 
+ 'Started' flag is set to True (Expenditures, Onstream) will not be shifted.</li>
+        </ol>
+        <p>&#160;</p>
+    </body>
+</html>

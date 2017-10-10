@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1206" MadCap:lastWidth="908" MadCap:conditionTagExpression="exclude[Primary.Online or Primary.Print] ">
+    <head><title>Baseline Variable Opex</title>
+        <link rel="StyleSheet" href="../../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <script type="text/javascript" language="JavaScript1.2" src="../ehlpdhtm.js">
+        </script>
+        <img src="../../Images/Logo Images/3esi_manage.png" style="width: 36px; height: 44px;" width="36" height="44" align="right" border="0" class="HeaderLogo" />
+        <h2>Baseline Variable OPEX </h2>
+        <p>If Production Baseline 
+ has been enabled, an additional Data element is added to the Variable 
+ OPEX&#160;table. 
+ &#160;</p>
+        <ul style="list-style: disc;" type="disc">
+            <li>The <span style="font-weight: bold;">Baseline</span> 
+ element is a Boolean and indicates the Variable OPEX segment &#160;that 
+ will represent the Base (existing) production profile. </li>
+        </ul>
+        <p>
+            <img src="../../Images/Baseline - Variable Opex 1.png" style="border: none;float: none;border-style: none;border-style: none;" border="0" />
+        </p>
+        <p>&#160;</p>
+        <p>Variable OPEX calculations (particularly where Actuals or Field Estimates 
+ are involved) is complex.</p>
+        <p>First, note that the Fixed OPEX Table is used for OPEX Actuals and Field 
+ Estimates (including entries that corresponding to Forecast Variable OPEX 
+ entries). The Baseline Flag on Actuals entries has no impact on the resultant 
+ calculations.</p>
+        <p>As with Production, when Baseline is enabled for an Asset, it is only 
+ the <span style="font-style: italic;">calculated</span> Uplift OPEX that 
+ is Reported or used in Metric calculations.</p>
+        <p>&#160;</p>
+        <p>
+            <MadCap:toggler targets="t1">See Also </MadCap:toggler>
+        </p>
+        <div MadCap:targetName="t1">
+            <p><a href="../../Project Editor/Project_Relationships.htm">Asset Relationship</a>
+            </p>
+            <p><a href="../../Reference/Opex_Calculations.htm">OPEX Calculations</a>
+            </p>
+            <p><a href="../../Reference/Production_Calculations.htm">Production Calculations</a>
+            </p>
+        </div>
+        <p>&#160;</p>
+        <h3>For <span style="font-weight: bold;">Total 
+ Uplift Modelling</span></h3>
+        <ol style="list-style: decimal;list-style-type: decimal;">
+            <li>The Variable OPEX entry that is marked as <span style="font-weight: bold;">Baseline</span> represents a Variable Operating 
+ Expense for the Asset in the Baseline state (<span style="font-style: italic;">Baseline 
+ Variable Rate</span>).</li>
+            <li>A corresponding Variable OPEX Entry (of the same 
+ OPEX Type, Asset and Product as the Baseline entry) that includes the 
+ Base amount, plus any anticipated incremental variable amount (<span style="font-style: italic;">Non-Baseline 
+ Variable Rate)</span>.</li>
+        </ol>
+        <p>For a report on a Forecast Basis, the calculation is:</p>
+        <p><span style="font-weight: bold;">Uplift OPEX </span> = (<span style="font-weight: bold;">Uplift 
+ Production</span> x Non Baseline Variable Rate) - (<span style="font-weight: bold;">Baseline 
+ Production</span> x Baseline Variable Rate)</p>
+        <p>&#160;</p>
+        <p><span style="font-weight: bold;">Note that</span>:</p>
+        <ol style="list-style: decimal;list-style-type: decimal;">
+            <li>The <span style="font-weight: bold;">Start Date</span> 
+ for the Uplift (non Baseline) Variable OPEX item indicates when Uplift 
+ OPEX is valid - it is not based on the Onstream Date of an associated 
+ Uplift production segment.</li>
+            <li>For Total Uplift, if the Variable OPEX Start Date 
+ is prior to the Onstream Date of the earliest Uplift segment, No OPEX 
+ amount will be reported as it relies on the Uplift Production (which in 
+ the Total case is contained within the production Uplift segment).</li>
+        </ol>
+        <p style="font-weight: normal;">Calculations with <span style="font-weight: bold;">Actuals</span> 
+ or <span style="font-weight: bold;">Field Estimates</span> (including 
+ <span style="font-weight: bold;">Blended</span>)</p>
+        <p>When Actuals or Field Estimates have been entered against the Asset, 
+ the Baseline Flag on these entries is not used. </p>
+        <p>What is reported is the entered <span style="font-weight: bold;">Actuals</span> <span style="font-style: italic;">less</span> the <span style="font-weight: bold;">calculated 
+ Baseline</span> amount for the corresponding period. The calculated Baseline 
+ amount is: Baseline Variable Rate x Baseline Production.</p>
+        <p>&#160;</p>
+    </body>
+</html>

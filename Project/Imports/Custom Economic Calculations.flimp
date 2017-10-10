@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MsWordImport
+  PreserveSourceStyles="false"
+  KeepSourceLinks="true"
+  ConvertInlineFormatting="true"
+  AddContinuedLinks="false"
+  AddContinuedFromLinks="false"
+  ContinuedLinkFormat="(continued in {title})"
+  ContinuedFromLinkFormat="(continued from {title})"
+  UseMaxCharLimit="false"
+  UseMinCharLimit="true"
+  MaxCharLimit="10000"
+  MinCharLimit="50"
+  FilenameLength="24"
+  GeneratePageLayouts="false"
+  UseFirstHeadingAsTopicTitle="true"
+  LastCollectTime="2014-11-19T21:34:05.1429977-07:00"
+  ProjectName="Help File"
+  ProjectFolder="\\cgyfile1\Shared\Flare\"
+  AutoSync="false"
+  AutoFitTables="false"
+  Stylesheet="../../Content/Resources/Stylesheets/HelpFileStylesheet.css"
+  LastImport="2014-11-19T21:34:57.1879977-07:00">
+  <Files>
+    <Url
+      Source="file:///C:/Users/isinclair/Documents/Custom Economic Calculations.docx"
+      AbsoluteSource="file:///C:/Users/isinclair/Documents/Custom Economic Calculations.docx" />
+  </Files>
+  <ExcludedFiles />
+  <CollectedSourceFiles />
+  <SkippedSourceFiles />
+  <GeneratedFiles>
+    <Url
+      Source="../../Content/Resources/Images/Custom Economic Calculations/02000001.jpg"
+      TimeStamp="19/11/2014 9:34:55 PM" />
+    <Url
+      Source="../../Content/Resources/Images/Custom Economic Calculations/03000002.png"
+      TimeStamp="19/11/2014 9:34:55 PM" />
+    <Url
+      Source="../../Content/Resources/Images/Custom Economic Calculations/03000003.png"
+      TimeStamp="19/11/2014 9:34:55 PM" />
+    <Url
+      Source="../../Content/Resources/Images/Custom Economic Calculations/03000004.png"
+      TimeStamp="19/11/2014 9:34:55 PM" />
+    <Url
+      Source="../../Content/Resources/Images/Custom Economic Calculations/03000005.png"
+      TimeStamp="19/11/2014 9:34:55 PM" />
+    <Url
+      Source="../../Content/Resources/Images/Custom Economic Calculations/03000006.png"
+      TimeStamp="19/11/2014 9:34:55 PM" />
+    <Url
+      Source="../../Content/Resources/Images/Custom Economic Calculations/03000007.png"
+      TimeStamp="19/11/2014 9:34:55 PM" />
+    <Url
+      Source="../../Content/Resources/Images/Custom Economic Calculations/03000008.png"
+      TimeStamp="19/11/2014 9:34:55 PM" />
+    <Url
+      Source="../../Content/Custom Economic Calculations/Custom Economic Calculations.htm"
+      TimeStamp="19/11/2014 9:34:55 PM" />
+    <Url
+      Source="../TOCs/Custom Economic Calculations.fltoc"
+      TimeStamp="19/11/2014 9:34:55 PM" />
+    <Url
+      Source="../../Content/Resources/Stylesheets/HelpFileStylesheet5.css"
+      TimeStamp="19/11/2014 9:34:55 PM" />
+  </GeneratedFiles>
+  <ParagraphStyles />
+  <CharacterStyles>
+    <Map
+      From="Hyperlink"
+      To="a.(MS Word Style)" />
+  </CharacterStyles>
+  <NewTopicStyles />
+  <UsedParagraphStyles />
+  <UsedCharacterStyles />
+</MsWordImport>

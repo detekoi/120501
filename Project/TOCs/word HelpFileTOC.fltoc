@@ -1,0 +1,2063 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="How to Use this File"
+    Link="/Content/How_to_Use_this_File.htm"></TocEntry>
+  <TocEntry
+    Title="Overview"
+    Link="/Content/Overview.htm"
+    BreakType="chapter"
+    StartSection="false"
+    PageNumberReset="continue" />
+  <TocEntry
+    Title="New in This Release"
+    Link="/Content/New_in_This_Release.htm"
+    BreakType="chapter"
+    StartSection="false"
+    PageNumberReset="continue" />
+  <TocEntry
+    Title="esi.manage Interface"
+    Link="/Content/esi.manage_Interface.htm"
+    BreakType="chapter"
+    StartSection="false"
+    PageNumberReset="continue" />
+  <TocEntry
+    Title="Database Connection"
+    Link="/Content/Database_Connection.htm"
+    BreakType="chapter"
+    StartSection="false"
+    PageNumberReset="continue" />
+  <TocEntry
+    Title="FAQ"
+    Link="/Content/FAQ.htm"
+    BreakType="chapter"
+    StartSection="false"
+    PageNumberReset="continue" />
+  <TocEntry
+    Title="Navigating esi.manage"
+    Link="/Content/Navigating esi.manage/Navigating_esi.manage.htm"
+    BreakType="chapter"
+    StartSection="false"
+    PageNumberReset="continue">
+    <TocEntry
+      Title="Project Browser"
+      Link="/Content/Navigating esi.manage/Project Browser/Project_Browser.htm">
+      <TocEntry
+        Title="Filtering Projects"
+        Link="/Content/Navigating esi.manage/Project Browser/Filtering_Projects.htm" />
+      <TocEntry
+        Title="Clear Filters"
+        Link="/Content/Navigating esi.manage/Project Browser/Clear_Filters.htm" />
+      <TocEntry
+        Title="Quick Find Search Engine"
+        Link="/Content/Navigating esi.manage/Project Browser/Quick_Find_Search_Engine.htm" />
+      <TocEntry
+        Title="Expenditure Forecast Year"
+        Link="/Content/Navigating esi.manage/Project Browser/Expenditure_Forecast_Year.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Navigator"
+      Link="/Content/Navigating esi.manage/Navigator/Navigator.htm">
+      <TocEntry
+        Title="Project Sets"
+        Link="/Content/Navigating esi.manage/Navigator/ProjectSets.htm">
+        <TocEntry
+          Title="Add Project Set"
+          Link="/Content/Navigating esi.manage/Navigator/Add_Project_Set.htm" />
+        <TocEntry
+          Title="Edit Project Set"
+          Link="/Content/Navigating esi.manage/Navigator/Edit_Project_Set.htm" />
+        <TocEntry
+          Title="Project Set Attributes"
+          Link="/Content/Navigating esi.manage/Navigator/Project_Set_Attributes.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Export Jobs"
+        Link="/Content/Navigating esi.manage/Navigator/ExportJobs.htm">
+        <TocEntry
+          Title="Export Job"
+          Link="/Content/Navigating esi.manage/Navigator/Export_Job.htm" />
+        <TocEntry
+          Title="Add Export Job"
+          Link="/Content/Navigating esi.manage/Navigator/Add_Export_Job.htm" />
+        <TocEntry
+          Title="Run Export Job"
+          Link="/Content/Navigating esi.manage/Navigator/Run_Export_Job.htm" />
+        <TocEntry
+          Title="Edit Export Job"
+          Link="/Content/Navigating esi.manage/Navigator/Edit_Export_Job.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Analysis Cases">
+        <TocEntry
+          Title="Analysis Case Overview"
+          Link="/Content/Navigating esi.manage/Navigator/Analysis_Case_Overview.htm" />
+        <TocEntry
+          Title="Add Analysis Case"
+          Link="/Content/Navigating esi.manage/Navigator/Add_Analysis_Case.htm" />
+        <TocEntry
+          Title="Analysis Case Pages">
+          <TocEntry
+            Title="Properties"
+            Link="/Content/Navigating esi.manage/Navigator/Analysis_Properties.htm" />
+          <TocEntry
+            Title="Metrics"
+            Link="/Content/Navigating esi.manage/Navigator/Analysis_Metrics.htm" />
+          <TocEntry
+            Title="Projects"
+            Link="/Content/Navigating esi.manage/Navigator/Analysis_Projects.htm" />
+        </TocEntry>
+      </TocEntry>
+      <TocEntry
+        Title="Bulk Edit Projects"
+        Link="/Content/Navigating esi.manage/Navigator/Bulk_Editor.htm">
+        <TocEntry
+          Title="Bulk Edit Fields"
+          Link="/Content/Navigating esi.manage/Navigator/Bulk_Edit_Fields.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Sensitivity Files"
+        Link="/Content/Sensitivity Files.htm" />
+      <TocEntry
+        Title="Evaluation Files"
+        Link="/Content/Evaluation Files.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Navigator Folders and WorkFlow"
+      Link="/Content/Navigating esi.manage/Navigator Folders and WorkFlow/Navigator_Folders_WorkFlow.htm">
+      <TocEntry
+        Title="Folders"
+        Link="/Content/Navigating esi.manage/Navigator Folders and WorkFlow/Folders.htm" />
+      <TocEntry
+        Title="Publish Workflow"
+        Link="/Content/Navigating esi.manage/Navigator Folders and WorkFlow/Publish_Workflow.htm" />
+      <TocEntry
+        Title="Active Selection"
+        Link="/Content/Navigating esi.manage/Navigator Folders and WorkFlow/Active_Selection.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="User Interface Features"
+      Link="/Content/Navigating esi.manage/User Interface Features/Navigation.htm">
+      <TocEntry
+        Title="Change Columns"
+        Link="/Content/Navigating esi.manage/User Interface Features/Change_Columns.htm" />
+      <TocEntry
+        Title="Resize"
+        Link="/Content/Navigating esi.manage/User Interface Features/Resize.htm" />
+      <TocEntry
+        Title="Refresh Button"
+        Link="/Content/Navigating esi.manage/User Interface Features/Refresh_Button.htm" />
+      <TocEntry
+        Title="Edit as a Form button"
+        Link="/Content/Navigating esi.manage/User Interface Features/Edit_as_a_Form.htm" />
+      <TocEntry
+        Title="Fast View Bar"
+        Link="/Content/Navigating esi.manage/User Interface Features/Action_Bars.htm" />
+      <TocEntry
+        Title="Export to Excel"
+        Link="/Content/Navigating esi.manage/User Interface Features/Export_to_Excel.htm" />
+      <TocEntry
+        Title="Accessing 'Hidden' Items"
+        Link="/Content/Navigating esi.manage/User Interface Features/UI_NonVisibleItems.htm" />
+      <TocEntry
+        Title="Hiding PageTabs"
+        Link="/Content/Navigating esi.manage/User Interface Features/Hiding_PageTabs.htm" />
+      <TocEntry
+        Title="Split Screen"
+        Link="/Content/Navigating esi.manage/User Interface Features/Split_Screen.htm" />
+      <TocEntry
+        Title="Detaching Views"
+        Link="/Content/Navigating esi.manage/User Interface Features/Detaching_Views.htm" />
+    </TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Dependencies"
+    Link="/Content/Dependencies/Dependencies.htm"
+    BreakType="chapter"
+    StartSection="false"
+    PageNumberReset="continue">
+    <TocEntry
+      Title="Overview"
+      Link="/Content/Dependencies/Dependency_Overview.htm" />
+    <TocEntry
+      Title="Creating Measures"
+      Link="/Content/Dependencies/Creating_Measures.htm" />
+    <TocEntry
+      Title="Creating Dependencies"
+      Link="/Content/Dependencies/Creating_Dependencies.htm" />
+    <TocEntry
+      Title="Removing Dependencies"
+      Link="/Content/Dependencies/Removing_Dependencies.htm" />
+    <TocEntry
+      Title="View &amp; Sort for Analysis"
+      Link="/Content/Dependencies/View_Sort_for_Analysis.htm" />
+    <TocEntry
+      Title="Linkage"
+      Link="/Content/Dependencies/Linkage.htm" />
+    <TocEntry
+      Title="Offsets"
+      Link="/Content/Dependencies/Dependency_Offsets_2.htm" />
+    <TocEntry
+      Title="Calculations"
+      Link="/Content/Dependencies/Dependency_Calculations.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Project Perspective"
+    Link="/Content/Project Perspective/Project_Perspective.htm"
+    BreakType="chapter"
+    StartSection="false"
+    PageNumberReset="continue">
+    <TocEntry
+      Title="Projects">
+      <TocEntry
+        Title="Add Project"
+        Link="/Content/Project Perspective/Projects/Add_Project.htm" />
+      <TocEntry
+        Title="Copy a Project"
+        Link="/Content/Project Perspective/Projects/Cloning_a_Project.htm" />
+      <TocEntry
+        Title="Copy Multiple Projects"
+        Link="/Content/Project Perspective/Projects/Copy_Projects.htm" />
+      <TocEntry
+        Title="Shift Dates"
+        Link="/Content/Project Perspective/Projects/Shift_Dates.htm" />
+      <TocEntry
+        Title="Shift Date Options"
+        Link="/Content/Project Perspective/Projects/Shift_Date_Options.htm" />
+      <TocEntry
+        Title="Show All Versions"
+        Link="/Content/Project Perspective/Projects/Show_All_Versions.htm" />
+      <TocEntry
+        Title="Sorting by Custom Attribute"
+        Link="/Content/Project Perspective/Projects/Sorting_by_Custom_Attribute.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Data Matrix"
+      Link="/Content/Project Perspective/Data Matrix/Data_Matrix.htm">
+      <TocEntry
+        Title="Open Matrix"
+        Link="/Content/Project Perspective/Data Matrix/Open_Matrix.htm" />
+      <TocEntry
+        Title="Data Matrix Filtering"
+        Link="/Content/Project Perspective/Data Matrix/Data_Matrix_Filtering.htm" />
+      <TocEntry
+        Title="Data Matrix Dates"
+        Link="/Content/Project Perspective/Data Matrix/Data_Matrix_Dates.htm" />
+      <TocEntry
+        Title="Matrix Controls"
+        Link="/Content/Project Perspective/Data Matrix/Matrix_Controls.htm" />
+      <TocEntry
+        Title="Changing Data in the Matrix"
+        Link="/Content/Project Perspective/Data Matrix/Changing_Data_in_the_Matrix.htm" />
+      <TocEntry
+        Title="Adding Entries within the Matrix"
+        Link="/Content/Project Perspective/Data Matrix/Add_Line_Matrix.htm" />
+      <TocEntry
+        Title="OPEX Editor"
+        Link="/Content/Project Perspective/Data Matrix/OPEXEditor.htm" />
+      <TocEntry
+        Title="Data Matrix - Update From"
+        Link="/Content/Project Perspective/Data Matrix/Data_Matrix_-_Update_From.htm" />
+      <TocEntry
+        Title="Production Editor"
+        Link="/Content/Project Perspective/Data Matrix/Production_Editor.htm" />
+      <TocEntry
+        Title="Spark Line"
+        Link="/Content/Project Perspective/Data Matrix/Spark_Line.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Type Curves"
+      Link="/Content/Project Perspective/Type Curves/TypeCurves_Overview.htm">
+      <TocEntry
+        Title="Creating Type Curves"
+        Link="/Content/Project Perspective/Type Curves/TypeCurves_Creating.htm"></TocEntry>
+      <TocEntry
+        Title="Types of Type Curves"
+        Link="/Content/Project Perspective/Type Curves/TypeCurves_Types.htm"></TocEntry>
+      <TocEntry
+        Title="Deleting Type Curves"
+        Link="/Content/Project Perspective/Type Curves/TypeCurves_Deleting.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Aggregate Projects"
+      Link="/Content/Project Perspective/Aggregate Projects/Aggregate_Projects.htm">
+      <TocEntry
+        Title="Starting an Aggregation"
+        Link="/Content/Project Perspective/Aggregate Projects/AggregateProjectsCreation.htm"></TocEntry>
+      <TocEntry
+        Title="Project Grouping"
+        Link="/Content/Project Perspective/Aggregate Projects/AggregateProjectsGrouping.htm" />
+      <TocEntry
+        Title="Project Aggregation"
+        Link="/Content/Project Perspective/Aggregate Projects/AggregateProjectsProjectAggregation.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Analysis View"
+      Link="/Content/Project Perspective/Analysis View/Analysis_View.htm">
+      <TocEntry
+        Title="Expenditure Analysis View"
+        Link="/Content/Project Perspective/Analysis View/AV_Exp_Def.htm" />
+      <TocEntry
+        Title="Opex Analysis View"
+        Link="/Content/Project Perspective/Analysis View/AV_OPEX_Def.htm" />
+      <TocEntry
+        Title="Production Analysis View"
+        Link="/Content/Project Perspective/Analysis View/AV_Prod_Def.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Project Gantt"
+      Link="/Content/Project Perspective/Project Gantt/Project_Gantt.htm">
+      <TocEntry
+        Title="Opening the Gantt"
+        Link="/Content/Project Perspective/Project Gantt/Opening_the_Gantt.htm" />
+      <TocEntry
+        Title="Time Line"
+        Link="/Content/Project Perspective/Project Gantt/Time_Line.htm" />
+      <TocEntry
+        Title="Timeline Controls"
+        Link="/Content/Project Perspective/Project Gantt/Timeline_Controls.htm" />
+      <TocEntry
+        Title="Gantt Controls"
+        Link="/Content/Project Perspective/Project Gantt/Gantt Controls.htm" />
+      <TocEntry
+        Title="Date Editing"
+        Link="/Content/Project Perspective/Project Gantt/Date_Editing.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Project Template Scheduling"
+      Link="/Content/Project Perspective/Project Template Scheduling/TW_Overview.htm">
+      <TocEntry
+        Title="Creating the Templates"
+        Link="/Content/Project Perspective/Project Template Scheduling/TWl_Templates.htm"></TocEntry>
+      <TocEntry
+        Title="Template Well Scheduler"
+        Link="/Content/Project Perspective/Project Template Scheduling/TW_Scheduler.htm" />
+      <TocEntry
+        Title="Updating Virtual Projects"
+        Link="/Content/Project Perspective/Project Template Scheduling/TW_Updates.htm" />
+      <TocEntry
+        Title="Promoting a Virtual Project"
+        Link="/Content/Project Perspective/Project Template Scheduling/TW_Project.htm" />
+      <TocEntry
+        Title="Deleting a Virtual Project"
+        Link="/Content/Project Perspective/Project Template Scheduling/Deleting_a_Virtual_Project.htm" />
+      <TocEntry
+        Title="Updating The Template Well Schedule"
+        Link="/Content/Project Perspective/Project Template Scheduling/UpdatingTheTemplateWellSchedule.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Bulk Editor"
+      Link="/Content/Project Perspective/Bulk Editor/Bulk_Editor_Fields.htm">
+      <TocEntry
+        Title="Bulk Edit Field"
+        Link="/Content/Project Perspective/Bulk Editor/Bulk_Edit_Field.htm" />
+      <TocEntry
+        Title="Fixed Attributes"
+        Link="/Content/Project Perspective/Bulk Editor/Fixed_Attributes.htm" />
+      <TocEntry
+        Title="Hierarchy Attributes"
+        Link="/Content/Project Perspective/Bulk Editor/Hierarchy_Attributes.htm" />
+      <TocEntry
+        Title="Deleting Attributes"
+        Link="/Content/Project Perspective/Bulk Editor/Fixed_Attributes_-_Deleting.htm" />
+      <TocEntry
+        Title="Derived Yield Production Volumes"
+        Link="/Content/Project Perspective/Bulk Editor/Derived_Yield_Production_Volumes.htm" />
+      <TocEntry
+        Title="Downtime"
+        Link="/Content/Project Perspective/Bulk Editor/Downtime.htm" />
+      <TocEntry
+        Title="Shrinkage">
+        <TocEntry
+          Title="Shrinkage"
+          Link="/Content/Project Perspective/Bulk Editor/Shrinkage.htm" />
+        <TocEntry
+          Title="Change Calender Mode"
+          Link="/Content/Project Perspective/Bulk Editor/Change_Calender_Mode.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Tabular Scaling"
+        Link="/Content/Project Perspective/Bulk Editor/Tabular_Scaling.htm" />
+      <TocEntry
+        Title="Date Shifting"
+        Link="/Content/Project Perspective/Bulk Editor/Date_Shifting.htm" />
+    </TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Report Perspective"
+    Link="/Content/Report Perspective/Reports_Perspective.htm"
+    BreakType="chapter"
+    StartSection="false"
+    PageNumberReset="continue">
+    <TocEntry
+      Title="Report Appearance Options"
+      Link="/Content/Report Perspective/Report_Appearance_Options.htm" />
+    <TocEntry
+      Title="Report Selector"
+      Link="/Content/Report Perspective/Report_Selector.htm" />
+    <TocEntry
+      Title="Choosing a Report to Run"
+      Link="/Content/Report Perspective/Choosing_a_Report_to_Run.htm" />
+    <TocEntry
+      Title="View Reports"
+      Link="/Content/Report Perspective/Generating_Reports.htm" />
+    <TocEntry
+      Title="Save Reports"
+      Link="/Content/Report Perspective/Save_Reports.htm" />
+    <TocEntry
+      Title="Print Reports"
+      Link="/Content/Report Perspective/Print_Reports.htm" />
+    <TocEntry
+      Title="Charts"
+      Link="/Content/Report Perspective/Charts.htm" />
+    <TocEntry
+      Title="Export Reports"
+      Link="/Content/Report Perspective/Export_Reports.htm" />
+    <TocEntry
+      Title="Types &amp; Definitions"
+      Link="/Content/Report Perspective/Definitions.htm" />
+    <TocEntry
+      Title="Reports">
+      <TocEntry
+        Title="Activity"
+        Link="/Content/Report Perspective/Reports/Activity.htm">
+        <TocEntry
+          Title="Example"
+          Link="/Content/Report Perspective/Reports/Activity_Report_Example.htm" />
+        <TocEntry
+          Title="Standard Parameters"
+          Link="/Content/Report Perspective/Reports/Activity_Report_Parameters.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Activity Variance"
+        Link="/Content/Report Perspective/Reports/12_Period_Activity_Variance_Overview.htm">
+        <TocEntry
+          Title="Example"
+          Link="/Content/Report Perspective/Reports/12_Period_Activity_Variance_Example.htm" />
+        <TocEntry
+          Title="Standard Parameters"
+          Link="/Content/Report Perspective/Reports/12_Period_Activity_Variance_Standard_Parameters.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="AFE Accruals"
+        Link="/Content/Report Perspective/Reports/AFE_Accruals_Overview.htm">
+        <TocEntry
+          Title="Example"
+          Link="/Content/Report Perspective/Reports/AFE_Accruals_Example.htm" />
+        <TocEntry
+          Title="Standard Parameters"
+          Link="/Content/Report Perspective/Reports/AFE_Accruals_Standard_Parameters.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="AFE Summary"
+        Link="/Content/Report Perspective/Reports/AFE_Summary_Overview.htm">
+        <TocEntry
+          Title="Example"
+          Link="/Content/Report Perspective/Reports/AFE_Summary_Example.htm" />
+        <TocEntry
+          Title="Standard Parameters"
+          Link="/Content/Report Perspective/Reports/AFE_Summary_Standard_Parameters.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Capex"
+        Link="/Content/Report Perspective/Reports/12_Period_CAPEX_Overview.htm">
+        <TocEntry
+          Title="Example"
+          Link="/Content/Report Perspective/Reports/12_Period_CAPEX_Example.htm" />
+        <TocEntry
+          Title="Standard Parameters"
+          Link="/Content/Report Perspective/Reports/12_Period_CAPEX_Standard_Parameters.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Capex Variance"
+        Link="/Content/Report Perspective/Reports/Capital_Expenditure_Variance_Overivew.htm">
+        <TocEntry
+          Title="Example"
+          Link="/Content/Report Perspective/Reports/Capital_Expenditure_Variance_Example.htm" />
+        <TocEntry
+          Title="Standard Parameters"
+          Link="/Content/Report Perspective/Reports/Capital_Expenditure_Variance_Standard_Parameters.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Capital Performance"
+        Link="/Content/Report Perspective/Reports/Capital_Performance_Report.htm">
+        <TocEntry
+          Title="Example"
+          Link="/Content/Report Perspective/Reports/Example.htm" />
+        <TocEntry
+          Title="Standard Parameters"
+          Link="/Content/Report Perspective/Reports/Capital_Performance_Report_Standard_Parameters.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Cash Flow"
+        Link="/Content/Report Perspective/Reports/12_Period_Cash_Flow_Overview.htm">
+        <TocEntry
+          Title="Example"
+          Link="/Content/Report Perspective/Reports/12_Period_Cash_Flow_Example.htm" />
+        <TocEntry
+          Title="Standard Parameters"
+          Link="/Content/Report Perspective/Reports/12_Period_Cash_Flow_Standard_Parameters.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Margin"
+        Link="/Content/Report Perspective/Reports/12_Period_Margin_Overview.htm">
+        <TocEntry
+          Title="Example"
+          Link="/Content/Report Perspective/Reports/12_Period_Margin_Example.htm" />
+        <TocEntry
+          Title="Standard Parameters"
+          Link="/Content/Report Perspective/Reports/12_Period_Margin_Standard_Parameters.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Operations Performance"
+        Link="/Content/Report Perspective/Reports/Operations_Performance_Overview.htm">
+        <TocEntry
+          Title="Example"
+          Link="/Content/Report Perspective/Reports/Operations_Performance_Example.htm" />
+        <TocEntry
+          Title="Standard Parameters"
+          Link="/Content/Report Perspective/Reports/Operations_Performance_Standard_Parameters.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Opex"
+        Link="/Content/Report Perspective/Reports/12_Period_OPEX_Detail_Overview.htm">
+        <TocEntry
+          Title="Example"
+          Link="/Content/Report Perspective/Reports/12_Period_OPEX_Detail_Example.htm" />
+        <TocEntry
+          Title="Standard Parameters"
+          Link="/Content/Report Perspective/Reports/12_Period_OPEX_Detail_Standard_Parameters.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Opex Variance"
+        Link="/Content/Report Perspective/Reports/12_Period_OPEX_Detail_Variance_Overview.htm">
+        <TocEntry
+          Title="Example"
+          Link="/Content/Report Perspective/Reports/12_Period_OPEX_Detail_Variance_Example.htm" />
+        <TocEntry
+          Title="Standard Parameters"
+          Link="/Content/Report Perspective/Reports/12_Period_OPEX_Detail_Variance_Standard_Parameters.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="PBR Report"
+        Link="/Content/Report Perspective/Reports/PBR_Overview.htm">
+        <TocEntry
+          Title="Example"
+          Link="/Content/Report Perspective/Reports/PBR_Example.htm" />
+        <TocEntry
+          Title="Standard Parameters"
+          Link="/Content/Report Perspective/Reports/PBR_Standard_Parameters.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Production"
+        Link="/Content/Report Perspective/Reports/12_Period_Production_Overview.htm">
+        <TocEntry
+          Title="Example"
+          Link="/Content/Report Perspective/Reports/12_Period_Production_Example.htm" />
+        <TocEntry
+          Title="Standard Parameters"
+          Link="/Content/Report Perspective/Reports/12_Period_Production_Standard_Parameters.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Product Production"
+        Link="/Content/Report Perspective/Reports/12_Period_Product_Production_Overview.htm">
+        <TocEntry
+          Title="Example"
+          Link="/Content/Report Perspective/Reports/12_Period_Product_Production_Example.htm" />
+        <TocEntry
+          Title="Standard Parameters"
+          Link="/Content/Report Perspective/Reports/12_Period_Product_Production_Standard_Parameters.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Production Variance"
+        Link="/Content/Report Perspective/Reports/Production_Variance_Overview.htm">
+        <TocEntry
+          Title="Example"
+          Link="/Content/Report Perspective/Reports/Production_Variance_Example.htm" />
+        <TocEntry
+          Title="Standard Parameters"
+          Link="/Content/Report Perspective/Reports/Production_Variance_Standard_Parameters.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Project Summary"
+        Link="/Content/Report Perspective/Reports/Project_Summary_Overview.htm">
+        <TocEntry
+          Title="Example"
+          Link="/Content/Report Perspective/Reports/Project_Summary_Example.htm" />
+        <TocEntry
+          Title="Standard Parameters"
+          Link="/Content/Report Perspective/Reports/Project_Summary_Standard_Parameters.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Project Variance Summary"
+        Link="/Content/Report Perspective/Reports/Project_Variance_Summary_Overview.htm">
+        <TocEntry
+          Title="Example"
+          Link="/Content/Report Perspective/Reports/Project_Variance_Summary_Example.htm" />
+        <TocEntry
+          Title="Standard Parameters"
+          Link="/Content/Report Perspective/Reports/Project_Variance_Summary_Standard_Parameters.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Reserve Bookings"
+        Link="/Content/Report Perspective/Reports/12_Period_Reserve_Bookings_Overview.htm">
+        <TocEntry
+          Title="Example"
+          Link="/Content/Report Perspective/Reports/12_Period_Reserve_Bookings_Example.htm" />
+        <TocEntry
+          Title="Standard Parameters"
+          Link="/Content/Report Perspective/Reports/12_Period_Reserve_Bookings_Standard_Parameters.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Reserve Variance"
+        Link="/Content/Report Perspective/Reports/Reserve_Variance_Overview.htm">
+        <TocEntry
+          Title="Example"
+          Link="/Content/Report Perspective/Reports/Reserve_Variance_Example.htm" />
+        <TocEntry
+          Title="Standard Parameters"
+          Link="/Content/Report Perspective/Reports/Reserve_Variance_Standard_Parameters.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Resource Variance"
+        Link="/Content/Report Perspective/Reports/Resource_Variance_Overview.htm">
+        <TocEntry
+          Title="Example"
+          Link="/Content/Report Perspective/Reports/12_Period_Resource_Variance_Example.htm" />
+        <TocEntry
+          Title="Standard Parameters"
+          Link="/Content/Report Perspective/Reports/12_Period_Resource_Variance_Standard_Parameters.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Resource Allocation"
+        Link="/Content/Report Perspective/Reports/12_Period_Resource_Allocation_Overview.htm">
+        <TocEntry
+          Title="Example"
+          Link="/Content/Report Perspective/Reports/12_Period_Resource_Allocation_Example_.htm" />
+        <TocEntry
+          Title="Standard Parameters"
+          Link="/Content/Report Perspective/Reports/12_Period_Resource_Allocation_Standard_Parameters.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Resource Utilization">
+        <TocEntry
+          Title="Example"
+          Link="/Content/Report Perspective/Reports/12_Period_Resource_Capacity_Example.htm" />
+        <TocEntry
+          Title="Standard Parameters"
+          Link="/Content/Report Perspective/Reports/12_Period_Resource_Capacity_Standard_Parameters.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Rig Releases"
+        Link="/Content/Report Perspective/Reports/12_Period_Rig_Releases_Overview.htm">
+        <TocEntry
+          Title="Example"
+          Link="/Content/Report Perspective/Reports/12_Period_Rig_Releases_Example.htm" />
+        <TocEntry
+          Title="Standard Parameters"
+          Link="/Content/Report Perspective/Reports/12_Period_Rig_Releases_Standard_Parameters.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Sales"
+        Link="/Content/Report Perspective/Reports/12_Period_Sales_Overview.htm">
+        <TocEntry
+          Title="Example"
+          Link="/Content/Report Perspective/Reports/12_Period_Sales_Example.htm" />
+        <TocEntry
+          Title="Standard Parameters"
+          Link="/Content/Report Perspective/Reports/12_Period_Sales_Standard_Parameters.htm" />
+      </TocEntry>
+    </TocEntry>
+    <TocEntry
+      Title="Report Parameters"
+      Link="/Content/Report Perspective/Reports/Report_Parameters.htm">
+      <TocEntry
+        Title="General"
+        Link="/Content/Report Perspective/Reports/Budgets.htm"></TocEntry>
+      <TocEntry
+        Title="Match Forecast Total &amp; Data Blending"
+        Link="/Content/Report Perspective/Reports/Match_Forecast_Total_&amp;_Data_Blending.htm" />
+      <TocEntry
+        Title="Sensitivities"
+        Link="/Content/Alberta_Royalties_asset-level_configuration.htm" />
+      <TocEntry
+        Title="Dates"
+        Link="/Content/Report Perspective/Reports/Dates.htm" />
+      <TocEntry
+        Title="Grouping"
+        Link="/Content/Report Perspective/Reports/Grouping.htm" />
+      <TocEntry
+        Title="Units of Measure"
+        Link="/Content/Report Perspective/Reports/Units_of_Measure.htm" />
+      <TocEntry
+        Title="Toggles"
+        Link="/Content/Report Perspective/Reports/Toggles.htm" />
+      <TocEntry
+        Title="Report Filters"
+        Link="/Content/Report Perspective/Reports/Report_Filters.htm" />
+      <TocEntry
+        Title="Project Selection"
+        Link="/Content/Report Perspective/Reports/Project_Filters.htm" />
+      <TocEntry
+        Title="Variance Options"
+        Link="/Content/Report Perspective/Report Parameters/Variance_Options.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Custom Charts"
+      Link="/Content/Report Perspective/Reports/Custom_Charts.htm">
+      <TocEntry
+        Title="Creating a Custom Chart"
+        Link="/Content/Report Perspective/Reports/Creating_a_Custom_Chart.htm" />
+      <TocEntry
+        Title="Important Notes"
+        Link="/Content/Report Perspective/Reports/!_Important_Notes.htm" />
+      <TocEntry
+        Title="Data Sets"
+        Link="/Content/Report Perspective/Reports/Data_Sets.htm" />
+      <TocEntry
+        Title="Project Filters"
+        Link="/Content/Report Perspective/Reports/Project_Filters.htm" />
+      <TocEntry
+        Title="Assigning Series"
+        Link="/Content/Report Perspective/Reports/Assigning_Series.htm" />
+      <TocEntry
+        Title="Dashboard Viewing"
+        Link="/Content/Report Perspective/Reports/Dashboard_Viewing.htm" />
+      <TocEntry
+        Title="Multiple Series"
+        Link="/Content/Report Perspective/Reports/Multiple_Series.htm" />
+      <TocEntry
+        Title="Data Set vs. Project Filters"
+        Link="/Content/Report Perspective/Reports/Data_Set_vs._Project_Filters.htm" />
+      <TocEntry
+        Title="Custom Filters"
+        Link="/Content/Report Perspective/Reports/Custom_Filters.htm" />
+      <TocEntry
+        Title="Printing"
+        Link="/Content/Report Perspective/Reports/Printing.htm" />
+      <TocEntry
+        Title="Edit Chart"
+        Link="/Content/Report Perspective/Reports/Edit_Charts.htm">
+        <TocEntry
+          Title="Select Chart Type"
+          Link="/Content/Report Perspective/Reports/Select_Chart_Type.htm">
+          <TocEntry
+            Title="Chart Preview"
+            Link="/Content/Report Perspective/Reports/Chart_Preview.htm" />
+          <TocEntry
+            Title="Chart Types"
+            Link="/Content/Report Perspective/Reports/Chart_Types.htm" />
+          <TocEntry
+            Title="Type Options"
+            Link="/Content/Report Perspective/Reports/Type_Options.htm" />
+        </TocEntry>
+        <TocEntry
+          Title="Select Data"
+          Link="/Content/Report Perspective/Reports/Select_Data.htm">
+          <TocEntry
+            Title="Data Preview"
+            Link="/Content/Report Perspective/Reports/Data_Preview.htm" />
+          <TocEntry
+            Title="Filters"
+            Link="/Content/Report Perspective/Reports/Filters.htm" />
+          <TocEntry
+            Title="Parameters"
+            Link="/Content/Report Perspective/Reports/Parameters.htm" />
+          <TocEntry
+            Title="Data Binding"
+            Link="/Content/Report Perspective/Reports/Data_Binding.htm" />
+        </TocEntry>
+        <TocEntry
+          Title="Format Chart"
+          Link="/Content/Report Perspective/Reports/Format_Chart.htm">
+          <TocEntry
+            Title="Series"
+            Link="/Content/Report Perspective/Reports/Series.htm" />
+          <TocEntry
+            Title="Chart Area"
+            Link="/Content/Report Perspective/Reports/Chart_Area.htm">
+            <TocEntry
+              Title="Axis"
+              Link="/Content/Report Perspective/Reports/Axis.htm" />
+            <TocEntry
+              Title="Title"
+              Link="/Content/Report Perspective/Reports/Title.htm" />
+            <TocEntry
+              Title="Plot"
+              Link="/Content/Report Perspective/Reports/Plot.htm" />
+            <TocEntry
+              Title="Legend"
+              Link="/Content/Report Perspective/Reports/Legend.htm" />
+          </TocEntry>
+        </TocEntry>
+      </TocEntry>
+    </TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Project Editor"
+    Link="/Content/Project Editor/Edit_Project.htm"
+    BreakType="chapter"
+    StartSection="false"
+    PageNumberReset="continue">
+    <TocEntry
+      Title="The Project"
+      Link="/Content/Project Editor/The_Project.htm" />
+    <TocEntry
+      Title="Project Relationships"
+      Link="/Content/Project Editor/Project_Relationships.htm" />
+    <TocEntry
+      Title="Project Details"
+      Link="/Content/Project Editor/Project Details/Project_Header.htm">
+      <TocEntry
+        Title="Project Header Fields"
+        Link="/Content/Project Editor/Project Details/Project_Header_Fields.htm" />
+      <TocEntry
+        Title="Project Overview"
+        Link="/Content/Project Editor/Project Details/Project_Overview.htm">
+        <TocEntry
+          Title="Hierarchy"
+          Link="/Content/Project Editor/Project Details/Hierarchy.htm" />
+      </TocEntry>
+    </TocEntry>
+    <TocEntry
+      Title="Assets"
+      Link="/Content/Project Editor/Assets/Assets.htm">
+      <TocEntry
+        Title="Asset Fields"
+        Link="/Content/Project Editor/Assets/Asset_Fields.htm" />
+      <TocEntry
+        Title="Add Asset"
+        Link="/Content/Project Editor/Assets/Add_Well.htm" />
+      <TocEntry
+        Title="Clone an Asset"
+        Link="/Content/Project Editor/Assets/Clone_a_Well.htm" />
+      <TocEntry
+        Title="Duplicate Asset"
+        Link="/Content/Project Editor/Assets/Duplicate_Asset.htm" />
+      <TocEntry
+        Title="Shift Asset Dates"
+        Link="/Content/Project Editor/Assets/Shift_Asset_Dates.htm" />
+      <TocEntry
+        Title="Asset Dependencies"
+        Link="/Content/Project Editor/Assets/Asset_Dependencies.htm" />
+      <TocEntry
+        Title="View EIDs"
+        Link="/Content/Project Editor/Assets/View_EIDs.htm" />
+      <TocEntry
+        Title="Asset Attributes"
+        Link="/Content/Project Editor/Assets/Asset_Attributes.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Dependencies">
+      <TocEntry
+        Title="Dependencies Overview"
+        Link="/Content/Project Editor/Dependencies/Dependencies_Overview.htm" />
+      <TocEntry
+        Title="Dependency Options"
+        Link="/Content/Project Editor/Dependencies/Dependency_Options.htm" />
+      <TocEntry
+        Title="Create New Dependency"
+        Link="/Content/Project Editor/Dependencies/Create_New_Dependency.htm" />
+      <TocEntry
+        Title="Editing Dependencies"
+        Link="/Content/Project Editor/Dependencies/Editing_Dependencies.htm" />
+      <TocEntry
+        Title="Dependency Offsets"
+        Link="/Content/Project Editor/Dependencies/Dependency_Offsets.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Type Curves"
+      Link="/Content/Project Editor/Type Curves/TypeCurves2_Overview.htm">
+      <TocEntry
+        Title="Using Type Curves"
+        Link="/Content/Project Editor/Type Curves/TypeCurves2_Using.htm" />
+      <TocEntry
+        Title="Patterns"
+        Link="/Content/Project Editor/Type Curves/TypeCurves2_Patterns.htm" />
+      <TocEntry
+        Title="Recurrences"
+        Link="/Content/Project Editor/Type Curves/TypeCurves2_Recurrences.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Ownership">
+      <TocEntry
+        Title="Overview"
+        Link="/Content/Project Editor/Ownership/Ownership_Overview.htm" />
+      <TocEntry
+        Title="Behavior"
+        Link="/Content/Project Editor/Ownership/Ownership_Behavior.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Expenditures"
+      Link="/Content/Project Editor/Expenditures/Expenditures.htm">
+      <TocEntry
+        Title="Expenditure Fields"
+        Link="/Content/Project Editor/Expenditures/Expenditure_Fields.htm" />
+      <TocEntry
+        Title="Add Expenditure"
+        Link="/Content/Project Editor/Expenditures/Add_Expenditure.htm" />
+      <TocEntry
+        Title="Schedule Expenditures"
+        Link="/Content/Project Editor/Expenditures/Schedule_Expenditures.htm" />
+      <TocEntry
+        Title="Map AFEs"
+        Link="/Content/Project Editor/Expenditures/Assign_AFEs.htm" />
+      <TocEntry
+        Title="Gross EAC"
+        Link="/Content/Project Editor/Expenditures/Gross_EAC.htm" />
+      <TocEntry
+        Title="Expenditure Dependencies"
+        Link="/Content/Project Editor/Expenditures/Expenditure_Dependencies.htm" />
+      <TocEntry
+        Title="Expenditure Analysis"
+        Link="/Content/Project Editor/Expenditures/Expenditure_Analysis.htm" />
+      <TocEntry
+        Title="Expenditure Depreciation"
+        Link="/Content/Project Editor/Expenditures/Project_Expenditure_Depreciation.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="AFE"
+      Link="/Content/Project Editor/AFE/AFE.htm">
+      <TocEntry
+        Title="AFE Fields"
+        Link="/Content/Project Editor/AFE/AFE_Fields.htm" />
+      <TocEntry
+        Title="Add an AFE"
+        Link="/Content/Project Editor/AFE/Add_an_AFE.htm" />
+      <TocEntry
+        Title="Map AFEs"
+        Link="/Content/Project Editor/AFE/Assign_AFEs.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Production"
+      Link="/Content/Project Editor/Production/Production.htm">
+      <TocEntry
+        Title="Add Production"
+        Link="/Content/Project Editor/Production/Add_Production.htm" />
+      <TocEntry
+        Title="Compound Production"
+        Link="/Content/Project Editor/Production/Fomulaic_Production.htm" />
+      <TocEntry
+        Title="Tabular Production"
+        Link="/Content/Project Editor/Production/Tab_Prod.htm" />
+      <TocEntry
+        Title="Production Actuals"
+        Link="/Content/Project Editor/Production/Production_Actuals.htm" />
+      <TocEntry
+        Title="Derived Products"
+        Link="/Content/Project Editor/Production/Derived_Products.htm" />
+      <TocEntry
+        Title="Production Chart &amp; Reserve Summary"
+        Link="/Content/Project Editor/Production/Technical_Forecast_Curve.htm" />
+      <TocEntry
+        Title="Reserves"
+        Link="/Content/Project Editor/Production/Reserves.htm" />
+      <TocEntry
+        Title="Downtime"
+        Link="/Content/Project Editor/Production/Downtime.htm" />
+      <TocEntry
+        Title="Shrinkage"
+        Link="/Content/Project Editor/Production/Shrinkage.htm" />
+      <TocEntry
+        Title="Time Variant Quality"
+        Link="/Content/Project Editor/Production/Time_Variant_Quality.htm"></TocEntry>
+      <TocEntry
+        Title="S Curves"
+        Link="/Content/Project Editor/Production/S_Curves.htm" />
+      <TocEntry
+        Title="Production Pricing"
+        Link="/Content/Project Editor/Production/Production_Pricing.htm"></TocEntry>
+      <TocEntry
+        Title="Production Analysis"
+        Link="/Content/Project Editor/Production/Production_Analysis.htm" />
+      <TocEntry
+        Title="Production Fields"
+        Link="/Content/Project Editor/Production/Production_Fields.htm" />
+      <TocEntry
+        Title="Import Production from File"
+        Link="/Content/Project Editor/Production/Import_Production_from_File.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="OPEX"
+      Link="/Content/Project Editor/OPEX/OPEX_Editor.htm">
+      <TocEntry
+        Title="Fixed OPEX">
+        <TocEntry
+          Title="Fixed OPEX Fields"
+          Link="/Content/Project Editor/OPEX/OPEX_Fields.htm" />
+        <TocEntry
+          Title="Adding Fixed OPEX"
+          Link="/Content/Project Editor/OPEX/Adding_OPEX.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Variable OPEX">
+        <TocEntry
+          Title="Variable OPEX Fields"
+          Link="/Content/Project Editor/OPEX/Variable_OPEX_Fields.htm" />
+        <TocEntry
+          Title="Add Variable OPEX"
+          Link="/Content/Project Editor/OPEX/Add_Variable_OPEX.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Price-Based Opex"
+        Link="/Content/Project Editor/OPEX/Price_Based_Opex.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="History"
+      Link="/Content/Project Editor/History/History.htm">
+      <TocEntry
+        Title="Production tab"
+        Link="/Content/Project Editor/History/Production.htm" />
+      <TocEntry
+        Title="Revenue"
+        Link="/Content/Project Editor/History/Revenue.htm" />
+      <TocEntry
+        Title="OPEX"
+        Link="/Content/Project Editor/History/OPEX.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Resources"
+      Link="/Content/Project Editor/Resources/Resources.htm">
+      <TocEntry
+        Title="Resource Fields"
+        Link="/Content/Project Editor/Resources/Resource_Fields.htm" />
+      <TocEntry
+        Title="Add a Resource"
+        Link="/Content/Project Editor/Resources/Add_a_Resource.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Prices"
+      Link="/Content/Project Editor/Prices/Finances.htm">
+      <TocEntry
+        Title="Price Forecast"
+        Link="/Content/Project Editor/Prices/Price_Adjustments.htm" />
+      <TocEntry
+        Title="Price Profiles"
+        Link="/Content/Project Editor/Prices/Project_Price_Profiles.htm" />
+      <TocEntry
+        Title="Price Defaults"
+        Link="/Content/Archived/WorkFlow/Project_Price_Defaults.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Metrics">
+      <TocEntry
+        Title="Performance Metrics"
+        Link="/Content/Project Editor/Metrics/Performance_Metrics.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Project Attributes"
+      Link="/Content/Project Editor/Project Attributes/Project_Value.htm">
+      <TocEntry
+        Title="Project Attributes"
+        Link="/Content/Project Editor/Project Attributes/Custom_Attributes.htm" />
+      <TocEntry
+        Title="Archived Budgets using Custom Attributes"
+        Link="/Content/Project Editor/Project Attributes/Archived_Budgets_using_Custom_Attributes.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Burdens"
+      Link="/Content/Project Editor/Burdens/Project_Burdens.htm">
+      <TocEntry
+        Title="Royalties"
+        Link="/Content/Project Editor/Burdens/Royalties.htm" />
+      <TocEntry
+        Title="Custom Burdens"
+        Link="/Content/Project Editor/Burdens/Custom_Burdens.htm" />
+      <TocEntry
+        Title="Taxes"
+        Link="/Content/Project Editor/Burdens/Taxes.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Attachments">
+      <TocEntry
+        Title="Attachments"
+        Link="/Content/Project Editor/Attachments/Attachments.htm" />
+    </TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Group Behavior"
+    Link="/Content/Group Behavior/Group_Behaviour.htm"
+    BreakType="chapter"
+    StartSection="false"
+    PageNumberReset="continue">
+    <TocEntry
+      Title="Creating a Group"
+      Link="/Content/Group Behavior/Creating_a_Group.htm" />
+    <TocEntry
+      Title="Adding Projects to a Group"
+      Link="/Content/Group Behavior/Adding_Projects_to_Groups.htm" />
+    <TocEntry
+      Title="Allocation">
+      <TocEntry
+        Title="Curtailment"
+        Link="/Content/Group Behavior/Curtailment.htm">
+        <TocEntry
+          Title="Constraints"
+          Link="/Content/Group Behavior/Constraints.htm" />
+      </TocEntry>
+    </TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Ranking Perspective"
+    Link="/Content/Ranking Perspective/Ranking_Perspective.htm"
+    BreakType="chapter"
+    StartSection="false"
+    PageNumberReset="continue">
+    <TocEntry
+      Title="Ranking Criteria"
+      Link="/Content/Ranking Perspective/Ranking Criteria.htm" />
+    <TocEntry
+      Title="Metric Fields"
+      Link="/Content/Ranking Perspective/Metric_Fields.htm" />
+    <TocEntry
+      Title="Project Ranking List"
+      Link="/Content/Ranking Perspective/Project_Ranking_List.htm" />
+    <TocEntry
+      Title="Color Scheme"
+      Link="/Content/Ranking Perspective/Context Menu.htm" />
+    <TocEntry
+      Title="Summary of Ranked Projects"
+      Link="/Content/Ranking Perspective/Summary_of_Ranked_Projects.htm" />
+    <TocEntry
+      Title="Useing Ranked List in New Budget"
+      Link="/Content/Ranking Perspective/Create_Ranking_Project_Set.htm" />
+    <TocEntry
+      Title="Copying Ranking Score Into Clipboard"
+      Link="/Content/Ranking Perspective/Copying_Ranking_Into_Clipboard.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Analysis Perspective"
+    Link="/Content/Analysis Perspective/Anaylsis_Perspective.htm"
+    BreakType="chapter"
+    StartSection="false"
+    PageNumberReset="continue">
+    <TocEntry
+      Title="Analysis Views"
+      Link="/Content/Analysis Perspective/Analysis Views.htm" />
+    <TocEntry
+      Title="Options for Running Economic Analysis"
+      Link="/Content/Analysis Perspective/Analyse_Individual_Project.htm" />
+    <TocEntry
+      Title="Analysis Cases">
+      <TocEntry
+        Title="Creating an Analysis Case"
+        Link="/Content/Navigating esi.manage/Navigator/Add_Analysis_Case.htm" />
+      <TocEntry
+        Title="Properties"
+        Link="/Content/Navigating esi.manage/Navigator/Analysis_Properties.htm" />
+      <TocEntry
+        Title="Metrics"
+        Link="/Content/Navigating esi.manage/Navigator/Analysis_Metrics.htm" />
+      <TocEntry
+        Title="Projects"
+        Link="/Content/Navigating esi.manage/Navigator/Analysis_Projects.htm"></TocEntry>
+      <TocEntry
+        Title="Custom Economic Calculations"
+        Link="/Content/Custom Economic Calculations/Custom Economic Calculations.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Income Statement"
+      Link="/Content/Analysis Perspective/Income_Statement.htm" />
+    <TocEntry
+      Title="Cash Flow Analysis"
+      Link="/Content/Analysis Perspective/Economic_Cash_Flow_Analysis.htm" />
+    <TocEntry
+      Title="Metric Analysis"
+      Link="/Content/Analysis Perspective/Metric_Analysis.htm" />
+    <TocEntry
+      Title="Analysis Variance"
+      Link="/Content/Analysis Perspective/Analysis_Variance.htm" />
+    <TocEntry
+      Title="Analysis Chart"
+      Link="/Content/Analysis Perspective/Analysis_Chart.htm">
+      <TocEntry
+        Title="Chart Options"
+        Link="/Content/Analysis Perspective/Chart_Options.htm" />
+      <TocEntry
+        Title="Cash Flow Chart"
+        Link="/Content/Analysis Perspective/Cash_Flow_Chart.htm" />
+      <TocEntry
+        Title="NPV Sensitivity Chart"
+        Link="/Content/Analysis Perspective/NPV_Sensitivity_Chart.htm" />
+      <TocEntry
+        Title="Pareto Chart"
+        Link="/Content/Analysis Perspective/Pareto_Chart.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Exporting Analysis Results to Excel"
+      Link="/Content/Analysis Perspective/Analysis Export to Excel.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Excel Template Perspective"
+    Link="/Content/ExcelTemplates/Excel Template Perspective.htm"
+    BreakType="chapter"
+    StartSection="false"
+    PageNumberReset="continue">
+    <TocEntry
+      Title="Enabling the Excel Template Perspective"
+      Link="/Content/ExcelTemplates/Enabling the Excel Template.htm" />
+    <TocEntry
+      Title="EDL Interface"
+      Link="/Content/ExcelTemplates/EDL Interface.htm">
+      <TocEntry
+        Title="Overview Tab"
+        Link="/Content/ExcelTemplates/Overview tab.htm" />
+      <TocEntry
+        Title="Attributes Tab"
+        Link="/Content/ExcelTemplates/Attributes tab.htm" />
+      <TocEntry
+        Title="Series Tab"
+        Link="/Content/ExcelTemplates/Series Tab.htm" />
+      <TocEntry
+        Title="Translations Tab"
+        Link="/Content/ExcelTemplates/Translations Tab.htm" />
+      <TocEntry
+        Title="User Parameters Tab"
+        Link="/Content/ExcelTemplates/User Parameters Tab.htm" />
+      <TocEntry
+        Title="Problems Pane"
+        Link="/Content/ExcelTemplates/Problems Pane.htm" />
+      <TocEntry
+        Title="Preview Pane"
+        Link="/Content/ExcelTemplates/Preview Pane.htm" />
+    </TocEntry>
+    <TocEntry
+      Title=".JSON Files"
+      Link="/Content/ExcelTemplates/JSON Files.htm" />
+    <TocEntry
+      Title="Importing Data Using a Template"
+      Link="/Content/ExcelTemplates/Importing Data Using a Template.htm" />
+    <TocEntry
+      Title="Entering Formulas"
+      Link="/Content/ExcelTemplates/Entering Formulas.htm">
+      <TocEntry
+        Title="Expression Evaluation"
+        Link="/Content/ExcelTemplates/Expression Evaluation.htm" />
+      <TocEntry
+        Title="General Functions"
+        Link="/Content/ExcelTemplates/General Functions.htm" />
+    </TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Configuration Perspective"
+    Link="/Content/Configuration Perspective/Configuration_Perspective.htm"
+    BreakType="chapter"
+    StartSection="false"
+    PageNumberReset="continue">
+    <TocEntry
+      Title="Budget/Project"
+      Link="/Content/Configuration Perspective/Budget-Project/Budget_Project.htm">
+      <TocEntry
+        Title="Budget">
+        <TocEntry
+          Title="Budgets"
+          Link="/Content/Configuration Perspective/Budget-Project/Budget.htm">
+          <TocEntry
+            Title="Budget Fields"
+            Link="/Content/Configuration Perspective/Budget-Project/Budget_Fields.htm" />
+          <TocEntry
+            Title="Add Budget"
+            Link="/Content/Configuration Perspective/Budget-Project/Add_Budget.htm" />
+          <TocEntry
+            Title="Closing a Budget"
+            Link="/Content/Configuration Perspective/Budget-Project/Budgets__Forecasts_and_Archives.htm" />
+          <TocEntry
+            Title="Budget Attributes"
+            Link="/Content/Configuration Perspective/Budget-Project/Budget_Attributes.htm" />
+        </TocEntry>
+      </TocEntry>
+      <TocEntry
+        Title="Prices">
+        <TocEntry
+          Title="Pricing Model"
+          Link="/Content/Configuration Perspective/Budget-Project/Price_Revenue_Model.htm" />
+        <TocEntry
+          Title="Price Scenarios"
+          Link="/Content/Configuration Perspective/Budget-Project/Price_Scenarios.htm" />
+        <TocEntry
+          Title="Price Defaults"
+          Link="/Content/Configuration Perspective/Budget-Project/Price_Defaults.htm" />
+        <TocEntry
+          Title="Price Forecasts"
+          Link="/Content/Configuration Perspective/Budget-Project/Price_Forecasts.htm" />
+        <TocEntry
+          Title="Price Profiles"
+          Link="/Content/Configuration Perspective/Budget-Project/Price_Profiles.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Reserve/Production">
+        <TocEntry
+          Title="Products"
+          Link="/Content/Configuration Perspective/Budget-Project/Product.htm" />
+        <TocEntry
+          Title="Relationship between Production Units, Quality and the products table."
+          Link="/Content/Configuration Perspective/Budget-Project/Relationship_between_Production_Units,_Quality_and_the_products_table..htm" />
+        <TocEntry
+          Title="Product Qualities"
+          Link="/Content/Configuration Perspective/Budget-Project/Product_Qualities.htm" />
+        <TocEntry
+          Title="Product Categories"
+          Link="/Content/Configuration Perspective/Budget-Project/Product_Categories.htm" />
+        <TocEntry
+          Title="Production Types"
+          Link="/Content/Configuration Perspective/Budget-Project/Production_Types.htm" />
+        <TocEntry
+          Title="Production Definitions"
+          Link="/Content/Configuration Perspective/Budget-Project/Production_Definitions.htm" />
+        <TocEntry
+          Title="Rates"
+          Link="/Content/Configuration Perspective/Budget-Project/Rate.htm" />
+        <TocEntry
+          Title="Reserve Classifications"
+          Link="/Content/Configuration Perspective/Budget-Project/Reserve_Classifications.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Project">
+        <TocEntry
+          Title="Project Hierarchy"
+          Link="/Content/Configuration Perspective/Budget-Project/Project_Hierarchy.htm" />
+        <TocEntry
+          Title="Project Metrics"
+          Link="/Content/Configuration Perspective/Budget-Project/Project_Metrics.htm" />
+        <TocEntry
+          Title="Project Manager"
+          Link="/Content/Configuration Perspective/Budget-Project/Project_Manager.htm" />
+        <TocEntry
+          Title="Project Statuses"
+          Link="/Content/Configuration Perspective/Budget-Project/Project_Status.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Expenditure">
+        <TocEntry
+          Title="Capital Types"
+          Link="/Content/Configuration Perspective/Budget-Project/Capital_Types.htm" />
+        <TocEntry
+          Title="Expenditure Categories"
+          Link="/Content/Configuration Perspective/Budget-Project/Expenditure_Categories.htm" />
+        <TocEntry
+          Title="Expenditure Types"
+          Link="/Content/Configuration Perspective/Budget-Project/Expenditure_Type.htm" />
+        <TocEntry
+          Title="Expenditure Families"
+          Link="/Content/Configuration Perspective/Budget-Project/Expenditure_Families.htm" />
+        <TocEntry
+          Title="Expenditure Groups"
+          Link="/Content/Configuration Perspective/Budget-Project/Expenditure_Groups.htm" />
+        <TocEntry
+          Title="Expenditure Statuses"
+          Link="/Content/Configuration Perspective/Budget-Project/Expenditure_Statuses.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Asset">
+        <TocEntry
+          Title="Asset Operators"
+          Link="/Content/Configuration Perspective/Budget-Project/Operators.htm" />
+        <TocEntry
+          Title="Asset Types"
+          Link="/Content/Configuration Perspective/Budget-Project/Asset_Types.htm" />
+        <TocEntry
+          Title="Asset Statuses"
+          Link="/Content/Configuration Perspective/Budget-Project/Asset_Status.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="AFE">
+        <TocEntry
+          Title="AFE Statuses"
+          Link="/Content/Configuration Perspective/Budget-Project/AFE_Statuses.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="OPEX">
+        <TocEntry
+          Title="OPEX Statuses"
+          Link="/Content/Configuration Perspective/Budget-Project/OPEX_Statuses.htm" />
+        <TocEntry
+          Title="OPEX Categories"
+          Link="/Content/Configuration Perspective/Budget-Project/OPEX_Category.htm" />
+        <TocEntry
+          Title="OPEX Types"
+          Link="/Content/Configuration Perspective/Budget-Project/OPEX_Type.htm" />
+        <TocEntry
+          Title="OPEX Groups"
+          Link="/Content/Configuration Perspective/Budget-Project/OPEX_Groups.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Resources">
+        <TocEntry
+          Title="Categories/Types"
+          Link="/Content/Configuration Perspective/Budget-Project/Categories_Types.htm" />
+        <TocEntry
+          Title="Capacities"
+          Link="/Content/Configuration Perspective/Budget-Project/Capacities.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Custom Attributes">
+        <TocEntry
+          Title="Configure Custom Attribute"
+          Link="/Content/Configuration Perspective/Budget-Project/Custom_Attribute_Types.htm" />
+        <TocEntry
+          Title="Custom Picklists"
+          Link="/Content/Configuration Perspective/Budget-Project/Custom_Picklists.htm" />
+      </TocEntry>
+    </TocEntry>
+    <TocEntry
+      Title="Economics">
+      <TocEntry
+        Title="Default Economic Metrics"
+        Link="/Content/Configuration Perspective/Economics/Default_Economic_Metrics.htm" />
+      <TocEntry
+        Title="Default Economic Properties"
+        Link="/Content/Configuration Perspective/Economics/Default_Economic_Properties.htm"></TocEntry>
+      <TocEntry
+        Title="Economic Truncation Formulas"
+        Link="/Content/Configuration Perspective/Economics/Economic_Truncation_Formulas.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="External Identifiers">
+      <TocEntry
+        Title="External Context Keys"
+        Link="/Content/Configuration Perspective/External Identifiers/External_Context_Keys.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Reports">
+      <TocEntry
+        Title="Report Appearance"
+        Link="/Content/Configuration Perspective/Reports/Report_Appearance.htm" />
+      <TocEntry
+        Title="Report Names"
+        Link="/Content/Configuration Perspective/Reports/Report_Names.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Defaults"
+      Link="/Content/Configuration Perspective/Defaults/Defaults.htm">
+      <TocEntry
+        Title="Ownership"
+        Link="/Content/Configuration Perspective/Defaults/Ownership.htm" />
+      <TocEntry
+        Title="Fiscal Model"
+        Link="/Content/Configuration Perspective/Defaults/Fiscal_Model.htm"></TocEntry>
+      <TocEntry
+        Title="Escalation"
+        Link="/Content/Configuration Perspective/Defaults/Escalation.htm"></TocEntry>
+      <TocEntry
+        Title="Measure Scaling"
+        Link="/Content/Configuration Perspective/Defaults/Measure_Scaling.htm" />
+      <TocEntry
+        Title="Custom Picklists Filter"
+        Link="/Content/Configuration Perspective/Defaults/Defaults_Custom_Picklists.htm" />
+      <TocEntry
+        Title="Production"
+        Link="/Content/Configuration Perspective/Defaults/Production_Defaults.htm" />
+      <TocEntry
+        Title="Opex"
+        Link="/Content/Configuration Perspective/Defaults/Opex.htm" />
+      <TocEntry
+        Title="Configuration Attachments"
+        Link="/Content/Configuration Attachments.htm" />
+      <TocEntry
+        Title="Custom Economic Calculation Spreadsheets"
+        Link="/Content/Configuration Perspective/Defaults/CustomEconomicCalculationSpreadsheets.htm" />
+      <TocEntry
+        Title="Excel Report Templates"
+        Link="/Content/Configuration Perspective/Defaults/Excel_Report_Templates.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="System">
+      <TocEntry
+        Title="Miscellaneous">
+        <TocEntry
+          Title="Document Attachments"
+          Link="/Content/Configuration Perspective/System/Document_Attachments.htm" />
+        <TocEntry
+          Title="Customer Support"
+          Link="/Content/Configuration Perspective/System/Customer_Support.htm" />
+        <TocEntry
+          Title="Enterprise Assumptions"
+          Link="/Content/Configuration Perspective/System/Enterprise_Assumptions.htm" />
+        <TocEntry
+          Title="Users Logged On"
+          Link="/Content/Configuration Perspective/System/Who_s_Logged_On_.htm" />
+        <TocEntry
+          Title="Site Specific Features"
+          Link="/Content/Configuration Perspective/System/Site_Specific_Features.htm" />
+        <TocEntry
+          Title="PEEP Reports"
+          Link="/Content/Configuration Perspective/System/PEEP_Reports.htm" />
+        <TocEntry
+          Title="BC Royalty"
+          Link="/Content/Configuration Perspective/System/BC_Royalty.htm">
+          <TocEntry
+            Title="BC Royalty Framework Global configuration"
+            Link="/Content/Configuration Perspective/System/BC_Royalty_Framework_Global_configuration.htm" />
+          <TocEntry
+            Title="BC Royalties Fiscal Model configuration"
+            Link="/Content/Configuration Perspective/System/BC_Royalties_Fiscal_Model_configuration_.htm" />
+          <TocEntry
+            Title="BC Royalties  Asset-level configuration"
+            Link="/Content/Configuration Perspective/System/BC_Royalties__Asset-level_configuration.htm" />
+        </TocEntry>
+        <TocEntry
+          Title="AB Royalty"
+          Link="/Content/Configuration Perspective/System/AB_Royalty.htm">
+          <TocEntry
+            Title="Alberta Royalty Framework Global configuration"
+            Link="/Content/Configuration Perspective/System/Alberta_Royalty_Framework.htm" />
+          <TocEntry
+            Title="Alberta Royalties Custom Asset Attributes"
+            Link="/Content/Configuration Perspective/System/Alberta_Royalties_Custom_Asset_Attributes.htm" />
+          <TocEntry
+            Title="Alberta Royalties Fiscal Model configuration"
+            Link="/Content/Configuration Perspective/System/Alberta_Royalties_Fiscal_Model_configuration.htm" />
+          <TocEntry
+            Title="Alberta Royalties asset-level configuration"
+            Link="/Content/Configuration Perspective/System/Alberta_Royalties_asset-level_configuration.htm" />
+          <TocEntry
+            Title="Alberta Royalties Validation"
+            Link="/Content/Configuration Perspective/System/Alberta_Royalties_Validation.htm" />
+        </TocEntry>
+        <TocEntry
+          Title="Remote Systems Configuration"
+          Link="/Content/Configuration Perspective/System/Remote Systems Configuration.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Security">
+        <TocEntry
+          Title="Add a User Process"
+          Link="/Content/Configuration Perspective/System/Add_a_User_Process.htm" />
+        <TocEntry
+          Title="Roles"
+          Link="/Content/Configuration Perspective/System/Roles.htm" />
+        <TocEntry
+          Title="Users"
+          Link="/Content/Configuration Perspective/System/Users.htm" />
+        <TocEntry
+          Title="User/Project Manager Access"
+          Link="/Content/Configuration Perspective/System/User_Project_Manager_Access.htm" />
+      </TocEntry>
+    </TocEntry>
+    <TocEntry
+      Title="Unit Conversions"
+      Link="/Content/Configuration Perspective/Unit Conversions/Units_Conversions.htm">
+      <TocEntry
+        Title="Currency Units"
+        Link="/Content/Configuration Perspective/Unit Conversions/Currency_Units.htm" />
+      <TocEntry
+        Title="Currency Conversion"
+        Link="/Content/Configuration Perspective/Unit Conversions/Currency_Conversion.htm" />
+      <TocEntry
+        Title="Currency Inflation"
+        Link="/Content/Currency Inflation.htm" />
+      <TocEntry
+        Title="Exchange Files"
+        Link="/Content/Configuration Perspective/Unit Conversions/Currency_Files.htm" />
+      <TocEntry
+        Title="Length Units"
+        Link="/Content/Configuration Perspective/Unit Conversions/Length_Units.htm" />
+      <TocEntry
+        Title="Length Conversions"
+        Link="/Content/Configuration Perspective/Unit Conversions/Length_Conversions.htm" />
+      <TocEntry
+        Title="Production Units Configuration"
+        Link="/Content/Configuration Perspective/Unit Conversions/Production_Units_Configuration.htm" />
+    </TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Integration Perspective"
+    Link="/Content/Integration Perspective/Integration_Perspective_Overview.htm"
+    BreakType="chapter"
+    StartSection="false"
+    PageNumberReset="continue">
+    <TocEntry
+      Title="Assets">
+      <TocEntry
+        Title="Searching Assets &amp; EIDs"
+        Link="/Content/Integration Perspective/EID_Assets.htm" />
+      <TocEntry
+        Title="Mapped External Identifiers"
+        Link="/Content/Integration Perspective/Mapped_External_Identifiers.htm" />
+      <TocEntry
+        Title="Finding Mapped EIDs"
+        Link="/Content/Integration Perspective/Finding_Mapped_EIDs.htm" />
+      <TocEntry
+        Title="Edit EID Allocation"
+        Link="/Content/Integration Perspective/Edit_EID_Allocation.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="External Identifiers">
+      <TocEntry
+        Title="Searching Assets &amp; EIDs"
+        Link="/Content/Integration Perspective/EID_Assets.htm" />
+      <TocEntry
+        Title="Mapped External Identifiers"
+        Link="/Content/Integration Perspective/Mapped_External_Identifiers.htm" />
+      <TocEntry
+        Title="EIDs and Budget Progression"
+        Link="/Content/Integration Perspective/Copying_EIDs.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Edit">
+      <TocEntry
+        Title="Edit External Identifiers"
+        Link="/Content/Integration Perspective/Edit_External_Identifiers.htm" />
+    </TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Importing and Exporting"
+    BreakType="chapter"
+    StartSection="false"
+    PageNumberReset="continue">
+    <TocEntry
+      Title="Import and Export Overview"
+      Link="/Content/Importing and Exporting/Import_Export_Overview.htm" />
+    <TocEntry
+      Title="Import File Excel Templates"
+      Link="/Content/Importing and Exporting/File_Import_Excel_Templates.htm"
+      ComputeToc="false" />
+    <TocEntry
+      Title="CSV Import Process">
+      <TocEntry
+        Title="File Import Overview"
+        Link="/Content/Importing and Exporting/CSV Import Process/File_Import_Overview.htm" />
+      <TocEntry
+        Title="Import Order"
+        Link="/Content/Importing and Exporting/CSV Import Process/Import_Order.htm" />
+      <TocEntry
+        Title="CSV Files"
+        Link="/Content/Importing and Exporting/CSV Import Process/CSV_Files.htm" />
+      <TocEntry
+        Title="Common Problems with CSV Files"
+        Link="/Content/Importing and Exporting/CSV Import Process/Common_Problems_with_CSV_Files.htm" />
+      <TocEntry
+        Title="CSV Import Rules"
+        Link="/Content/Importing and Exporting/CSV Import Process/Import_Rules.htm" />
+      <TocEntry
+        Title="Import Process Overview"
+        Link="/Content/Importing and Exporting/CSV Import Process/Import_Process.htm" />
+      <TocEntry
+        Title="Select Import Type"
+        Link="/Content/Importing and Exporting/CSV Import Process/Select_Import_Type.htm" />
+      <TocEntry
+        Title="Select a Budget"
+        Link="/Content/Importing and Exporting/CSV Import Process/Select_Budget.htm" />
+      <TocEntry
+        Title="Choose Import File and Validate"
+        Link="/Content/Importing and Exporting/CSV Import Process/Select_Import_File.htm" />
+      <TocEntry
+        Title="Clear Data"
+        Link="/Content/Importing and Exporting/CSV Import Process/Clean_Up_Data.htm" />
+      <TocEntry
+        Title="Import Data"
+        Link="/Content/Importing and Exporting/CSV Import Process/ImportData.htm" />
+      <TocEntry
+        Title="Finish/Results"
+        Link="/Content/Importing and Exporting/CSV Import Process/Finish_Results.htm" />
+      <TocEntry
+        Title="External Identifiers">
+        <TocEntry
+          Title="EID Import Requirements"
+          Link="/Content/Importing and Exporting/CSV Import Process/EID_Import_Requirements.htm" />
+        <TocEntry
+          Title="EID Import CSV Example"
+          Link="/Content/Importing and Exporting/CSV Import Process/EID_Import_CSV_Example.htm" />
+        <TocEntry
+          Title="EID Import .txt file Example"
+          Link="/Content/Importing and Exporting/CSV Import Process/EID_Import_txt_file_Example.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Project Hierarchy">
+        <TocEntry
+          Title="Project Hierarchy Import Requirements"
+          Link="/Content/Importing and Exporting/CSV Import Process/Project_Hierarchy_Import_Requirements.htm" />
+        <TocEntry
+          Title="Project Hierarchy Import CSV Example"
+          Link="/Content/Importing and Exporting/CSV Import Process/Project_Hierarchy_Import_CSV_Example.htm" />
+        <TocEntry
+          Title="Project Hierarchy Import .txt file Example"
+          Link="/Content/Importing and Exporting/CSV Import Process/Project_Hierarchy_Import_txt_file_Example.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="AFE Header Import">
+        <TocEntry
+          Title="AFE Header Import Requirements"
+          Link="/Content/Importing and Exporting/CSV Import Process/AFE_Header_Import_Requirements.htm" />
+        <TocEntry
+          Title="AFE Header Import CSV Example"
+          Link="/Content/Importing and Exporting/CSV Import Process/AFE_Header_Import_CSV_Example.htm" />
+        <TocEntry
+          Title="AFE Header Import .txt file Example"
+          Link="/Content/Importing and Exporting/CSV Import Process/AFE_Header_Import_txt_file_Example.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="AFE Detail Import">
+        <TocEntry
+          Title="AFE Details Import CSV Requirements"
+          Link="/Content/Importing and Exporting/CSV Import Process/AFE_Details_Import_Requirements.htm" />
+        <TocEntry
+          Title="AFE Details Import CSV Example"
+          Link="/Content/Importing and Exporting/CSV Import Process/AFE_Details_Import_CSV_Example.htm" />
+        <TocEntry
+          Title="AFE Details Import .txt file Example"
+          Link="/Content/Importing and Exporting/CSV Import Process/AFE_Details_Import_txt_file_Example.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="CAPEX Header Import">
+        <TocEntry
+          Title="CAPEX Header Import Requirements"
+          Link="/Content/Importing and Exporting/CSV Import Process/CAPEX_Header_Import_Requirements.htm" />
+        <TocEntry
+          Title="CAPEX Header Import CSV Example"
+          Link="/Content/Importing and Exporting/CSV Import Process/CAPEX_Header_Import_CSV_Example.htm" />
+        <TocEntry
+          Title="CAPEX Header Import .txt file Example"
+          Link="/Content/Importing and Exporting/CSV Import Process/CAPEX_Header_Import_txt_file_Example.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="CAPEX Detail Import">
+        <TocEntry
+          Title="CAPEX Detail Import Requirements"
+          Link="/Content/Importing and Exporting/CSV Import Process/CAPEX_Details_Import_Requirements.htm" />
+        <TocEntry
+          Title="CAPEX Detail Import CSV Example"
+          Link="/Content/Importing and Exporting/CSV Import Process/CAPEX_Detail_Import_CSV_Example.htm" />
+        <TocEntry
+          Title="CAPEX Detail Import .txt file Example"
+          Link="/Content/Importing and Exporting/CSV Import Process/CAPEX_Detail_Import_txt_file_Example.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="OPEX">
+        <TocEntry
+          Title="OPEX Import Requirements"
+          Link="/Content/Importing and Exporting/CSV Import Process/OPEX_Import_Requirements.htm" />
+        <TocEntry
+          Title="OPEX Import CSV Example"
+          Link="/Content/Importing and Exporting/CSV Import Process/OPEX_Import_CSV_Example.htm" />
+        <TocEntry
+          Title="OPEX Import .txt file Example"
+          Link="/Content/Importing and Exporting/CSV Import Process/OPEX_Import_txt_file_Example.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Production">
+        <TocEntry
+          Title="Production Import Requirements"
+          Link="/Content/Importing and Exporting/CSV Import Process/Production_Import_Requirements.htm" />
+        <TocEntry
+          Title="Production Import CSV Example"
+          Link="/Content/Importing and Exporting/CSV Import Process/Production_Import_CSV_Example.htm" />
+        <TocEntry
+          Title="Production Import .txt file Example"
+          Link="/Content/Importing and Exporting/CSV Import Process/Production_Import_txt_file_Example.htm" />
+      </TocEntry>
+    </TocEntry>
+    <TocEntry
+      Title="XML Imports">
+      <TocEntry
+        Title="XML Import Overview"
+        Link="/Content/Importing and Exporting/XML Imports/XML_Import_Overview.htm" />
+      <TocEntry
+        Title="Importing Project Attributes"
+        Link="/Content/Importing and Exporting/XML Imports/Importing_Project_Attributes.htm" />
+      <TocEntry
+        Title="Using Integration Services"
+        Link="/Content/Importing and Exporting/XML Imports/Using_Integration_Services.htm" />
+      <TocEntry
+        Title="Web Service Test Page"
+        Link="/Content/Importing and Exporting/XML Imports/Web_Service_Test_Page.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="XML Export">
+      <TocEntry
+        Title="XML Export Overview"
+        Link="/Content/Importing and Exporting/XML Export/XML_Export_Overview.htm" />
+      <TocEntry
+        Title="Project Export"
+        Link="/Content/Importing and Exporting/XML Export/Project_Export.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="External CSV Import"
+      Link="/Content/Importing and Exporting/External CSV Import/External_CSV_Import.htm">
+      <TocEntry
+        Title="Import.exe Arguments"
+        Link="/Content/Importing and Exporting/External CSV Import/Command_Line.htm" />
+      <TocEntry
+        Title="Opex Properties File"
+        Link="/Content/Importing and Exporting/External CSV Import/Properties_File.htm" />
+      <TocEntry
+        Title="Prices Properties File"
+        Link="/Content/Importing and Exporting/External CSV Import/Prices_Properties_File.htm" />
+      <TocEntry
+        Title="Currency Properties File"
+        Link="/Content/Importing and Exporting/External CSV Import/Currency_Properties_File.htm" />
+      <TocEntry
+        Title="Currency Excalation Properties File"
+        Link="/Content/Importing and Exporting/External CSV Import/Currency_Excalation_Properties_File.htm" />
+      <TocEntry
+        Title="Asset Dependency Import"
+        Link="/Content/Importing and Exporting/External CSV Import/Asset_Dependency_Import.htm" />
+      <TocEntry
+        Title="External Opex Import File"
+        Link="/Content/Importing and Exporting/External CSV Import/External_OPEX_Import_File.htm" />
+      <TocEntry
+        Title="External Prices Import File"
+        Link="/Content/Importing and Exporting/External CSV Import/External_Prices_Import_File.htm" />
+      <TocEntry
+        Title="External Currency Exchange Import File"
+        Link="/Content/Importing and Exporting/External CSV Import/Currency_Exchange_Import_File.htm" />
+      <TocEntry
+        Title="External Currency Escalation Import File"
+        Link="/Content/Importing and Exporting/External CSV Import/External_Currency_Escalation_Import_File.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Measure Export"
+      Link="/Content/Importing and Exporting/Measure Export/Measure_Export.htm">
+      <TocEntry
+        Title="ExportMeasure.exe Arguments"
+        Link="/Content/Importing and Exporting/Measure Export/ExportMeasure.exe_Arguments.htm" />
+    </TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Reference"
+    BreakType="chapter"
+    StartSection="false"
+    PageNumberReset="continue">
+    <TocEntry
+      Title="Expenditure Calculations"
+      Link="/Content/Reference/Expenditure_Calculations.htm" />
+    <TocEntry
+      Title="Dependency, Risk and Probability of Success"
+      Link="/Content/Reference/Risk_and_Probability_of_Success.htm" />
+    <TocEntry
+      Title="Production Units"
+      Link="/Content/Reference/Production_Units.htm"></TocEntry>
+    <TocEntry
+      Title="Production Calculations"
+      Link="/Content/Reference/Production_Calculations.htm" />
+    <TocEntry
+      Title="OPEX Calculations"
+      Link="/Content/Reference/Opex_Calculations.htm" />
+    <TocEntry
+      Title="Performance Metric Calculations"
+      Link="/Content/Reference/Performance_Metric_Calculations.htm" />
+    <TocEntry
+      Title="Revenue Calculations"
+      Link="/Content/Reference/Revenue_Calculations.htm" />
+    <TocEntry
+      Title="Cost Escalation"
+      Link="/Content/Reference/Cost_Escalation.htm" />
+    <TocEntry
+      Title="Economic Calculations"
+      Link="/Content/Reference/Economic_Calculations.htm" />
+    <TocEntry
+      Title="Depreciation Calculations"
+      Link="/Content/Reference/Asset_Depreciation_Calculations.htm" />
+    <TocEntry
+      Title="Fiscal Year"
+      Link="/Content/Reference/Fiscal_Year.htm" />
+    <TocEntry
+      Title="Jurisdictions"
+      Link="/Content/Reference/Jurisdictions.htm" />
+    <TocEntry
+      Title="Currency Escalation Configuration"
+      Link="/Content/Reference/Currency_Escalation_Configuration.htm" />
+    <TocEntry
+      Title="Measure Scale"
+      Link="/Content/Reference/Measure_Scale.htm" />
+    <TocEntry
+      Title="Customizing the Excel Report Cashflow Tab"
+      Link="/Content/Customizing the Excel Report Cashflow Tab.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="PEEP Interface"
+    BreakType="chapter"
+    StartSection="false"
+    PageNumberReset="continue">
+    <TocEntry
+      Title="PEEP Import Jobs"
+      Link="/Content/PEEP Interface/PEEP_Import_Jobs.htm" />
+    <TocEntry
+      Title="The PEEP Menu"
+      Link="/Content/PEEP Interface/The PEEP Menu.htm" />
+    <TocEntry
+      Title="Import from PEEP"
+      Link="/Content/PEEP Interface/Import_from_PEEP.htm" />
+    <TocEntry
+      Title="Export to PEEP"
+      Link="/Content/PEEP Interface/Export_to_PEEP.htm" />
+    <TocEntry
+      Title="Synch with PEEP"
+      Link="/Content/PEEP Interface/Synch_with_PEEP.htm"></TocEntry>
+    <TocEntry
+      Title="Set Case Parameters"
+      Link="/Content/PEEP Interface/Set_Case_Parameters.htm"></TocEntry>
+    <TocEntry
+      Title="Import PEEP Reports"
+      Link="/Content/PEEP Interface/Import_PEEP_Reports.htm"></TocEntry>
+    <TocEntry
+      Title="Set PEEP Product Price Scenarios"
+      Link="/Content/PEEP Interface/Set_PEEP_Product_Price_Scenarios.htm"></TocEntry>
+    <TocEntry
+      Title="PEEP Custom Columns"
+      Link="/Content/PEEP Interface/PEEP_Custom_Columns.htm" />
+    <TocEntry
+      Title="PEEP Mapping File &amp; Configuration"
+      Link="/Content/PEEP Interface/PEEP_Mapping_File_Configuration.htm" />
+    <TocEntry
+      Title="Update PEEP Case List Cache"
+      Link="/Content/PEEP Interface/Update_PEEP_Case_List_Cache.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="ValNav Import Jobs"
+    Link="/Content/ValNav/ValNavImportJobs.htm"
+    BreakType="chapter"
+    StartSection="false"
+    PageNumberReset="continue">
+    <TocEntry
+      Title="Configuration"
+      Link="/Content/ValNav/ValNavConfiguration.htm" />
+    <TocEntry
+      Title="Mapping File"
+      Link="/Content/ValNav/ValNavMappingFile.htm"></TocEntry>
+    <TocEntry
+      Title="Import Job"
+      Link="/Content/ValNav/ValNavImportJobs.htm" />
+    <TocEntry
+      Title="Update Project"
+      Link="/Content/ValNav/UpdateProject.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Calculation Flow Diagrams"
+    BreakType="chapter"
+    StartSection="false"
+    PageNumberReset="continue">
+    <TocEntry
+      Title="Economics Calculations Flow"
+      Link="/Content/Calculation Flow Diagrams/Economics_Calculations.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Work Flows"
+    BreakType="chapter"
+    StartSection="false"
+    PageNumberReset="continue">
+    <TocEntry
+      Title="Month End"
+      Link="/Content/Work Flows/MonthEnd1.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Resource Planner Perspective"
+    StartSection="false"
+    BreakType="chapter"
+    PageNumberReset="continue">
+    <TocEntry
+      Title="Resource Planner"
+      Link="/Content/ResourcePlanner_ HelpFile2/The Resource Planner/ResourcePlanner.htm">
+      <TocEntry
+        Title="Launching the Perspective"
+        Link="/Content/ResourcePlanner_ HelpFile2/The Resource Planner/LaunchingRP.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Asset Selection"
+      Link="/Content/ResourcePlanner_ HelpFile2/The Resource Planner/Asset Selection.htm">
+      <TocEntry
+        Title="Budgets"
+        Link="/Content/ResourcePlanner_ HelpFile2/The Resource Planner/Budgets.htm"></TocEntry>
+      <TocEntry
+        Title="Project Sets"
+        Link="/Content/ResourcePlanner_ HelpFile2/The Resource Planner/Project Sets.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Expenditure Selection"
+      Link="/Content/ResourcePlanner_ HelpFile2/Expenditure Selection/Expenditure Selection.htm">
+      <TocEntry
+        Title="Limitations between Single and Multi Expenditure Selection"
+        Link="/Content/ResourcePlanner_ HelpFile2/Expenditure Selection/Limitations Single expenditure vs multi.htm"></TocEntry>
+      <TocEntry
+        Title="Clear Expense Durations"
+        Link="/Content/ResourcePlanner_ HelpFile2/Expenditure Selection/Clear Expense Durations.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Resource Selection"
+      Link="/Content/ResourcePlanner_ HelpFile2/Resource Selection/Resource Selection.htm">
+      <TocEntry
+        Title="Duration Modes"
+        Link="/Content/ResourcePlanner_ HelpFile2/Resource Selection/Durations Modes.htm"></TocEntry>
+      <TocEntry
+        Title="Resourse Modifier Flag"
+        Link="/Content/ResourcePlanner_ HelpFile2/Resource Selection/Resource Modifier Flag.htm" />
+      <TocEntry
+        Title="Clear Resource Assignments"
+        Link="/Content/ResourcePlanner_ HelpFile2/Resource Selection/Clear Resource Assignment.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Resource Line"
+      Link="/Content/ResourcePlanner_ HelpFile2/Gantt Chart - Resource Line/Resource Line.htm">
+      <TocEntry
+        Title="Drag and Drop Options"
+        Link="/Content/ResourcePlanner_ HelpFile2/Gantt Chart - Resource Line/Drag and Drop.htm"></TocEntry>
+      <TocEntry
+        Title="Crosshairs"
+        Link="/Content/ResourcePlanner_ HelpFile2/Crosshairs.htm"></TocEntry>
+      <TocEntry
+        Title="Timeline Controls"
+        Link="/Content/ResourcePlanner_ HelpFile2/Timeline Controls.htm"></TocEntry>
+      <TocEntry
+        Title="Showing Reports Fields"
+        Link="/Content/ResourcePlanner_ HelpFile2/Gantt Chart - Resource Line/Reporting Fields on Gantt.htm" />
+      <TocEntry
+        Title="Print Gantt"
+        Link="/Content/ResourcePlanner_ HelpFile2/Gantt Chart - Resource Line/Print Gantt.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Schedule Builder"
+      Link="/Content/ResourcePlanner_ HelpFile2/Schedule Builder/Schedule Builder.htm">
+      <TocEntry
+        Title="Auto Build Schedule"
+        Link="/Content/ResourcePlanner_ HelpFile2/Schedule Builder/Auto Build.htm"></TocEntry>
+      <TocEntry
+        Title="Scheduling Order"
+        Link="/Content/ResourcePlanner_ HelpFile2/Schedule Builder/Scheduling Order.htm" />
+      <TocEntry
+        Title="Adding and Editing Attributes"
+        Link="/Content/ResourcePlanner_ HelpFile2/Schedule Builder/adding-editing attributes.htm" />
+      <TocEntry
+        Title="Copy to Clipboard"
+        Link="/Content/ResourcePlanner_ HelpFile2/Schedule Builder/copy to clipboard.htm" />
+      <TocEntry
+        Title="Paste from Clipboard"
+        Link="/Content/ResourcePlanner_ HelpFile2/Schedule Builder/paste from clipboard.htm"></TocEntry>
+    </TocEntry>
+    <TocEntry
+      Title="Gantt Setting"
+      Link="/Content/ResourcePlanner_ HelpFile2/Color Coding and Gantt Settings/CCodingandGsettings.htm">
+      <TocEntry
+        Title="Bar Text"
+        Link="/Content/ResourcePlanner_ HelpFile2/Color Coding and Gantt Settings/Bar Text.htm" />
+      <TocEntry
+        Title="Bar Color"
+        Link="/Content/ResourcePlanner_ HelpFile2/Color Coding and Gantt Settings/bar color.htm" />
+      <TocEntry
+        Title="Bar Fill Pattern"
+        Link="/Content/ResourcePlanner_ HelpFile2/Color Coding and Gantt Settings/Bar Fill Pattern.htm"></TocEntry>
+      <TocEntry
+        Title="Bar Border"
+        Link="/Content/ResourcePlanner_ HelpFile2/Color Coding and Gantt Settings/Bar Border.htm"></TocEntry>
+      <TocEntry
+        Title="Rule Types"
+        Link="/Content/ResourcePlanner_ HelpFile2/Color Coding and Gantt Settings/Rule Types.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Resources Tab"
+      Link="/Content/Project Editor/Resources/Resources.htm">
+      <TocEntry
+        Title="Resource Fields"
+        Link="/Content/Project Editor/Resources/Resource_Fields.htm" />
+      <TocEntry
+        Title="Add a Resource"
+        Link="/Content/Project Editor/Resources/Add_a_Resource.htm" />
+    </TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Known Issues"
+    Link="/Content/Known_Issues.htm"
+    BreakType="chapter"
+    StartSection="false"
+    PageNumberReset="continue" />
+</CatapultToc>

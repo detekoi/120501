@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="8" MadCap:lastHeight="1249" MadCap:lastWidth="1410">
+    <head><title></title>
+        <link href="../Resources/Stylesheets/HelpFileStylesheet2.css" rel="stylesheet" />
+    </head>
+    <body>
+        <p>
+            <img src="../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />
+        </p>
+        <h2>Overview Tab</h2>
+        <p>***THIS FEATURE IS BEING DEPRECATED. PLEASE MIGRATE ALL EXCEL DATA LOAD TEMPLATES TO THE NEW FORMAT***</p>
+        <p>The Overview tab inputs are discussed below; the mandatory inputs are Template Type and Original Excel File. Top down:</p>
+        <ul style="list-style-type: square;margin-left: 37pt;">
+            <li style="list-style-type: square;">Owner: the user logged in to esi.manage who created the template</li>
+            <li style="list-style-type: square;">Created: the date the template was created</li>
+            <li style="list-style-type: square;">Template Name: the name of the template</li>
+            <li style="list-style-type: square;">Template Description: a description can be entered here to describe the template, or to instruct users of how to use the template. Any useful information can be stored here.</li>
+            <li style="list-style-type: square;">Template Type: A drop-down list to define the template</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 73pt;">
+            <li style="list-style-type: circle;">Add Production Curves: The add production curves type is used when there is an already existing project within esi.manage, and there is production information in Excel to be added to the project. This type requires that there is production already within the production tab of a project. This feature will overwrite the existing production.</li>
+            <li style="list-style-type: circle;">Add Production Curves – Multiple: This feature is similar to the previous but instead has the capability to add multiple products and rates to an existing project. Again production must already exist within the projects and will be overwritten by the template.</li>
+            <li style="list-style-type: circle;">Create Non-forecast: Non-forecast data has the ability to be imported into the Actuals tab of the Project Editor. Existing data for Production, Fixed Opex, or Revenue can be imported.</li>
+            <li style="list-style-type: circle;">Create Non-forecast – Multiple: The multiple feature for Non-forecast imports is effectively the same as the Create Non-forecast template type.</li>
+            <li style="list-style-type: circle;">Write Hierarchy Type: Write Hierarchy Type template allows Hierarchy Types and Hierarchy Elements to be written in to configuration. </li>
+            <li style="list-style-type: circle;">Write Hierarchy Type – Multiple: The multiple feature for Write Hierarchy Type is effectively the same as the singular template.</li>
+            <li style="list-style-type: circle;">Write Budget: The Write Budget template imports budgets into configuration. Budgets, Current Forecasts, and Archives can all be imported. </li>
+            <li style="list-style-type: circle;">Write Budget – Multiple: Write Budget – Multiple works the same as Write Budget but can import more than one budget at a time. </li>
+            <li style="list-style-type: circle;">Write Project: The write project function will create an entire project from scratch, loading its assets and measures from the provided Excel document. This is used when the Excel document only contains a single project.</li>
+            <li style="list-style-type: circle;">Write Project – Multiple: This function is the same as Write Project, but it is used when an Excel document houses multiple projects to be loaded into esi.manage.</li>
+            <li style="list-style-type: circle;">Write Type Curves: Used to write a single type curve from an Excel Workbook.</li>
+            <li style="list-style-type: circle;">Write Type Curves – Multiple: Used to write multiple type curves from a single Excel Workbook.</li>
+        </ul>
+        <p>	 Template Options: Additional options to shape how the EDL loads data:</p>
+        <p>o	Merge New Data With Existing: Available in Write Project and Write Project – Multiple Template Types. This feature will update a project with new data mapped in the EDL template.</p>
+        <p>o	Trim Leading Zeros from Tabular Forecasts: When loading tabular data, leading zeros will be trimmed and start dates/onstream dates updated accordingly.</p>
+        <p>o	Trim Trailing Zeroes from Tabular Forecasts: When loading tabular data, trailing zeroes will be trimmed.</p>
+        <p>&#160;</p>
+        <ul style="list-style-type: square;margin-left: 37pt;">
+            <li style="list-style-type: square;">Date Formats: In this text box, the format of the dates within Excel are specified. For example, if the dates in Excel are all in the format 2014/1 to describe January 2014 or similar, yyyy/MM would be typed into the text box. This works for any format, as well as multiple formats. If there are multiple formats, the | character can be used to separate them. The usable characters are as follows (Case sensitive):</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 73pt;">
+            <li style="list-style-type: circle;">y = year</li>
+            <li style="list-style-type: circle;">M = month</li>
+            <li style="list-style-type: circle;">d = day in month</li>
+            <li style="list-style-type: circle;">D = day in year</li>
+            <li style="list-style-type: circle;">q = quarter</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 109pt;">
+            <li style="list-style-type: square;">Quarters will have a format such as:</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 145pt;">
+            <li style="list-style-type: disc;">qQyyyy for values in Excel in the form 2Q2014 to describe April 1, 2014</li>
+            <li style="list-style-type: disc;">yyQTRq for values in Excel in the form 15Q1 to describe January 1, 2015</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 37pt;">
+            <li style="list-style-type: square;">Repeat across worksheets: This check box can be enabled if the data is in the same format from worksheet to worksheet and the template is to load in the same way on each sheet. Checking this box enables the Number of Header Worksheets numeric box and the Worksheet Repeat Group Size numeric box and the three options are tied together. If this is enabled, it will cause errors if the Worksheet Repeat Group Size is zero.</li>
+            <li style="list-style-type: square;">Number of Header Worksheets: In this numeric box, the number of worksheets before the actual data starts can be specified. This value must be defined if Repeat across worksheets is defined. Its default is zero.</li>
+            <li style="list-style-type: square;">Worksheet Repeat Group Size: If there is repeating data, but multiple sheets define a project, the pattern can be specified here. For example, if sheet 1 contains production, sheet 2 for capex, then a new project starts on sheet 3 which has production, then capex on sheet 4, the group size can be specified as 2. The default is 0, but must be changed to specify the pattern while Repeat across worksheets is enabled.</li>
+            <li style="list-style-type: square;">Original Excel File: The name of the Excel document from which to base the EDL template. </li>
+        </ul>
+        <p>To create a basic template, only the Template Type and Original Excel File are needed to get started. The rest of the features are to enhance the template and to address more complex needs.</p>
+    </body>
+</html>

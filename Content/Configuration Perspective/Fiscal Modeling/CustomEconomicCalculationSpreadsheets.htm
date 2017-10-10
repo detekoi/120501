@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="10" MadCap:lastHeight="19582" MadCap:lastWidth="1924">
+    <head>
+        <link href="../../Resources/TableStyles/HelpFileTableStylesheet.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <p>
+            <img src="../../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />
+        </p>
+        <h1>
+            <MadCap:keyword term="Custom Economic Calculation Spreadsheets" />
+            <MadCap:keyword term="Custom Economic" />Custom <MadCap:keyword term="Economic Calculation" />Economic Calculation Spreadsheets</h1>
+        <p>Users are able to define hierarchy and asset level custom economic calculations by means of spreadsheets uploaded into esi.manage.</p>
+        <p>
+            <img src="../../Images/CustomEcoonomicSheet1.png" style="width: 1141px;height: 446px;" />
+        </p>
+        <p>The spreadsheets describe the input data to retrieve and the custom parameters and formulas necessary to transform these inputs into the cash flow outputs required for display and further calculation downstream by esi.manage.</p>
+        <p>To be recognizable by esi.manage the structure of the spreadsheets must follow strict rules as described in the following sections.</p>
+        <h3>Spreadsheet Tabs (Mandatory)</h3>
+        <p>There must be a worksheet named one of the following:</p>
+        <ul>
+            <li>Calculation<MadCap:keyword term="Calculation" /></li>
+            <li>PreTax<MadCap:keyword term="PreTax" /></li>
+            <li>PostTax<MadCap:keyword term="PostTax" /></li>
+            <li>PreTaxTruncated<MadCap:keyword term="PreTaxTruncated" /></li>
+            <li>PostTaxTruncated<MadCap:keyword term="PostTaxTruncated" /></li>
+        </ul>
+        <p>While esi.manage will recalculate all sheets in the workbook, it will only transfer data into or out of the sheets named as per above.</p>
+        <p>
+            <img src="../../Images/CustomEcon2.png" />
+        </p>
+        <p>Previously, esi.manage would search through the attached spreadsheet for a tab named <i>Calculation</i>. Now, four tabs are sought: <i>PreTax, PostTax, PreTaxTruncated and PostTaxTruncated</i>.</p>
+        <p>For backwards compatibility, <i>Calculation</i> can still be used as a synonym for <i>PreTax</i>. The format and content of this worksheet however must conform to the conventions used in the applicable version (described in subsequent sections of this document).</p>
+        <p>In the unlikely event that a workbook has both a <i>Calculation</i> and <i>PreTax</i> tab, the former will be used.</p>
+        <p>A workbook may freely omit either the <i>PreTax</i> or <i>PostTax</i> tab when not needed. However, an error will be reported if both tabs are missing.  The <i>PreTaxTruncated</i> or <i>PostTaxTruncated</i> tabs are only used when truncation is applied to an economic model.</p>
+        <p>The usage of each sheet is described in detail in the Custom Economic Calculations section of the Analysis Perspective.</p>
+        <h3>Spreadsheet Tabs (Recommended)</h3>
+        <p>It is recommended that the following worksheets also be used:</p>
+        <ul>
+            <li>Notes</li>
+            <li>Parameters</li>
+            <li>Instructions</li>
+        </ul>
+        <p>The Notes tab as per the example below is used for information and audit purposes only. The contents of the Note tab is not used within the esi.manage calculation workflow consequently there is no set format that needs to be adhered to.</p>
+        <p>
+            <img src="../../Images/CustomEcon3.png" />
+        </p>
+        <p>The Parameters tab as the name suggests can be used to specify any parameters/constants for use within the calculations sheets (<i>PreTax, PostTax, PreTaxTruncated, PostTaxTruncated</i>). The contents of the Parameters sheet is not directly used within the esi.manage calculation workflow consequently there is no set format that needs to be adhered to.  Similarly there is no restriction of the number of these sheets that can be used (other than what finite system resources will allow).</p>
+        <p>
+            <img src="../../Images/CustomEcon4.png" />
+        </p>
+        <p>The Instruction tab as per the example below is another sheet used purely for information purposes only. It is simply a copy of the conventions that need to be adhered to when defining the calculation sheets (described in the following section) that can be used a quick reference guide by spreadsheet designers.</p>
+        <p>
+            <img src="../../Images/CustomEcon5.png" />
+        </p>
+        <h3>Calculation Sheet Rules</h3>
+        <p>The following rules govern the format and content of the calculation sheets (<i>PreTax, PostTax, PreTaxTruncated, PostTaxTruncated</i>) directly referenced in the esi.manage calculation workflow.</p>
+        <p><b style="text-decoration: underline; font-style: italic;">ROWS</b>
+        </p>
+        <ul>
+            <li><b>Row 1</b>
+                <br />The first row of the spreadsheet is reserved for dates, starting in column E<br /><img src="../../Images/CustomEcon6.png" /><br />The interval between dates is always monthly as that is how esi.manage performs all economic calculations internally. During calculation, esi.manage will overwrite the date row with the actual date range in use for the analysis.</li>
+            <li><b>Row N</b>
+                <br />Subsequent non-blank rows must start with four columns containing a type, unit, element, and title.<br /><img src="../../Images/CustomEcon7.png" /></li>
+        </ul>
+        <p><b style="text-decoration: underline; font-style: italic;">COLUMNS</b>
+        </p>
+        <ul>
+            <li><b>Column A (<i>Type</i>)</b>
+                <br />
+                <ul>
+                    <li>The Type column must be blank or contain one of <i>IN, OUT</i> or <i>TMP</i>.<br /><img src="../../Images/CustomEcon8.png" /><br /></li>
+                    <li>An <i>IN</i> row will be overwritten during calculation to hold pre-calculated values from the economics flowsheet (e.g. production, revenue, etc).</li>
+                    <li> The <i>Element</i> and <i>Title</i> columns, described below, indicate which values to use. After the <i>IN</i> rows have been overwritten with values from the economics flowsheet, the workbook is recalculated.<br /><img src="../../Images/CustomEcon9.png" /><br /></li>
+                    <li>After the workbook has been recalculated, the values each OUT row will be added into columns in the economics flowsheet. The target columns are determined by the <i>Element</i> and <i>Title</i> columns described below.<br /><img src="../../Images/CustomEcon10.png" /><br /></li>
+                    <li>A <i>TMP</i> row is used to hold intermediate calculation results that are not displayed on the economics flowsheet.<br /></li>
+                    <li>A row with a blank <i>Type</i> is mostly ignored by esi.manage, although any formulas it contains will be recalculated in case they contribute to the final results in the <i>OUT</i> rows</li>
+                    <li>
+                        <p>•	A row with a blank Type is mostly ignored by esi.manage, although any formulas it contains will be recalculated in case they contribute to the final results in the OUT rows</p>
+                    </li>
+                    <li>
+                        <p>•	An ATTR row is used to pull in Custom Attributes, Hierarchy Attributes, or Standard (build-in) attributes.</p>
+                    </li>
+                    <li>
+                        <p>•	A PARAM row is used in conjunction with a Parameters Excel Worksheet, and can subsequently be used in separate Parameter files.</p>
+                    </li>
+                </ul>
+            </li>
+            <li><b>Column B (<i>Unit</i>)</b>
+                <ul>
+                    <li>The <i>Unit</i> column indicates the unit of measure for values in each row.<br /><img src="../../Images/CustomEcon11.png" /></li>
+                    <li>Users are required to use only units of measure that are made available in the Configuration perspective</li>
+                    <li>For <i>IN</i> rows, esi.manage will convert the data into the named unit.</li>
+                    <li>For <i>OUT</i> rows, esi.manage will convert the data from the named unit to the required analysis case unit.</li>
+                    <li>For certain combinations of <i>Elements</i> and <i>Units</i>, this conversion may not be possible. In the event that this occurs an error message will be issued when the Analysis Case is run.</li>
+                </ul>
+            </li>
+            <li><b>Column C (<i>Element</i>)</b>
+                <ul>
+                    <li>The <i>Element</i> column describes the type of esi.manage data it contains. Examples include Production, ProductionEquivalence, Opex, Capex and many others which are detailed below.<br /><img src="../../Images/CustomEcon12.png" /></li>
+                    <li>Each of these identifies a corresponding column from the economic flowsheets.</li>
+                    <li>A blank element is a special case and is used to create new custom flowsheet columns from OUT rows.<br /><img src="../../Images/CustomEcon13.png" /></li>
+                    <li>
+                        <img src="../../Images/CustomEcon14.png" />
+                    </li>
+                </ul>
+            </li>
+            <li><b>Column D (<i>Title</i>) </b>
+                <ul>
+                    <li>The <i>Title</i> column is used differently based on the row type:<ul><li><i>IN</i> Rows:<ul><li>If the title is blank, the flowsheet summary column for the corresponding element is used.  For example, let's say that the <i>Element</i> is Capex. A blank title would retrieve the summary column labelled Capex from the flowsheet.</li><li>If the title is not blank, then a flowsheet detail column for the corresponding element is used. A title of Development would retrieve the detail column labelled Capex (Development) from the flowsheet.</li></ul></li></ul><p><img src="../../Images/CustomEcon15.png" /><br /><img src="../../Images/CustomEcon16.png" /></p><ul><li><i>OUT</i>&#160;Rows:<ul><li><i>Title</i> is used in similar fashion as for an <i>IN</i> column, except that it specifies the flowsheet columns to receive the values from the <i>OUT</i> row.</li><li>In the case of a blank element, a new custom flowsheet column will be created using the specified <i>Title</i>. Such created columns do not participate in further economic calculation in esi.manage – they exist solely for the purpose of transparency in the custom calculation.</li></ul></li></ul></li>
+                </ul>
+            </li>
+            <li><b>Column E onwards (<i>Values</i>)</b>
+                <ul>
+                    <li>Contains the actual values and formulas that comprise the calculation.<br /><img src="../../Images/CustomEcon17.png" /></li>
+                    <li>The last column in the row is special (column directly under the last date in the first row). When esi.manage overwrites the date row, it may happen that there are more dates in the analysis case then there are in the spreadsheet.<br /><img src="../../Images/CustomEcon18.png" /></li>
+                    <li>In this event, the last column formula will be replicated (using "fill right") to pad the values out to the necessary number of dates. Any formulas in this last column should be written with this in mind.<br /><img src="../../Images/CustomEcon19.png" /></li>
+                    <li>Similarly, if the analysis case dates are fewer in number than the dates in the spreadsheet, the excess dates and values will be cleared.</li>
+                    <li>This replication and clearing will only occur on rows with one of the types <i>IN, OUT</i> and <i>TMP</i>. Rows with a blank type will not be adjusted in this way.</li>
+                </ul>
+            </li>
+        </ul>
+        <h3>
+            <MadCap:keyword term="Spreadsheet Elements" />Spreadsheet Elements</h3>
+        <p>The following table provides a comprehensive list of the allowable spreadsheet elements:</p>
+        <table class="TableStyle-HelpFileTableStylesheet" style="mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');" cellspacing="0">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" style="width: 152px;" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" style="width: 46px;" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" style="width: 43px;" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" style="width: 58px;" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" style="width: 108px;" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" style="width: 134px;" />
+            <thead>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-Header1">Element</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">IN</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">OUT</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">Stage</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">Title</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-Header1">Unit Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2" style="text-align: left;">Production</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" style="text-align: center;">Y</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" style="text-align: center;">Y*</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">PreTax</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">Product</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">Production (physical)</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3" style="text-align: left;">ProductionNetRoyalty</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3" style="text-align: center;">
+                        <p>Y</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3" style="text-align: center;">Y*</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">PreTax</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Product</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">Production (physical)</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2" style="text-align: left;">ProductionEquivalence</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" style="text-align: center;">Y</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" style="text-align: center;">Y*</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">PreTax</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">Product</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">Production (equivalence)</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3" style="text-align: left;">ProductionEquivalenceNetRoyalty</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3" style="text-align: center;">Y</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3" style="text-align: center;">Y*</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">PreTax</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Product</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">Production (equivalence)</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2" style="text-align: left;">Revenue</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" style="text-align: center;">Y</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" style="text-align: center;">Y*</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">PreTax</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">Product</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">Currency</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3" style="text-align: left;">Royalty</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3" style="text-align: center;">Y</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3" style="text-align: center;">Y*</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">PreTax</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Product</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">Currency</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2" style="text-align: left;">Opex</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" style="text-align: center;">Y</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" style="text-align: center;">Y*</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">PreTax</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">Opex type</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">Currency</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3" style="text-align: left;">OpexGroup</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3" style="text-align: center;">Y</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3" style="text-align: center;">N</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">PreTax</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Opex group</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">(none)</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2" style="text-align: left;">Capex</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" style="text-align: center;">Y</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" style="text-align: center;">Y*</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">PreTax</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">Capex type</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">Currency</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3" style="text-align: left;">CapexGroup</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3" style="text-align: center;">Y</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3" style="text-align: center;">N</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">PreTax</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Capex group</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">(none)</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2" style="text-align: left;">DD&amp;A</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" style="text-align: center;">Y</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" style="text-align: center;">Y*</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">PreTax</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">(none)</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">Currency</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3" style="text-align: left;">Depreciation</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3" style="text-align: center;">Y</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3" style="text-align: center;">Y*</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">PreTax</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Fiscal hierarchy</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">Currency</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2" style="text-align: left;">Burden</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" style="text-align: center;">Y</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" style="text-align: center;">Y</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">PreTax</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">Name</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">Currency</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3" style="text-align: left;">PriceForecast</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3" style="text-align: center;">Y</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3" style="text-align: center;">N</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">PreTax</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Name</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">Currency</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2" style="text-align: left;">Custom</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" style="text-align: center;">N</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" style="text-align: center;">Y</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">PreTax</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">Name</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">(none)</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3" style="text-align: left;">NetRevenue</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3" style="text-align: center;">Y</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3" style="text-align: center;">N</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">PostTax</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">(none)</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">Currency</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2" style="text-align: left;">OperatingIncome</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" style="text-align: center;">Y</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" style="text-align: center;">N</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">PostTax</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">(none)</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">Currency</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3" style="text-align: left;">TaxableIncome</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3" style="text-align: center;">Y</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3" style="text-align: center;">N</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">PostTax</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Fiscal hierarchy</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">Currency</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2" style="text-align: left;">IncomeBeforeTax</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" style="text-align: center;">Y</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" style="text-align: center;">N</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">PostTax</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">Fiscal hierarchy</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">Currency</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3" style="text-align: left;">TaxCurrent</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3" style="text-align: center;">Y</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3" style="text-align: center;">Y</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">PostTax</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Fiscal hierarchy</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">Currency</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2" style="text-align: left;">TaxDeferred</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" style="text-align: center;">Y</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" style="text-align: center;">Y</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">PostTax</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">Fiscal hierarchy</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">Currency</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body3" style="text-align: left;">Custom</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3" style="text-align: center;">Y</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3" style="text-align: center;">Y</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">PostTax</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">Name</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body3">(none)</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Table Definitions:</p>
+        <ul>
+            <li><i>IN</i> and <i>OUT</i> specifies whether an element can be used for input, output or both.<ul><li>Y = yes, and N = no</li><li>Y* for output means that technically an element can be sent back to esi.manage but great care must be taken to ensure that all dependent quantities are updated accordingly.<br />For example, if production is updated, then revenue, royalty, opex, etc. must be updated as well since the built-in esi.manage calculations have already been performed using the original production value.</li></ul></li>
+            <li><i>Stage</i> indicates the stage at which an element becomes available.<ul><li><i>PreTax</i> elements are available for input in the <i>PostTax</i> stage as well.</li></ul></li>
+            <li><i>Title</i> describes what an element's title represents when qualifying or naming the element.</li>
+            <li><i>Custom</i> elements play no role in esi.manage calculations, they are available in the final cash flow display for informational purposes only.</li>
+        </ul>
+        <p class="note"><b>Note</b>: 	Custom fields are specified by leaving the <i>Type</i> column blank, do not enter the word "Custom" in the <i>Type</i> column as this will result in an error.</p>
+        <p>
+            <img src="../../Images/_addon_error.png" />
+        </p>
+        <ul>
+            <li><i>PriceForecast</i> elements access the unadjusted prices from a named global price forecast file - the prices will not be subject to any configured price escalation.</li>
+        </ul>
+        <p>&#160;</p>
+        <p class="note"><b>Note</b>: 	The esi.manage calculation workflow is sensitive to the spelling used in the <i>Type, Unit, Element</i> and <i>Title</i> columns. Entries must match exactly (ie upper/lower case, no leading or trailing spaces) to the identifiers described above and the corresponding items in Configuration where applicable.</p>
+        <h3>
+            <MadCap:keyword term="Output Columns" />Output Columns</h3>
+        <p>This functionality exists so that custom calculations can be performed that influence the native economics calculations in esi.manage. As a best practice, it is recommended that any output columns generated from a spreadsheet be given unique names that do not match existing flowsheet columns in esi.manage.</p>
+        <p>
+            <img src="../../Images/CustomEcon21.png" />
+        </p>
+        <p>
+            <img src="../../Images/CustomEcon22.png" />
+        </p>
+        <p>This makes it easier to separate the calculations performed natively by esi.manage from those performed by the spreadsheet, which is useful when troubleshooting. Also, uniquely named spreadsheet elements are automatically summed moving up the calculation hierarchy. This is not always the case for the corresponding elements calculated natively in esi.mange.</p>
+        <p>
+            <img src="../../Images/CustomEcon23.png" />
+        </p>
+        <h3>Unit Conversion</h3>
+        <p>Some unit conversions may be disallowed at analysis time. For instance product unit conversions that require a heating value or mass density will be rejected.  This is because the relevant quality information is not maintained during the economic aggregation process.</p>
+        <p>The workaround is either to work in equivalence units, or to ensure that the physical product units used in the spreadsheet and the analysis case match.</p>
+        <p>
+            <img src="../../Images/CustomEcon24.png" />
+        </p>
+        <p>
+            <img src="../../Images/CustomEcon26.png" />
+        </p>
+        <p>For similar reasons, input prices are always reported in the units of the associated configured price forecasts. The system does not permit the user to specify an alternate unit of measure when requesting prices.</p>
+        <p class="note"><b>Note</b>: 	Flowsheet columns generated by spreadsheet <i>OUT</i> columns with a blank Element identifier are not subject to any unit conversion. The numbers calculated by the spreadsheet are shown as-is in the Cashflow display.</p>
+        <h3>Supported Spreadsheet Functions</h3>
+        <p>The calculation engine employed by esi.manage supports almost all functions and formulas available in MS Excel including: Text, Logical, Information, Date &amp; Time, Lookup &amp; Reference, Math &amp; Trig, Statistical, Database, Financial, and so on. Named ranges and a variety of add-in formulas and functions are also supported.</p>
+        <p>The table below lists the functions that are not currently supported:</p>
+        <p>
+            <img src="../../Images/CustomEcon25.png" />
+        </p>
+        <p>The calculation engine used in esi.manage prior to version 3.22 supports named ranges and the following functions only:</p>
+        <p>
+            <img src="../../Images/CustomEcon27.png" />
+        </p>
+        <p>For backwards compatibility the previous version of the calculation engine can still be used by adding a line to the esi.manage.ini file as per the following:</p>
+        <p>-Dcom._3esi.manage.spreadsheet.persister=poi</p>
+        <p>
+            <img src="../../Images/CustomEcon28.png" />
+        </p>
+        <h3>Configuration Setup for Custom Economic Calculation Workbooks</h3>
+        <p>When the spreadsheet definition is complete and ready for testing/publishing, complete the following steps to incorporate into the esi.manage economic calculation workflow.</p>
+        <ol>
+            <li>Navigate to the relevant hierarchy node in Configuration / Defaults / Fiscal Model.</li>
+            <li>Select the Custom tab, and set the Test Spreadsheet path for the applicable calculation level (Hierarchy or Asset) so that it points to the spreadsheet file saved on disk. It is also useful to set the <i>Output Folder</i> folder path for debugging purposes at this point.<br /><img src="../../Images/CustomEcoonomicSheet1.png" style="width: 1138px;height: 445px;" /><br /><b>Note</b>: The paths defined in both the <i>Test Spreadsheet</i> and <i>Output Folder</i> fields must be accessible to all network users otherwise an error will be generated for those users without access.</li>
+            <li>Test the spreadsheet from within esi.manage by running an Analysis Case that exercises all of the calculations defined in the spreadsheet.</li>
+            <li>
+                <img src="../../Images/_projbrowser.png" />
+                <br />
+                <br />If the debugging folder is set, then a copy of the spreadsheet will be saved into that folder.<br /><img src="../../Images/CustomEcon31.png" /><br />The copy will contain the actual esi.manage input data from the analysis case run, along with the calculated output data. This is useful for identifying and resolving any issues in the original source spreadsheet.<br /><img src="../../Images/CustomEcon32.png" /></li>
+            <li>Once satisfied that the spreadsheet calculations are functioning correctly, upload the spreadsheet into esi.manage using Configuration / Defaults / Configuration Attachments.<br /><img src="../../Images/CustomEconomicSheet3.png" style="width: 1071px;height: 355px;" /><br />Note: The space available for documents might need to be adjusted to upload spreadsheets into esi.manage. This can be found at Configuration&gt;System&gt;Miscellaneous&gt;Document Attachments.<br /><img src="../../Images/DocAttach.png" /><br /></li>
+            <li>Return to the Custom tab for the applicable fiscal model hierarchy node, select the newly uploaded spreadsheet from the Spreadsheet File dropdown path for the applicable calculation level (Hierarchy or Asset) and clear out the <i>Test Spreadsheet</i> and <i>Output Folder</i> fields.<br /><img src="../../Images/CustomEconomicSheet4.png" style="width: 1115px;height: 449px;" /><br />This will publish the spreadsheet so that it affects the economics calculations for all esi.manage users.</li>
+        </ol>
+        <p class="note"><b>Note</b>: Once published any changes made to the original spreadsheet saved on disk will have no effect unless it is uploaded to esi.manage again.</p>
+        <p>Should it be desirable to work on an updated version of the calculation spreadsheet, repeat the steps above to test and republish.</p>
+        <p class="note"><b>Note</b>: Whenever the <i>Test Spreadsheet</i> field is populated the spreadsheet defined overrides the file configured in the <i>Spreadsheet File</i> dropdown for the current user only. This is convenient for testing as other users will be unaffected as the testing takes place.</p>
+        <h3>Custom Economic Parameters</h3>
+        <p>Users are also able to supply parameters to the master calculation spreadsheet by means of uploading a custom economic parameters spreadsheet.</p>
+        <p>
+            <img src="../../Images/CustomEconomicSheet5.png" />
+        </p>
+        <p>Note that the calculation parameters spreadsheet works in conjunction to existing custom calculation spreadsheets specified in the same page. If there are no custom calculation spreadsheet files selected for a given fiscal model hierarchy node, the calculation parameters spreadsheet selected will be ignored.</p>
+        <p>The calculation parameters spreadsheet follow the general layout of other calculation spreadsheets in that they have the usual columns of Type, Unit, Element, and Title. However, this is just for consistency. Only the Type and Title columns are used. The Type column can either be blank, or contain “PARAM”. Rows of blank type are ignored. On “PARAM” rows, the Title gives a name to the parameter. All of these parameter definitions must be on a worksheet named Parameters.</p>
+        <p>The “PARAM” elements from the calculation parameters spreadsheet are permitted in custom calculation spreadsheets. They are used to indicate that the corresponding parameter row is to be copied form the parameter spreadsheet into the calculation spreadsheet. All row values in the calculation spreadsheet are discarded and replaced completely by the values from the parameter sheet row.</p>
+        <p>The following figure shows the connections between the calculation parameters spreadsheet and the custom calculation spreadsheet:</p>
+        <p>
+            <img src="../../Images/_econconfig_spreadsheet.png" />
+        </p>
+    </body>
+</html>

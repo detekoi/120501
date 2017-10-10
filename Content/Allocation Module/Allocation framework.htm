@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="6" MadCap:lastHeight="6795" MadCap:lastWidth="1170">
+    <head>
+        <link href="../Resources/TableStyles/HelpFileTableStylesheet.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Allocation framework</title>
+    </head>
+    <body>
+        <h2>Allocation framework<img src="../Images/Logo Images/3esi_manage.png" align="right" border="0" class="HeaderLogo" /></h2>
+        <h3>Configuration Settings </h3>
+        <p>Custom Page of the Project (must be enabled in the Configuration)</p>
+        <p>
+            <img src="../Resources/Images/Allocation Module/Allocation framework.png" style="visibility: visible;mso-wrap-style: square;width: 550px;height: 536px;" />
+        </p>
+        <p>What’s available (asset attributes, project attributes, parameters)</p>
+        <table style="mc-table-style: url('../Resources/TableStyles/HelpFileTableStylesheet.css');" class="TableStyle-HelpFileTableStylesheet" cellspacing="0">
+            <col style="width: 93px;" class="TableStyle-HelpFileTableStylesheet-Column-Column1" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2" MadCap:pattern="5">
+                    <th class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>Element Name</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>Description</p>
+                    </th>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>HIERARCHY</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>hierarchy attributes</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>BUDGET</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>budget level custom attributes</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>PROJECT</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>project level custom attributes</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>ASSET</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>asset level custom attributes</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body3">
+                        <p>STANDARD</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body3">
+                        <p>the published standard (built-in) attributes</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h3>Overview</h3>
+        <p>Allocation in esi.manage is based on the Custom Excel framework (it is an extension of the mechanism for embedding custom Economic models in esi.manage). The purpose of Allocation is to transfer calculated results from one or more assets, to one or more assets, utilizing an Excel model. </p>
+        <p>NOTE that Allocation is a calculation time activity – the results of this process are visible in the Economics Analysis output; there is no “record” in either the source or target projects of the measure transfer.</p>
+        <p>As with the other implementations of the Excel modelling framework, the data that is populated into the Excel model will be “post” application of Escalation, Inflation and ScaleFiles. </p>
+        <p>There is no “recalculation” of dependent data, for example, transferring a Gross Opex amount from one Asset to others, will not result in the Net Opex being recalculated in any of the Assets. Further, what is being sent “OUT” to any asset is added to what is already in that Asset for the particular measure. Even if there isn’t a particular entry in an asset (i.e.; there is no Opex Forecast for a particular opex type), results can be allocated into the asset using this framework. </p>
+        <p>Measure Totals (Revenue, Opex, Capex) will be recalculated as they are sum values (post processed). In addition, the Totals (GrossOpex, GrossCapex) can be requested into the models and they will be summed by the framework.</p>
+        <p>NOTE that the calculations are Asset based – Projects only provide the Hierarchy information for identification/grouping.</p>
+        <p>Allocation Models are introduced into a Budget through a project. Within that Project there must be at least one asset (which the Excel Allocation Model will be associated against. An Allocation model can either be loaded in from disk, or selected from the Configuration Attachments (this allows a single allocation spreadsheet to be used in multiple budgets, with the ability to update that spreadsheet in a single location).</p>
+        <p>Optionally, you can choose to associate Parameter file with the model.</p>
+        <table style="mc-table-style: url('../Resources/TableStyles/HelpFileTableStylesheet.css');" class="TableStyle-HelpFileTableStylesheet" cellspacing="0">
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                <th class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                    <p>Row Type</p>
+                </th>
+                <th class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                    <p>Description</p>
+                </th>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                    <p>ATTR</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                    <p>a row that defines an attribute to be provided from the economic model (except custom time series)</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                    <p>IN</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                    <p>a row whose values will be overwritten by economic model data or custom time series</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                    <p>INN</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                    <p>a row whose calues will be overwritten by the total group economic model data</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                    <p>OUT</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                    <p>a row that will be recalculated with results copied back into the economic model, including custom time series</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                    <p>TMP</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                    <p>a row that will be recalculated but will not be copied back into the economic model</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                    <p>PARAM</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                    <p>a row that defines a calculation parameter (in a parameter workbook) or receives it (in a calculation workbook)</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                    <p>&#160;</p>
+                </td>
+                <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                    <p>a row that will be ignored (the row type is left blank)</p>
+                </td>
+            </tr>
+        </table>
+        <p>&#160;</p>
+        <p>An Allocation Model is made up of 2 primary pages (plus a Parameters page if desired):</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">Group – the Group page identifies which of the available measure interfaces are of interest.</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="list-style-type: circle;">The API has access to all calculated data:</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="list-style-type: square;">Gross and Net</li>
+            <li style="list-style-type: square;">By type (expenditure, opex, production, revenue) or as a rollup (Opex, Capex, Revenue)</li>
+            <li style="list-style-type: square;">Calculation entities that are appropriate for economic calculations (Price Forecasts, Inflation Vectors, etc.)</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">There are 3 key words that instruct esi.manage on how to populate the requested rows:</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="list-style-type: circle;">IN – this will correspond to the data that is associated with the Asset that the allocation model was associated against</li>
+            <li style="list-style-type: circle;">INN – this will correspond to the aggregate data for all Assets that are part of the selected Hierarchy – this is only available on the Group Page</li>
+            <li style="list-style-type: circle;">OUT – this will be the Delta (adjustment) that is to be “added” to the existing data on an Asset</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">Member – this is the definition of how data is to be allocated to an individual Asset.</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="list-style-type: circle;">Only the IN and OUT keywords are supported – IN will correspond to the particular Asset.</li>
+            <li style="list-style-type: circle;">Formula for the Allocation are written against the Group page rows</li>
+        </ul>
+        <p>At calculation time (in memory) the member page is replicated for each asset that is part of the allocation Hierarchy. The IN rows will be populated with the requested data for the specific asset. The Group Page (only populated once) can have the aggregate data for all assets within the Group.</p>
+        <p>NOTE: Asset Names that contain the following characters (: \ / ? * [ ] ) are not allowed.</p>
+        <p>&#160;</p>
+        <h3>Allocation Model Workflow</h3>
+        <p>Allocation spreadsheets are configured in an esi.manage Project, on the Custom Page. This page must be enabled in the esi.manage Configuration to be visible in a Project.</p>
+        <p>
+            <img src="../Resources/Images/Allocation Module/Allocation framework_1.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 376px;" />
+        </p>
+        <p>Allocation Models (and related parameter files) can be loaded into the esi.manage Configuration to the Configuration Attachments Node.</p>
+        <p>
+            <img src="../Resources/Images/Allocation Module/Allocation framework_2.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 84px;" />
+        </p>
+        <p>In order for these files to be accessible to a Project, the Types must be set accordingly. </p>
+        <p>In the Budget that you will be utilizing the Allocation Model(s), you must choose (or create, depending on the desired calculations) the Project that the allocation model(s) will be associated with.</p>
+        <p>On the Custom Page of the desired project:</p>
+        <p>
+            <img src="../Resources/Images/Allocation Module/Allocation framework_3.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 48px;" /> </p>
+        <p>The Name that is provided will be used to “name” (provided you have the Economic Debug path configured) the debug output file. It has no bearing on how the calculations will be performed. The Asset which is selected will correspond to the IN keyword on the Group Page. The implication of this will be described later.</p>
+        <p>The Group drop down will be populated with the Project Hierarchy options. It may be that the existing hierarchy has the necessary options to support how measures are to be “allocated”, or a new Hierarchy may be introduced.</p>
+        <p>
+            <img src="../Resources/Images/Allocation Module/Allocation framework_4.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 393px;" />
+        </p>
+        <p>The implications of the Group selection are shown below. On the Project that the allocation model has been entered, the Related Projects column will show all of the Project in the Budget that have the selected value (in this case Allocation Yes) in the current Budget.</p>
+        <p>On any other project, if you view the Custom Page, it will “reflect” which Allocation Groups (models) it is part of.</p>
+        <p>
+            <img src="../Resources/Images/Allocation Module/Allocation framework_5.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 272px;" />
+        </p>
+        <p>The next step will be “embed” the allocation model Excel Book into the Project. When you double click in the Model cell, a “Browse” button will be enabled in the lower right corner of the cell:</p>
+        <p>
+            <img src="../Resources/Images/Allocation Module/Allocation framework_3.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 48px;" />
+        </p>
+        <p>You have two choices for how to select the model:</p>
+        <p>
+            <img src="../Resources/Images/Allocation Module/Allocation framework_6.png" style="visibility: visible;mso-wrap-style: square;width: 390px;height: 146px;" />
+        </p>
+        <p>Local File will be selected from disk, all Excel files in the Configuration Attachments of type “Asset Custom Model” will also be displayed in the drop down list.</p>
+        <p>Allocation Model selected from Disk:</p>
+        <p>
+            <img src="../Resources/Images/Allocation Module/Allocation framework_7.png" style="visibility: visible;mso-wrap-style: square;width: 536px;height: 103px;" />
+        </p>
+        <p>Allocation Model selected from Configuration:</p>
+        <p>
+            <img src="../Resources/Images/Allocation Module/Allocation framework_8.png" style="visibility: visible;mso-wrap-style: square;width: 390px;height: 146px;" />
+        </p>
+        <p>Allocation Parameter Files can be selected in a similar manner.</p>
+        <p>Note: the method for the utilization of parameter files (during calculations) is for esi.manage to first Read the contents of the Parameter Files into memory. As the various Excel files (allocation, asset level operating income, hierarchy level operating income, taxes) are encountered during the calculations, those files are first populated with their “requested” Parameter entries. It is possible to utilize fewer Parameter Files (with more entries than are used by any one of the Excel Models) – the Excel models will be updated with their required parameters during calculations.</p>
+        <p>Once the Custom line has been filled in, you can Refresh to display the Projects that will participate in the calculations based on your selections:</p>
+        <p>
+            <img src="../Resources/Images/Allocation Module/Allocation framework_5.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 272px;" />
+        </p>
+        <h3>Design of the Allocation Model</h3>
+        <p>It is important to design the intent of the Allocation prior to constructing the model. An allocation model must have 2 pages, Group and Member.</p>
+        <p>Group – this page allows the use of the INN Type, which will be the aggregate (including the Asset the allocation model is associated with) of the selected measure. During calculations, the Group page is populated first with this data.</p>
+        <p>Member – this is the generic allocation worksheet, whose formula are written (in part) against rows or ranges on the Group page. The member page (at calculation time) is cycled through for each of the Assets that are part of the Hierarchy Group. IN data is populated, and the OUT adjustments are then updated back into the individual assets (in memory – there is no change to the original source data for the asset.</p>
+        <p>The following is an illustration of a Group page formula:</p>
+        <p>
+            <img src="../Resources/Images/Allocation Module/Allocation framework_9.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 215px;" />
+        </p>
+        <p>The syntax and keywords are identical to the Custom Excel economic models, with the addition of the INN keyword, which is allowed on the Group page of the model.</p>
+        <p>In the situation where there is data on the allocation asset, it can be accessed by using the IN Type, as shown on lines 4 and 5. To back out the data that is coming from the additional assets in the calculation group, Line 8 is constructed. The TMP type means the formula written on that row will be extended to the specified time horizon. </p>
+        <p>Key Notes: </p>
+        <p>The use of the built in Parameter (esiMonthCount) has been used to control the horizon to 1000 months. When there are assets with vastly different start dates, the horizon (which is determined by the Analysis Case span) is applied to each asset’s start date, which can result in a very long “aggregate” calculation window.</p>
+        <p>While Totals (GrossOpex, GrossCapex) can be brought into the spreadsheet, values CANNOT be assigned out into these Elements – all allocations must be done at the Type level (opex type, capex type, production by product, revenue by product) on both a Gross and Net basis. </p>
+        <p>It is not necessary to provide an adjustment to all Types, however, any type that is being adjusted MUST be adjusted for both Gross and Net (there will be no recalculation of an individual assets data based on original information such as WI).</p>
+        <p>The model is responsible for ensuring the balance – if you are allocating costs or revenues from the allocation asset to the other assets using some ratio – the amounts that are being allocated must be decremented from the allocation asset.</p>
+        <p>The following is an illustration of a Member page formula:</p>
+        <p>
+            <img src="../Resources/Images/Allocation Module/Allocation framework_10.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 165px;" />
+        </p>
+        <p>In this example, an Asset Attribute (line 4) has been used to indicate whether the Member Page is receiving allocated data, or “dumping” the allocated data. There are alternate approaches to the construction of this logic – it would be allowable to write OUT lines on the Group Page to discard the allocation asset’s data. </p>
+        <p>In this example, the Ratio line (line 8) is the fraction of this particular asset’s Gas Production, as a percentage of the Total Gas Production from all other assets (except the allocation node Asset). Group E8 is the TMP line formula which subtracted the IN Gas (allocation asset) from the INN Gas (all assets).</p>
+        <p>The Assignment formula (line 9) indirectly uses the asset attribute to determine how the allocation node’s data is being dealt with.</p>
+        <p>For the allocation asset – Line 9 is going to resolve to -1/</p>
+        <p>For all other assets – Line 9 is going to resolve the Fraction of Gas.</p>
+        <p>Line 12 is a GrossProduction “adjustment” against Group!E4 – the Gross Gas Production for the allocation asset. </p>
+        <p>For the allocation asset – it will be a -1 * the IN Production – which will result in 0 for that asset’s Gross Gas production.</p>
+        <p>For all other assets, it will be a fractional addition of the Gas Amount.</p>
+        <p>NOTE: OUT columns are “additive” whatever is written will be added to what is currently in esi.manage calculation memory for the asset. The Group page is ONLY populated and calculated ONCE – meaning member page OUTs will never be reflected on the Group page during calculations. </p>
+        <p>As noted earlier – when using allocation, the model is responsible for dealing with all “dependant” measures. For example, if Production is being allocated, it is likely required that Revenue and Royalty amounts volumes are also allocated. These rows (on the Group page) bring in the corresponding data for the allocation asset.</p>
+        <p>
+            <img src="../Resources/Images/Allocation Module/Allocation framework_11.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 87px;" />
+        </p>
+        <p>The corresponding rows on the Member page follow the previous syntax:</p>
+        <p>
+            <img src="../Resources/Images/Allocation Module/Allocation framework_12.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 52px;" />
+        </p>
+        <p>&#160;</p>
+    </body>
+</html>

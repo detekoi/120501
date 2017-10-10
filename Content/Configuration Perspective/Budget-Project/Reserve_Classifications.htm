@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="4048" MadCap:lastWidth="1484">
+    <head><title>Reserve Classifications</title>
+        <link rel="StyleSheet" href="../../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <img src="../../Images/Logo Images/3esi_manage.png" align="right" border="0" class="HeaderLogo" />
+        <h1>Reserve Classifications</h1>
+        <h3>Configuring Reserves</h3>
+        <p>esi.manage supports configuring Reserves to support a number of use 
+ cases.</p>
+        <p>&#160;</p>
+        <h3>Cumulative 
+ Function</h3>
+        <p style="font-weight: normal;text-decoration: none;">By 
+ leaving the 'Reserve classifications are incremental' box unchecked when 
+ production is entered into the production tab of the project editor, the 
+ production data will automatically be populated into the next reserve 
+ classification.</p>
+        <p style="font-weight: normal;text-decoration: none;">This 
+ supports:</p>
+        <p style="font-weight: normal;text-decoration: none;">1P 
+ / P90 = Proved Reserves (P1) (Proven developed, Proven Undeveloped, Proven 
+ Developed not producing))</p>
+        <p style="font-weight: normal;text-decoration: none;">2P 
+ / P50 = 1P + Probable Reserves (P2)</p>
+        <p style="font-weight: normal;text-decoration: none;">3P 
+ / P10 = 2P + &#160;Possible 
+ Reserves (P3)</p>
+        <p style="font-weight: normal;text-decoration: none;">
+            <img src="../../Images/aimage109.jpg" style="border: none;border-style: none;border-style: none;" border="0" />
+        </p>
+        <p style="font-weight: normal;text-decoration: none;">&#160;</p>
+        <p style="font-weight: normal;text-decoration: none;">
+            <img src="../../Images/Reserve_class_prodn_table.png" />
+        </p>
+        <p style="font-weight: normal;text-decoration: none;">&#160;</p>
+        <p style="font-weight: normal;text-decoration: none;">Above 
+ is a very simplistic example. By entering in 100 into '1P', 100 is also 
+ populated into the next classification of '2P' which is displayed in green 
+ font to show it was automatically populated. This saves the user from 
+ entering the same data into each of the reserve classes as often 2P will 
+ be the same as 1P as there is no Probable reserves etc.</p>
+        <p style="font-weight: normal;text-decoration: none;">We 
+ then entered 150 into 3P which is why that column is not green.</p>
+        <p style="font-weight: normal;text-decoration: none;">The 
+ screen shot below shows how this was configured in the Reserves Classification 
+ page with the 'Reserve Classifications are incremental' box unchecked.</p>
+        <p style="font-weight: bold;text-decoration: underline;">
+            <img src="../../Images/Reserve_class_non_incremental.png" />
+        </p>
+        <p style="font-weight: normal;text-decoration: none;">&#160;</p>
+        <h3>Incremental 
+ Function</h3>
+        <p>However, in other configurations which need to split out the P1 (Proven 
+ Reserves) into incremental layers, it would not make sense to auto-populate 
+ the data from one reserve classification to the next.</p>
+        <p>For example:</p>
+        <p>P1 - Proved Developed Producing (PDP)</p>
+        <p>P1 - Proved Undeveloped (PUD)</p>
+        <p>P1 - Proved Developed Not Producing (PDNP)</p>
+        <p>P2 - Possible Reserves</p>
+        <p>P3 - Probable reserves</p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../Images/reserve_class_consolidation2.PNG" style="border: none;float: none;width: 882px;height: 476px;border-style: none;border-style: none;" width="882" height="476" border="0" />
+        </p>
+        <p>&#160;</p>
+        <p>In this example the production will not automatically be populated a 
+ P1 Reserve Classification to another. &#160;However, 
+ P2 and P3 do not have the incremental box checked (not shown), and so 
+ will automatically be populated by whatever entry is in any of the P1 
+ Classifications.</p>
+        <p>&#160;</p>
+        <h3>Reserve 
+ Consolidations</h3>
+        <p style="font-weight: normal;text-decoration: none;">Reserves 
+ are reported and analyzed in the esi.manage reports and Production analysis 
+ view using consolidations. Within each Reserve category, you may wish 
+ to model the High (P90 / 3P), Medium (P50 / 2P) and Low scenarios (P10 
+ / 1P) and calculate the mean of the distribution using a Swanson’s mean 
+ type consolidation.</p>
+        <p>There is also a consolidations tab. This contains all the reserve classifications 
+ from all tabs to allow the user to create global consolidations if required.</p>
+        <p>&#160;</p>
+        <h3>Expected 
+ Value</h3>
+        <p>On the Reserve Consolidations section, you are able to choose a Reserve 
+ Consolidation that is your Expected Value (EV). &#160;The 
+ EV is denoted by a gold star.</p>
+        <p>
+            <img src="../../Images/EV_star.png" style="border: none;width: 348px;height: 186px;float: none;border-style: none;" width="348" height="186" border="0" />
+        </p>
+        <p>The EV is important when using the Reserve Progression Feature in Reports. 
+ If you choose the Reserve Progression option, as time progresses any Reserve 
+ Consolidation you choose to report on (eg. 1P) will progress towards the 
+ EV value.</p>
+        <p>&#160;</p>
+        <h3>Parametric 
+ Mean definition</h3>
+        <ul>
+            <li>The Parametric Mean Definition is used to calculate the mean of the 
+ parameters and then calculate the profile as opposed to calculating the 
+ mean of the profiles</li>
+            <li>The advantage of this is that it will calculate the mean end point 
+ rather than having to take the P1, P2 or P3 points</li>
+        </ul>
+        <p>
+            <img src="../../Images/aimage40.png" />
+        </p>
+        <ul>
+            <li>Set up the Parametric Mean in the Reserves Configuration for each 
+ Classification.</li>
+            <li>Like all consolidations it can be used for Reporting and Charting</li>
+        </ul>
+        <p class="note"><b>Note:</b> Parametric Mean should only be used for pure Formulaic data – not where Tabular 
+ is used</p>
+        <p>
+            <img src="../../Images/parametric_mean_example_graph.PNG" style="border: none;float: none;width: 720px;height: 412px;border-style: none;border-style: none;" width="720" height="412" border="0" />
+        </p>
+        <p>&#160;</p>
+        <p class="note"><b>&#160;Note:</b> In addition to the above configuration, the <a href="../Fiscal Modeling/Default_Economic_Properties.htm">default 
+ economic properties</a> also requires the reserve consolidation to be 
+ set.</p>
+    </body>
+</html>

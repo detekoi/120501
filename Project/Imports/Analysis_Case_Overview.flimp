@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MsWordImport
+  PreserveSourceStyles="false"
+  KeepSourceLinks="true"
+  ConvertInlineFormatting="true"
+  AddContinuedLinks="false"
+  AddContinuedFromLinks="false"
+  ContinuedLinkFormat="(continued in {title})"
+  ContinuedFromLinkFormat="(continued from {title})"
+  UseMaxCharLimit="false"
+  UseMinCharLimit="true"
+  MaxCharLimit="10000"
+  MinCharLimit="50"
+  FilenameLength="24"
+  GeneratePageLayouts="false"
+  UseFirstHeadingAsTopicTitle="true"
+  LastCollectTime="2014-11-19T21:26:50.2779977-07:00"
+  ProjectName="Help File"
+  ProjectFolder="\\cgyfile1\Shared\Flare\"
+  AutoSync="false"
+  AutoFitTables="false"
+  Stylesheet="../../Content/Resources/Stylesheets/HelpFileStylesheet.css"
+  LastImport="2014-11-19T21:27:39.3539977-07:00">
+  <Files>
+    <Url
+      Source="../../../../Documentation/Flare/Completed Word Docs/Analysis_Case_Overview.doc"
+      AbsoluteSource="file://cgyfile1/Documentation/Flare/Completed Word Docs/Analysis_Case_Overview.doc" />
+  </Files>
+  <ExcludedFiles />
+  <CollectedSourceFiles />
+  <SkippedSourceFiles />
+  <GeneratedFiles>
+    <Url
+      Source="../../Content/Resources/Images/Analysis_Case_Overview/02000001.jpg"
+      TimeStamp="19/11/2014 9:27:35 PM" />
+    <Url
+      Source="../../Content/Resources/Images/Analysis_Case_Overview/02000002.jpg"
+      TimeStamp="19/11/2014 9:27:35 PM" />
+    <Url
+      Source="../../Content/Analysis_Case_Overview/Analysis Case Overview.htm"
+      TimeStamp="19/11/2014 9:27:36 PM" />
+    <Url
+      Source="../../Content/Resources/Images/Analysis_Case_Overview/03000003.png"
+      TimeStamp="19/11/2014 9:27:35 PM" />
+    <Url
+      Source="../../Content/Resources/Images/Analysis_Case_Overview/03000004.png"
+      TimeStamp="19/11/2014 9:27:35 PM" />
+    <Url
+      Source="../../Content/Resources/Images/Analysis_Case_Overview/03000005.png"
+      TimeStamp="19/11/2014 9:27:35 PM" />
+    <Url
+      Source="../../Content/Resources/Images/Analysis_Case_Overview/03000006.png"
+      TimeStamp="19/11/2014 9:27:35 PM" />
+    <Url
+      Source="../../Content/Analysis_Case_Overview/Creating a New Analysis Case.htm"
+      TimeStamp="19/11/2014 9:27:36 PM" />
+    <Url
+      Source="../../Content/Resources/Images/Analysis_Case_Overview/03000007.png"
+      TimeStamp="19/11/2014 9:27:35 PM" />
+    <Url
+      Source="../../Content/Analysis_Case_Overview/PropertiesFields.htm"
+      TimeStamp="19/11/2014 9:27:36 PM" />
+    <Url
+      Source="../../Content/Analysis_Case_Overview/Analysis Case Portfolio Metrics.htm"
+      TimeStamp="19/11/2014 9:27:36 PM" />
+    <Url
+      Source="../../Content/Resources/Images/Analysis_Case_Overview/0300000A.png"
+      TimeStamp="19/11/2014 9:27:36 PM" />
+    <Url
+      Source="../../Content/Analysis_Case_Overview/Projects.htm"
+      TimeStamp="19/11/2014 9:27:36 PM" />
+    <Url
+      Source="../../Content/Analysis_Case_Overview/Analysis_Case_Overview.htm"
+      TimeStamp="19/11/2014 9:27:36 PM" />
+    <Url
+      Source="../TOCs/Analysis_Case_Overview.fltoc"
+      TimeStamp="19/11/2014 9:27:36 PM" />
+    <Url
+      Source="../../Content/Resources/Stylesheets/HelpFileStylesheet4.css"
+      TimeStamp="19/11/2014 9:27:36 PM" />
+  </GeneratedFiles>
+  <ParagraphStyles>
+    <Map
+      From="h1"
+      To="h1" />
+    <Map
+      From="h2"
+      To="h2" />
+    <Map
+      From="h3"
+      To="h3" />
+  </ParagraphStyles>
+  <CharacterStyles>
+    <Map
+      From="Hyperlink"
+      To="a.(MS Word Style)" />
+    <Map
+      From="Strong"
+      To="b" />
+  </CharacterStyles>
+  <NewTopicStyles>
+    <StyleName
+      Name="h1" />
+    <StyleName
+      Name="h2" />
+  </NewTopicStyles>
+  <UsedParagraphStyles>
+    <StyleName
+      Name="body" />
+    <StyleName
+      Name="h1" />
+    <StyleName
+      Name="h2" />
+    <StyleName
+      Name="h3" />
+    <StyleName
+      Name="h3_whs5" />
+    <StyleName
+      Name="li" />
+    <StyleName
+      Name="li_Bullets" />
+    <StyleName
+      Name="li_Bullets_1" />
+    <StyleName
+      Name="li_NumberedList" />
+    <StyleName
+      Name="li_NumberedList_1" />
+    <StyleName
+      Name="li_NumberedList_2" />
+    <StyleName
+      Name="p" />
+    <StyleName
+      Name="p_Bullets" />
+    <StyleName
+      Name="p_Bullets_1" />
+    <StyleName
+      Name="p_NumberedList" />
+    <StyleName
+      Name="p_whs3" />
+    <StyleName
+      Name="p_whs3_1" />
+    <StyleName
+      Name="p_whs5" />
+  </UsedParagraphStyles>
+  <UsedCharacterStyles>
+    <StyleName
+      Name="script" />
+    <StyleName
+      Name="span" />
+    <StyleName
+      Name="span_1" />
+    <StyleName
+      Name="span_2" />
+    <StyleName
+      Name="span_3" />
+    <StyleName
+      Name="span_4" />
+    <StyleName
+      Name="Strong" />
+  </UsedCharacterStyles>
+</MsWordImport>

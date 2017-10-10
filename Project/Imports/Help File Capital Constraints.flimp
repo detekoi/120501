@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MsWordImport
+  PreserveSourceStyles="true"
+  KeepSourceLinks="true"
+  ConvertInlineFormatting="true"
+  AddContinuedLinks="false"
+  AddContinuedFromLinks="false"
+  ContinuedLinkFormat="(continued in {title})"
+  ContinuedFromLinkFormat="(continued from {title})"
+  UseMaxCharLimit="false"
+  UseMinCharLimit="true"
+  MaxCharLimit="10000"
+  MinCharLimit="50"
+  FilenameLength="24"
+  GeneratePageLayouts="false"
+  UseFirstHeadingAsTopicTitle="true"
+  LastCollectTime="2016-05-25T07:43:22.6053538-06:00"
+  ProjectName="Help File - 3.24test"
+  ProjectFolder="\\cgyfile1\Shared\Flare\"
+  AutoSync="false"
+  AutoFitTables="false"
+  LastImport="2016-05-25T07:43:52.0593538-06:00">
+  <Files>
+    <Url
+      Source="file:///C:/Users/isinclair/Desktop/Help File Capital Constraints.docx"
+      AbsoluteSource="file:///C:/Users/isinclair/Desktop/Help File Capital Constraints.docx" />
+  </Files>
+  <ExcludedFiles />
+  <CollectedSourceFiles />
+  <SkippedSourceFiles />
+  <GeneratedFiles>
+    <Url
+      Source="../../Content/Resources/Images/Help File Capital Constraints/03000001.png"
+      TimeStamp="25/05/2016 7:43:38 AM" />
+    <Url
+      Source="../../Content/Help File Capital Constraints/Capital Constraints.htm"
+      TimeStamp="25/05/2016 7:43:38 AM" />
+    <Url
+      Source="../TOCs/Help File Capital Constraints.fltoc"
+      TimeStamp="25/05/2016 7:43:38 AM" />
+    <Url
+      Source="../../Content/Resources/Stylesheets/Help File Capital Constraints.css"
+      TimeStamp="25/05/2016 7:43:38 AM" />
+  </GeneratedFiles>
+  <ParagraphStyles>
+    <Map
+      From="Heading 1"
+      To="h1.Heading 1" />
+    <Map
+      From="Heading 2"
+      To="h2.Heading 2" />
+    <Map
+      From="Heading 3"
+      To="h3.Heading 3" />
+  </ParagraphStyles>
+  <CharacterStyles>
+    <Map
+      From="Hyperlink"
+      To="a.(MS Word Style)" />
+  </CharacterStyles>
+  <NewTopicStyles />
+  <UsedParagraphStyles>
+    <StyleName
+      Name="List Paragraph" />
+  </UsedParagraphStyles>
+  <UsedCharacterStyles />
+</MsWordImport>

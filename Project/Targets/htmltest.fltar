@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="3.26.0"
+  Type="HtmlHelp"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  DefaultUrl="/Content/Overview.htm"
+  MasterToc="/Project/TOCs/HelpFileTOC.fltoc"
+  MasterStylesheet="/Content/Resources/Stylesheets/HelpFileStylesheet.css"
+  OutputFolder="C:\Work\Help (git)\outputs\html output"
+  GetLatestBeforeCompile="true"
+  EmbedImages="true"
+  DisableAutoSync="true"
+  Skin="/Project/Skins/BlueSkin.flskn">
+  <PrintedOutput
+    CollapseMargins="true"
+    MultiDocWordOutput="true" />
+</CatapultTarget>

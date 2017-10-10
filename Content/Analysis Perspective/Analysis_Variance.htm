@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="3946" MadCap:lastWidth="1409">
+    <head><title>Analysis Variance</title>
+        <link rel="StyleSheet" href="../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <h3>
+            <img src="../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />
+        </h3>
+        <h2>Analysis Variance</h2>
+        <p>The Analysis Variance window is used when comparing the results of two 
+ different Analysis Cases (with the same or different Project Set) or two different Project Sets using the same Analysis Case. &#160;This 
+ can be used to determine differences between any combination of variables 
+ or metrics that can be configured within an Analysis Case, such as Project 
+ Set, Discount Rate, Price Scenario, Reserve Consolidation, etc. &#160;Please 
+ note that this window is best viewed when maximized, as the two windows 
+ with data in them have a specified size in order to display identical 
+ data and scroll simultaneously.</p>
+        <p>&#160;</p>
+        <h3>To 
+ run an Analysis Variance:</h3>
+        <ol style="list-style: decimal;list-style-type: decimal;">
+            <li class="kadov-p"><a href="../Navigating esi.manage/Navigator/Add_Analysis_Case.htm">Create 
+ an Analysis Case</a>, and save it. (eg.Cash Flow)</li>
+            <li class="kadov-p">Change whatever variable you wish to see the effect 
+ of. &#160;For 
+ example, If you wish to compare two different Project Sets, change the 
+ Project Set(s) selected on the third tab of the Analysis Case.</li>
+            <li class="kadov-p">Click "Save as" and save the new Analysis 
+ Case with a different name. </li>
+            <li class="kadov-p">Select both Analysis cases from the Navigator using 
+ Ctrl+click</li>
+            <li class="kadov-p">Right click on an Analysis Case and select "Analyze 
+ Selected Analysis Cases"<br /><img src="../Images/run_analysis_variance.png" style="border: none;border-style: none;float: none;" border="0" /></li>
+            <li class="kadov-p">Click OK if prompted to switch to the Analysis Perspective.</li>
+        </ol>
+        <p> <br /><span style="font-size: 10pt;">The Summary tab, shown in part below, details 
+ analysis information including summary, truncation, discounting, and data 
+ definition.</span><br /> <br /><img src="../Images/AnalysisVarianceSummary.png" /><br /> <br /></p>
+        <p><span style="font-size: 10pt;">The Cashflow tab, shown in part below, allows 
+ the User to determine the cash flow variance by subtracting the results 
+ of one analysis from another. The same focus options are available in the Custom and Metrics tabs.</span>
+            <br /> <br /><img src="../Images/AnalysisVarianceCashflow 1.png" /></p>
+        <p>&#160;</p>
+        <p class="note"><b>Note:</b> the User can choose to focus on all analysis cases, or a single case, as illustrated below.<br />&#160;<img src="../Images/Analysis - Variance - Focus.png" /></p>
+        <p>&#160;</p>
+        <h3>Analysis Variance on Project Sets</h3>
+        <p>If you want to use the same Analysis Case to compare two different Project Sets, simply select the Project Sets in the Navigator and choose to Analyze Project Sets using your Analysis Case.</p>
+        <p>
+            <img src="../Images/Analyze_two_proj_set.png" />
+        </p>
+        <p>&#160;</p>
+        <h3>Analysis Mode</h3>
+        <p>There are three Analysis modes available when you choose to run an Analysis Case. </p>
+        <p>
+            <img src="../Images/Project_Analyze3.png" />
+        </p>
+        <ul>
+            <li>Simple - This will sum all items being analyzed into a single top level line item which can be drilled into to expose any grouping within it (eg. Project Set, Fiscal model).</li>
+            <li>Variance - This requires more than one item to be selected to behave differently than a simple variance. This can be multiple Projects selected from the Project List, multiple Project Sets, or multiple Analysis Cases. It will provide the option to subtract any two of the following pieces of information from each other:<ul><li>Total of Analysis Case</li><li>Each individual item selected (Project, Project Set, or Analysis Case)</li><li>Null value</li></ul></li>
+            <li>Variance (+ base): This requires a Project Set to be set inside of the Analysis Case to behave differently than a Variance Analysis. The Project Set selected in the Analysis Case must also have projects that are set as Base Projects, and these function as the +base layer. This allows a user to run incremental analysis of individual items in addition to the base layer, using the same functionality as the variance analysis.</li>
+        </ul>
+        <p>&#160;</p>
+        <h3>Resizing Columns</h3>
+        <p style="font-weight: normal; text-decoration: none;">You can resize one or all columns in the Cashflow tab. Right-click on the header or table, and choose to either resize a column or all columns.</p>
+        <p style="font-weight: normal; text-decoration: none;">
+            <img src="../Images/Analysis - Variance - Resize.png" />
+        </p>
+        <p style="font-weight: normal; text-decoration: none;">&#160;</p>
+        <h3>Show 
+ / Hide Zeros</h3>
+        <p style="font-weight: normal;text-decoration: none;">There 
+ is an option in the top right corner of the Analysis Variance window, 
+ called "Hide Zeros". This will hide <span style="font-style: italic;font-weight: bold;">rows 
+ </span>that are all zeros in <span style="font-weight: bold;font-style: italic;">both 
+ </span>Analysis Cases. This can lead to different numbers of rows in different 
+ roll up levels.</p>
+        <p style="font-weight: normal;text-decoration: none;">
+            <img src="../Images/AnalysisShowHideZeros.png" />
+        </p>
+        <p style="font-weight: normal;text-decoration: none;">For 
+ example:</p>
+        <ul style="list-style: disc;" type="disc">
+            <li style="font-weight: normal; text-decoration: none;">Project 
+ set in Canada has data prior to the start date of my Analysis Cases (Jan 
+ 2013), so it will display a "&lt;2013 - Jan" row with values 
+ in it.</li>
+            <li style="font-weight: normal; text-decoration: none;">Project 
+ set in USA has <span style="font-weight: bold;font-style: italic;">no 
+ </span>data prior to the start of the Analysis Case (Jan 2013), so when 
+ hide zeros is selected it will no longer display a "&lt;2013 - Jan" 
+ row</li>
+            <li style="font-weight: normal; text-decoration: none;">This 
+ can cause problems if exporting to Excel for the sake of further comparison</li>
+        </ul>
+        <p class="note"><span><b>Note:</b> the "Hide Zero" option will not hide columns that 
+ have no data within them, as these are un-editable within an Analysis 
+ Case </span><span style="font-weight: normal;text-decoration: none;">(see 
+ <a href="../Navigating esi.manage/Navigator/Analysis_Metrics.htm">Analysis Case Metrics</a>).</span>
+        </p>
+    </body>
+</html>

@@ -1,0 +1,697 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpCheckList.First Draft" MadCap:lastBlockDepth="6" MadCap:lastHeight="2716" MadCap:lastWidth="1195">
+    <head>
+        <link href="../../Resources/TableStyles/HelpFileTableStylesheet.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>External Prices Import File</title>
+        <link rel="StyleSheet" href="../../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <img src="../../Images/Logo Images/3esi_manage.png" align="right" border="0" class="HeaderLogo" />
+        <h2>External Prices Import File</h2>
+        <p style="margin-left: 0px;">The basic structure of the source file (csv 
+ form) is:</p>
+        <p style="margin-left: 40px;">1. Definition of a Price Forecast:</p>
+        <p style="margin-left: 80px;">a. Hierarchy Attribute Code.</p>
+        <p style="margin-left: 80px;">b. Project.</p>
+        <p style="margin-left: 80px;">c. The Forecast name.</p>
+        <p style="margin-left: 80px;">d. Either the Base Forecast name (if the 
+ Forecast is related to another Forecast), or</p>
+        <p style="margin-left: 80px;">e. Currency and Units if the Forecast is 
+ a Root Forecast.</p>
+        <p style="margin-left: 80px;">f. Comments </p>
+        <p style="margin-left: 40px;">2. Identification of the Price Scenario the 
+ following data will be read into.</p>
+        <p style="margin-left: 40px;">3. Periodic Data</p>
+        <p style="margin-left: 80px;">a. Date and Price for Root Forecasts.</p>
+        <p style="margin-left: 80px;">b. Date, Scale and Offset for all other Forecasts.</p>
+        <p style="margin-left: 40px;">4. The first column of any row must contain 
+ one of the following entries to identify how to interpret the rest of 
+ the data in the row:</p>
+        <p style="margin-left: 80px;">a. Null (empty) – this row is ignored. This 
+ allows you to put in a Header row to guide you in the structure of the 
+ data. Header rows can be entered anywhere in the file.</p>
+        <p style="margin-left: 80px;">b. Forecast – this indicates that the row 
+ identifies an existing Price Forecast (if data is being updated), or creates 
+ a new Price Forecast.</p>
+        <p style="margin-left: 80px;">c. Scenario – this indicates which Scenario 
+ the following data is to be read into.</p>
+        <p style="margin-left: 80px;">d. Price – indicates that the data pertains 
+ to a Root Forecast.</p>
+        <p style="margin-left: 80px;">e. Diff – indicates that the data pertains 
+ to Forecast that has a Base Forecast.</p>
+        <p style="margin-left: 80px;">&#160;</p>
+        <p style="margin-left: 0px;">The file is processed procedurally; i.e:</p>
+        <p style="margin-left: 40px;">1. The first row identifies the Forecast. 
+ All subsequent rows apply to that Forecast until another Forecast row 
+ is encountered.</p>
+        <p style="margin-left: 40px;">2. The next row identifies the Scenario. 
+ All subsequent rows apply the Forecast / Scenario combination.</p>
+        <p style="margin-left: 40px;">3. Data rows (either Price or Diff). All 
+ subsequent rows are read into the Details for the Forecast / Scenario 
+ combination.</p>
+        <p style="margin-left: 80px;">a. The second column (Diff or Price is in 
+ the first column) specifies the Date. </p>
+        <p style="margin-left: 80px;">b. The Date can either be in YYYY-MM form 
+ (for monthly data), or YYYY for yearly data.</p>
+        <p style="margin-left: 40px;">4. The “next” section can be identified by 
+ either the Forecast or Scenario keyword.</p>
+        <p style="margin-left: 80px;">a. If Forecast, the procedure begins again 
+ at item 1.</p>
+        <p style="margin-left: 80px;">b. If Scenario is the next Keyword, the procedure 
+ begins at item 2; i.e.; the subsequent data rows will apply to the Forecast 
+ from item 1, but the new Scenario.</p>
+        <h3>&#160;</h3>
+        <h3>Forecast Row Layout</h3>
+        <p>This table has been transposed from the required format for ease of 
+ readability. &#160;The 
+ column number is there for reference and is not a part of the formatting 
+ of the csv file.</p>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');" cellspacing="0" width="100%" class="TableStyle-HelpFileTableStylesheet">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Column #</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Name</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Description</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Optional</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="11.273%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p style="font-weight: bold;text-align: center;" align="center">1</p>
+                    </td>
+                    <td width="28.02%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Line Type</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.362%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>"Forecast"</p>
+                    </td>
+                    <td width="10.345%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td bgcolor="#C0C0C0" width="11.273%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p style="font-weight: bold;text-align: center;" align="center">2</p>
+                    </td>
+                    <td width="28.02%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Budget</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.362%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>An existing budget, or empty</p>
+                    </td>
+                    <td width="10.345%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p style="text-align: center;" align="center">Y</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="11.273%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p style="font-weight: bold;text-align: center;" align="center">3</p>
+                    </td>
+                    <td width="28.02%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Project</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.362%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>An existing Project, or empty</p>
+                    </td>
+                    <td width="10.345%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p style="text-align: center;" align="center">Y</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td bgcolor="#C0C0C0" width="11.273%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p style="font-weight: bold;text-align: center;" align="center">4</p>
+                    </td>
+                    <td width="28.02%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p><span style="font-weight: bold;">Name</span>
+                        </p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.362%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>The Forecast name (existing or new)</p>
+                    </td>
+                    <td width="10.345%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="11.273%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p style="font-weight: bold;text-align: center;" align="center">5</p>
+                    </td>
+                    <td width="28.02%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Base</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.362%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>An existing Forecast, or empty</p>
+                    </td>
+                    <td width="10.345%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p style="text-align: center;" align="center">Y</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td bgcolor="#C0C0C0" width="11.273%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p style="font-weight: bold;text-align: center;" align="center">6</p>
+                    </td>
+                    <td width="28.02%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Currency</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.362%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>An existing Currency Abbreviation, or empty</p>
+                    </td>
+                    <td width="10.345%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="11.273%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p style="font-weight: bold;text-align: center;" align="center">7</p>
+                    </td>
+                    <td width="28.02%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Production Unit</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.362%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>An existing Production Unit, or empty</p>
+                    </td>
+                    <td width="10.345%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td bgcolor="#C0C0C0" width="11.273%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body3">
+                        <p style="font-weight: bold;text-align: center;" align="center">8</p>
+                    </td>
+                    <td width="28.02%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p>Comment</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.362%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p>A text string for documentation, or empty</p>
+                    </td>
+                    <td width="10.345%" class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body3">
+                        <p style="text-align: center;" align="center">Y</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="margin-left: 0px;">&#160;</p>
+        <h3>Scenario Row Layout</h3>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');" cellspacing="0" width="100%" class="TableStyle-HelpFileTableStylesheet">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Column #</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Name</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Description</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Optional</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="11.273%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p style="font-weight: bold;text-align: center;" align="center">1</p>
+                    </td>
+                    <td width="28.02%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Line Type</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.362%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>"Scenario"</p>
+                    </td>
+                    <td width="10.345%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td bgcolor="#C0C0C0" width="11.273%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body3">
+                        <p style="font-weight: bold;text-align: center;" align="center">2</p>
+                    </td>
+                    <td width="28.02%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p>Scenario</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.362%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p>Name of a configured price scenario</p>
+                    </td>
+                    <td width="10.345%" class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body3">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h3>Price Row Layout</h3>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');" cellspacing="0" width="100%" class="TableStyle-HelpFileTableStylesheet">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Column #</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Name</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Description</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Optional</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="11.273%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p style="font-weight: bold;text-align: center;" align="center">1</p>
+                    </td>
+                    <td width="28.02%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Line Type</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.362%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>"Price"</p>
+                    </td>
+                    <td width="10.345%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td colspan="1" rowspan="1" bgcolor="#C0C0C0" width="11.273%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p style="font-weight: bold;text-align: center;" align="center">2</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="28.02%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Date</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.362%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Date, in YYYY or YYYY-MM format</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10.345%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="11.273%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body2">
+                        <p style="font-weight: bold;text-align: center;" align="center">3</p>
+                    </td>
+                    <td width="28.02%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2">
+                        <p>Price</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.362%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2">
+                        <p>Number</p>
+                    </td>
+                    <td width="10.345%" class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body2">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h3>Differential Row Layout</h3>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');" cellspacing="0" width="100%" class="TableStyle-HelpFileTableStylesheet">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Column #</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Name</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Description</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Optional</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="11.273%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p style="font-weight: bold;text-align: center;" align="center">1</p>
+                    </td>
+                    <td width="28.02%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Line Type</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.362%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>"Diff"</p>
+                    </td>
+                    <td width="10.345%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td colspan="1" rowspan="1" bgcolor="#C0C0C0" width="11.273%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p style="font-weight: bold;text-align: center;" align="center">2</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="28.02%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Date</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.362%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Date, in YYYY or YYYY-MM format</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10.345%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td colspan="1" rowspan="1" bgcolor="#C0C0C0" width="11.273%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p style="font-weight: bold;text-align: center;" align="center">3</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="28.02%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Scale</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.362%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Number</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10.345%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td bgcolor="#C0C0C0" width="11.273%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body3">
+                        <p style="font-weight: bold;text-align: center;" align="center">4</p>
+                    </td>
+                    <td width="28.02%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p>Offset</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.362%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p>Number</p>
+                    </td>
+                    <td width="10.345%" class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body3">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h3>Profile Row Layout</h3>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');" cellspacing="0" width="100%" class="TableStyle-HelpFileTableStylesheet">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Column #</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Name</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Description</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Optional</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="11.273%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p style="font-weight: bold;text-align: center;" align="center">1</p>
+                    </td>
+                    <td width="28.02%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Line Type</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.362%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>"Profile"</p>
+                    </td>
+                    <td width="10.345%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td bgcolor="#C0C0C0" width="11.273%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p style="font-weight: bold;text-align: center;" align="center">2</p>
+                    </td>
+                    <td width="28.02%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>hierarchyElementCode</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.362%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>name of a configured hierarchy element code</p>
+                    </td>
+                    <td width="10.345%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p style="text-align: center;" align="center">Y</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="11.273%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p style="font-weight: bold;text-align: center;" align="center">3</p>
+                    </td>
+                    <td width="28.02%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Budget</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.362%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>An existing budget, or empty</p>
+                    </td>
+                    <td width="10.345%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p style="text-align: center;" align="center">Y</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td bgcolor="#C0C0C0" width="11.273%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p style="font-weight: bold;text-align: center;" align="center">4</p>
+                    </td>
+                    <td width="28.02%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Project</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.362%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>An existing Project, or empty</p>
+                    </td>
+                    <td width="10.345%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p style="text-align: center;" align="center">Y</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="11.273%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p style="font-weight: bold;text-align: center;" align="center">5</p>
+                    </td>
+                    <td width="28.02%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p><span style="font-weight: bold;">Name</span>
+                        </p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.362%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>The Forecast name (existing or new)</p>
+                    </td>
+                    <td width="10.345%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td bgcolor="#C0C0C0" width="11.273%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p style="font-weight: bold;text-align: center;" align="center">6</p>
+                    </td>
+                    <td width="28.02%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Currency</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.362%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Price Currency</p>
+                    </td>
+                    <td width="10.345%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="11.273%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p style="font-weight: bold;text-align: center;" align="center">7</p>
+                    </td>
+                    <td width="28.02%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Production Unit</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.362%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Production Unit</p>
+                    </td>
+                    <td width="10.345%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td bgcolor="#C0C0C0" width="11.273%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body3">
+                        <p style="font-weight: bold;text-align: center;" align="center">8</p>
+                    </td>
+                    <td width="28.02%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p>Comment</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.362%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p>User Comment</p>
+                    </td>
+                    <td width="10.345%" class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body3">
+                        <p style="text-align: center;" align="center">Y</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h3>Tier Row Layout</h3>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');" cellspacing="0" width="100%" class="TableStyle-HelpFileTableStylesheet">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Column #</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Name</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Description</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Optional</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="11.273%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p style="font-weight: bold;text-align: center;" align="center">1</p>
+                    </td>
+                    <td width="28.02%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Line Type</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.362%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>"Tier"</p>
+                    </td>
+                    <td width="10.345%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td bgcolor="#C0C0C0" width="11.273%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p style="font-weight: bold;text-align: center;" align="center">2</p>
+                    </td>
+                    <td width="28.02%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p><span style="font-weight: bold;">Name</span>
+                        </p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.362%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>The Tier name (new)</p>
+                    </td>
+                    <td width="10.345%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="11.273%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p style="font-weight: bold;text-align: center;" align="center">3</p>
+                    </td>
+                    <td width="28.02%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Threshold Value</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.362%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Either the percentage (0-100) or the production threshold for this price 
+ tier</p>
+                    </td>
+                    <td width="10.345%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td bgcolor="#C0C0C0" width="11.273%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p style="font-weight: bold;text-align: center;" align="center">4</p>
+                    </td>
+                    <td width="28.02%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Threshold Type</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.362%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>"RELATIVE" for a percentage tier (0-100) and "ABSOLUTE" 
+ for a specified production amount</p>
+                    </td>
+                    <td width="10.345%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td colspan="1" rowspan="1" bgcolor="#C0C0C0" width="11.273%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p style="font-weight: bold;text-align: center;" align="center">5</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="28.02%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Start Date</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.362%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>the date at which this price tier becomes effective in YYYY or YYYY-MM 
+ format</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10.345%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p style="text-align: center;" align="center">Y</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td colspan="1" rowspan="1" bgcolor="#C0C0C0" width="11.273%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p style="font-weight: bold;text-align: center;" align="center">6</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="28.02%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>End Date</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.362%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>the date at which this price tier is no longer effective (inclusive) 
+ in YYYY or YYYY-MM format</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10.345%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p style="text-align: center;" align="center">Y</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td colspan="1" rowspan="1" bgcolor="#C0C0C0" width="11.273%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p style="font-weight: bold;text-align: center;" align="center">7</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="28.02%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Forecast</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.362%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>name of the price forecast to use with this tier</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10.345%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td bgcolor="#C0C0C0" width="11.273%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body3">
+                        <p style="font-weight: bold;text-align: center;" align="center">8</p>
+                    </td>
+                    <td width="28.02%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p>Comment</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.362%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p>User Comment</p>
+                    </td>
+                    <td width="10.345%" class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body3">
+                        <p style="text-align: center;" align="center">Y</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p class="note"><span style="font-weight: bold;">Note: </span><span>Tiers are always 
+ created against a Price Profile by placing them sequentially after the 
+ current profile.</span>
+        </p>
+    </body>
+</html>

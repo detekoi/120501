@@ -1,0 +1,240 @@
+/*<meta sourceDocument="\\cgyfile1\Documentation\Flare\Completed Word Docs\Analysis_Case_Overview.doc" />*/
+
+body
+{
+	font-family: Arial;
+	font-size: 13px;
+	line-height: 1.7em;
+	margin: 17px;
+	max-width: 750px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+	font-weight: bold;
+	color: #749AB6;
+}
+
+p.example
+{
+	background-color: #DEE8F0;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 14px;
+	padding-bottom: 14px;
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-left-color: #BECFDC;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-right-color: #BECFDC;
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-top-color: #BECFDC;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #BECFDC;
+}
+
+p.note
+{
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	color: #000000;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 14px;
+	padding-bottom: 14px;
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-left-color: #41c8d8;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-right-color: #41c8d8;
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-top-color: #41c8d8;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #41c8d8;
+	background-color: #e0ffff;
+}
+
+a
+{
+	color: #5B8EC1;
+}
+
+MadCap|expanding
+{
+	mc-open-image: url('resources:Images/WebHelp/minus.png');
+	mc-closed-image: url('resources:Images/WebHelp/plus.png');
+	mc-image-position: left;
+}
+
+MadCap|dropDown
+{
+	mc-open-image: url('resources:Images/WebHelp/minus.png');
+	mc-closed-image: url('resources:Images/WebHelp/plus.png');
+}
+
+MadCap|toggler
+{
+	mc-open-image: url('resources:Images/WebHelp/minus.png');
+	mc-closed-image: url('resources:Images/WebHelp/plus.png');
+	color: inherit;
+}
+
+MadCap|popupHead
+{
+	color: #0000ff;
+}
+
+MadCap|popupBody
+{
+	border: none;
+	padding: 11px 15px;
+	color: #ffffff;
+	background-color: #444444;
+}
+
+MadCap|glossaryTerm
+{
+	
+}
+
+MadCap|glossaryTerm.Expanding
+{
+	color: inherit;
+	font-weight: inherit;
+}
+
+MadCap|glossaryTerm.Hyperlink
+{
+	font-weight: inherit;
+	color: #0000ff;
+}
+
+MadCap|glossaryTerm.Popup
+{
+	font-weight: normal;
+	color: #0000ff;
+}
+
+MadCap|conceptLink
+{
+	color: #000000;
+}
+
+MadCap|keywordLink
+{
+	color: #000000;
+}
+
+MadCap|relatedTopics
+{
+	color: #000000;
+}
+
+MadCap|helpControlMenu
+{
+	color: #707070;
+	background-color: #FFFFFF;
+	border: none;
+}
+
+MadCap|helpControlMenuItem
+{
+	color: inherit;
+	font-size: inherit;
+	font-family: inherit;
+}
+
+MadCap|helpControlMenuItem.Highlighted
+{
+	color: #000000;
+	background-color: #E5EFF7;
+}
+
+h1
+{
+	color: #41b7c3;
+}
+
+h2
+{
+	color: #41b7c3;
+}
+
+h3
+{
+	color: #41b7c3;
+}
+
+h4
+{
+	color: #41b7c3;
+}
+
+h5
+{
+	color: #41b7c3;
+}
+
+h6
+{
+	color: #41b7c3;
+}
+
+img.HeaderLogo
+{
+	width: 36px;
+	height: 44px;
+	border-style: none;
+	border-style: none;
+	border-left-style: none;
+	border-right-style: none;
+	border-top-style: none;
+	border-bottom-style: none;
+	float: right;
+}
+
+MadCap|popup
+{
+	bottom: 11px;
+	overflow: visible;
+	position: relative;
+	visibility: visible;
+	border-collapse: collapse;
+}
+
+p.warning
+{
+	background-color: #ffd700;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-left-color: #444444;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-right-color: #444444;
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-top-color: #444444;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #444444;
+}
+

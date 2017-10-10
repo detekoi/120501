@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="497" MadCap:lastWidth="1160">
+    <head><title>! Important Notes</title>
+        <link rel="StyleSheet" href="../../Resources/Stylesheets/default.css" />
+        <style>
+h1.whs1
+{
+	text-align: right;
+}
+li.mc-h1-Cwhs1
+{
+	text-align: right;
+}
+img_whs2
+{
+	border: none;
+	width: 36px;
+	height: 44px;
+	float: none;
+	border-style: none;
+}
+h1.whs3
+{
+	font-family: Arial, sans-serif;
+	font-size: 14pt;
+}
+li.mc-h1-Cwhs3
+{
+	font-family: Arial, sans-serif;
+	font-size: 14pt;
+}
+p.whs4
+{
+	font-family: Arial, sans-serif;
+}
+li.whs4
+{
+	font-family: Arial, sans-serif;
+}
+ol.whs5
+{
+	list-style: decimal;
+}
+p.whs6
+{
+	font-family: Arial, sans-serif;
+	font-weight: normal;
+}
+li.whs6
+{
+	font-family: Arial, sans-serif;
+	font-weight: normal;
+}
+
+</style>
+        <style>
+div.WebHelpPopupMenu
+{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 4;
+	visibility: hidden;
+}
+
+</style>
+        <script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">/*<![CDATA[*/
+<!--
+ function reDo() {
+ if (innerWidth != origWidth || innerHeight != origHeight)
+ location.reload();
+ }
+ if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+ origWidth = innerWidth;
+ origHeight = innerHeight;
+ onresize = reDo;
+ }
+ onerror = null; 
+ //-->
+/*]]>*/</script> <script type="text/javascript" language="javascript1.2" src="../../Archived/whmsg.js"></script> <script type="text/javascript" language="javascript" src="../../Archived/whver.js"></script> <script type="text/javascript" language="javascript1.2" src="../../Archived/whproxy.js"></script> <script type="text/javascript" language="javascript1.2" src="../../Archived/whutils.js"></script> <script type="text/javascript" language="javascript1.2" src="../../Archived/whtopic.js"></script></head>
+    <body>
+        <h1 class="whs1" style="text-align: right;" align="right">
+            <img src="../../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />
+        </h1>
+        <h1>Important Notes</h1>
+        <p class="whs4">It is easy to prevent charts from graphing in a number of 
+ ways. The following are a list of common errors, and how to avoid (or 
+ resolve) them.</p>
+        <ol class="whs5" style="list-style: decimal;list-style-type: decimal;">
+            <li style="font-family: Arial, sans-serif;" class="whs4"><span><b style="font-weight: bold;">Filters 
+ exclude all data:</b></span> If you create mutually exclusive filters, 
+ example: Start Date &gt; Jan 1, 2010 and Start Date &lt; Jan 1, 2010, 
+ this will obviously exclude everything, and no data will be available.</li>
+            <li style="font-family: Arial, sans-serif;" class="whs4"><span><b style="font-weight: bold;">Filter 
+ excludes data sets:</b></span> If you create a filter for a data set that 
+ is above or below the highest/lowest value of the data set, no data will 
+ be available.</li>
+            <li style="font-family: Arial, sans-serif;" class="whs6"><span><b style="font-weight: bold;">Null 
+ Measure/Series values:</b></span> If your selected measure has no information 
+ for the selected Product, Type, or Basis, the chart will fail. Selecting 
+ Gas as a product for a budget with only Oil production values as an example.</li>
+            <li style="font-family: Arial, sans-serif;" class="whs6"><span><b style="font-weight: bold;">Custom 
+ Data Binding:</b></span> If you create custom data bindings, it can severely 
+ limit your data output, and will persist through any other changes made. 
+ Make sure you remove these if you make changes to the data set or series 
+ to avoid skewed data.</li>
+            <li style="font-family: Arial, sans-serif;" class="whs6"><span><b style="font-weight: bold;">Create 
+ New Button:</b></span> DO NOT USE THE "CREATE NEW..." button 
+ in the Edit Chart dialogue. A custom dialogue does appear, but this will override 
+ your existing data set.</li>
+            <li style="font-family: Arial, sans-serif;" class="whs6"><span><b style="font-weight: bold;">Invalid 
+ series units:</b></span> If you assign multiple attributes to a given 
+ series, they must be compatible units. The Y-axis can have up to 2 unit 
+ types, using a dual-axis, but the X must only have one.</li>
+            <li style="font-family: Arial, sans-serif;" class="whs6"><span><b style="font-weight: bold;">No 
+ Series Assigned:</b></span> You must drag and drop at least one value 
+ to the X and Y axis series. These are <span style="font-style: italic;"><i>not</i></span> 
+ automatically assigned, and must be manually defined before the chart 
+ is plottable.</li>
+            <li style="font-family: Arial, sans-serif;" class="whs6"><span><b style="font-weight: bold;">Numbers 
+ Calculating Wrong:</b></span> If an aggregation has been added, it can 
+ appear to cause the calculation to be incorrect. These values persist 
+ when individual values are changed, and when a chart is saved.</li>
+            <li style="font-family: Arial, sans-serif;" class="whs6"><span><b style="font-weight: bold;">Project 
+ Metrics Time Series</b></span>: If the "Metrics" measure is 
+ selected, the reporting period (found in the Dates section) <span style="font-style: italic;"><i>must</i></span> <span>be set to "Annual".</span></li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="4" MadCap:lastHeight="6788" MadCap:lastWidth="1246">
+    <head><title></title>
+        <link href="../Resources/Stylesheets/HelpFileStylesheet2.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2>
+            <img src="../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />
+        </h2>
+        <h2>Repeats and Repetitions</h2>
+        <p>Any array within an EDL template has the option within its Array Properties to select a <b>Repetition Type</b>.</p>
+        <p>
+            <img src="../Resources/Images/New EDL/Array_Repetition.png" />
+        </p>
+        <p>Repetitions and&#160;Repeats are used to load multiple pieces of data into a single attribute. They act as a <i>loop</i> and will follow the mappings nested below it as long as a repetition condition is met.  Repeats / Repetitions can be nested within each other. The lowest level loop will calculate first, then roll up into the attributes and mappings above it in the tree. Repetitions are used to loading value arrays such as Amounts and Periods, and can be used relative to other repetitions that are repeating in a different direction.</p>
+        <p>
+            <img src="../Resources/Images/New EDL/Array_Repetition2.png" />
+        </p>
+        <p>There are 4 different types of repetitions.</p>
+        <ul>
+            <li><b>Horizontal</b>: A horizontal repetition will repeat horizontally until its condition is no longer met.</li>
+            <li><b>Vertical</b>: A vertical repetition will repeat vertically until its condition is no longer met.</li>
+            <li><b>Parallel</b>: A parallel repetition will link to another repetition and run parallel to it until it's links condition is no longer met.</li>
+            <li><b>Worksheet</b>: A worksheet repetition will repeat its mappings from worksheet to worksheet until its condition is no longer met.</li>
+        </ul>
+        <p>Picture the following Capex example.</p>
+        <p>
+            <img src="../Resources/Images/New EDL/Capex_Repeat_Example1.png" />
+        </p>
+        <p>In this basic example, there are a number of repetitions involved to load this data correctly. The first way that will be shown to load this data is using the <b>Amounts / Periods</b> combination. Here is what the mapping structure looks like to load this. The required project attributes have been added, as well as the required Capex attributes alongside the Amounts and Periods arrays.</p>
+        <p>
+            <img src="../Resources/Images/New EDL/Capex_Repeat_Example2.png" />
+        </p>
+        <p>The first repetition requires the Capex array. The expenditure types are repeating horizontally and there are associated values to load into each expenditure type.</p>
+        <p>
+            <img src="../Resources/Images/New EDL/Capex_Repeat_Example3.png" />
+        </p>
+        <p>Once the Horizontal Repetition Type has been entered, its associated properties will be added. It is not <b>Relative To</b> another repetition and its <b>Active Sheet</b> is the sheet where the data resides. <b>Start When</b> and <b>End When</b> are the conditions that dictate how the repeat will operate. While either of the conditions are selected, the expression builder icon can be clicked to display a selection of formulas that can be used.</p>
+        <p>
+            <img src="../Resources/Images/New EDL/Capex_Repeat_Example4.png" />
+        </p>
+        <p>The <b>Start When</b> condition in this case is set to <i>=True</i>, which will always start the repeat.</p>
+        <p>The <b>End When</b> condition is set to <i>=ISBLANK(ESI.CELLVALUE(F13))</i>, which evaluates each cell horizontally from F13 until it reaches a blank cell. In this example, "Drilling"&#160;resides in cell F13.</p>
+        <p>For the attributes that are nested under the Capex repeat, <b>Currency</b> is defaulted to CAD and is unaffected by the repeat.</p>
+        <p>
+            <img src="../Resources/Images/New EDL/Capex_Repeat_Example5.png" />
+        </p>
+        <p><b>Expenditure Type</b> uses the cell reference F13 to load each Expenditure Type found by the repeat.</p>
+        <p>
+            <img src="../Resources/Images/New EDL/Capex_Repeat_Example6.png" />
+        </p>
+        <p>The second repeat that is used can be applied to the Amounts or the Periods. In this example is has been applied to Amounts.</p>
+        <p>
+            <img src="../Resources/Images/New EDL/Capex_Repeat_Example7.png" />
+        </p>
+        <p>Amounts will be loaded while there is a time series present and its conditions are tailored to that requirement. Its <b>Repetition Type</b> is vertical and is <b>Relative To</b> the Capex repeat. This creates the relationship that will pull in all the amounts for each expenditure type as the Capex repeats horizontally. Its <b>Active Sheet</b> is the same sheet as the Capex repeat.</p>
+        <p><b>Start When</b> is set to <i>=True</i> again to start the repeat.</p>
+        <p><b>End When</b> is set to <i>=ISBLANK(ESI.CELLVALUE($E14))</i> where E14 is the first cell in the time series. Its column has been fixed to $E14 to ensure that it looks in the time series column for each expenditure amount that is being loaded.</p>
+        <p>The Value attribute that is nested under the Amounts array can reference the first cell where data will start, F14. Alternatively, the <b>Scalar Type</b> can be switched to Formula to build stronger logic into the dataload.</p>
+        <p>
+            <img src="../Resources/Images/New EDL/Capex_Repeat_Example8.png" />
+        </p>
+        <p>In this example, <i>=IF(ESI.CELLVALUE(F14)="",0,ESI.CELLVALUE(F14))</i> has been used to ensure that null values are treated as 0.</p>
+        <p>The Periods array repetition mimics the structure of Amounts. For relationships of this nature, the <b>Parallel Repetition Type</b> can be used. Its conditions will be the same as its Linked repeat and can be managed in its linked location.</p>
+        <p>
+            <img src="../Resources/Images/New EDL/Capex_Repeat_Example9.png" />
+        </p>
+        <p>The Value attribute nested under the period array can be a cell reference to the time series to pull in the dates associated with the data.</p>
+        <p>
+            <img src="../Resources/Images/New EDL/Capex_Repeat_Example10.png" />
+        </p>
+        <p>Once set up correctly, the Preview will display everything that will be loaded into esi.manage.</p>
+        <p>
+            <img src="../Resources/Images/New EDL/Capex_Repeat_Example11.png" />
+        </p>
+        <p>Another method to load this same data is using the <b>Start Date / Periodicity / Amounts</b> combination. The structure is very similar to the previous example, but instead of the periods array, the Start Date and Periodicity attributes can be used. Start Date uses a fixed cell value to the first cell in the time series, and Periodicity using a Default Value of Monthly.</p>
+        <p>
+            <img src="../Resources/Images/New EDL/Capex_Repeat_Example12.png" />
+        </p>
+        <h3>Repeat Node</h3>
+        <p>In some situations, an additional repeating node is necessary. They can be added to the mapping section in an appropriate location and have the same properties as an array.</p>
+        <p>
+            <img src="../Resources/Images/New EDL/Repeat_Node.png" />
+        </p>
+        <p>A repeat node is often used after a Merge or Condition node. Please refer to their respective sections in the help file.</p>
+    </body>
+</html>

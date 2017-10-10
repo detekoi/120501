@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="3" MadCap:lastHeight="3074" MadCap:lastWidth="1218">
+    <head><title></title>
+        <link href="../Resources/Stylesheets/HelpFileStylesheet2.css" rel="stylesheet" />
+    </head>
+    <body>
+        <p>
+            <img src="../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />
+        </p>
+        <h2>Attributes tab</h2>
+        <p>***THIS FEATURE IS BEING DEPRECATED. PLEASE MIGRATE ALL EXCEL DATA LOAD TEMPLATES TO THE NEW FORMAT***</p>
+        <p>The next tab is the Attributes tab. For the discussion of this tab, the Write Project – Multiple template type has been selected. This will give a better overview of the tab, while the Add Production Curves type is just a narrowed down version of the write project attributes. </p>
+        <p>
+            <img src="../Resources/Images/ExcelTemplates1/0300000F.png" style="visibility: visible;mso-wrap-style: square;" />
+        </p>
+        <p>&#160;</p>
+        <p>The attributes tab is where the data is defined and the data that will be “mapped” to Excel is identified. To properly fill out the attributes tab the first time around, an understanding of what is in the Excel document is required. There are multiple columns of information here as well as multiple ways to enter data. The first column is the Attribute Name column. Within it is all the attributes that make up a project that can be imported through the EDL. Attributes can be created and customized through the esi.manage configuration. There are different icons for different types of attributes and are as follows:</p>
+        <p>
+            <img src="../Resources/Images/ExcelTemplates1/03000001.png" style="visibility: visible;mso-wrap-style: square;width: 22px;height: 17px;" />: Top level object and sub-objects. Objects will contain nested attributes, sub-objects, and arrays. Nesting gives the input data-structure a tree shape. These attributes are not directly defined.</p>
+        <p>&#160;</p>
+        <p>
+            <img src="../Resources/Images/ExcelTemplates1/03000002.png" style="visibility: visible;mso-wrap-style: square;width: 25px;height: 16px;" />: Array of objects attribute. Arrays are not directly defined. Houses key and regular attributes. </p>
+        <p>&#160;</p>
+        <p>
+            <img src="../Resources/Images/ExcelTemplates1/03000003.png" style="visibility: visible;mso-wrap-style: square;width: 26px;height: 17px;" />: Key attribute. Key attributes must be defined to be able to load successfully. Attributes have a specific type: String, Numeric, Integer, Date, Boolean, ArrayOfDouble.</p>
+        <p>&#160;</p>
+        <p>
+            <img src="../Resources/Images/ExcelTemplates1/03000004.png" style="visibility: visible;mso-wrap-style: square;width: 25px;height: 17px;" />: Regular attribute. Same as key attribute, but not mandatory for a project.</p>
+        <p>&#160;</p>
+        <p>
+            <img src="../Resources/Images/ExcelTemplates1/03000005.png" style="visibility: visible;mso-wrap-style: square;width: 25px;height: 16px;" />: The 123 is the data pulled from the mapped Excel. (When on the series tab and mapping data, the target mapping will be in the form of project.asset.production.curves.volumes or something similar. This points to the attribute tab and drills down the nodes to the target, in this case volumes.&#160; The data is defined to a ‘123’ to be loaded into esi.manage.)</p>
+        <p>&#160;</p>
+        <p>
+            <img src="../Resources/Images/ExcelTemplates1/03000006.png" style="visibility: visible;mso-wrap-style: square;width: 23px;height: 17px;" />: The clock refers to durations that can also be mapped in the series tab.</p>
+        <p>&#160;</p>
+        <p>The next column is the Tabular column. Depending which template type is selected, there will either be a check box or it will be blank.&#160; The tabular box is checked when there are multiple values for that specific attribute (e.g. you are importing multiple columns of production data with different reserve classifications). When an attribute is tabular, it will have to be mapped on the series tab for the template to know where to grab the values from. If there is only one value that will be in that attribute it can be defined directly on the attributes tab. For the Write Project template type, the project object will not have a project array, and the attributes will not have a tabular box to be able to check. This is because with write project enabled, there is only a single project, therefore there is only one definition for each attribute within the project level. Once the asset or measure nodes have been expanded there is still the option to do tabular data entries.</p>
+        <p>The Worksheet column is auto populated when a cell has been entered into the Cell or Formula column. It is an identifier to show where the data is being grabbed from. It can be manually adjusted if the template is pointing to the wrong worksheet.</p>
+        <p>The Cell or Formula sheet is an option of data entry. If the data is not tabular and rests in a single cell in Excel, the cell reference can be directly plugged into this column. By putting a cell here will auto populate the worksheet column with the sheet the cell was pulled from and will display its value in the value column. Formulas can be inserted into this column by beginning the expression with the equal sign (=) and having the formula follow. Formulas can contain cell addresses, variable references, functions, operators, and constants. Appended is a section on formula expressions and logic. A value can be put in this cell as well, but better practice is using a direct value in the default column.</p>
+        <p>The Value cell is another auto populated column when the Cell or Formula column has been filled out. It displays the value that will be loaded into esi.manage for that attribute.</p>
+        <p>The Data Type column specifies the format of the data for each attribute. The data being input into esi.manage and that specific attribute must obey the data type defined for said attribute.</p>
+        <p>The Default column is where values are hand entered to define a parameter. The default column is good for constants or unchanging parameters. For example the project manager may be the same for all projects. The project manager can be enter into default to be loaded. Alternatively, the default can be used in conjunction with the Cell or Formula column. The Cell or Formula will take precedence but if the cell or formula does not lead to a value the default will be used. </p>
+        <p>The Variable Name column is used in more complex cases. Occasionally an attribute will be used to calculate another attribute. The first attribute can have a variable name defined for it in this column so it can then be used in a formula by another attribute. A variable name may not be a valid Excel cell address.</p>
+        <p>By knowing which information is in Excel, the attributes tab can be progressed through and filled out with the formulas, cells, and values needed. The most difficult part of EDL is knowing what is being loaded into esi.manage, and mapping it correctly.</p>
+        <p>
+            <img src="../Resources/Images/ExcelTemplates1/03000010.png" style="visibility: visible;mso-wrap-style: square;" />
+        </p>
+        <p>&#160;</p>
+        <p>
+            <img src="../Resources/Images/ExcelTemplates1/03000011.png" style="visibility: visible;mso-wrap-style: square;" />
+        </p>
+        <p>
+            <br />
+        </p>
+        <p>The buttons involved with the attributes tab (above) are simple. The white x enclosed in a red circle will clear the selected row of any defaults, cells or formulas, or tabular info. The A1 is the alternative of typing in a desired cell. If for example the cell B6 has the project name in it, that cell can be selected in Excel; then pressing the A1 button will enter the selected cell or formula row. While an object or array is selected, the plus or minus buttons can be used to expand or retract all the nodes it holds. The white check mark enclosed in a green circle is opens the Validation dialog.</p>
+        <p>A Validation dialog can be opened to attach a validation rule or rules to an attribute. The variable “VALUE” is set to the data the attribute contains. A message can be provided for when a user breaks the validation rule to provide insight as to why it is wrong. There is also a severity attached, whether the rule being broken will cause an Error, a Warning, or provide Info. An example of a validation:</p>
+        <p>‘=VALUE == “Hello”’</p>
+        <p>A validation such as this, when applied to a string, will give a message whenever the value does not equal “Hello”.</p>
+        <h3>Loading via Codes</h3>
+        <p style="font-style: italic;">This is an enhanced piece of capability. This is not required for most EDL templates.</p>
+        <p>The EDL can load and update data matching against the Project / Asset code instead of Project name. This can be useful if the Project or Asset name is subject to change.</p>
+        <p>The EDL will first look at the Budget name and Project / Asset code to find a match within the database. If no code is provided, it will then use Project and Asset name.</p>
+        <p>The Project or Asset name can be renamed by providing a Project / Asset name along with its appropriate code.</p>
+    </body>
+</html>

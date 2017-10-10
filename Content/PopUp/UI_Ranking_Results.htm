@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Ranking Results</title>
+        <link rel="StyleSheet" href="../Resources/Stylesheets/popUp.css" />
+    </head>
+    <body>
+        <h3>Ranking Results</h3>
+        <p>Once all of the Metrics have been defined, and Ranking Units specified, 
+ select the Rank button in the Ranking Results pane. Each of the Projects 
+ will be evaluated for each of the Metrics in the Ranking file. The Ranking 
+ Results table is a grid of Projects and Metrics:</p>
+        <ul>
+            <li class="Bullets">Each <span style="font-weight: bold;">Metric</span> 
+ is shown as a <span style="font-weight: bold;">column</span> with the 
+ calculated value for each Project.</li>
+            <li class="Bullets">Each <span style="font-weight: bold;">Project</span> 
+ is shown as a <span style="font-weight: bold;">line</span>, with the value 
+ for each Metric, and a total <span style="font-weight: bold;">Score</span> 
+ based on all Metrics that are to be scored.</li>
+        </ul>
+        <p>To determine the Score:</p>
+        <ol>
+            <li class="NumberedList">Each Metric is 
+ first evaluated across all projects to determine the Range (if a Ceiling 
+ or Floor has been specified for a Metric, values outside of that Range 
+ are scored based on either that Range).</li>
+            <li class="NumberedList">The 'Best' metric 
+ value is assigned a score of 100, the poorest a score of 0. Weighting 
+ is simply a multiplier of the 0-100 score.</li>
+            <li class="NumberedList">Metric values 
+ which fall within the range are interpolated. </li>
+            <li class="NumberedList">For each Project 
+ the score for each metric is summed to provide a Total Score.</li>
+        </ol>
+        <p>The Ranking Results table can be sorted on any column, as well as having 
+ a Colour scheme applied (colour coding on a metric by metric basis)</p>
+    </body>
+</html>

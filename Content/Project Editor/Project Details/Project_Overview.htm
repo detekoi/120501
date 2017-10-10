@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1343" MadCap:lastWidth="1484">
+    <head><title>Project Overview</title>
+        <link rel="StyleSheet" href="../../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <h3>
+            <img src="../../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />
+        </h3>
+        <h1><strong style="font-weight: bold;">Project &#160;Overview</strong>
+        </h1>
+        <p>
+            <img src="../../Images/_details.png" />
+        </p>
+        <p>&#160;</p>
+        <ol>
+            <li><strong style="font-weight: bold;">Description:</strong> 
+ Project Name.</li>
+            <li><strong style="font-weight: bold;">Code:</strong> 
+ If a project code was assigned when the project was added, this will be 
+ reflected here.</li>
+            <li><strong style="font-weight: bold;">Status:</strong> 
+ Reflects the stage the project is at. Default options include Approved, 
+ Budgeted, Completed, In Progress, Inventory, and Proposed.</li>
+            <li><strong style="font-weight: bold;">Manager:</strong> 
+ The assigned project manager for the&#160;project.&#160;This can be changed 
+ by selecting a new manager from the "Project Manager"&#160;pick 
+ list&#160;in the second&#160;column of fields in the editor below.&#160;The 
+ Project Manager is the main security level, and largely determines the visibility and ability of users to read and/or write to
+ the project. See the <a href="../../Configuration Perspective/System/User_Project_Manager_Access.htm">User/Project Manager Access</a> page for more details on using Project Managers to control security, or the <a href="../../Configuration Perspective/System/Roles.htm">User Roles</a> section for more details on access rights.</li>
+            <li><strong style="font-weight: bold;">Location:</strong> 
+ Text field for the geographical position of the project.</li>
+            <li><span style="font-weight: bold;">Template 
+ Type</span>: used for Source Template Projects to control how the Virtual 
+ Projects will be created, either individually or as Assets grouped by 
+ year.</li>
+            <li><span style="font-weight: bold;">Source 
+ Template</span>: if the Project is a Virtual Project, this indicates the 
+ Source Template project.</li>
+            <li><span style="font-weight: bold;">Start 
+ Date</span>: the earliest Start Date within the Project.</li>
+            <li><span style="font-weight: bold;">Created 
+ By</span>: Log of who initially generated the project.</li>
+            <li><span style="font-weight: bold;">Created 
+ Time</span>: Log of when the project was initially generated.</li>
+            <li><strong style="font-weight: bold;">Comment: 
+ <span style="font-weight: normal;">Text</span></strong> field for any 
+ extra information that should be noted about the project that was not 
+ included in the standard fields.</li>
+        </ol>
+        <p>&#160;</p>
+        <p>A Projects Start Date is used in several places throughout esi.manage, 
+ such as:</p>
+        <ul style="list-style: disc;" type="disc">
+            <li>Template Scheduler</li>
+            <li>Date Shifting</li>
+            <li>"Earliest Date" in Economics</li>
+            <li>Integration with esi.schedule</li>
+            <li>Clone Asset</li>
+        </ul>
+        <p>The logic used to determine the Start Date for a Project is outlined 
+ below. &#160;An 
+ asset's start date is taken to be the earliest date from among the following 
+ items:</p>
+        <ul style="list-style: disc;" type="disc">
+            <li>CAPEX header and detail start dates</li>
+            <li>AFE detail start dates</li>
+            <li>production forecast onstream dates</li>
+            <li>production non-forecast detail start dates</li>
+            <li>If none of these dates are present, the asset's 
+ start date is taken to be the containing budget's start date.</li>
+            <li>OPEX, spud, rig release, ownership, reserve booking 
+ dates and any other dates are all expressly ignored for this calculation.</li>
+            <li>A project's start date is the earliest of its 
+ assets' start dates.</li>
+            <li>If a project has no assets, then its start date 
+ is the containing budget's start date.</li>
+        </ul>
+        <p>&#160;</p>
+    </body>
+</html>

@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="5721" MadCap:lastWidth="1484">
+    <head><title>Fiscal Model</title>
+        <link rel="StyleSheet" href="../../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <h2>
+            <img src="../../Images/Logo Images/3esi_manage.png" align="right" border="0" class="HeaderLogo" />
+        </h2>
+        <h1>Fiscal Model</h1>
+        <p>The Fiscal Model page is where default Royalties, Taxes, Burdens, 
+ Expenditure Depreciation, and Custom Economic Calculation Spreadsheets are configured to be applied across a Jurisdiction 
+ or Economic Group. </p>
+        <p>Jurisdictions and Economic Groups are a mandatory project hierarchy 
+ fields. You can add and delete Jurisdictions and Economic Groups in the 
+ <a href="../Budget-Project/Project_Hierarchy.htm">Project Hierarchy page</a> of the Configuration 
+ perspective.</p>
+        <p>Countries are normally configured as Jurisdictions and local areas with 
+ their own tax, royalty and burden regimes are usually configured as Economic Groups. Economic groups belong to a Jurisdiction so are lower in the hierarchy.</p>
+        <p>
+            <img src="../../Images/fiscal_model_overview.png" />
+        </p>
+        <p>&#160;</p>
+        <p>In the screen shot above, you can see the fiscal model page with a 'Fiscal 
+ Model Hierarchy' showing Jurisdictions at the top level and Economic Groups 
+ under each Jurisdiction. The list of Jurisdictions and Economic Groups 
+ can be expanded and contracted by clicking on the twisties that appear 
+ when you hover your mouse to the left of the green tick besides the Jurisdiction 
+ name. </p>
+        <p>The green circle with a tick icon denotes that data has been written 
+ to the Jurisdiction or Economic Group. To clear the data in the fiscal 
+ model, select the drop down arrow next to the refresh icon and select 
+ 'Clear Fiscal Model Data'.</p>
+        <p>
+            <img src="../../Images/fiscal_model_refresh.png" />
+        </p>
+        <p>&#160;</p>
+        <p>By selecting either a Jurisdiction or an Economic Group in the Fiscal 
+ Model Hierarchy, you can then populate the Royalties, Taxes, Burdens and 
+ Expenditure Depreciation for the particular Jurisdiction or Economic Group 
+ you have selected.</p>
+        <h3>&#160;</h3>
+        <h3>Overview</h3>
+        <p>This tab provides a snapshot of the currency, royalties, taxes, burdens 
+ and depreciation and where they are inherited from. For example, the screen 
+ shot at the top of this page shows the Fiscal model defaults for Alberta 
+ which is under Canada in the hierarchy. Therefore any esi.manage projects 
+ that are configured with Canada and Alberta in the details page, will 
+ automatically inherit the royalties, taxes, burdens and expenditure depreciation 
+ for Canada as well as Alberta.</p>
+        <p>Depreciation is being inherited from Canada, this is because a depreciation 
+ model has been configured for Canada but not for Alberta. In contrast, 
+ the tax is being inherited from both Canada and Alberta as they both have 
+ a tax model configured.</p>
+        <h3>&#160;</h3>
+        <h3>Royalties</h3>
+        <p style="font-weight: normal;text-decoration: none;">Royalties 
+ can be configured at both country / federal level and at the state / local 
+ level. There are two ways that default royalties can be configured in 
+ the Fiscal Model page of the defaults section. The first is a fixed percentage 
+ by product, month / year and price scenario (See figure below).</p>
+        <p>Royalties can also be input, in a similar manner, within the Project perspective under a Project’s Burdens tab. These will override the configured royalty amounts. Note that these amounts are input in %.</p>
+        <p>The second is by price triggers, as discussed below.</p>
+        <p style="font-weight: normal;text-decoration: none;">
+            <img src="../../Images/fiscal_model_royalties.png" />
+        </p>
+        <h3>&#160;</h3>
+        <h3>Royalty 
+ Price Triggers</h3>
+        <p style="font-weight: normal;text-decoration: none;">The 
+ second method for allocating default royalties is by price triggers.</p>
+        <p style="font-weight: normal;text-decoration: none;">In 
+ the screen shot below shows the Trigger sub tab within the Royalties tab. 
+ The default royalties are applied in 'Price Trigger Tranches' so you can 
+ model changing royalties rates as prices change. </p>
+        <p style="font-weight: normal;text-decoration: none;">To 
+ configure a price trigger, in the price triggers section of the screen, 
+ click into the name field and give the price trigger a name, select which 
+ product it is for and the price profile that it will be applied against. 
+ One this is completed, the currency and volume unit should be populated 
+ automatically.</p>
+        <p style="font-weight: normal;text-decoration: none;">Next, 
+ in the 'Price Trigger Tranches' table, set the price triggers and the 
+ associated royalty percentage.</p>
+        <p style="font-weight: normal;text-decoration: none;">A 
+ chart will automatically be plotted to show a graphical representation 
+ of the Price Trigger.</p>
+        <p style="font-weight: normal;text-decoration: none;">
+            <img src="../../Images/fiscal_model_royalty_trigger.png" />
+        </p>
+        <p style="font-weight: normal;text-decoration: none;">&#160;</p>
+        <p style="font-weight: normal;text-decoration: none;">You 
+ can also see that there is a Royalty time line section at the top of the 
+ page. This allows the configuration to inherit either the percent or trigger 
+ mechanism to a certain date and then a different royalty mechanism or 
+ provider up to another data. So the mechanisms for Royalty calculation 
+ can change over time.</p>
+        <h3>Alberta Royalties</h3>
+        <p>Alberta Royalties have been built in esi.manage in the Fiscal Model area. Within this tab, the user can define several items that will the defaults for the Alberta Royalties within each project.</p>
+        <p>
+            <img src="../../Images/fiscal_model_ABroyalty.png" />
+        </p>
+        <h3>Taxes</h3>
+        <p style="font-weight: normal;text-decoration: none;">The 
+ taxes tab allows the creation of one or more taxes that are applied against 
+ operating income. </p>
+        <p style="font-weight: normal;text-decoration: none;">There 
+ are three buttons. <img src="../../Images/fiscal_model_taxes_toolbar.PNG" style="border: none;float: none;width: 72px;height: 25px;border-style: none;border-style: none;" width="72" height="25" border="0" /></p>
+        <ol>
+            <li style="font-weight: normal;text-decoration: none;"><span style="font-weight: bold;">Configure Taxes</span> - click here to 
+ create a new tax. Click on<span style="font-weight: bold;"> 'add tax'</span> 
+ and give the new tax a name. Click OK and the new tax will appear as a 
+ column on the front of the taxes tab. </li>
+            <li style="font-weight: normal;text-decoration: none;"> <span style="font-weight: bold;">Yearly</span> - This is toggles the date 
+ range between monthly and annual. Once you have selected the desired periodicity, 
+ type in the tax percentage for the new tax type you have created. The 
+ number you type in to either the monthly or yearly cell will automatically 
+ fill down until you type in a new number.</li>
+            <li style="font-weight: normal;text-decoration: none;"><span style="font-weight: bold;">Refresh</span>
+            </li>
+        </ol>
+        <p>&#160;</p>
+        <h3>Burdens</h3>
+        <p style="font-weight: normal;text-decoration: none;">Burdens 
+ can be applied to all projects and assets within a Jurisdiction or Economic Group. The burdens tab is configured in the same way as the <a href="../../Project Editor/Burdens/Custom_Burdens.htm">custom 
+ burdens</a> in the burdens editor within a project (with the exception of the “Allow Asset to Override Schedule” option, discussed below).</p>
+        <p style="font-weight: normal;text-decoration: none;">
+            <img src="../../Images/image38.jpg" style="border: none;" border="0" />
+        </p>
+        <ol>
+            <li style="font-weight: normal;text-decoration: none;"><span style="font-weight: bold;">Configure Burdens - </span>allows you 
+ to create different types of burdens. Pressing the add button provides 
+ a list of options to select. </li>
+            <li style="font-weight: normal;text-decoration: none;"> <span style="font-weight: bold;">Filter Table - </span>&#160;move 
+ the burdens to fit customizable configurations. </li>
+            <li style="font-weight: normal;text-decoration: none;"> <span style="font-weight: bold;">Yearly - </span>&#160;see 
+ Taxes</li>
+            <li style="font-weight: normal;text-decoration: none;"><span style="font-weight: bold;">Refresh - </span><span>see Taxes</span>
+            </li>
+        </ol>
+        <p>
+            <img src="../../Images/_configBurden.png" />
+        </p>
+        <p>There is an additional flag when configuring default burdens which is the <i>Allow Asset to Override Schedule</i> flag. While this flag is checked, burdens can be configured at within the Project Editor at an asset-level to override the defaults. </p>
+        <p>The schedule is completely overwritten while using asset-level burdens, but can be restored to the defaults by clearing the schedule.</p>
+        <p>The schedule will have a yellow background if it is inheriting default values from the fiscal model.</p>
+        <h3>Expenditure 
+ Depreciation</h3>
+        <p>Expenditure Depreciation can also be applied to multiple projects by 
+ default in particular Jurisdictions and / or Economic Groups. </p>
+        <p>Each Expenditure Type is grouped so that depreciation can be applied 
+ in the same way to all expenditure types in the group. This saves time 
+ as you don't need to configure a depreciation method for each expenditure 
+ type.</p>
+        <p>Depreciation uses the Expenditure Family called Tax Family. If the tax 
+ family is not selected, the depreciation will not be calculated and won't 
+ show up in the cashflow statement in the analysis perspective.</p>
+        <p>
+            <img src="../../Images/fiscal_model_exp_deprec.png" />
+        </p>
+        <p>&#160;</p>
+        <p>As with the other tabs in the fiscal Model page, the first step is to 
+ select the Jurisdiction and / or an Economic Group in the 'Fiscal Model 
+ Hierarchy'. Then select the Tax family and the Expenditure group. </p>
+        <p>Each Expenditure group is represented as two 'types': <span style="font-weight: bold;">Tangible</span> 
+ and <span style="font-weight: bold;">Intangible</span>. These two parts 
+ are configured independently for each Expenditure group, however they 
+ are connected in that the Total Tangible % + Total Intangible % will always 
+ equal 100.</p>
+        <p>For each Expenditure/Jurisdiction, the values that can be entered are
+ :</p>
+        <ul>
+            <li class="Bullets"><span style="font-weight: bold;"><a href="../Budget-Project/Expenditure_Families.htm">Family</a></span> - The Expenditure Family 
+ to apply the Depreciation against. &#160;</li>
+            <li class="Bullets"><span style="font-weight: bold;"><a href="../Budget-Project/Expenditure_Groups.htm">Group</a></span> - Used to Depreciate a 
+ Group of Expenditure Types. &#160;If 
+ left blank, the Depreciation will be used as a default for all Expenditure 
+ Types, unless otherwise specified in the Depreciation Schedule.</li>
+        </ul>
+        <p class="Bullets">&#160;</p>
+        <p class="Bullets">Tangible and Intangible Types both have the following 
+ selections:</p>
+        <ul>
+            <li class="Bullets"><span style="font-weight: bold;">Type</span> 
+ - Depreciation models (Declining Balance, Straight Line, Sum of Years). 
+ These models determine the amount of the original capital cost that is 
+ eligible for deduction from the Net Income at the point in time as defined 
+ by the Convention.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Annual 
+ Decline %</span> - Annual Depreciation rate (if Declining Balance is selected 
+ as the Depreciation model.)</li>
+            <li class="Bullets"><span style="font-weight: bold;">Useful 
+ Life (Years)</span> - The duration the Depreciation is applied over.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Convention</span> 
+ - Defines when the Depreciation calculations are performed - Mid Month, 
+ Mid Quarter or Mid Year. </li>
+        </ul>
+        <p>&#160;</p>
+        <p>The values that are defined for Depreciation in the Configuration are 
+ applied by default to any Expenditure (based on the Jurisdiction and or 
+ Economic Group assigned to the Project).</p>
+        <p>Depreciation can be overridden at the Project level in the <a href="../../Project Editor/Expenditures/Project_Expenditure_Depreciation.htm">Expenditure 
+ Tab</a>.</p>
+    </body>
+</html>

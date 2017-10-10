@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="4960" MadCap:lastWidth="1387">
+    <head>
+        <link href="../Resources/TableStyles/HelpFileTableStylesheet.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Enersight Mapping File</title>
+        <link rel="StyleSheet" href="../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <h2>
+            <img src="../Images/Logo Images/3esi_manage.png" align="right" border="0" class="HeaderLogo" />
+        </h2>
+        <h2>Enersight Mapping File</h2>
+        <p>In order for the Enersight Integration to work, a mapping file must be configured specifically for the Enersight and esi.manage data. The mapping file for the Enersight Integration can be found in the Sample Files folder of the esi.manage installation folder (eg. 3esi\esi.manage\Sample_Files\Enersight\Mapping.csv)</p>
+        <p>
+            <img src="../Images/Enersight Int Images/EN_mapping_file_location.png" />
+        </p>
+        <p>The mapping file specifies what information is transferred from a PDS into esi.manage, defaults for many options, as well as translates values in Enersight to values in esi.manage. Generally speaking, the mapping file follows a three column format (except where indicated otherwise).</p>
+        <ul>
+            <li>Column A - Mapping type</li>
+            <li>Column B - Enersight value</li>
+            <li>Column C - esi.manage value</li>
+        </ul>
+        <p>Each section of the mapping file will start with a line that begins with a number sign (#) which will indicate what the section is for. The "#" denotes a comment line, and this line will not be considered by esi.manage when importing data. Additionally, there may be comments on the format of the section (eg. four columns, defaults, etc.), or examples of what the values could be.</p>
+        <p>The mapping file is read from top to bottom, with each row being interpreted sequentially. For this reason it is important to maintain a one-to-one mapping in all cases. Any mapped values where more than one Enersight value is mapped to a single esi.manage value, only the last values will be imported. For example, if three capital classes are mapped to a single esi.manage expenditure type, only the capital in the third class listed will be imported.</p>
+        <p>When deciding what information to include in the mapping file, there are a few things to consider. First, only values that do not already match between Enersight and esi.manage need to be mapped. If the value is the same in both systems, it will assume that is the mapping (eg. bbl as a production unit). Second, if there is unnecessary or incomplete information in the mapping file, you may not need to remove it. Incorrect/incomplete mappings will be ignored if there is no data coming from Enersight that requires it to be mapped (eg. inert gas as a product in Enersight with a blank value in the esi.manage column, will be ignored if there is no inert gas production in Enersight). Lastly, any row can be commented out to be ignored by esi.manage by entering "#" at the start of column A.</p>
+        <p>Currently, the following data can be imported. Also listed is the location of the source data in&#160;Enersight as well as the location of the data once imported into esi.manage.</p>
+        <ul>
+            <li>Attributes<ul><li>Enersight: user data</li><li>esi.manage: project hierarchy or project custom attribute</li></ul></li>
+            <li>Capital<ul><li> Enersight: capital</li><li>esi.manage: expenditure</li></ul></li>
+            <li>Production<ul><li>Enersight: Decline/Prod</li><li>esi.manage: Production</li></ul></li>
+            <li>Revenue<ul><li>Enersight: Other Income and Process</li><li>esi.manage: Production (with effective price to calculate the same cost or additional revenue)</li></ul></li>
+            <li>Opcost<ul><li>Enersight: Opcost</li><li>esi.manage: Opex</li></ul></li>
+            <li>Ownership<ul><li>Enersight: Land</li><li>esi.manage: Ownership</li></ul></li>
+            <li>NRI<ul><li>Enersight: Land</li><li>esi.manage: Ownership (may be hidden of site specific features not configured correctly)</li></ul></li>
+            <li>ProductQuality<ul><li>Enersight: Units</li><li>esi.manage: Configuration &gt; Product Qualities</li></ul></li>
+            <li>Royalty<ul><li>Enersight: Economics or Sev&amp;AdVal</li><li>esi.manage: Burdens &gt; Royalties</li></ul></li>
+            <li>Burden<ul><li>Enersight: Other Royalties (eg. positive GORR)</li><li>esi.manage: Burdens</li></ul></li>
+            <li>Tax<ul><li>Enersight: Economics or Sev&amp;AdVal</li><li>esi.manage: Burdens</li></ul></li>
+            <li>RoyaltyInputs
+<ul><li>Enersight: Royalty calculator inputs</li><li>esi.manage: project custom attributes</li></ul></li>
+        </ul>
+        <p class="note"><span style="font-weight: bold;">Note: </span>The mapping file is a .csv (comma delimited) file. Although these files can be edited in Microsoft Excel, occasionally it will insert commas into empty cells which will cause the mapping file to no longer work. For this reason, it is often best to edit the mapping file in a text editor (eg. Notepad++), or keep a backup copy of the mapping file before making any changes.</p>
+        <p>&#160;</p>
+        <p>
+            <h3>Enersight Mapping File Configuration</h3>
+            <table style="width: 100%;border-left-style: solid;border-left-width: 4px;border-right-style: solid;border-right-width: 4px;border-top-style: solid;border-top-width: 4px;border-bottom-style: solid;border-bottom-width: 4px;mc-table-style: url('../Resources/TableStyles/HelpFileTableStylesheet.css');" class="TableStyle-HelpFileTableStylesheet" cellspacing="0">
+                <col style="width: 153px;" class="TableStyle-HelpFileTableStylesheet-Column-Column1" />
+                <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" style="width: 225px;" />
+                <col style="width: 153px;" class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+                <col style="width: 114px;" class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+                <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+                <tbody>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                        <th colspan="5" style="text-align: center;">Section Name</th>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                        <th colspan="5" style="text-align: center;">Description of Section</th>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                        <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">Column A</td>
+                        <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">Column B</td>
+                        <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">Column C</td>
+                        <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">Column D</td>
+                        <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">Notes</td>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                        <th colspan="5" style="text-align: center;">Defaults</th>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                        <td colspan="5" class="TableStyle-HelpFileTableStylesheet-BodyD-Column1-Body2">This section is for setting default values for fields that are required in esi.manage, but do not exist in Enersight. it is also used to set universal values for the import, such as currency, and how to treat variable opex. All rows that exist in the Sample file must be populated.</td>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">DefaultValue</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">ProjectManager</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Name of Project Manager that exists in esi.manage</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">null</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">All imported opportunities will be given this Project Manager</td>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">DefaultValue</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">ReserveClassification
+</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">Name of Reserve classification in esi.manage</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">null</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">All production will be entered into this Reserve Classification</td>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">DefaultValue</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">RoyaltyScenario
+</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Name of a Price Scenario that exists in esi.manage</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">null</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">Effective Price and Effective Royalty Rates will be imported into this Price Scenario</td>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">DefaultValue</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">ProcessFeeValues
+</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">"Negative" or "Positive"</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">null</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                            <p>Negative - will import negative production and maintain a positive price to represent process fees</p>
+                            <p>Positive - Will import positive production values and a negative price to represent process fee values</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">DefaultValue</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">PdsCurrency
+</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Currency abbreviation from Enersight</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">null</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">If no Currency unit is set for the PDS, this currency will be used.</td>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">DefaultValue</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">VariableOpcostByProduct
+</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">"true" or "false"</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">null</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                            <p>True - variable opcost will be summed by product and imported as a single line item for each product</p>
+                            <p>False - Variable opcost will be imported grouped by Enersight opcost class (requires not having &gt;1 product mapped to a given class and designated as variable)</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">DefaultValue</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">ProductionKind</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">"AsSold" or "AsProduced"</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">null</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                            <p>AsSold - production passed to esi.manage will be after shrinkage, and match the "As Sold" values in enersight reports.</p>
+                            <p>AsProduced - production passed to esi.manage will be unshrunk and match the "As Produced" values in enersight reports</p>
+                            <p>It is important to note that variable opex will also be based off of the Production Kind that is designated here.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                        <th colspan="5" style="text-align: center;">Action Configuration</th>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                        <td colspan="5" class="TableStyle-HelpFileTableStylesheet-BodyD-Column1-Body3">This section allows you to choose which pieces of data you want to import into esi.manage. The values are all entered on a single row, each in a new cell. Any item removed from the list will not be changed when merging data.</td>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">ActionConfiguration</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">ImportFromEnersight</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">Measure 1 (eg. Attributes)</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">Measure 2 (eg. Capital)</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                            <p>Enter a new value in each column on the same row until all desired import data is listed. The options are: Attributes,	Capital,	Production,	Revenue,	Opcost,	Ownership,	NRI,	ProductQuality,	Royalty,	Burden,	Tax,	RoyaltyInputs
+</p>
+                            <p>Note: NRI overrides Ownership and Effective Royalty percentages when performing calculations in esi.manage.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                        <th colspan="5" style="text-align: center;">Action Options</th>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                        <td colspan="5" class="TableStyle-HelpFileTableStylesheet-BodyD-Column1-Body2">This section indicates the behaviour when loading projects that already exist in esi.manage. This row can be commented out for a complete delete of the existing projects in esi.manage and a reload of new data as per the mapping file.</td>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">ActionOptions</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">ImportFromEnersight</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Merge</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">null</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">When merging a new import with projects that already exist in esi.manage, all data that is listed in the ActionConfiguration section will be deleted from the existing projects in esi.manage, and reloaded. Data that exists in esi.manage (eg. Capital) that is not listed in the ActionConfiguration line will not be changed.</td>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                        <th colspan="5">Attribute Mapping</th>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                        <td colspan="5" class="TableStyle-HelpFileTableStylesheet-BodyD-Column1-Body3">
+                            <p colspan="5">This section maps the field name in Enersight to the name of the field in esi.manage where the value should go. The Enersight column should be the User Data Name, and the esi.manage column can be either an existing project hierarchy type, or project custom attribute description. </p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">AttributeMapping</td>
+                        <td style="font-style: normal;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                            <p>Enersight user data name</p>
+                            <p>(eg. Formation)</p>
+                        </td>
+                        <td style="font-style: normal;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                            <p>esi.manage project hierarchy type or project custom attribute name</p>
+                            <p>(eg. Formation Top)</p>
+                        </td>
+                        <td style="font-style: normal;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">null</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">The esi.manage hierarchy type or project custom attribute must already exist in esi.manage.</td>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                        <th colspan="5" style="text-align: center;">Attribute Instance Mapping</th>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                        <td colspan="5" class="TableStyle-HelpFileTableStylesheet-BodyD-Column1-Body2">
+                            <p colspan="5">This section allows the user to map specific Enersight values to specific esi.manage values, for the attributes mapped in the AttributeMapping section. </p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">AttributeInstanceMapping</td>
+                        <td style="font-style: normal;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">esi.manage project hierarchy type or project custom attribute name (eg. Formation Top)</td>
+                        <td style="font-style: normal;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                            <p>Enersight value</p>
+                            <p>(eg. Shunda)</p>
+                        </td>
+                        <td style="font-style: normal;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Esi.manage value (eg. Shunda Western Canada)</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">The esi.manage value in column D must already exist in esi.manage</td>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                        <th colspan="5" style="text-align: center;">Products</th>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                        <td colspan="5" class="TableStyle-HelpFileTableStylesheet-BodyD-Column1-Body3">This section is where product names are lined up. They must be a one to one mapping.</td>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">ProductMapping</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">Enersight product name</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">esi.manage product description</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">null</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">Any product that is being saved into the PDS must have a mapped esi.manage product.</td>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                        <th colspan="5">Volume Units</th>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                        <td colspan="5" class="TableStyle-HelpFileTableStylesheet-BodyD-Column1-Body2">This section is to indicate which esi.manage units to use for each Enersight volume unit. This is particularly relevant for units in Enersight that are used for both energy based (gas) and mass based (liquid) products.</td>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">VolumeUnitMapping</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Enersight production unit</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">esi.manage production unit</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                            <p>Mass, Energy, or Equivalence</p>
+                        </td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">Enersight often uses the same production unit for both Gas and Oil, however esi.manage must use different units for energy and mass based products. In a situation where Enersight uses the unit "m3" to represent both, in esi.manage we will have one called "m3" with "Mass" in column D, but also "m3 (gas)" with "Energy" in column D. </td>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                        <th colspan="5">Currency</th>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                        <td colspan="5" class="TableStyle-HelpFileTableStylesheet-BodyD-Column1-Body3">This section is used to indicate the currency unit in esi.manage that represents different magnitudes of a currency unit in Enersight.</td>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">CurrencyMapping</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">Enersight base currency unit (eg. USD)</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">scale unit (eg. m$)</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">esi.manage currency unit for the given scale (eg. kUSD)</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">The example mapping can be interpreted as the base currency of Enersight is USD, and when multiplied by m$, is equal to kUSD (thousand US&#160;Dollars) in esi.manage.</td>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                        <th colspan="5">Product Quality</th>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                        <td colspan="5" class="TableStyle-HelpFileTableStylesheet-BodyD-Column1-Body2">If the product quality units do not match in esi.manage and Enersight, they are mapped here.</td>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">ProductQualityUnitMapping</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Enersight product quality unit (eg. GJ/e3m3)</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">esi.manage product quality unit (eg. GJ/e3m3 (gas))</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">null</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">This mapping is only required for product qualities that include a production unit that does not match between Enersight and esi.manage, such as the "m3" unit mentioned in VolumeUnitMapping.</td>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                        <th colspan="5">Expenditure Types</th>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                        <td colspan="5" class="TableStyle-HelpFileTableStylesheet-BodyD-Column1-Body3">This section maps the Enersight capex class to esi.manage expenditure type description. It is important to note here that there should not be more than one Enersight class mapped to a single esi.manage expenditure type, as only the last mapping in the list will be loaded.</td>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">ExpenditureTypeMapping</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">Enersight capital class (eg. class1)</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">esi.manage expenditure type (eg. Drilling)</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">null</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">The Enersight capital class is typically denoted by "class#", however custom capital classes can exist that have been named. On the capital cost definitions page in Enersight, the value to enter in column B is the value in the drop down list directly to the right of the Name.</td>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                        <th colspan="5">Opex Type Mapping</th>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                        <td colspan="5" class="TableStyle-HelpFileTableStylesheet-BodyD-Column1-Body2">This section is for mapping fixed opex classes in Enersight to fixed opex types in esi.manage, IF the VariableOpCostByProduct value is set to "true". If the value is set to "false", all opex types should be mapped here. If the value in the Enersight PDS is saved as a $/production unit, it will be imported as variable opex in esi.manage. If it is $/unit time, it will be imported as fixed opex. It is also important to note here that these should be a one to one mapping for the same reason as expenditure types.</td>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">OpexTypeMapping</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Enersight opex class (eg. class1)</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">esi.manage opex type (eg. Monthly Well Cost)</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">null</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">Same as with the expenditure type mapping, the opcost class can be found in the Opcost Definitions page of Enersight. The esi.manage opex type should be the description, not the code. </td>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                        <th colspan="5">Variable Opex Type Mapping</th>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                        <td colspan="5" class="TableStyle-HelpFileTableStylesheet-BodyD-Column1-Body3">This section is for mapping variable opex when the  VariableOpCostByProduct value is set to "true" in the defaults section of the mapping file. In this scenario, all opex in Enersight that is denoted as having the Opcost Type of "Variable" and having the same product will be summed and imported as a single variable opex line item in esi.manage. An opex type will need to exist in esi.manage that is not also used in the previous section, "OpexTypeMapping". An example would be to create a separate variable opex type for each product.</td>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">VariableOpexTypeMapping</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">Enersight product (eg. oil)</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">Esi.manage opex type (eg. Variable Oil Opex)</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">null</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">Same as with the expenditure type mapping, the opcost class can be found in the Opcost Definitions page of Enersight. The esi.manage opex type should be the description, not the code. </td>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                        <th colspan="5">Income Mapping</th>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                        <td colspan="5" class="TableStyle-HelpFileTableStylesheet-BodyD-Column1-Body2">Revenue that is generated in Enersight as a result of processing fees are modelled in esi.manage as revenue from a production stream. Products must be created in esi.manage that this income can be mapped to, for each product that has processing revenue generated.</td>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">IncomeMapping</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Enersight product (eg. Gas)</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Esi.manage product (eg. Other Gas Income)</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">null</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">The esi.manage product used to represent this additional revenue must not be used elsewhere to model actual production (ie. do not use the product "Gas" here, as any production imported earlier in the mapping file will be overwritten).</td>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                        <th colspan="5">Process Fee Mapping</th>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                        <td colspan="5" class="TableStyle-HelpFileTableStylesheet-BodyD-Column1-Body3">Similar to Income Mapping, this section is for mapping costs as a result of processing fees. Products must be created in esi.manage that these costs can be mapped to.</td>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">ProcessFeeMapping</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">Enersight product (eg. Gas)</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">Esi.manage product (eg. Other Gas Costs)</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">null</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">The esi.manage product used to represent this additional revenue must not be used elsewhere to model actual production (ie. do not use the product "Gas" here, as any production imported earlier in the mapping file will be overwritten).</td>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                        <th colspan="5">Revenue Rate Mapping</th>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                        <td colspan="5" class="TableStyle-HelpFileTableStylesheet-BodyD-Column1-Body2">This section is similar to the Currency Mapping section. It indicates what currency rate in esi.manage is for what magnitude of currency rate in Enersight.</td>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">RevenueRateMapping
+</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Enersight currency unit (eg. USD)</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Magnitude (eg. m$)</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">esi.manage revenue rate (eg. kUSD/d)</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">The esi.manage revenue rate can be set to the same as the currency mapping, and best practice is to keep the periodicity of the revenue rate as daily.</td>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                        <th colspan="5">Revenue Price Profile Mapping</th>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                        <td colspan="5" class="TableStyle-HelpFileTableStylesheet-BodyD-Column1-Body3">Esi.manage support default price profiles for products, however Enersight can provide multiple different revenue rates in a single PDS. This section allows the user to map magnitudes of currency to esi.manage price profile units.</td>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">RevenuePriceProfileMapping</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">Enersight currency unit (eg. USD)</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">Magnitude (eg. m$)</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">esi.manage revenue rate (eg. kUSD)</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">Similar to Currency Unit Mapping</td>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                        <th colspan="5">Tax Name Mapping</th>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                        <td colspan="5" class="TableStyle-HelpFileTableStylesheet-BodyD-Column1-Body2">Several types of taxes can be calculated in Enersight. These can be renamed on their way into esi.manage.</td>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">TaxNameMapping</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Enersight tax name (eg. state)</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">esi.manage tax name (eg. State Tax)</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">null</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">&#160;</td>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                        <th colspan="5">Value Mapping</th>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                        <td colspan="5" class="TableStyle-HelpFileTableStylesheet-BodyD-Column1-Body3">The value mapping section allows a user to map some values out of Enersight that are not user data, to either a fixed field, hierarchy attribute, or project custom attribute. The two fields in esi.manage that can be used are "Asset Type" and "Asset Subtype". Column B indicates whether you want to import the asset type or subtype from Enersight, the Column C indicates which location in esi.manage you want to put it, and the Column D indicates the name of the esi.manage field (where relevant). See below for examples</td>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">Value Mapping</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">EsiEsOpportunity.type
+</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">assets.type</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">&#160;</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">This will import the asset type from Enersight into the asset type in esi.manage. The asset type must already be configured in esi.manage</td>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">Value Mapping</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">EsiEsOpportunity.type
+</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">hierarchyAttributes
+</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Well Type
+</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">This will import the Enersight asset type into the project hierarchy field called Well&#160;Type. The asset type must already be configured in esi.manage as a possible selection for Well Type</td>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">Value Mapping</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">EsiEsOpportunity.subtype
+</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">hierarchyAttributes
+</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">Well Type
+</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">This will import the Enersight asset sub-type into the project hierarchy field called Well&#160;Type. The asset sub-type must already be configured in esi.manage as a possible selection for Well Type</td>
+                    </tr>
+                    <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body3">Value Mapping</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">EsiEsOpportunity.type
+</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">customAttributes
+</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">Project Type
+</td>
+                        <td class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body3">This will import the Enersight asset type into the project custom attribute field called Project Type. If this custom attribute is not a "text" attribute, but a picklist selection, it must already be configured in esi.manage.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </p>
+    </body>
+</html>

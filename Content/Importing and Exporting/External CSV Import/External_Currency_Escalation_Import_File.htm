@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1461" MadCap:lastWidth="1195">
+    <head>
+        <link href="../../Resources/TableStyles/HelpFileTableStylesheet.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>External Currency Escalation Import File</title>
+        <link rel="StyleSheet" href="../../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <h3>
+            <img src="../../Images/Logo Images/3esi_manage.png" align="right" border="0" class="HeaderLogo" />
+        </h3>
+        <h2>External Currency Escalation Import File</h2>
+        <p>There are seven different line types for a Currency Exchange File Import.</p>
+        <ol style="list-style: decimal;list-style-type: decimal;">
+            <li><span style="font-weight: bold;">File </span>- 
+ identifies the currency escalation file to be defined</li>
+            <li style="font-weight: normal;"><span style="font-weight: bold;">Hierarchy 
+ code</span> - identifies the Hierarchy element for following details. 
+ &#160;Use the 
+ code, not the description.</li>
+            <li style="font-weight: normal;"><span style="font-weight: bold;">CAPEX 
+ - </span><span>specifies that following details apply to CAPEX. &#160;Use 
+ the CAPEX type code, not description.</span>
+            </li>
+            <li style="font-weight: normal;"><span style="font-weight: bold;">OPEX 
+ - </span>specifies that following details apply to OPEX</li>
+            <li style="font-weight: normal;"><span style="font-weight: bold;">Resource 
+ - </span>specifies that following details apply to resource costs</li>
+            <li style="font-weight: normal;"><span style="font-weight: bold;">Price 
+ - </span>specifies that following details apply to prices</li>
+            <li style="font-weight: normal;"><span style="font-weight: bold;">Detail 
+ - </span>defines the currency escalation rate for a particular date</li>
+        </ol>
+        <p>Each line type has a different layout.</p>
+        <p>&#160;</p>
+        <h3>File Line Type Layout</h3>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');" cellspacing="0" width="100%" class="TableStyle-HelpFileTableStylesheet">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Column #</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Description</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Notes</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Optional</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="10.249%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>1</p>
+                    </td>
+                    <td width="22.397%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Line Type</p>
+                    </td>
+                    <td width="56.996%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>always "File"</p>
+                    </td>
+                    <td width="10.358%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td bgcolor="#C0C0C0" width="10.249%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body3">
+                        <p>2</p>
+                    </td>
+                    <td width="22.397%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p>File Name</p>
+                    </td>
+                    <td width="56.996%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p>name of the escalation file being defined</p>
+                    </td>
+                    <td width="10.358%" class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body3">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h3>Jurisdiction Line Type Layout</h3>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');" cellspacing="0" width="100%" class="TableStyle-HelpFileTableStylesheet">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Column #</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Description</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Notes</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Optional</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="10.249%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>1</p>
+                    </td>
+                    <td width="22.397%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Line Type</p>
+                    </td>
+                    <td width="56.996%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>always "Jurisdiction"</p>
+                    </td>
+                    <td width="10.358%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td bgcolor="#C0C0C0" width="10.249%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body3">
+                        <p>2</p>
+                    </td>
+                    <td width="22.397%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p>Jurisdiction</p>
+                    </td>
+                    <td width="56.996%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p>Code of a configured Hierarchy Element</p>
+                    </td>
+                    <td width="10.358%" class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body3">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h3>CAPEX Line Type Layout</h3>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');" cellspacing="0" width="100%" class="TableStyle-HelpFileTableStylesheet">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Column #</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Description</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Notes</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Optional</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="10.249%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>1</p>
+                    </td>
+                    <td width="22.397%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Line Type</p>
+                    </td>
+                    <td width="56.996%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>always "CAPEX"</p>
+                    </td>
+                    <td width="10.358%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td bgcolor="#C0C0C0" width="10.249%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body3">
+                        <p>2</p>
+                    </td>
+                    <td width="22.397%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p>CAPEX Category Code</p>
+                    </td>
+                    <td width="56.996%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p>Code of a configured expenditure category</p>
+                    </td>
+                    <td width="10.358%" class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body3">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h3>OPEX Line Type Layout</h3>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');" cellspacing="0" width="100%" class="TableStyle-HelpFileTableStylesheet">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Column #</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Description</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Notes</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Optional</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="10.249%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body2">
+                        <p>1</p>
+                    </td>
+                    <td width="22.397%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2">
+                        <p>Line Type</p>
+                    </td>
+                    <td width="56.996%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2">
+                        <p>always "OPEX"</p>
+                    </td>
+                    <td width="10.358%" class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body2">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h3>Resource Line Type Layout</h3>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');" cellspacing="0" width="100%" class="TableStyle-HelpFileTableStylesheet">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Column #</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Description</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Notes</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Optional</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="10.249%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body2">
+                        <p>1</p>
+                    </td>
+                    <td width="22.397%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2">
+                        <p>Line Type</p>
+                    </td>
+                    <td width="56.996%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2">
+                        <p>always "Resource"</p>
+                    </td>
+                    <td width="10.358%" class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body2">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h3>Price Line Type Layout</h3>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');" cellspacing="0" width="100%" class="TableStyle-HelpFileTableStylesheet">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Column #</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Description</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Notes</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Optional</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="10.249%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body2">
+                        <p>1</p>
+                    </td>
+                    <td width="22.397%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2">
+                        <p>Line Type</p>
+                    </td>
+                    <td width="56.996%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2">
+                        <p>always "Price"</p>
+                    </td>
+                    <td width="10.358%" class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body2">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h3>Detail Line Type Layout</h3>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');" cellspacing="0" width="100%" class="TableStyle-HelpFileTableStylesheet">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Column #</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Description</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Notes</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">Optional</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="10.249%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>1</p>
+                    </td>
+                    <td width="22.397%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Line Type</p>
+                    </td>
+                    <td width="56.996%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>always "Detail"</p>
+                    </td>
+                    <td width="10.358%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td colspan="1" rowspan="1" bgcolor="#C0C0C0" width="10.249%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>2</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="22.397%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Date</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="56.996%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>date specified in YYYY-MM format (e.g. 2010-01)</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10.358%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="10.249%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body2">
+                        <p>3</p>
+                    </td>
+                    <td width="22.397%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2">
+                        <p>Escalation</p>
+                    </td>
+                    <td width="56.996%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2">
+                        <p>escalation rate, specified as a fraction per year</p>
+                    </td>
+                    <td width="10.358%" class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body2">
+                        <p style="text-align: center;" align="center">N</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+    </body>
+</html>

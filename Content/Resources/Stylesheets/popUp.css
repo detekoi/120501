@@ -1,0 +1,228 @@
+/*<meta />*/
+
+body
+{
+	font-family: Arial;
+	background-color: #ffffff;
+}
+
+h3
+{
+	font-weight: bold;
+	background-color: #874f12;
+	color: #ffffff;
+	text-indent: 0.25in;
+	margin-left: 0pt;
+	line-height: 150%;
+	border-left-style: none;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	font-size: 11pt;
+}
+
+li.mc-H3
+{
+	font-weight: bold;
+	color: #ffffff;
+	text-indent: 0.25in;
+	line-height: 150%;
+	font-size: 11pt;
+}
+
+h4
+{
+	font-weight: bold;
+	font-size: 12.0pt;
+}
+
+li.mc-H4
+{
+	font-weight: bold;
+	font-size: 12.0pt;
+}
+
+h5
+{
+	font-weight: bold;
+	font-size: 10.0pt;
+}
+
+li.mc-H5
+{
+	font-weight: bold;
+	font-size: 10.0pt;
+}
+
+h6
+{
+	font-weight: bold;
+	font-size: 8.0pt;
+}
+
+li.mc-H6
+{
+	font-weight: bold;
+	font-size: 8.0pt;
+}
+
+p
+{
+	margin-top: 0pt;
+	margin-bottom: 6pt;
+	font-size: 9pt;
+}
+
+li
+{
+	font-size: 9pt;
+}
+
+a.expandspot
+{
+	cursor: hand;
+	font-size: 10pt;
+	color: #400080;
+	x-on-hover: dropshadow(color=#ffffff);
+	font-weight: bold;
+	font-style: normal;
+	text-decoration: none;
+}
+
+span.expandtext
+{
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: normal;
+	color: #339999;
+	text-decoration: underline;
+}
+
+a.dropspot
+{
+	cursor: hand;
+	color: #008000;
+	font-style: italic;
+	text-decoration: none;
+}
+
+a.glossterm
+{
+	color: #800000;
+	cursor: hand;
+	font-style: italic;
+	text-decoration: none;
+}
+
+span.glosstext
+{
+	font-style: italic;
+	font-weight: normal;
+	color: #0000ff;
+}
+
+ol,
+ul
+{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+p.Bullets
+{
+	list-style: disc;
+}
+
+li.Bullets
+{
+	list-style: disc;
+}
+
+p.NumberedList
+{
+	list-style: decimal;
+}
+
+li.NumberedList
+{
+	list-style: decimal;
+}
+
+a.popupspot
+{
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: normal;
+	color: #339999;
+	text-decoration: none;
+}
+
+div.droptext
+{
+	margin-left: 0.25in;
+	margin-right: 0.25in;
+	margin-top: 18px;
+}
+
+popupBody.popupBody_1
+{
+	font-family: Arial;
+	font-size: 8pt;
+	padding: 10px 10px;
+	color: #000000;
+	background-color: #ffffc0;
+	margin: 0px;
+}
+
+MadCap|expandingHead.expandspot
+{
+	cursor: hand;
+	font-size: 10pt;
+	color: #400080;
+	x-on-hover: dropshadow(color=#ffffff);
+	font-weight: bold;
+	font-style: normal;
+	text-decoration: none;
+}
+
+MadCap|dropDownHotSpot.dropspot
+{
+	cursor: hand;
+	color: #008000;
+	font-style: italic;
+	text-decoration: none;
+}
+
+MadCap|expandingBody.expandtext
+{
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: normal;
+	color: #339999;
+	text-decoration: underline;
+}
+
+MadCap|glossaryTerm.glossterm
+{
+	color: #800000;
+	cursor: hand;
+	font-style: italic;
+	text-decoration: none;
+}
+
+MadCap|expandingBody.glossterm
+{
+	font-style: italic;
+	font-weight: normal;
+	color: #0000ff;
+}
+
+MadCap|textPopup.popupspot
+{
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: normal;
+	color: #339999;
+	text-decoration: none;
+}
+

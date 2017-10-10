@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1345" MadCap:lastWidth="1205">
+    <head><title>Clean Up Data</title>
+        <link rel="stylesheet" href="../../Resources/Stylesheets/default.css" type="text/css" />
+        <style>
+h1.whs1
+{
+	font-size: 14pt;
+	text-align: right;
+}
+li.mc-h1-Cwhs1
+{
+	font-size: 14pt;
+	text-align: right;
+}
+img_whs2
+{
+	border: none;
+	width: 36px;
+	height: 44px;
+	float: none;
+	border-style: none;
+}
+h1.whs3
+{
+	font-size: 14pt;
+}
+li.mc-h1-Cwhs3
+{
+	font-size: 14pt;
+}
+img_whs4
+{
+	border: none;
+	width: 516px;
+	height: 421px;
+	float: none;
+	border-style: none;
+}
+
+</style>
+        <style>
+div.WebHelpPopupMenu
+{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 4;
+	visibility: hidden;
+}
+
+</style>
+        <script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">/*<![CDATA[*/
+<!--
+ if (navigator.appName !="Netscape")
+ { document.write("<link rel='stylesheet' href='default.css'>");}
+ //-->
+/*]]>*/</script> <script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">/*<![CDATA[*/
+<!--
+ function reDo() {
+ if (innerWidth != origWidth || innerHeight != origHeight)
+ location.reload();
+ }
+ if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+ origWidth = innerWidth;
+ origHeight = innerHeight;
+ onresize = reDo;
+ }
+ onerror = null; 
+ //-->
+/*]]>*/</script> <script type="text/javascript" language="javascript1.2" src="../../Archived/whmsg.js"></script> <script type="text/javascript" language="javascript" src="../../Archived/whver.js"></script> <script type="text/javascript" language="javascript1.2" src="../../Archived/whproxy.js"></script> <script type="text/javascript" language="javascript1.2" src="../../Archived/whutils.js"></script> <script type="text/javascript" language="javascript1.2" src="../../Archived/whtopic.js"></script></head>
+    <body>
+        <h2>
+            <img src="../../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />Clear Data</h2>
+        <p>When importing Production, CAPEX (AFEs of CAPEX Details) or OPEX data, prior
+ data can be cleared by selecting the <span style="font-weight: bold;">Clear</span> 
+ option before importing. 
+ This Form will be initialized based on the data that is found in the import 
+ file:</p>
+        <ol>
+            <li class="NumberedList">The Start and 
+ End Dates will respectively be the earliest and latest dates found in 
+ the import file.</li>
+            <li class="NumberedList">The Types will 
+ also be highlighted based on the contents of the import file.</li>
+        </ol>
+        <p>There are several considerations in regards to how the Clear function 
+ is applied, and how your import files are formulated. The three parts 
+ of the Clear function are combined together, i.e:</p>
+        <ol>
+            <li class="NumberedList">All records of 
+ type Actuals or Field Estimate</li>
+            <li class="NumberedList">Whose start and 
+ end dates fall between Feb 1, 2015 and Feb 28, 2015</li>
+            <li class="NumberedList">With the Clear 
+ Matching check box selected, the clear is applied to Projects identified 
+ within the import file (via the System/Identifier pair).</li>
+            <li class="NumberedList">If the Clear 
+ Matching check box is not checked, then the resultant Clear will be based 
+ on steps 1 and 2.</li>
+        </ol>
+        <h3>&#160;</h3>
+        <h3>Considerations for Preparation of Import Files</h3>
+        <ol>
+            <li class="NumberedList">If  bringing 
+ in data from different systems (i.e., Two different Field Capture Systems 
+ which are to be imported independently), then ensure the Matching check 
+ box is selected otherwise the second import file will erase the results 
+ of the first import file.</li>
+            <li class="NumberedList">Care should be 
+ exercised when combining data of different Types (i.e., Field Estimates 
+ and Financial Actuals). It is highly probable that in this situation there 
+ will be a quite wide range of Dates, for example, Field Estimates from 
+ June and Financial Actuals from February. This would result in a Start 
+ Date of Feb 1, 2015, and an End Date of June 30, 2015. Unless the import 
+ file contains all of the Field Estimate data between February 1 and June 
+ 30, 2015, when the Clear is applied it will remove all Field Estimate 
+ Data between the specified dates.</li>
+        </ol>
+        <p>&#160;</p>
+        <p>
+            <img src="../../Images/69.png" />
+        </p>
+        <h3>&#160;</h3>
+        <h3>If the Clear Button is not Pressed</h3>
+        <p>Depending on the type of Import, the treatment of existing data is different 
+ if the Clear Button isn't pressed.</p>
+        <ol>
+            <li class="NumberedList">For OPEX and 
+ Production, the new data will be blended into existing data (provided 
+ the dates for the imported records match the date range for the existing 
+ record). </li>
+            <li class="NumberedList">For CAPEX and 
+ AFE Details, the new data will overwrite the existing data (provided the 
+ dates for the imported records match the date range for the existing record).</li>
+            <li class="NumberedList">If the dates 
+ in the import file don't match the existing dates, an error message will 
+ be generated regarding Overlapping Dates and the import record will 
+ be rejected.</li>
+        </ol>
+        <p>&#160;</p>
+    </body>
+</html>

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-ca" MadCap:lastBlockDepth="3" MadCap:lastHeight="4639" MadCap:lastWidth="769">
+    <head><title></title>
+    </head>
+    <body>
+        <h2 class="Heading2">Incremental Economics<img src="../Images/Logo Images/3esi_manage.png" align="right" border="0" class="HeaderLogo" /></h2>
+        <h3 class="Heading3">Overview</h3>
+        <p>While the previous workflow for performing incremental Economic calculations remain in esi.manage, an additional, more prescriptive approach has been included. The Incremental Ring Fence is part of the Group Behaviour within a Budget – which means that if it has been configured for that budget, when you perform any Economic Analysis against those projects, the Incremental Ring Fence calculation approach will be applied.</p>
+        <p>This calculation approach (and the results) are deltas:</p>
+        <p>For any project (project n+20), what will be reported in the Economics Analysis results are:</p>
+        <p>Aggregate Cashflow (Base + project 1 through 20) – Aggregate Cashflow (Base + project 1 through 19).</p>
+        <p>Projects that are part of a Ring Fence will either be identified as Base, or Incremental Projects. For those that are Incremental, you will set a Dependency Order based on your criteria; that controls the order of the calculations. </p>
+        <p>The Dependency Order, once it has been set for a Project, is visible on the Project Detail page:</p>
+        <p>
+            <img src="../Resources/Images/Incremental Module/Incremental Economics.png" style="visibility: visible;mso-wrap-style: square;width: 334px;height: 239px;" />
+        </p>
+        <p>Note: when Projects that are part of an Incremental Ring Fence are copied to another Budget, their Dependency Order is reset, and if a Ring Fence existed in that Budget that the project will belong to, it will be part of the Base. You will need to move it to the Incremental Projects list in the Target Budget, and set an appropriate Dependency Order.</p>
+        <h3 class="Heading3">Creating an Incremental Ring Fence Group</h3>
+        <p>Within the Projects Perspective, select the Groups page tab next to the Project List and choose Add a new Group:</p>
+        <p>
+            <img src="../Resources/Images/Incremental Module/Incremental Economics_1.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 74px;" />
+        </p>
+        <p>&#160;</p>
+        <p>The Type will be Incremental Ring Fence – the Budget will be defaulted to the Budget you are in.</p>
+        <p>
+            <img src="../Resources/Images/Incremental Module/Incremental Economics_2.png" style="visibility: visible;mso-wrap-style: square;width: 342px;height: 279px;" />
+        </p>
+        <p>Choose the Fiscal Model Node (based on the Fiscal Model Configuration) that defines the Group. A Manager must be assigned that provides security control over the ability to modify the Group.</p>
+        <p>
+            <img src="../Resources/Images/Incremental Module/Incremental Economics_3.png" style="visibility: visible;mso-wrap-style: square;width: 342px;height: 279px;" />
+        </p>
+        <p>The Group Screen for building the Incremental Order will start with all projects being identified as Base. Select the projects and use the Right Arrow to move them across into the Incremental Projects table.</p>
+        <p>
+            <img src="../Resources/Images/Incremental Module/Incremental Economics_4.png" style="visibility: visible;mso-wrap-style: square;width: 597px;height: 380px;" />
+        </p>
+        <p>Note, there can be multiple Projects that represent the Base – however, they will be evaluated together and presented as a single line in the Economics Results.</p>
+        <p>
+            <img src="../Resources/Images/Incremental Module/Incremental Economics_5.png" style="visibility: visible;mso-wrap-style: square;width: 588px;height: 414px;" />
+        </p>
+        <p>The Incremental Projects Table can be copied from and pasted into, if you have another source that can define the Dependency Order. It is a good practice to leave gaps in the order for the initial configuration, as it provides the ability to move projects up or down in the list. The calculation order (regardless of any sorting of the table) will be ascending in the Dependency order.</p>
+        <h3 class="Heading3">Running an Incremental Analysis</h3>
+        <p>When the Incremental Ring Fence exists in the Budget, running an Economic Analysis against a subset of the projects that are in the Ring Fence will “potentially” result in other projects being calculated as well. A project’s presence in an Incremental Ring Fence will result in Incremental calculations being performed. Since this is a Delta calculation, there must be “previous” project(s) calculated to perform the delta against.</p>
+        <p>
+            <img src="../Resources/Images/Incremental Module/Incremental Economics_6.png" style="visibility: visible;mso-wrap-style: square;width: 260px;height: 145px;" />
+        </p>
+        <p>The Analysis Mode is Simple. The progress will take longer than running the projects without the Incremental Ring Fence, as the delta must be determined.</p>
+        <p>
+            <img src="../Resources/Images/Incremental Module/Incremental Economics_7.png" style="visibility: visible;mso-wrap-style: square;width: 320px;height: 116px;" />
+        </p>
+        <p>Once calculations are complete, the results can be view in the Analysis Perspective.</p>
+        <p>
+            <img src="../Resources/Images/Incremental Module/Incremental Economics_8.png" style="visibility: visible;mso-wrap-style: square;width: 405px;height: 519px;" />
+        </p>
+        <p>The order that the projects are displayed in will be the Dependency order. The results, for Pad 0029 for example, is the Delta between “Base, Pad 0015, Pad 0019 and Pad 0029” and “Base, Pad 0015 and Pad 0019”. This approach is designed to indicate a development order (projects with better incrementals should likely go first), or potentially projects that don’t increase the overall value of the portfolio.</p>
+        <p>The same projects evaluated without the Ring Fence is shown below. The results are similar for many projects, but not all.</p>
+        <p>
+            <img src="../Resources/Images/Incremental Module/Incremental Economics_9.png" style="visibility: visible;mso-wrap-style: square;width: 414px;height: 522px;" />
+        </p>
+        <p>&#160;</p>
+        <p>NOTE: If Group Economic Limit has also been configured in your esi.manage database, the Group Limit calculations will also participate (and because the Group Limit requires the calculation of all projects that are part of the Group, they will get evaluated to determine the Group Limit, even when they are not part of the incremental step). </p>
+        <p>&#160;</p>
+    </body>
+</html>

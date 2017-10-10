@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="3" MadCap:lastHeight="2173" MadCap:lastWidth="1709">
+    <head>
+    </head>
+    <body>
+        <h2>
+            <img src="../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />Configure <MadCap:keyword term="PEEP Custom Columns" />PEEP <MadCap:keyword term="Custom Columns" />Custom Columns</h2>
+        <p>Esi.manage has the ability to store and edit data that is kept on the Custom Tab in PEEP.  This is accessed through the Configure PEEP Custom Columns option in the PEEP Interface Drop down.</p>
+        <p>
+            <img src="../Resources/Images/PEEP_Custom_Columns1.png" />
+        </p>
+        <p>To add a new custom column, press the green plus icon located in the popup window.  This will create a new line where a description for the column can be added.  When adding Custom Columns it is important that the Description used in esi.manage matches the name used in PEEP exactly.  This is due to the way in which custom columns are mapped between the two systems.</p>
+        <p>There is check box for each item that specifies whether or not the data in the columns should shift as the project shifts.  For example, something like a custom tax rate or custom price file should not shift with the project as they are tied to specific years.  Something like a custom well count, or reserves numbers should be flagged to Shift with Asset as they are relative to the timing of the Project itself.</p>
+        <p>The sort order will specify which columns appear in which order, with the lowest values appearing at the left end of the table and the highest numbers appearing on the right.</p>
+        <p>
+            <img src="../Resources/Images/PEEP_Custom_Columns2.png" />
+        </p>
+        <p>To enable the custom columns tab in the Project Editor, the tab must be turned on in the esi.manage Preferences.  The option is found in the Project Editor section as shown above.</p>
+        <p>
+            <img src="../Images/PEEPCustomColumns.png" />
+        </p>
+        <p>Editing or viewing the data in the custom columns is done through the new PEEP Custom Columns tab in the Project Editor.  Here data is stored when imported from PEEP and can be edited before sending the project to PEEP with a Synch or and Export action.  Additionally, if a case is being created from esi.manage data can be entered into these columns to push to PEEP without the case or data existing beforehand.</p>
+        <p class="note">Note: Columns must be included in the PEEP mapping file to properly transfer back and forth between PEEP and esi.manage.  The mapping for these items requires knowledge of Java RegEx patterns and Java String format notation so it is recommended that 3esi is involved in configuring the mapping file for these new columns.</p>
+    </body>
+</html>

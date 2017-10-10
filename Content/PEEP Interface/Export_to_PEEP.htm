@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1447" MadCap:lastWidth="1162">
+    <head><title>Export to PEEP</title>
+        <link rel="StyleSheet" href="../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <h2>
+            <img src="../Images/Logo Images/3esi_manage.png" align="right" border="0" class="HeaderLogo" />
+        </h2>
+        <h2>Export to PEEP</h2>
+        <p>One or more projects can be Exported to PEEP from the Projects View.</p>
+        <ol style="list-style: decimal;list-style-type: decimal;">
+            <li>Select the Project(s) to be Exported in the 
+ Project View.</li>
+            <li>Initiate the export action by either invoking 
+ the context menu and choosing the <span style="font-weight: bold;">Export 
+ Project(s) to PEEP </span>action or by clicking the <span style="font-weight: bold;">Export 
+ Project(s) to PEEP</span> button.<img src="../Images/PEEPExportButton.PNG" style="border: none;width: 16px;height: 13px;float: none;border-style: none;border-style: none;" width="16" height="13" border="0" /></li>
+            <li>&#160;A 
+ dialogue box will open confirming the export action. There are a number of parameters too configure for the export.<ol style="list-style: decimal;list-style-type: lower-roman;"><li>Select 
+ a Global Parameter from the drop down list.</li><li>Select the target Scenario to export to for non-scenario consolidation projects.</li><li>Select the Production Parameters that define the production stream(s) you want to export.</li><li>Select the Capital Parameters that define the capital profile you want to export.</li></ol></li>
+            <li>Click OK to continue or 
+ Cancel to abort.</li>
+        </ol>
+        <p>
+            <img src="../Resources/Images/PEEP_Export.png" />
+        </p>
+        <p>&#160;</p>
+        <p>The Export to PEEP can also be done at a Project Set level by right-clicking 
+ the project set and choosing <span style="font-weight: bold;">Export Projects 
+ to PEEP</span>. &#160;The 
+ dialogue box above will open and proceeds the same as above from there.</p>
+        <p class="note"><span style="font-weight: bold;">Note: </span>The export to PEEP fails 
+ for Projects with names that a greater than 50 characters as PEEP only 
+ allows case names of 50 characters while esi.manage allows project names 
+ of 100 characters.</p>
+        <p><span>It is important to ensure the esi.manage economic group is an 
+ exact replica of the PEEP model name in order for the interface to run.</span>
+        </p>
+        <p>Users can specify discount and escalation dates via the (<i>DefaultValue</i> section of the) mapping file. For discount (i.e. real value) dates, choices are as follows:</p>
+        <ul>
+            <li>
+                <p>ProjectStart (default) = esi.manange project start date;</p>
+            </li>
+            <li>
+                <p>FiscalYear = Start of the fiscal year of the esi.manage project start;</p>
+            </li>
+            <li>
+                <p>DiscountDate = "Economic Discounting as of" field from Default Economic Properties in esi.manage configuration;</p>
+            </li>
+            <li>
+                <p>None = Leave it alone for existing PEEP cases or PEEP new case default for new PEEP cases</p>
+            </li>
+        </ul>
+        <p>For escalation / inflation date, choices are as follows:</p>
+        <ul>
+            <li>
+                <p>ProjectStart (default) = esi.manange project start date</p>
+            </li>
+            <li>
+                <p>BudgetBaseCurrencyDate = esi.manage project's budget base currency date in budget configuration table</p>
+            </li>
+            <li>
+                <p>None = Leave it alone for existing PEEP cases or PEEP new case default for new PEEP cases</p>
+            </li>
+        </ul>
+    </body>
+</html>

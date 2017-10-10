@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="3582" MadCap:lastWidth="1208">
+    <head><title>Economic Calculations</title>
+        <link rel="StyleSheet" href="../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <script type="text/javascript" language="JavaScript1.2" src="../Archived/ehlpdhtm.js">
+        </script>
+        <h1>
+            <img src="../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />
+            <MadCap:keyword term="Economic Calculations" />Economic Calculations</h1>
+        <p>The Analysis Case will perform Discounted Cash Flow calculations against 
+ a collection of Projects. There are several aspects to the calculations:</p>
+        <ol style="list-style: decimal;list-style-type: decimal;">
+            <li class="NumberedList">The underlying 
+ cash flow is generated at a <span style="font-weight: bold;">monthly</span> 
+ granularity. The Display settings determine whether this data will be 
+ presented in a <span style="font-weight: bold;">monthly periodicity</span>, 
+ or aggregated into <span style="font-weight: bold;">yearly values</span>.</li>
+            <ul style="list-style: decimal;list-style-type: circle;">
+                <li class="NumberedList">The Cash 
+ Flow data is generated based on the CAPEX and Production Types and Definitions 
+ specified in the <span style="font-weight: bold;"><a href="../Navigating esi.manage/Navigator/Analysis_Properties.htm" target="_popup">Analysis 
+ Case</a></span> 
+ Properties for the Horizon set in the Schedule. </li>
+                <li class="NumberedList">The underlying 
+ Data is generated per Expenditure, OPEX and Production Segment. The Results 
+ can be displayed for each individual entry.</li>
+                <li class="NumberedList">Revenue will 
+ be calculated by combining the calculated Production with the selected 
+ Price File.</li>
+                <li class="NumberedList">If a <span style="font-weight: bold;"><a href="Currency_Escalation_Configuration.htm" target="_popup">Currency Escalation</a></span> 
+ file has been selected, the costs are adjusted accordingly.</li>
+            </ul>
+            <li class="NumberedList">The Cash Flow, 
+ Burdens, Depreciation and Taxes are calculated against every Asset.</li>
+            <ul style="list-style: decimal;list-style-type: circle;">
+                <li class="NumberedList">Burdens and 
+ Taxes are either based on the corresponding <span style="font-weight: bold;"><a href="Jurisdictions.htm" target="_popup">Jurisdiction</a></span>, 
+ or what has been locally overridden in the <span style="font-weight: bold;"><a href="Local_Tax.htm" target="_popup">Project</a></span>. 
+ </li>
+                <li class="NumberedList">The Depreciation 
+ is calculated based on the configured <span style="font-weight: bold;"><a target="_popup" href="../PopUp/Expenditure_Depreciation.htm">Expenditure Depreciation</a></span> 
+ model, or what has been locally overridden within the <span style="font-weight: bold;"><a href="../Project Editor/Expenditures/Project_Expenditure_Depreciation.htm" target="_popup">Project</a></span>.</li>
+                <li class="NumberedList">These results 
+ are also aggregated &#160;</li>
+            </ul>
+            <li class="NumberedList">Depending on 
+ the structure of the Project(s) / Project Set(s) being analyzed, the Asset 
+ level data described above are then aggregated to the various levels of 
+ the <span style="font-weight: bold;"><a href="../Analysis Perspective/Economic_Cash_Flow_Analysis.htm" target="_popup">Cash Flow Analysis</a></span> 
+ hierarchy:</li>
+            <ul style="list-style: decimal;list-style-type: circle;">
+                <li class="NumberedList">Asset to 
+ Project</li>
+                <li class="NumberedList">Project to 
+ Jurisdiction</li>
+                <li class="NumberedList">Jurisdiction 
+ to Project Set</li>
+                <li class="NumberedList">Project Set 
+ to Analysis Case</li>
+            </ul>
+            <li class="NumberedList">The Discounting 
+ is then applied to the Asset Level data, and at each aggregate level. 
+ &#160;</li>
+        </ol>
+        <p>
+            <MadCap:toggler targets="t1">See Also </MadCap:toggler>
+        </p>
+        <div MadCap:targetName="t1">
+            <p><a href="../Project Editor/Project_Relationships.htm">Asset Relationship</a>
+            </p>
+            <p><a href="Currency_Escalation_Configuration.htm">Currency Escalation</a>
+            </p>
+            <p><a href="Asset_Depreciation_Calculations.htm">Depreciation Calculations</a>
+            </p>
+            <p><a href="Expenditure_Calculations.htm">Expenditure Calculations</a>
+            </p>
+            <p><a href="Opex_Calculations.htm">OPEX Calculations</a>
+            </p>
+            <p><a href="Production_Calculations.htm">Production Calculations</a>
+            </p>
+            <p><a href="Production_Units.htm">Production Units</a>
+            </p>
+            <p><a href="Revenue_Calculations.htm">Revenue Calculations</a>
+            </p>
+            <p><a href="Risk_and_Probability_of_Success.htm">Risk and Probability of 
+ Success</a>
+            </p>
+        </div>
+        <p>&#160;</p>
+        <p>Economics <span style="font-weight: bold;"><a href="../Calculation Flow Diagrams/Economics_Calculations.htm">Calculation 
+ Flow Diagram</a></span></p>
+        <h3>&#160;</h3>
+        <h3>Terminology</h3>
+        <p>These terms will be used in the following description:</p>
+        <ul>
+            <li class="Bullets"><span style="font-weight: bold;">Income 
+ Tax</span> – a % that is applied to determine the Tax owed. This is referred 
+ to in the following description as Local Tax or Government Tax.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Production</span> 
+ or <span style="font-weight: bold;">Revenue Tax</span> – defined against 
+ individual Product’s Production or Revenue. </li>
+            <ul>
+                <li class="Bullets">These are referred 
+ to in the following description as <span style="font-weight: bold;">Production/Revenue 
+ Tax</span>.</li>
+            </ul>
+            <li class="Bullets"><span style="font-weight: bold;">Production 
+ taxes</span> are expressed as $ / volume and are independent of the Price 
+ File being used to calculate Cash Flow.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Revenue 
+ taxes</span> are expressed as a % and are dependent on the Price File 
+ being used to calculate Cash Flow.</li>
+        </ul>
+        <p>&#160;</p>
+        <p>The Analysis Case uses the term "<span style="font-weight: bold;">Cash 
+ Flow Tag</span>" to represent calculation points in the Cash Flow:</p>
+        <ul>
+            <li class="Bullets"><span style="font-weight: bold;">Net 
+ Revenue (NRev)</span> – Revenue less Operating Expenses</li>
+            <li class="Bullets"><span style="font-weight: bold;">Net 
+ Net Revenue (NNRev)</span> – Net Revenue less Local Production/RevenueTax</li>
+            <li class="Bullets"><span style="font-weight: bold;">Before 
+ Tax (BTax)</span> – Net Net Revenue less CAPEX</li>
+            <li class="Bullets"><span style="font-weight: bold;">After 
+ Tax (ATax)</span> – Net Net Revenue less (Local Tax, Government Production/Revenue 
+ Tax, Depreciation, Government Tax and CAPEX)</li>
+        </ul>
+        <p>&#160;</p>
+        <h3>Discounting</h3>
+        <p>The cash flow table that is generated is based on a monthly periodicity. 
+ In terms of the discounting calculations, these amounts are treated as 
+ if they occur at the end of the month. </p>
+        <p>The Annual Rate will be used for any Period whose Discounting is Annual. 
+ There is the option to select <span style="font-weight: bold;">Monthly 
+ Discounting</span> for some period of the Analysis Horizon.</p>
+        <p>If Monthly Discounting is being used for a particular period, the Effective 
+ Monthly Discount Rate is calculated as:</p>
+        <p style="margin-left: 40px;"><span style="font-weight: bold;">Effective 
+ Monthly Discount Rate</span> = (1 + Annual Rate)^<span style="vertical-align: Super;">(1/12)</span> 
+ - 1</p>
+        <p>For example, a <span style="font-weight: bold;">15%</span> Annual Discount 
+ Rate converts to an Effective Monthly Rate of <span style="font-weight: bold;">~1.1715%</span></p>
+        <p>The Discounting that is applied to a particular period is based on the 
+ Discount Rate (Effective Monthly or Annual) and the number of Discount 
+ Periods. Again, the Number of Discount Periods is dependent on the <span style="font-weight: bold;"><a href="../PopUp/UI_Anyls_Settings.htm" target="_popup">Display / Discounting</a></span> 
+ settings.</p>
+        <p><span style="font-weight: bold;">For Annual Discounting</span>:</p>
+        <p style="margin-left: 40px;">Number of<span style="font-weight: bold;"> 
+ Discount Periods</span> = (<span style="font-weight: bold;">Year</span> <span style="vertical-align: Sub;">Current Period</span> - <span style="font-weight: bold;">Year</span><span style="vertical-align: Sub;"> Economic Discounting As Of Date</span>) 
+ + (12 - <span style="font-weight: bold;">Month</span><span style="vertical-align: Sub;">Economic 
+ Discounting As Of Date</span> )/12</p>
+        <p class="example"><b>eg.:</b> with Discount As Of Date of 
+ Dec 31, 2009, any period in 2013 will have a value of 4 for the number 
+ of Discount Periods. Even if the Display Setting is Monthly, if Annual 
+ Discounting has been selected for that particular period, the number of 
+ Discount Periods will be 4 for all monthly entries within 2013.</p>
+        <p style="font-weight: normal;">If you have selected an Economic Discount 
+ Date somewhere other than the end of a year, the formula above accounts 
+ for the 'mid-year' transition.</p>
+        <p style="font-weight: normal;">When <span style="font-weight: bold;">Monthly 
+ Discounting</span> has been selected:</p>
+        <p style="margin-left: 40px;">Number of<span style="font-weight: bold;"> 
+ Discount Periods</span> = (<span style="font-weight: bold;">Serial Month</span> <span style="vertical-align: Sub;">Current Period</span> - <span style="font-weight: bold;">Serial 
+ Month</span><span style="vertical-align: Sub;"> Economic Discounting As 
+ Of Date</span>) </p>
+        <p>effectively the number of Months between the Current Period and the 
+ Economic Discount Date.</p>
+        <p>The Mid Year option is only applicable to Periods that have Annual Discounting 
+ (the Mid-Period correction will never be applied to a period with Monthly 
+ Discounting).</p>
+        <p style="margin-left: 40px;"><span style="font-weight: bold;">Number of 
+ Discount Periods</span><span style="vertical-align: Sub;"> Mid Year</span> 
+ &#160;= <span style="font-weight: bold;">Number of Discount Periods</span><span style="vertical-align: Sub;">Annual 
+ Discounting</span> - 0.5</p>
+        <p style="font-weight: normal;">The calculation of a Discounted Value is:</p>
+        <p style="margin-left: 40px;"><span style="font-weight: bold;">Discounted 
+ Amount</span> = <span style="font-weight: bold;">Amount</span> * ( 1 / 
+ (1 + <span style="font-weight: bold;">Discount Rate</span>) ^ (<span style="font-weight: bold;">Number 
+ of Discount Periods</span>) )</p>
+        <p style="margin-left: 0px;">&#160;</p>
+        <h3>Economic Metrics</h3>
+        <p>Each <a href="../Configuration Perspective/Economics/Default_Economic_Metrics.htm" style="font-weight: bold;" target="_popup">Metric</a> 
+ is associated with a specific <span style="font-weight: bold;">Cash Flow 
+ Tag</span> (one of the list above), which specifies the ‘point’ in the 
+ Cash Flow calculations that is used in the Metric. In the following descriptions 
+ of the Metric, the term Cash Flow Tag will mean any of the above list.</p>
+        <ul>
+            <li class="Bullets"><span style="font-weight: bold;">Horizon</span> 
+ – the period which is covered by the <span style="font-weight: bold;">Start 
+ Date</span> (either Point Forward Date or Full Cycle First Spend) plus 
+ the <span style="font-weight: bold;">Span</span></li>
+            <li class="Bullets"><span style="font-weight: bold;">Cumulative 
+ CAPEX (∑ CAPEX)</span> – the total CAPEX which is captured over 
+ the Horizon</li>
+            <li class="Bullets"><span style="font-weight: bold;">Cumulative</span> 
+ Net Revenue / Before Tax / Net Net Revenue / After Tax (∑NRev, ∑NNRev, 
+ ∑Btax, ∑BTax) – corresponding cumulative amounts of these 
+ Tags</li>
+        </ul>
+        <p>Metrics can be configured at a different Discount Rate than what is 
+ being used for the Analysis Case itself. The other properties of the Analysis 
+ Case (Discounting Schedule, Economics As Of Date, etc.) are used to generate 
+ the corresponding Discounted Cash Flow (if it is a Discounted Metric) 
+ for the Metric. </p>
+        <h3>&#160;</h3>
+        <h3>IRR – Internal Rate of Return</h3>
+        <p>The Internal rate of return is the <span style="font-weight: bold;">Discount 
+ Rate</span> which will result in <span style="font-weight: bold;">NPV 
+ = 0</span>.</p>
+        <h3>&#160;</h3>
+        <h3>Economic Limit</h3>
+        <p>The Economic Limit is defined as the point in time when the periodic 
+ Cash Flow goes from <span style="font-weight: bold;">Positive</span> to 
+ <span style="font-weight: bold;">Negative</span>. </p>
+        <h3>&#160;</h3>
+        <h3>
+            <MadCap:keyword term="Payout" />Payout</h3>
+        <p>The Payout is the date when the <span style="font-weight: bold;">Cumulative 
+ Cash Flow</span> (at the chosen Cash Flow Tag) equals the <span style="font-weight: bold;">Cumulative 
+ CAPEX</span> captured over the entire <span style="font-weight: bold;">Horizon</span>.</p>
+        <p>The Payout start date is defined as the later of the project start date and the <MadCap:keyword term="point-forward" />point-forward date defined in an Analysis Case.</p>
+        <p>When creating a Payout metric there is a flag to <b><MadCap:keyword term="Interpolate Date" />Interpolate Date</b>. This option allows for an interpolation of when the Payout occurred, and will calculate the Payout to a specific date. When a start date occurs on any day of the month other than the first and date interpolation is on, the month’s value will be reduced proportionately.</p>
+        <p>&#160;</p>
+        <h3>Custom Metric</h3>
+        <p>Custom economic metrics allow the user to specify a formula as a metric calculation. The formula is a simple NUM / DENOM, where NUM and DENOM are sums of cashflow columns, where each column can be separately filtered</p>
+        <p>The usual metrics NPV, PIR, DPIR, ROI, DROI can be defined as a custom metric. As information, the metrics calculation are referenced below.</p>
+        <p>&#160;</p>
+        <h3>NPV - Net Present Value</h3>
+        <p>Net Present Value at the specified Analysis Case Discount Rate is reported as the Cumulative Discounted Cash Flow at a particular level (i.e., Asset or Project).</p>
+        <blockquote>
+            <p>The NPV Metric is defined as: ∑ Discounted "Cash Flow Tag"</p>
+        </blockquote>
+        <p>Additional NPV metrics can be added which repeat the Cash Flow Discounting calculations at a different Discount Rate and report the cumulative value as described above as the NPV at that rate.</p>
+        <p>&#160;</p>
+        <h3>Profit to Investment Ratio (PIR)</h3>
+        <p>The Profit to Investment Ratio (<span style="font-weight: bold;">PIR</span>) 
+ is defined as:</p>
+        <p style="margin-left: 40px;">PIR = (∑”CashFlowTag” + ∑ CAPEX) 
+ / ∑ CAPEX</p>
+        <h3>&#160;</h3>
+        <h3>Discounted Profit to Investment Ratio (DPIR)</h3>
+        <p>The Discounted Profit to Investment Ratio (DPIR) is defined as:</p>
+        <p style="margin-left: 40px;">DPIR = (∑Discounted ”CashFlowTag” + 
+ ∑ Discounted CAPEX) / ∑ Discounted CAPEX</p>
+        <p style="margin-left: 40px;">&#160;</p>
+        <h3>Return on Investment (ROI)</h3>
+        <p>The Return on Investment (<span style="font-weight: bold;">ROI</span>) 
+ is defined as:</p>
+        <p style="margin-left: 40px;">ROI = ∑”Cash Flow Tag” / ∑ CAPEX</p>
+        <h3>&#160;</h3>
+        <h3>Discounted Return on Investment &#160;(DROI)</h3>
+        <p>The Discounted Return on Investment (DROI) is defined as:</p>
+        <p style="margin-left: 40px;">DROI = ∑ Discounted “Cash Flow Tag” 
+ / ∑ Discounted CAPEX</p>
+    </body>
+</html>

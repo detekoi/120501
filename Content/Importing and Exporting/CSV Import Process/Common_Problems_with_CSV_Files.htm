@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpCheckList.Ran Smart Index" MadCap:lastBlockDepth="4" MadCap:lastHeight="465" MadCap:lastWidth="868">
+    <head><title>Common Problems with CSV Files</title>
+        <link rel="StyleSheet" href="../../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <h2>
+            <img src="../../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />Common Problems with CSV Files</h2>
+        <p>Excel's formatting of CSV files can be strange at best to downright 
+ confusing at worst. Perfectly fine import records will sometimes return 
+ an error at the validation stage "Invalid Record Length" as 
+ a result of this. To diagnose this problem, always look at the record 
+ <span style="font-weight: bold;">in Notepad or Wordpad, not Excel.</span><span> 
+ Formatting errors will appear much clearer there.</span></p>
+        <p style="font-style: italic;">In this example, we are importing some hierarchy 
+ items, but leaving the fourth column blank, as it is optional.</p>
+        <p style="font-style: normal;font-weight: bold;">Correct:</p>
+        <ul>
+            <li style="font-style: normal;" class="Bullets">Country, Canada, Can,</li>
+            <li style="font-style: normal;" class="Bullets">Country, US, US,</li>
+        </ul>
+        <p style="font-style: italic;">Notice the extra comma at the end of each, 
+ denoting that there is no value in the final column.</p>
+        <p style="font-style: normal;font-weight: bold;">Incorrect:</p>
+        <ul>
+            <li style="font-style: normal;" class="Bullets">Country, Canada, Can</li>
+            <li style="font-style: normal;" class="Bullets">Country, US, US</li>
+        </ul>
+        <p style="font-style: italic;">In this example, Excel has not properly 
+ formatted the CSV to reflect the empty cell at the end of the table. By 
+ dropping the comma, the importer is unaware there is data for the fourth 
+ import column and thus the import fails.</p>
+    </body>
+</html>

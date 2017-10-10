@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpCheckList.Ran Smart Index" MadCap:lastBlockDepth="6" MadCap:lastHeight="1070" MadCap:lastWidth="933" MadCap:conditionTagExpression="exclude[Primary.Online or Primary.Print] ">
+    <head><title>Backout</title>
+        <link rel="StyleSheet" href="../../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <h3 style="font-family: Arial, sans-serif;">
+            <img src="../../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />
+        </h3>
+        <h2><strong style="font-weight: bold;">Backout</strong>
+        </h2>
+        <p>Backout is a <span style="font-weight: bold;">'Site-Specific' Feature</span>, 
+ and as such, has been developed under a <span style="font-weight: bold;">specific 
+ set</span> of assumptions. The corresponding Backout calculations are 
+ appropriate <span style="font-weight: bold;">only</span> for those specific 
+ set of assumptions. Unless this feature is enabled in the Configuration, 
+ none of the screens shown below will be visible in a Project.</p>
+        <p>The Backout screen under the Production editor allows you to calculate 
+ the actual benefit of bringing a new well online into an existing system 
+ that will cause other assets in a connected system to have to decrease 
+ their output.</p>
+        <p>The Backout screen can be accessed from the "Backout" tab 
+ in the Production editor or by clicking the Backout barrel icon in the 
+ toolbar.</p>
+        <h3>&#160;</h3>
+        <h3>To Add Backout</h3>
+        <p style="font-weight: bold;">
+            <img src="../../Images/240.png" />
+        </p>
+        <ol style="list-style: decimal;list-style-type: decimal;">
+            <li>Select an Asset that is affected, and which product 
+ is effected.</li>
+            <li>Set the start date of the Backout period by setting 
+ an Offset Period and Offset Amount.</li>
+            <li style="list-style: none;">
+                <ul style="list-style: disc;" type="disc">
+                    <li>Example of Offset: An asset with production 
+ coming onstream January 1 with an Offset Amount of 6 and an Offset Period 
+ of Months would see the Backout period start July 1.</li>
+                    <li>If the Offset Amount was 10 and the Offset 
+ Period days, it would start January 11.</li>
+                </ul>
+            </li>
+            <li>Enter the duration of the Backout by setting a 
+ duration and selecting a period. Based on a combination of Offset and 
+ Duration, Start and End dates will auto-populate.</li>
+            <li>The Backout factor is the amount of production 
+ lost as a result of the Backout. This needs to be entered *in the same 
+ unit* as the selected production was entered for the selected asset.</li>
+        </ol>
+        <p>
+            <img src="../../Images/Prodn_Backout.png" />
+        </p>
+        <p>&#160;</p>
+        <p>The bottom of the page shows the other calculations (risk, working interest, 
+ royalty) being applied to the record in question.</p>
+        <p class="note"><b>Note:</b> in <span style="font-weight: bold;"><b>esi</b></span>.manage<span style="font-size: 8pt;vertical-align: Super;">TM</span>, the opportunity 
+ cost of the new well is attributed to the well <span style="font-style: italic;">causing</span> 
+ the backout, <span style="font-style: italic;">not</span> against the 
+ wells actually operating at reduced capacity. See disclaimer at the bottom 
+ of the Backout page show above.</p>
+    </body>
+</html>

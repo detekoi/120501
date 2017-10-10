@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="6" MadCap:lastHeight="2281" MadCap:lastWidth="1179">
+    <head><title></title>
+        <link href="../Resources/Stylesheets/HelpFileStylesheet2.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2>
+            <img src="../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />General Workflow</h2>
+        <p>Once a template has been started, the first step is to add an Excel Workbook to map to. This is done be clicking the <b>Upload Workbook</b> icon.</p>
+        <p>
+            <img src="../Resources/Images/New EDL/Upload_Workbook.png" />
+        </p>
+        <p>Click the <b>Excel</b> Icon to open the Workbook.</p>
+        <p>The next step is to add a command corresponding to the type of template being created. Click-click on Commands and select <b>Add</b>.</p>
+        <p>
+            <img src="../Resources/Images/New EDL/Commands.png" />
+        </p>
+        <p>Commands:</p>
+        <ul>
+            <li><b>Add Production Curves</b>: A vintage feature superseded by Write Project's "<b>Merge New Data With Existing</b>". Add Production Curves updates existing production within a project.</li>
+            <li><b>Delete Hierarchy Attribute</b>: Deletes hierarchy attributes from configuration.</li>
+            <li><b>Shift Projects</b>: Bulk shifts projects by an offset.</li>
+            <li><b>Write Budget</b>: Writes budgets into configuration.</li>
+            <li><b>Write Hierarchy Attributes</b>: Writes hierarchy attributes into configuration.</li>
+            <li><b>Write Non-forecast</b>: Creates non-forecast entries into Opex, Production, Capex, Resources, or Revenue of a project.</li>
+            <li><b>Write Project</b>: Creates esi.manage projects from scratch.</li>
+            <li><b>Write Type Curves</b>: Writes type curves into a budget.</li>
+        </ul>
+        <p><b>Write Project</b> is the most commonly used template type and will be used for examples.</p>
+        <p>Commands have properties that can help shape data. Write Project's command properties are:</p>
+        <ul>
+            <li><b>Merge New Data With Existing</b>: The merge feature is a project update. A project will be updated with the information within the EDL. Updates are done at the measure level and not at the line item level. If Capex is being updated, all existing Capex data will be replaced with the Capex data within the EDL.</li>
+            <li><b>Setting Project Start Date does not shift project</b>: Setting the project start date will not shift dates within a project.</li>
+            <li><b>Setting Asset Start Date does not shift measures</b>: Setting the asset start date will not shift the measure dates within a project.</li>
+            <li><b>Trim Leading Zeroes from Tabular Forecasts</b>: When loading tabular data, leading zeros will be trimmed and start dates/onstream dates updated accordingly.</li>
+            <li><b>Trim Trailing Zeroes from Tabular Forecasts</b>: When loading tabular data, trailing zeroes will be trimmed.</li>
+        </ul>
+        <h3>Required Information</h3>
+        <p>Creating a new project (one that does not exist in the target budget) through the EDL is like creating a project through the interface. There are required pieces of information to successfully create a project through the UI; the same is for creation via the EDL. When initially creating a project, <b>Project Name</b>, <b>Budget</b>, <b>Project Manager</b>, <b>Start Date</b>, and <b>Hierarchy</b> (if hierarchy defaults are not utilized) are required to create a project. There are additional pieces of information that can be added to a project, but they are not mandatory. Similarly, when measure information is ready to be added to a project, it must be assigned to an asset, thus <b>Asset Name</b> is another required field.</p>
+        <p>Measures require the necessary information to create the measure header, then a combination of information the load values into that header. Capex for example, requires the expenditure type and currency for its header. The values can then be loaded using one of the following data combinations.</p>
+        <ul>
+            <li><b>Start Date / End Date / Amount</b>: Three columns of data (Start Date, End Date, and Amount). Direct Mapping to attributes.</li>
+            <li><b>Start Date / Amounts / Periodicity</b>: Start Date and Periodicity can be mapped to an attribute or defaulted to a value while the Amounts array requires to be added and configured to use a repeat to load data.</li>
+            <li><b>Start Date / Amounts / Durations</b>:&#160;Start Date is mapped to an attribute. An array is required for Amounts and Durations each.</li>
+            <li><b>Amounts / Periods</b>: Two arrays to load associated tabular data.</li>
+        </ul>
+        <p>The combination used is dependent on the format of data within the Excel Workbook in question. Different measures will have difference combinations available to them.</p>
+        <h3>Loading via Codes</h3>
+        <p style="font-style: italic;">This is an enhanced piece of capability. This is not required for most EDL templates.</p>
+        <p>The EDL can load and update data matching against the Project / Asset code instead of Project name. This can be useful if the Project or Asset name is subject to change.</p>
+        <p>The EDL will first look at the Budget name and Project / Asset code to find a match within the database. If no code is provided, it will then use Project and Asset name.</p>
+        <p>The Project or Asset name can be renamed by providing a Project / Asset name along with its appropriate code.</p>
+    </body>
+</html>

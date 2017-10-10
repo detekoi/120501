@@ -1,0 +1,551 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="6403" MadCap:lastWidth="1175">
+    <head><title>Production Calculations</title>
+        <link rel="StyleSheet" href="../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <p>
+            <img src="../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />
+        </p>
+        <h2>
+            <MadCap:concept term="Production Calculations" />Production Calculations</h2>
+        <p>There are two approaches to represent the Production Forecast for a 
+ particular well(s).</p>
+        <ol>
+            <li class="Bullets"><span style="font-weight: bold;">Formulaic</span> 
+ - based on an Initial Production (IP, or Qi) rate, Decline Type (e.g. Linear, Hyperbolic, Exponential, or Harmonic) and Parameters, 
+ Onstream Date, and Offstream Date or Rate.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Tabular</span> 
+ - a series of entries (typically monthly) that represents the average 
+ daily rate for the period.</li>
+        </ol>
+        <p>&#160;</p>
+        <p>There are a number of Segment Level Modifiers that can be applied to 
+ the calculated Production, depending on the particular needs:</p>
+        <ol>
+            <li class="NumberedList"><span style="font-weight: bold;">WI%</span> 
+ - this represents your company's Net Production.</li>
+            <li class="NumberedList"><span style="font-weight: bold;">Shrinkage</span> 
+ - the Shrinkage % represents 'losses'; which may be due to Derived Product(s) 
+ (see below), line losses, or consumption for compression. This factor 
+ is represented in Production Calculations via the Raw versus Sales Production 
+ definition.</li>
+            <li class="NumberedList"><span style="font-weight: bold;">NRI%</span> 
+ - this factor (Net after Royalties) combines the Working Interest and 
+ Royalty % into a single value. Unlike Royalties or Production Tax, there 
+ is no Time basis to this factor. If NRI% is supplied, it takes precedence 
+ over any time based Royalty percentages.</li>
+            <li class="NumberedList"><span style="font-weight: bold;">Quality</span> 
+ - a factor that can adjust the calculated Production in terms of actual 
+ heating value (for Gas), or Density (for liquids).</li>
+        </ol>
+        <p>&#160;</p>
+        <p>In addition to the modifiers listed above, there are a number of options 
+ that can impact Production Calculations.</p>
+        <ol>
+            <li class="NumberedList"><span style="font-weight: bold;">Derived 
+ Products</span> - a Production segment can be defined as being Derived 
+ from a Primary Product. The Production for this segment will be a ratio 
+ (constant or time variant) of the Primary Product's production.</li>
+            <li class="NumberedList"><span style="font-weight: bold;">Royalties</span> 
+ - every Asset/Product combination can have time series' of Royalty % specified. 
+ Three series are available (Low, Medium, High or P10, P50, P90). The names 
+ of the individual series is configurable.</li>
+            <li class="NumberedList"><span style="font-weight: bold;">Downtime</span> 
+ - Unscheduled and/or Scheduled downtime can be defined for the Asset (well). 
+ With the exception of the Production Analysis screen, all other Production 
+ related calculations (this includes calculations that are based on Production, 
+ such as Variable OPEX or Revenue) will be after Downtime.</li>
+            <li class="NumberedList"><span style="font-weight: bold;">Curtailment</span><span> 
+ - this is a set of capabilities for modelling the effects of constraints 
+ on production at a group level, such as the constraints a facility places 
+ on a producing field.</span>
+            </li>
+        </ol>
+        <p>&#160;</p>
+        <p>And finally, Production based taxes can be configured at a Jurisdiction 
+ level to support Economics Calculations.</p>
+        <ol>
+            <li class="NumberedList"><span style="font-weight: bold;">Production 
+ Tax</span> - a certain percentage of a Product's Production is removed 
+ as a Tax. Revenue calculations are then performed against the 'removed' 
+ Production to determine the corresponding Tax.</li>
+            <li class="NumberedList"><span style="font-weight: bold;">Revenue 
+ Tax</span> - a dollar / volume tax. This is independent of the corresponding 
+ Product Price, but is related to the Production.</li>
+        </ol>
+        <p>&#160;</p>
+        <h3><a name="Heating_Value_and_Density_Conversions1"></a>Quality 
+ - Heating Value or Density</h3>
+        <p>A given Production stream can be reported in two ways, depending on 
+ the Product Category:</p>
+        <ul>
+            <li class="Bullets"><span style="font-weight: bold;">Gas</span> 
+ - Volumetric or Energy</li>
+            <li class="Bullets"><span style="font-weight: bold;">Non-Gas 
+ (Liquid or Other)</span> - Volumetric or Mass</li>
+        </ul>
+        <p>Generally, a production segment will be Forecast in volumetric units 
+ (Gas in mcf/day, Liquids in bbl/day). However, Price Files (for calculation 
+ of Revenue) are often defined in Heating Value (for Gas) or Mass (for 
+ Liquids). Each Product has a default Quality (entered in the Configuration), 
+ and every Production Segment has data Fields for specifying the particular 
+ Quality of the well.</p>
+        <p>In addition, there are Equivalence Units which allow for cross category 
+ reporting - for example Reporting the entire production in terms of a 
+ Gas (mcfe) or Liquid (boe). These units will only have a "notional" 
+ representation of Quality - for example a GJe unit would be based on a 
+ "standard" Heat Content for both Gas and Non-Gas.</p>
+        <p>&#160;</p>
+        <p>The Conversion infrastructure is based on the SI system:</p>
+        <p>For <span style="font-weight: bold;">Gas</span>:</p>
+        <ul>
+            <li class="Bullets">Volumetric Base - <span style="font-weight: bold;">m3</span> (cubic metres). This is identified 
+ in the Configuration as m3 (energy)</li>
+            <li class="Bullets">Energy Base - <span style="font-weight: bold;">J</span> 
+ (joules)</li>
+        </ul>
+        <p>For <span style="font-weight: bold;">Non-Gas</span>:</p>
+        <ul>
+            <li class="Bullets">Volumetric Base - <span style="font-weight: bold;">m3</span> (cubic metres). This is identified 
+ in the Configuration as m3 (mass)</li>
+            <li class="Bullets">Mass Base - <span style="font-weight: bold;">kg</span> 
+ (kilograms)</li>
+        </ul>
+        <p><span style="font-weight: bold;">Data Input</span> is only allowed in 
+ an appropriate unit - i.e.:</p>
+        <ul>
+            <li class="Bullets">A Gas segment can only 
+ be defined in either <span style="font-weight: bold;">Volumetric</span> 
+ (mcf, mmcf, e3m3 (G)), or <span style="font-weight: bold;">Energy</span> 
+ (btu, mbtu, GJ) basis.</li>
+            <li class="Bullets">A Liquid (Oil, NGLs) segment 
+ can only be defined in either <span style="font-weight: bold;">Volumetric</span> 
+ (bbl,m3, e3m3 (L)), or <span style="font-weight: bold;">Mass</span> (T, 
+ kT) basis.</li>
+        </ul>
+        <p>&#160;</p>
+        <p><span style="font-weight: bold;">Equivalence Units</span> (boe, mcfe, 
+ GJe, etc.) can be defined in the Configuration to allow conversion between 
+ Product Categories (i.e., reporting Gas in a Liquid Equivalence unit). 
+ The values entered represent the conversion to <span style="font-weight: bold;">boe</span>, 
+ i.e.; <span style="font-weight: bold;">1 mcfe</span> = <span style="font-weight: bold;">0.16667 
+ boe</span>.</p>
+        <p>Production Calculations which report in non-native units (for example 
+ when reporting both Gas and Liquid), can only be reported using an Equivalence 
+ Unit.</p>
+        <p>There are several recognized "Standards" which specify Conversion 
+ Factors:</p>
+        <ol>
+            <li class="NumberedList">For Gas the reference 
+ state is dependent on whether the Imperial or SI system is being used 
+ as the standard.</li>
+            <li class="NumberedList">The "Base" 
+ energy content (BTU/cf) of a Gas has a variety of values.</li>
+            <li class="NumberedList">Similarly, the 
+ reference density for Oil can vary.</li>
+        </ol>
+        <p>The only "guidance' is to ensure that a consistent set of inter-conversions 
+ are entered.</p>
+        <p>&#160;</p>
+        <p>Default <span style="font-weight: bold;">Product Qualities</span> are 
+ user defined conversion factors:</p>
+        <ol>
+            <li class="NumberedList">The Description 
+ is a user defined label.</li>
+            <li class="NumberedList">Only one conversion 
+ factor can be supplied for each entry: to the base Heating Value definition 
+ (J/m3) or base Density definition (kg/m3).</li>
+            <li class="NumberedList">The entries in 
+ this table are what are available in the Product Definition table, as 
+ well as the individual Production Segments.</li>
+        </ol>
+        <p>&#160;</p>
+        <p>Individual Products are defined in terms of:</p>
+        <ol>
+            <li class="NumberedList"><span style="font-weight: bold;">Bookable</span> 
+ - whether the Product is to participate in metric (Lifting Cost, F&amp;D) 
+ calculations.</li>
+            <li class="NumberedList"><span style="font-weight: bold;">Energy</span> 
+ - indicates whether the Quality is to be represented in Energy or Mass 
+ units.</li>
+            <li class="NumberedList"><span style="font-weight: bold;">Units/boe, 
+ Unit</span> &#160;- 
+ the Base unit for the particular Product and its conversion to the base 
+ Equivalence Unit (boe).</li>
+        </ol>
+        <p>&#160;</p>
+        <p>The Quality conversions represent the <span style="font-weight: bold;">Default</span> 
+ relationship. For each Product the conversion is represented as a <span style="font-weight: bold;">Quality</span> and <span style="font-weight: bold;">Quality 
+ Unit</span>.</p>
+        <ol>
+            <li class="NumberedList">For "Gas" 
+ products (the Energy flag will be true), the Quality will be represented 
+ in a Heating Value unit defined as per Product Qualities (above).</li>
+            <li class="NumberedList">For "Non-Gas" 
+ products (the Energy flag will be false), the Quality will be represented 
+ in a Density unit defined as per Product Qualities (above).</li>
+        </ol>
+        <p>&#160;</p>
+        <p>Each Production segment will use the corresponding Product Default Quality, 
+ however, it can be overridden. </p>
+        <h3>&#160;</h3>
+        <h3><a name="Forecast_Production"></a>Forecast Production 
+ - Periodic</h3>
+        <p>All <span style="font-weight: bold;">Forecast</span> related Production 
+ calculations begin with the determination of the <span style="font-weight: bold;">Gross 
+ Cumulative Production</span> for a particular period. All Production calculations 
+ require a Production period (Start Date to End Date), which has generally 
+ been specified by the client (Reports, Analysis Screens, Economics, Ranking, 
+ etc.) of the calculations. &#160;The 
+ client configuration determines the Start and End Date for the various 
+ periods being requested (i.e., Monthly, Quarterly, Annual).</p>
+        <ul>
+            <li class="Bullets">esi.manage uses the actual 
+ number of days in a given period for its calculations. For example, if 
+ monthly calculations are requested, January will be based on 31 days of 
+ production and February 28 (or 29). A Production Graph will appear somewhat 
+ jagged based on the number of days in a particular month.</li>
+            <ul style="list-style-type: circle;">
+                <li class="Bullets"><span style="font-weight: bold;">Daily 
+ Production Rates</span> are determined by dividing the Cumulative Production 
+ by the number of days in the Period. This will smooth out the Production 
+ Profile.</li>
+            </ul>
+            <li class="Bullets">esi.manage uses the Effective 
+ Decline rate formulation of the various Formulaic Decline methods. If 
+ your source data is represented as a Nominal Decline, it must be converted 
+ to the Effective Decline form.</li>
+            <ul style="list-style-type: circle;">
+                <li class="Bullets">The Decline Interval 
+ can be Daily, Weekly, Monthly, Quarterly or Annual. For Production calculations 
+ these are converted to a Daily decline rate.</li>
+                <li class="Bullets">Monthly decline intervals 
+ are converted based on 30.4375 days/month</li>
+                <li class="Bullets">Quarterly decline intervals 
+ are based on 91.3125 days/quarter</li>
+                <li class="Bullets">Annual decline intervals 
+ are based on 365.25 days/year.</li>
+            </ul>
+            <li class="Bullets">Production Declines from 
+ the first day. </li>
+            <li class="Bullets">Tabular Production is held 
+ within esi.manage as the Average Daily Production for the period. The 
+ cumulative Production is determined by multiplying this value by the number 
+ of days in the calculation period.</li>
+        </ul>
+        <p>&#160;</p>
+        <p>The Production Segment Onstream Date can occur on anywhere in the month. 
+ For example, if the Forecast OnStream date is May 25, 2011, the Cumulative 
+ Production for May will be based on 7 days (May 25 to May 31).</p>
+        <p>Production can be calculated up to the Offstream 'point'. This is determined 
+ from the calculated end date of a formulaic curve, or the end of entered 
+ tabular data.</p>
+        <p>The Total Cumulative Production for a particular segment is based on 
+ the period from the Onstream Date to the Offstream Date. This is the value 
+ that will be used to initialize the Gross Technical Reserves amount.</p>
+        <h3>&#160;</h3>
+        <h3><a name="Production Downtime"></a>Production 
+ Downtime</h3>
+        <p>Production Downtime can be expressed in two forms:</p>
+        <ol>
+            <li class="Bullets"><span style="font-weight: bold;">Unscheduled</span> 
+ - this is a % that represents the anticipated service factor for a particular 
+ 'well', expressed as the % of time that the well will be non-producing. 
+ For example, a well that has historically produced 75% of the time will 
+ have an unscheduled downtime % of 25.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Scheduled</span> 
+ - this is used to reflect 'known' downtime periods at some time in the 
+ future. Each Scheduled downtime entry has a Start and End Date, and a 
+ Downtime % for that period. The Downtime % represents the anticipated 
+ reduction - for example if a Facility will be running at 60% capacity 
+ for a particular period, the corresponding Scheduled Downtime will be 
+ 40%.</li>
+        </ol>
+        <p>Multiple overlapping downtime entries are applied in a sequential order, by default, resulting in a multiplicative result.  Unscheduled downtime is applied first, followed by scheduled downtime.  In this manner, 50% unscheduled downtime and 50% scheduled downtime in the same period will result in 25% production (100*50% = 50%, then 50*50% = 25%)</p>
+        <p>Production models may assume that product is 'lost' during downtime, as opposed to an extension of the life of a well. To support such models, esi.manage allows the user to discard downtime production. This option can be toggled within the Configuration perspective (System -&gt;Miscellaneous-&gt;Site-specific features&gt;Nonstandard Downtime).  Enabling this feature will also calculate downtime in an additive manner (ie. 50% scheduled and 50% unscheduled downtime will have zero production in that period).</p>
+        <p>Beyond these points, Forecast Production values used or displayed (with 
+ one exception) within esi.manage are <span style="font-weight: bold;">After 
+ Downtime </span>has been applied. The Production Analysis view will display 
+ Forecast values with and without Downtime applied.</p>
+        <p>Production Actuals are a result of any real Downtime, the configured 
+ Downtime percentages are not applied to Actuals.</p>
+        <h3>&#160;</h3>
+        <h3><a name="Production_Definitions"></a>Production 
+ Definitions</h3>
+        <p>The following table shows how the various Modifiers described above 
+ are applied to calculated Forecast Production (<span style="font-weight: bold;"><a href="#Production Downtime">after Downtime</a></span>).</p>
+        <p>
+            <img src="../Images/Prod_Defns.png" style="border: none;float: none;border-style: none;border-style: none;" border="0" />
+        </p>
+        <p>&#160;</p>
+        <p>With the exception of Royalties (which utilize a Time Series), all other 
+ modifiers are single values that are applied to the calculated Forecast 
+ Amount.</p>
+        <ol>
+            <li class="NumberedList">Note that <span style="font-weight: bold;">Actuals</span> (Field Estimates, Actuals and 
+ Financial Actuals) only occur after a Well is producing.</li>
+            <li class="NumberedList">Actuals have 
+ <span style="font-weight: bold;">0 Risk</span> (POS is 100%), are presumed 
+ to be <span style="font-weight: bold;">Shrunk</span> (no Shrinkage will 
+ be applied), and reflect any actual <span style="font-weight: bold;">Down 
+ Time</span>.</li>
+            <li class="NumberedList">Actuals are presumed 
+ to reflect the Royalties or NRI%, and contain the corresponding Revenue 
+ generated from the Production.</li>
+            <ul>
+                <li class="NumberedList">NRI%, Royalties 
+ and Price Files <span style="font-weight: bold;">will not</span> be applied 
+ to 'Actuals' production data.</li>
+            </ul>
+        </ol>
+        <p>In terms of the data entered for these modifiers (and their impact on 
+ the reported production):</p>
+        <ul>
+            <li class="Bullets"><span style="font-weight: bold;">WI%</span> 
+ is applied directly. A Net number will be the Gross Production x the WI%.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Risk</span> 
+ is derived from dependencies in the Project. A Risked production amount 
+ will be the Gross (or Net) Production x NPS%. &#160;If 
+ Production is not dependent on another measure, you can enter an AF% to 
+ get the NPS% for the production segments %.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Shrinkage</span> 
+ is accounted for with the Sales definitions; which will be the Production 
+ Amount (Gross or Net, Risked or Unrisked) x (1 - Shrinkage).</li>
+            <li class="Bullets"><span style="font-weight: bold;">NRI%</span> 
+ is applied directly, however, it is presumed to include the WI% as part 
+ of its value. If NRI% has been supplied for a Production Segment, the 
+ WI% <span style="font-weight: bold;">will not</span> be applied to calculate 
+ Net Risked after Royalty. Risk and Shrinkage will be applied first.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Royalties</span> 
+ will be applied to the Net Risked Shrunk value for a given reporting period. 
+ As Royalties are configured as a time series, the appropriate Royalty 
+ Rate for each of the reporting periods will be applied in the form of 
+ Net Risked Sales Production x (1 - Royalty Rate).</li>
+        </ul>
+        <h3>&#160;</h3>
+        <h3><a name="Production_Types"></a>Production Types</h3>
+        <p>Production segments can also contain 'Actuals' (Field Estimates, Actuals 
+ and Financial Actuals) data. esi.manage treats the values preferentially:</p>
+        <p><span style="font-weight: bold;">Financial Actuals</span> are presumed 
+ to be the most accurate, followed by <span style="font-weight: bold;">Actuals</span> 
+ and then <span style="font-weight: bold;">Field Estimates</span>.</p>
+        <p>As indicated above, from a calculation perspective Actuals have <span style="font-weight: bold;">no Risk</span> (POS = 100%) and they are <span style="font-weight: bold;">Shrunk</span> (Shrinkage = 0).</p>
+        <p>As an example, consider a variance Report where the Production Type 
+ is Actuals. If the <span style="font-weight: bold;">Risked Sales</span> 
+ Production Definition is compared to <span style="font-weight: bold;">Unrisked 
+ Raw</span>, the variance will be 0.</p>
+        <p>
+            <img src="../Images/348.png" style="border: none;float: none;width: 994px;height: 164px;border-style: none;border-style: none;" width="994" height="164" border="0" />
+        </p>
+        <p>&#160;</p>
+        <p>Each Production Type can be used explicitly for calculations; i.e., 
+ Report on Production Actuals. In this scenario, the only factor that will 
+ affect the results will be the intersection/overlap between the Data Dates 
+ (the periods for each Actuals record) and the Reporting Dates (the Start 
+ and End dates for each calculation period).</p>
+        <p>The precedence of Production Data Types is used in <span style="font-weight: bold;">Blended</span> 
+ calculations. For a given period, Financial Actuals will be used (if present) 
+ first, followed by Actuals, Field Estimates and then Forecast values.
+ </p>
+        <h3>&#160;</h3>
+        <h3><a name="Production_Calculation_Dates"></a>Calculation 
+ Period versus Data Period</h3>
+        <p>For the following section, the Calculation Period is represented by 
+ a Start and End Date. For example, the Production in May, 2011 will be 
+ based on May 1, 2011 (Start Date) and May 31, 2011 (End Date).</p>
+        <ol>
+            <li class="NumberedList">For Formulaic 
+ Production segments, this simply means calculating the Cumulative Production 
+ (Onstream Date to End Date) and subtracting the Cumulative Production 
+ (Onstream Date to Start Date) which determines the cumulative Production 
+ within the Reporting Period.</li>
+            <ul>
+                <li class="NumberedList">Note that 
+ any Down Time percentages are applied to each of the calculation periods.</li>
+            </ul>
+            <li class="NumberedList">For Tabular Production 
+ (which includes Tabular Forecast) the calculations are based on the relationship 
+ between the Reporting Period and the Data Period(s).</li>
+            <li class="NumberedList">For example, 
+ the Reporting Period is May 1 to May 31, 2011.</li>
+            <li class="NumberedList">Within that period 
+ there are <span style="font-weight: bold;">3 Data periods</span>.</li>
+            <ol style="list-style-type: lower-roman;">
+                <li class="NumberedList">April 28 
+ to May 3 with an average daily rate of <span style="font-weight: bold;color: #ff0000;">10000</span>.</li>
+                <li class="NumberedList">May 4 to 
+ May 25 with an average daily rate of <span style="font-weight: bold;color: #0000ff;">100</span>.</li>
+                <li class="NumberedList">May 26 to 
+ June 4 with an average daily rate of <span style="font-weight: bold;color: #008000;">10</span>.</li>
+            </ol>
+            <li class="NumberedList">The calculations 
+ for May will be:</li>
+            <ul>
+                <li class="NumberedList">3 days (May 
+ 1 to May 3) at 10000/day = <span style="color: #ff0000;font-weight: bold;">30,000</span>.</li>
+                <li class="NumberedList">22 days (May 
+ 4 to May 25) at 100/day = <span style="color: #0000ff;font-weight: bold;">2,200</span>.</li>
+                <li class="NumberedList">6 days (May 
+ 26 to May 31) at 10/day = <span style="font-weight: bold;color: #008000;">60</span>.</li>
+            </ul>
+            <li class="NumberedList">The total production 
+ for May will be <span style="font-weight: bold;color: #ff0000;">3</span><span style="font-weight: bold;color: #0000ff;">22</span><span style="font-weight: bold;color: #008000;">60</span>.
+ </li>
+        </ol>
+        <h3>&#160;</h3>
+        <h3><a name="Blended_Production"></a>Blended Production 
+ Calculations</h3>
+        <p>&#160;There 
+ are two methods of Blended Production calculations:</p>
+        <ul>
+            <li class="Bullets"><span style="font-weight: bold;">Data 
+ Driven</span> - this approach will use whatever Data Types exist within 
+ a Calculation Period, in order of Preference.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Date 
+ Driven</span> - this requires Dates (i.e., the Last Actuals Date) to be 
+ specified for each Data Type. </li>
+        </ul>
+        <p>Blended Production (as shown in the Production Types figure above) considers 
+ Actuals and Field Estimates. </p>
+        <p>First, we will describe the <span style="font-weight: bold;">Date Driven</span> 
+ approach. This will require the <span style="font-weight: bold;">Last 
+ Actuals</span> and <span style="font-weight: bold;">Last Field Estimates</span> 
+ dates to be identified (either user supplied or initialized from the data 
+ within the Budget). </p>
+        <p>When calculations are being performed:</p>
+        <ol>
+            <li class="NumberedList">Only data of 
+ <span style="font-weight: bold;">Type Actuals</span> will be used for 
+ calculation periods <span style="font-weight: bold;">up to</span> the 
+ Last Actuals Date.</li>
+            <ul>
+                <li class="NumberedList">If, for a 
+ particular Production segment, there are no Actuals, but there are Field 
+ Estimates within this period, the reported value will be 0.</li>
+            </ul>
+            <li class="NumberedList">Only data of 
+ <span style="font-weight: bold;">Type Field Estimates</span> will be considered 
+ for calculation periods <span style="font-weight: bold;">between</span> 
+ the Last Actuals and Last Field Estimates Dates.</li>
+            <ul>
+                <li class="NumberedList">Similarly, 
+ if there are Actuals within this Period, they will not be considered.</li>
+            </ul>
+            <li class="NumberedList">Only <span style="font-weight: bold;">Forecast</span> 
+ data will be used <span style="font-weight: bold;">after</span> the Last 
+ Field Estimates date, regardless of whether there is Actuals or Field 
+ Estimates Data.</li>
+        </ol>
+        <p>In addition, the same 'Dates' mechanism described in the Calculation 
+ Period section is used when there is an intersection between Calculation 
+ periods and Data Type periods.</p>
+        <p>For example:</p>
+        <ol>
+            <li class="NumberedList">The specified 
+ Last Field Estimates Date was <span style="font-weight: bold;">April 30</span>.</li>
+            <li class="NumberedList">A particular 
+ production segment has a Field Estimates entry that covered <span style="font-weight: bold;">April 
+ 28</span> to <span style="font-weight: bold;">May 5</span>, with an average 
+ daily production of <span style="font-weight: bold;">100</span>.</li>
+            <li class="NumberedList">This Field Estimates 
+ entry would contribute <span style="font-weight: bold;">300</span> to 
+ the April total, and nothing to May.</li>
+        </ol>
+        <p>With Data Driven Blending, the Data Types are 'lined' up in order of 
+ preference (Actuals then Field Estimates then Forecast), and the contributions 
+ determined based on the intersection / overlap between Calculation Periods 
+ and Data Periods.</p>
+        <h3>&#160;</h3>
+        <h3><a name="Derived_Products_Calculations"></a>Derived 
+ Products Calculations</h3>
+        <p>A Product (typically NGLs, Condensate, or Water) can be defined in terms 
+ of a Primary Product. The Derived Product segment requires an Asset to 
+ be identified, which enables the correct Primary Product production segment(s) 
+ to be referenced for calculations.</p>
+        <p>A Derived Product's production profile is defined as a Ratio to the 
+ Primary Product:</p>
+        <ul>
+            <li class="Bullets"><span style="font-weight: bold;">Fixed 
+ Ratio</span> - a single value will be used for all time periods.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Variable 
+ Ratio</span> - a series of ratio's are defined in terms of Offset (days, 
+ weeks, months, quarters, years) from the Onstream Date or a specific Calendar Date. The last entry 
+ in the table defines the ratio to be used for all time periods beyond 
+ that Offset.</li>
+        </ul>
+        <p>In certain applications, it will be desirable to define a chain of derivations. 
+ For example:</p>
+        <ol>
+            <li class="NumberedList">In a steam injection 
+ application, Steam is the Primary Product.</li>
+            <li class="NumberedList">Oil is 'Derived' 
+ from the Steam Production.</li>
+            <li class="NumberedList">Gas is then Derived 
+ from the Oil</li>
+        </ol>
+        <p>Production calculations for the Derived Product are based on the calculated 
+ profile for its Primary Product, multiplied by the appropriate factor. 
+ If a Variable Ratio has been specified, the corresponding Production period 
+ is used to determine the correct factor to apply.</p>
+        <p>There are two paths through the Production Calculations depending on 
+ how the <span style="font-weight: bold;">Primary Segment</span> was defined:</p>
+        <ul>
+            <li class="Bullets"><span style="font-weight: bold;">Shrinkage 
+ = 0</span> - in this case the Primary Segment's production (IP) has been 
+ entered as a <span style="font-weight: bold;">Shrunk</span> value.</li>
+            <ul style="list-style-type: circle;">
+                <li class="Bullets">The Derived segment's 
+ Production will be the <span style="font-weight: bold;">Ratio</span> to 
+ the Primary segment's calculated production.</li>
+                <li class="Bullets">The Derived segment's 
+ Production will be reported for <span style="font-weight: bold;">both</span> 
+ a Raw and Sales Production Definition.</li>
+            </ul>
+            <li class="Bullets"><span style="font-weight: bold;">Shrinkage 
+ &gt; 0</span> - in this case the Primary Segment's production (IP) has 
+ been entered as a <span style="font-weight: bold;">Raw</span> value.</li>
+            <ul style="list-style-type: circle;">
+                <li class="Bullets">The Derived segment's 
+ Production will again be the Ratio to the Primary segment's calculated 
+ production.</li>
+            </ul>
+            <li class="Bullets">However, what is reported 
+ is now <span style="font-weight: bold;">dependent</span> on the selected 
+ <span style="font-weight: bold;">Production Definition </span>and on whether 
+ it is a Byproduct or an Associated Product.</li>
+            <ul style="list-style-type: circle;">
+                <li class="Bullets">For a <span style="font-weight: bold;">Raw</span> 
+ definition - the Primary segment will be <span style="font-weight: bold;">Unshrunk</span> 
+ and the Derived <span style="font-weight: bold;">Byproduct</span> segment's 
+ Production will be reported as <span style="font-weight: bold;">0</span>. 
+ An example here is NGL derived from Gas. &#160;NGL 
+ is in gas phase in the raw gas, and therefore not deemed reportable as 
+ a raw product. &#160;To 
+ report it AND to report the Raw gas would result in double counting of 
+ the NGL molecules.</li>
+                <li class="Bullets">For a <span style="font-weight: bold;">Raw 
+ </span>definition - the Primary segment will be <span style="font-weight: bold;">Unshrunk</span> 
+ and the Derived <span style="font-weight: bold;">Associated</span> segment's 
+ Production will be reported as <span style="font-weight: bold;">0</span>. 
+ An example here is water associated with oil. &#160;Water 
+ is present and measurable in the raw fluid stream, and therefore deemed 
+ reportable as a raw product.</li>
+                <li class="Bullets">For a <span style="font-weight: bold;">Sales</span> 
+ definition - the Primary segment will be <span style="font-weight: bold;">Shrunk</span> 
+ (based on the Shrinkage%), and the Derived <span style="font-weight: bold;">Byproduct 
+ </span>segment's Production <span style="font-weight: bold;">will be</span> 
+ reported based on the defined Ratio. Using the NGL derived from Gas example, 
+ the NGL has now been separated and liquefied (and more importantly the 
+ gas volume has been reduced to allow for this extraction). It will be 
+ reported based on the defined Ratio.</li>
+                <li class="Bullets">For a <span style="font-weight: bold;">Sales</span> 
+ definition - the Primary segment will be Shrunk (based on the Shrinkage%), 
+ and the Derived <span style="font-weight: bold;">Associated</span> Product 
+ segment's Production will be reported based on the defined Ratio. This 
+ is no different than in the Raw case above.</li>
+            </ul>
+        </ul>
+        <p>&#160;</p>
+    </body>
+</html>

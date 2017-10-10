@@ -1,0 +1,318 @@
+/*<meta />*/
+
+body
+{
+	font-family: Arial;
+	background-color: #ffffff;
+}
+
+h1
+{
+	font-weight: bold;
+	font-size: 18pt;
+}
+
+li.mc-H1
+{
+	font-weight: bold;
+	font-size: 18pt;
+}
+
+li.mc-H1
+{
+	font-weight: bold;
+	font-size: 24.0pt;
+}
+
+h2
+{
+	font-weight: bold;
+	font-size: 14pt;
+}
+
+li.mc-H2
+{
+	font-weight: bold;
+	font-size: 14pt;
+}
+
+li.mc-H2
+{
+	font-weight: bold;
+	font-size: 18.0pt;
+}
+
+h3
+{
+	font-weight: bold;
+	font-size: 12pt;
+}
+
+li.mc-H3
+{
+	font-weight: bold;
+	font-size: 12pt;
+}
+
+li.mc-H3
+{
+	font-weight: bold;
+	font-size: 14.0pt;
+}
+
+h4
+{
+	font-weight: bold;
+	margin-top: 18.5pt;
+	font-size: 10pt;
+	border-bottom-style: none;
+}
+
+li.mc-H4
+{
+	font-weight: bold;
+	font-size: 10pt;
+}
+
+li.mc-H4
+{
+	font-weight: bold;
+	font-size: 12.0pt;
+}
+
+h5
+{
+	font-weight: bold;
+	font-size: 10.0pt;
+}
+
+li.mc-H5
+{
+	font-weight: bold;
+	font-size: 10.0pt;
+}
+
+li.mc-H5
+{
+	font-weight: bold;
+	font-size: 10.0pt;
+}
+
+h6
+{
+	font-weight: bold;
+	font-size: 8.0pt;
+}
+
+li.mc-H6
+{
+	font-weight: bold;
+	font-size: 8.0pt;
+}
+
+li.mc-H6
+{
+	font-weight: bold;
+	font-size: 8.0pt;
+}
+
+p
+{
+	margin-top: 0pt;
+	margin-bottom: 9pt;
+	font-size: 10pt;
+}
+
+li
+{
+	font-size: 10pt;
+}
+
+li
+{
+	font-size: 12.0pt;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+}
+
+a.expandspot
+{
+	cursor: hand;
+	font-style: italic;
+	color: #400080;
+	text-decoration: none;
+}
+
+span.expandtext
+{
+	font-style: italic;
+	font-weight: normal;
+	color: #ff0000;
+}
+
+a.dropspot
+{
+	cursor: hand;
+	font-weight: bold;
+	font-style: normal;
+	color: #0000ff;
+	text-decoration: none;
+}
+
+a.glossterm
+{
+	color: #800000;
+	cursor: hand;
+	font-style: italic;
+	text-decoration: none;
+}
+
+span.glosstext
+{
+	font-style: italic;
+	font-weight: normal;
+	color: #0000ff;
+}
+
+ol
+{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+ul
+{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+p.NumberedList
+{
+	font-weight: normal;
+	margin-top: 0pt;
+	margin-bottom: 4.5pt;
+	list-style: decimal;
+}
+
+li.NumberedList
+{
+	font-weight: normal;
+	margin-top: 0pt;
+	margin-bottom: 4.5pt;
+	list-style: decimal;
+}
+
+p.Bullets
+{
+	list-style: disc;
+	margin-bottom: 4.5pt;
+}
+
+li.Bullets
+{
+	margin-bottom: 4.5pt;
+	list-style: disc;
+}
+
+div.droptext
+{
+	border-left-style: Outset;
+	border-right-style: Outset;
+	border-top-style: Outset;
+	border-bottom-style: Outset;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	margin-left: 0.25in;
+	margin-right: 0.25in;
+	margin-top: 18px;
+	border-left-width: 4px;
+	border-right-width: 4px;
+	border-top-width: 4px;
+	border-bottom-width: 4px;
+}
+
+p.Table
+{
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	line-height: 1.65;
+}
+
+li.Table
+{
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	line-height: 1.65;
+}
+
+h4.Heading4Reference
+{
+	border-bottom-style: Double;
+	border-bottom-width: 4px;
+}
+
+li.mc-H4-CHeading4Reference
+{
+	
+}
+
+p.MLTable
+{
+	margin-bottom: 0pt;
+}
+
+li.MLTable
+{
+	margin-bottom: 0pt;
+}
+
+MadCap|popupBody.popupBody_1
+{
+	font-family: Arial;
+	font-size: 8pt;
+	padding: 10px 10px;
+	color: #000000;
+	background-color: #ffffc0;
+	margin: 0px;
+}
+
+MadCap|expandingHead.expandspot
+{
+	cursor: hand;
+	font-style: italic;
+	color: #400080;
+	text-decoration: none;
+}
+
+MadCap|dropDownHotSpot.dropspot
+{
+	cursor: hand;
+	font-weight: bold;
+	font-style: normal;
+	color: #0000ff;
+	text-decoration: none;
+}
+
+MadCap|expandingBody.expandtext
+{
+	font-style: italic;
+	font-weight: normal;
+	color: #ff0000;
+}
+
+MadCap|glossaryTerm.glossterm
+{
+	color: #800000;
+	cursor: hand;
+	font-style: italic;
+	text-decoration: none;
+}
+
+MadCap|expandingBody.glossterm
+{
+	font-style: italic;
+	font-weight: normal;
+	color: #0000ff;
+}
+

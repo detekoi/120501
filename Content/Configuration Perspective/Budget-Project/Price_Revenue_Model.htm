@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="2027" MadCap:lastWidth="1473">
+    <head><title>Price_Revenue_Model</title>
+        <link rel="StyleSheet" href="../../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <h3>
+            <img src="../../Images/Logo Images/3esi_manage.png" align="right" border="0" class="HeaderLogo" />
+        </h3>
+        <h1>Price Model</h1>
+        <p>The calculation of Revenue in esi.manage is comprised of three systems:</p>
+        <ul>
+            <li class="Bullets">Production Calculations 
+ for a particular Asset</li>
+            <li class="Bullets">Product Quality (when Prices 
+ are expressed in quality dependant units, like $/mmbtu)</li>
+            <li class="Bullets">Price Profile</li>
+        </ul>
+        <p>Other topics describe the <a href="../../Reference/Production_Calculations.htm">Production Calculation</a> 
+ and <a href="Product_Qualities.htm">Product Quality</a> components of esi.manage. </p>
+        <h3>&#160;</h3>
+        <h3>Terminology</h3>
+        <ul>
+            <li class="Bullets"><span style="font-weight: bold;">Effective 
+ Price</span> – the particular product price that is calculated for a particular 
+ Price Forecast.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Price 
+ Forecast</span> – made up of root forecasts and price adjustment forecasts. 
+ &#160;The root 
+ price is generally the base price for a specific product (i.e. NYMEX for 
+ Gas, WTI for Oil) and is entered as a single number. &#160;A 
+ price adjustment is nested off of a root price (or off of another price 
+ adjustment)</li>
+            <li class="Bullets"><span style="font-weight: bold;">Price 
+ Adjustment</span> – a two part entry (Scalar and Offset) that represents 
+ the desired adjustment at a particular date.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Price 
+ Details</span> – a time series of Price Adjustments for a particular Price 
+ Forecast.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Scenario</span><span> 
+ - a way of declaring different values for your existing forecasts. (i.e. 
+ high price, low price, archived prices)</span>
+            </li>
+            <li class="Bullets"><span style="font-weight: bold;">Profiles</span> 
+ – price forecasts can be combined into profiles based on % of production, 
+ or based on volume amounts, which will then give an effective price based 
+ on the different forecasts provided.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Tier</span><span> 
+ - ties a forecast to a specific profile and specifies the allocation of 
+ that forecast. &#160;Tiers 
+ are allocated and resolved sequentially.</span>
+            </li>
+        </ul>
+        <p>&#160;</p>
+        <h3>Effective Price</h3>
+        <p>The "Effective Price" is what will be used to calculate the 
+ Revenue for a particular product. In the following screen shot, the highlight 
+ is on a particular Price Forecast (Rockies - Gas), at a particular period 
+ of time (January 2010). </p>
+        <p>The bottom of the screen shows how the "Price" (USD/mmbtu) 
+ will be determined:</p>
+        <ol>
+            <li class="NumberedList">NYMX Gas is the 
+ root Price Forecast.</li>
+            <li class="NumberedList">For this particular 
+ Scenario (Current Prices), NYMX Gas has a Price of $5.02 USD/mmbtu.</li>
+            <li class="NumberedList">Rockies Gas is 
+ a Price Forecast which has been related to NYMX Gas. </li>
+            <li class="NumberedList">It has a Scale 
+ of 1, and an offset of -0.25. </li>
+            <li class="NumberedList">The Effective 
+ Price for the Rockies Gas Forecast is 4.77 USD/mmbtu. </li>
+            <li class="NumberedList">A Price Adjustment 
+ is made up of two parts:</li>
+            <li class="Bullets"><span style="font-weight: bold;">Scale</span> 
+ - which is a fractional multiplier.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Offset</span> 
+ - which is a numeric offset applied after the multiplier.</li>
+        </ol>
+        <p>A Global Forecast, such as "AB Par Price Oil", defines the currency 
+ unit and basis (mcf, bbl, mmbtu) for all Price Forecasts which are derived 
+ from it. </p>
+        <p>Global Forecasts don't have a Scale, only a Price.</p>
+        <p>
+            <img src="../../Images/Prices_Root_Forecast.png" style="border: none;border-style: none;float: none;width: 490px;height: 361px;" width="490" height="361" border="0" />
+        </p>
+        <p>&#160;</p>
+        <p>The Pricing Model is configured through four nodes within the Configuration:</p>
+        <p>
+            <img src="../../Images/Price_revenue_model1.png" style="border: none;border-style: none;float: none;" border="0" />
+        </p>
+        <p>&#160;</p>
+        <ul>
+            <li class="Bullets"><span style="font-weight: bold;">Scenarios</span> 
+ are a "named" set of Prices, and Scale and Offset Modifier.</li>
+            <li class="Bullets">All Forecasts are accessible 
+ to each Scenario. However, the Forecast Details can be modified for each 
+ Scenario to enable Price Sensitivity analysis</li>
+            <li class="Bullets"><span style="font-weight: bold;">Defaults</span> 
+ allow specific Price Profiles to be assigned to each Product. This will 
+ initialize each Product with a Price Forecast.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Forecasts</span> 
+ are where the hierarchical relationships between Price Forecasts are defined. 
+ </li>
+            <li class="Bullets"><span style="font-weight: bold;">Profiles</span> 
+ are where the functional (contract) relationships between Price Forecasts 
+ are defined.</li>
+        </ul>
+    </body>
+</html>

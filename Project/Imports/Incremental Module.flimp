@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MsWordImport
+  PreserveSourceStyles="false"
+  KeepSourceLinks="false"
+  ConvertInlineFormatting="false"
+  AddContinuedLinks="false"
+  AddContinuedFromLinks="false"
+  ContinuedLinkFormat="(continued in {title})"
+  ContinuedFromLinkFormat="(continued from {title})"
+  UseMaxCharLimit="false"
+  UseMinCharLimit="true"
+  MaxCharLimit="10000"
+  MinCharLimit="50"
+  FilenameLength="24"
+  GeneratePageLayouts="false"
+  UseFirstHeadingAsTopicTitle="true"
+  LastCollectTime="2017-04-18T21:59:34.3570125-06:00"
+  ProjectName="esi.manage Help File"
+  ProjectFolder="C:\Work\Help (git)\e.m. help file v3\esi.manage Help File\"
+  AutoSync="false"
+  AutoFitTables="false"
+  UseHeaderRows="false"
+  LastImport="2017-04-18T22:02:00.7816535-06:00">
+  <Files>
+    <Url
+      Source="../../../../../../Users/cktuckey/Downloads/Incremental Module.docx"
+      AbsoluteSource="file:///C:/Users/cktuckey/Downloads/Incremental Module.docx" />
+  </Files>
+  <ExcludedFiles />
+  <CollectedSourceFiles />
+  <SkippedSourceFiles />
+  <GeneratedFiles>
+    <Url
+      Source="../../Content/Resources/Images/Incremental Module/Incremental Economics.png"
+      TimeStamp="4/18/2017 10:00:27 PM" />
+    <Url
+      Source="../../Content/Resources/Images/Incremental Module/Incremental Economics_1.png"
+      TimeStamp="4/18/2017 10:00:27 PM" />
+    <Url
+      Source="../../Content/Resources/Images/Incremental Module/Incremental Economics_2.png"
+      TimeStamp="4/18/2017 10:00:27 PM" />
+    <Url
+      Source="../../Content/Resources/Images/Incremental Module/Incremental Economics_3.png"
+      TimeStamp="4/18/2017 10:00:27 PM" />
+    <Url
+      Source="../../Content/Resources/Images/Incremental Module/Incremental Economics_4.png"
+      TimeStamp="4/18/2017 10:00:27 PM" />
+    <Url
+      Source="../../Content/Resources/Images/Incremental Module/Incremental Economics_5.png"
+      TimeStamp="4/18/2017 10:00:27 PM" />
+    <Url
+      Source="../../Content/Resources/Images/Incremental Module/Incremental Economics_6.png"
+      TimeStamp="4/18/2017 10:00:27 PM" />
+    <Url
+      Source="../../Content/Resources/Images/Incremental Module/Incremental Economics_7.png"
+      TimeStamp="4/18/2017 10:00:27 PM" />
+    <Url
+      Source="../../Content/Resources/Images/Incremental Module/Incremental Economics_8.png"
+      TimeStamp="4/18/2017 10:00:27 PM" />
+    <Url
+      Source="../../Content/Resources/Images/Incremental Module/Incremental Economics_9.png"
+      TimeStamp="4/18/2017 10:00:27 PM" />
+    <Url
+      Source="../../Content/Incremental Module/Incremental Economics.htm"
+      TimeStamp="4/18/2017 10:00:28 PM" />
+    <Url
+      Source="../TOCs/Incremental Module.fltoc"
+      TimeStamp="4/18/2017 10:00:28 PM" />
+    <Url
+      Source="../../Content/Resources/MasterPages/Incremental Module.flmsp"
+      TimeStamp="4/18/2017 10:00:28 PM" />
+    <Url
+      Source="../../Content/Resources/Stylesheets/Incremental Module.css"
+      TimeStamp="4/18/2017 10:00:28 PM" />
+  </GeneratedFiles>
+  <ParagraphStyles>
+    <Map
+      From="Heading 1"
+      To="h1.Heading 1" />
+    <Map
+      From="Heading 2"
+      To="h2.Heading 2" />
+    <Map
+      From="Heading 3"
+      To="h3.Heading 3" />
+  </ParagraphStyles>
+  <CharacterStyles>
+    <Map
+      From="Hyperlink"
+      To="a.(MS Word Style)" />
+  </CharacterStyles>
+  <NewTopicStyles />
+  <UsedParagraphStyles>
+    <StyleName
+      Name="Heading 2" />
+    <StyleName
+      Name="Heading 3" />
+  </UsedParagraphStyles>
+  <UsedCharacterStyles />
+</MsWordImport>

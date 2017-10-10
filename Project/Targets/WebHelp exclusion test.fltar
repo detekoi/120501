@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="3.25.0"
+  Type="WebHelp"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  DefaultUrl="/Content/Overview.htm"
+  MasterToc="/Project/TOCs/HelpFileTOC.fltoc"
+  MasterStylesheet="/Content/Resources/Stylesheets/HelpFileStylesheet.css"
+  OutputFolder="\\CGYFILE1\Shared\Help File\3.25 Compiled Help v4 Final Web Help"
+  GetLatestBeforeCompile="true"
+  EmbedImages="true"
+  DisableAutoSync="true"
+  Skin="/Project/Skins/BlueSkin.flskn"
+  ExcludeUnreferencedContent="true">
+  <PrintedOutput
+    CollapseMargins="true"
+    MultiDocWordOutput="true" />
+</CatapultTarget>

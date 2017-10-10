@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="738" MadCap:lastWidth="1487">
+    <head><title>Analysis Case Overview</title>
+        <link rel="StyleSheet" href="../../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <h1 style="font-size: 14pt;text-align: right;" align="right">
+            <img src="../../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />
+        </h1>
+        <h1>Analysis Case Overview</h1>
+        <p>The Analysis feature in esi.manage performs Economics calculations against 
+ a Cash Flow for a set of projects. The general calculation process is:</p>
+        <ol>
+            <li class="NumberedList">Internally generate 
+ a Cash Flow (Capital Expenditure, Revenue, Operating Expense) for a selection 
+ of Projects for a defined number of years. The Cash Flow can be generated 
+ using any of the esi.manage Types (Gross, Net, Net Risked / Forecast, 
+ Blended, etc.).</li>
+            <li class="NumberedList">With multiple 
+ Projects, or Projects with Multiple Assets, the generated Cash Flow is 
+ also aggregated at the Asset, Project, Fiscal Model, Project Set, and Analysis 
+ Case level.</li>
+            <li class="NumberedList">Apply Discounting 
+ (Monthly, Yearly, Mid Period, with Interest in the Past) against the Cash 
+ Flow to produce a Discounted Cash Flow at a specified Discount Rate.</li>
+            <li class="NumberedList">Calculate Economic 
+ Metrics (ROI, DROI, NPV, Payout, Economic Limit, etc.) against the Cash 
+ Flow / Discounted Cash Flow.</li>
+            <li class="NumberedList">Examine the calculated 
+ Results, Raw and Discounted Cash Flows, Economic Metrics, either at the 
+ individual Asset, Project, Project Set, or Analysis Case level.</li>
+        </ol>
+        <p>The Analysis Case calculation engine can be accessed from the Project 
+ Ranking perspective such that the Metrics are available to the Ranking 
+ criteria. </p>
+        <p>Corporate Standards for Economics Calculations (Analysis Period, Discount 
+ Rate and Economics Discounting As Of, Mid Period, Default Metrics, etc.) 
+ are defined inside of the esi.manage Configuration such that all Analysis 
+ Cases begin with the same set of calculation parameters. Company's have 
+ the option of locking any of the Default parameters so that they cannot 
+ be modified within an individual Analysis Case. </p>
+        <p>User Defined Metrics (NPV at a different Discount Rate for example) 
+ can be added into any Analysis Case in addition to any Corporate standard 
+ metrics. </p>
+        <p><span style="font-weight: bold;">Note That</span>: </p>
+        <ol>
+            <li class="NumberedList">The Analysis 
+ Case Engine can be accessed in a number of ways. In addition to the Analysis 
+ Case, you can Select Projects from the Browser and choose the Analyze 
+ Button. At this point you will be prompted to choose which Analysis Case 
+ is to be used - i.e., all of its settings (except for the Project or Project 
+ Set selection) will be applied against the selected projects.</li>
+            <li class="NumberedList">Multiple Analysis 
+ Cases can be selected from the Navigator and be Analyzed together. In 
+ this case, the Analysis Settings (Period/Duration/Discounting) for the 
+ first Analysis Case will be used for all Analysis Cases such that a consistent 
+ set of periodic data is generated.</li>
+        </ol>
+        <p class="NumberedList">&#160;</p>
+        <p class="NumberedList">See <a href="Add_Analysis_Case.htm">Add 
+ Analysis Case</a>, and <a href="../../Analysis Perspective/Anaylsis_Perspective.htm">Analysis 
+ Perspective</a> for more detailed descriptions. </p>
+    </body>
+</html>

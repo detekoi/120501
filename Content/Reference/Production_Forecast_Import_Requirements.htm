@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1740" MadCap:lastWidth="1195">
+    <head>
+        <link href="../Resources/TableStyles/HelpFileTableStylesheet.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Production Forecast Import Requirements</title>
+        <link rel="StyleSheet" href="../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <p>
+            <img src="../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />
+        </p>
+        <h1>Production Forecast Import Requirements</h1>
+        <h3>For Formulaic Production Segments</h3>
+        <p><span style="font-weight: bold;">Description:</span><span style="font-style: italic;">Which 
+ field is being imported</span>
+        </p>
+        <p><span style="font-weight: bold;">Format:</span><span style="font-style: italic;">What 
+ the required import format is</span>
+        </p>
+        <p><span style="font-weight: bold;">Validation Rule:</span><span style="font-style: italic;">If 
+ the field is mandatory, and if there are any special requirements for 
+ the field.</span>
+        </p>
+        <table style="width: 84.574%;mc-table-style: url('../Resources/TableStyles/HelpFileTableStylesheet.css');" cellspacing="0" width="84.574%" class="TableStyle-HelpFileTableStylesheet">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <thead>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th bgcolor="#800000" width="29.56%" class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">DESCRIPTION</p>
+                    </th>
+                    <th bgcolor="#800000" width="20.283%" class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">FORMAT</p>
+                    </th>
+                    <th bgcolor="#800000" width="50.157%" class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">VALIDATION RULE</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="29.56%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p style="font-weight: bold;">Import Type</p>
+                    </td>
+                    <td width="20.283%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Text</p>
+                    </td>
+                    <td width="50.157%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>Must be "Formula" </p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td colspan="1" rowspan="1" bgcolor="#C0C0C0" width="29.56%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p style="font-weight: bold;font-style: normal;">Product</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.283%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Text</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.157%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>Must match a Product Description as defined in the Products table</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td colspan="1" rowspan="1" bgcolor="#C0C0C0" width="29.56%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p style="font-weight: bold;font-style: italic;">OnStream Date</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.283%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Date</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.157%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>yyyy-mm-dd. See Data Relationship Rule 1</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td colspan="1" rowspan="1" bgcolor="#C0C0C0" width="29.56%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p style="font-weight: bold;font-style: normal;">IP</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.283%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Number</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.157%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="29.56%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p style="font-weight: bold;">Production Rate</p>
+                    </td>
+                    <td width="20.283%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Text</p>
+                    </td>
+                    <td width="50.157%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>Must match a Production Rate (i.e., bbld/d) Unit in esi.manage</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td colspan="1" rowspan="1" bgcolor="#C0C0C0" width="29.56%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p style="font-weight: normal;font: bold;">Product Quality Unit</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.283%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Text</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.157%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>Must match a Product Quality Unit description in esi.manage</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td colspan="1" rowspan="1" bgcolor="#C0C0C0" width="29.56%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p style="font-weight: normal;font: bold;">Product Quality</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.283%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Number</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.157%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>Product Quality Amount</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td bgcolor="#C0C0C0" width="29.56%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p style="font-weight: bold;">Decline</p>
+                    </td>
+                    <td width="20.283%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Text</p>
+                    </td>
+                    <td width="50.157%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>Must match a Formulaic Decline Type (Linear, Hyperbolic, etc) in esi.manage</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="29.56%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p style="font-weight: bold;">b-exp</p>
+                    </td>
+                    <td width="20.283%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Number</p>
+                    </td>
+                    <td width="50.157%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td bgcolor="#C0C0C0" width="29.56%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p style="font-weight: bold;font-style: normal;">Decline Rate</p>
+                    </td>
+                    <td width="20.283%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Decimal or Percentage</p>
+                    </td>
+                    <td width="50.157%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>Whole Number with % (12%) or Decimal (.12)</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="29.56%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p style="font-weight: bold;font-style: normal;">Interval</p>
+                    </td>
+                    <td width="20.283%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Text</p>
+                    </td>
+                    <td width="50.157%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>Must match an Interval option (Daily, Monthly, Annual, etc.) in esi.manage</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td colspan="1" rowspan="1" bgcolor="#C0C0C0" width="29.56%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p style="font-style: normal;font-weight: normal;font: bold;">Shrinkage</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.283%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Decimal or Percentage</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.157%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>Whole Number with % (3%) or Decimal (.03). See Data Relationship Rule 
+ 3</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="29.56%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p style="font-weight: bold;font-style: italic;">Offstream Date</p>
+                    </td>
+                    <td width="20.283%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Date</p>
+                    </td>
+                    <td width="50.157%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>yyyy-mm-dd. See Data Relationship Rule 2</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td colspan="1" rowspan="1" bgcolor="#C0C0C0" width="29.56%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body3">
+                        <p style="font-weight: bold;font-style: italic;">Offstream Rate</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.283%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p>Number</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.157%" class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body3">
+                        <p>See Data Relationship Rule 2</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p><span style="font-weight: bold;">Bolded</span> items are mandatory.</p>
+        <p class="note"><b>Note:</b><span style="font-weight: normal;"><span>If</span>
+ you are supplying a Product Quality, then a Product Quality Unit must 
+ be supplied as well.</span>
+        </p>
+        <h3>&#160;</h3>
+        <h3>Data Relationship Rules</h3>
+        <p><span style="font-weight: bold;">Rule 1</span>: Offstream Date/Rate</p>
+        <p>Either Offstream Date or Rate must supplied for each segment identified 
+ in the import file.</p>
+        <p><span style="font-weight: bold;">Rule 2</span>: Shrinkage</p>
+        <p>If left empty, Shrinkage will be defaulted to 0%.</p>
+        <p>&#160;</p>
+        <h3>For Tabular Production Segments</h3>
+        <table style="width: 84.574%;mc-table-style: url('../Resources/TableStyles/HelpFileTableStylesheet.css');" cellspacing="0" width="84.574%" class="TableStyle-HelpFileTableStylesheet">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-Header1">DESCRIPTION</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">FORMAT</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-Header1">VALIDATION RULE</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="29.56%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p style="font-weight: bold;">Import Type</p>
+                    </td>
+                    <td width="20.283%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Text</p>
+                    </td>
+                    <td width="50.157%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>Must be "Table"</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td colspan="1" rowspan="1" bgcolor="#C0C0C0" width="29.56%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p style="font-weight: bold;font-style: normal;">Product</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.283%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Text</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.157%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>Must match a Product Description as defined in the Products table</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td colspan="1" rowspan="1" bgcolor="#C0C0C0" width="29.56%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p style="font-weight: bold;font-style: normal;">OnStream Date &#160;- 
+ Ignored</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.283%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Date</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.157%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>yyyy-mm-dd</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td bgcolor="#C0C0C0" width="29.56%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p style="font-weight: bold;">Initial Production - Ignored</p>
+                    </td>
+                    <td width="20.283%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Number</p>
+                    </td>
+                    <td width="50.157%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="29.56%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p style="font-weight: bold;font-style: italic;">Production Rate</p>
+                    </td>
+                    <td width="20.283%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Text</p>
+                    </td>
+                    <td width="50.157%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>Must match a Production Rate (i.e., bbld/d) Unit in esi.manage</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td colspan="1" rowspan="1" bgcolor="#C0C0C0" width="29.56%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p style="font-style: normal;font-weight: normal;font: bold;">Product Quality Unit</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.283%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Text</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.157%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>Must match a Product Quality Unit description in esi.manage</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td colspan="1" rowspan="1" bgcolor="#C0C0C0" width="29.56%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p style="font-style: normal;font-weight: normal;font: bold;">Product Quality</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.283%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Number</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.157%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>The corresponding Product Quality</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td colspan="1" rowspan="1" bgcolor="#C0C0C0" width="29.56%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p style="font-weight: bold;font-style: normal;">Gross Production Volume</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.283%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Number</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.157%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="29.56%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p style="font-weight: bold;font-style: normal;">Start Date</p>
+                    </td>
+                    <td width="20.283%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Date</p>
+                    </td>
+                    <td width="50.157%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>yyyy-mm-dd</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td bgcolor="#C0C0C0" width="29.56%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p style="font-weight: bold;font-style: normal;">End Date</p>
+                    </td>
+                    <td width="20.283%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Date</p>
+                    </td>
+                    <td width="50.157%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>yyyy-mm-dd</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td colspan="1" rowspan="1" bgcolor="#C0C0C0" width="29.56%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p style="font-weight: normal;font-style: normal;font: bold;">Shrinkage</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.283%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Decimal or Percentage</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="50.157%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>Whole Number with % (3%) or Decimal (.03)</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td bgcolor="#C0C0C0" width="29.56%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body3">
+                        <p style="font: bold;">OffStream Date - Ignored</p>
+                    </td>
+                    <td width="20.283%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p>Date</p>
+                    </td>
+                    <td width="50.157%" class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p class="note"><b>Note:</b> Columns which are labelled as Ignored and 
+ are Bold (OnStream Date, Initial Production Rate) must be supplied in 
+ the correct format, but their data is not used. OffStream Date can be 
+ empty, if not it must be in the correct format, however, the data will 
+ be ignored. The Initial Production, Onstream Date, and Offstream Date 
+ are determined from the actual data being imported.</p>
+        <p style="font-weight: normal;">If you are supplying a Product Quality, 
+ then a Product Quality Unit must be supplied as well.</p>
+        <h3>&#160;</h3>
+        <h3>Data Relationship Rules</h3>
+        <p><span style="font-weight: bold;">Rule 1</span>: Shrinkage</p>
+        <p>If left empty, Shrinkage will be defaulted to 0%.</p>
+    </body>
+</html>

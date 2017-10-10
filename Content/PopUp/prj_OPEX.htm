@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="501" MadCap:lastWidth="978">
+    <head><title>Project Relationships: Opex</title>
+        <link rel="StyleSheet" href="../Resources/Stylesheets/popUp.css" />
+    </head>
+    <body>
+        <h3>OPEX </h3>
+        <p style="font-weight: bold;">Fixed OPEX </p>
+        <p>Each Fixed OPEX entry must be associated against an Asset.</p>
+        <ul>
+            <li class="Bullets">The OPEX Entry is <span style="font-weight: bold;font-style: italic;">initialized</span> with 
+ the <span style="font-weight: bold;">WI%</span> and <span style="font-weight: bold;">POS%</span> 
+ of the Asset</li>
+        </ul>
+        <p>An OPEX Entry can be made <span style="font-weight: bold;">Dependent</span> 
+ on an Expenditure, in which case:</p>
+        <ul>
+            <li class="Bullets">&#160;The 
+ POS% is <span style="font-weight: bold;font-style: italic;">calculated</span> 
+ as the <span style="font-weight: bold;">NPD%</span> of that Expenditure.</li>
+            <li class="Bullets">Updates to that NPD% will 
+ propagate to the OPEX item.</li>
+            <li class="Bullets">The Start Date for the 
+ OPEX entry must be <span style="font-weight: bold;">later than</span> 
+ the End Date of that Expenditure.</li>
+        </ul>
+        <p style="font-weight: bold;"><span>Variable OPEX </span>
+        </p>
+        <p>Each Variable OPEX entry must either be associated against a <span style="font-weight: bold;">specific 
+ Asset</span>, or the <span style="font-weight: bold;">All Assets</span> 
+ option. </p>
+        <p>In the latter case:</p>
+        <ul>
+            <li class="Bullets">The Variable OPEX entry 
+ will be associated with <span style="font-weight: bold;">every</span> 
+ Asset within the Project.</li>
+        </ul>
+        <p>The Variable OPEX entry must identify a <span style="font-weight: bold;">Product</span>, 
+ which results in:</p>
+        <ul>
+            <li class="Bullets">&#160;The 
+ 'matching' (Asset and Product) <span style="font-weight: bold;">periodic</span> 
+ Production is used to determine the resultant Variable OPEX <span style="font-weight: bold;">amount</span>.</li>
+            <li class="Bullets">The POS% and WI% are <span style="font-weight: bold;">implicit</span> from the matching Production 
+ segment(s).</li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1044" MadCap:lastWidth="1221">
+    <head><title>Ownership Overview</title>
+        <link rel="StyleSheet" href="../../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <img src="../../Images/Logo Images/3esi_manage.png" align="right" border="0" class="HeaderLogo" />
+        <h1>Ownership Overview</h1>
+        <ul style="list-style: disc;" type="disc">
+            <li>The Ownership Tab provides the function to add 
+ time-variant working interest.<img src="../../Images/Ownership Tab.PNG" style="border: none;width: 85px;height: 21px;float: none;border-style: none;border-style: none;" width="85" height="21" border="0" /></li>
+            <li>The Ownership tab allows one to input WI% by project 
+ or by asset (subset of a project) and for all measures or individually (Expenditure types, 
+ Products or OPEX).</li>
+            <li>By entering data into a cell, esi.manage will 
+ automatically populate the subsequent months or years with the same number.</li>
+            <li>WI% is inherited down the Ownership levels and 
+ down the Measures. For example, if the project level had ownership configured, 
+ the asset level would automatically inherit the WI% from the Project level 
+ unless it was manually overwritten. Likewise, WI% configured in All Measures 
+ would feed down to the other measures who would inherit the data. Inherited 
+ WI% is denoted by a tinted shading in the WI% fields, see below.</li>
+            <li>When data has been written to the ownership tables, 
+ a pencil icon will appear. See below, next to Asset for example.</li>
+            <li>Ownership can also be configured across multiple 
+ projects that sit in the same hierarchy group. This is done in the <a href="../../Configuration Perspective/Defaults/Ownership.htm">default Ownership</a> page of the Configuration perspective.</li>
+        </ul>
+        <p style="text-align: left;">
+            <img src="../../Images/_ownership_overview.png" />
+        </p>
+        <p>In the screenshot above, there are several pieces of information can 
+ be taken away from it besides the obvious meaning of the values shown.</p>
+        <ol style="list-style: decimal;list-style-type: decimal;">
+            <li>Because Bakken Base Well 1 is highlighted yellow, 
+ its value is being inherited from the level above it. &#160;In 
+ this case, the only level above Asset/All Measures is Project/All measures. 
+ &#160;This means 
+ that at the highest possible level, on the Project/All measures screen, 
+ there is a value of 20% entered. &#160;If 
+ you were to create a new asset then, it would automatically inherit this 
+ 20% WI%.</li>
+            <li>There are no pencils next to the measures (Expenditure, 
+ Fixed OPEX, Production), so you can assume that the values entered on 
+ this page will be inherited by all the levels below it without being changed. 
+ &#160;This means 
+ that for each measure associated with each asset, it will have the WI% 
+ displayed here for the asset it is associated with.</li>
+        </ol>
+    </body>
+</html>

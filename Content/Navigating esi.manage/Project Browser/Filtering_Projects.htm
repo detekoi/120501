@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="3291" MadCap:lastWidth="1261">
+    <head><title>Filtering Projects</title>
+        <link rel="stylesheet" href="../../Resources/Stylesheets/default.css" type="text/css" />
+        <style>
+p.whs1
+{
+	text-align: right;
+}
+li.whs1
+{
+	text-align: right;
+}
+img_whs2
+{
+	border: none;
+	width: 36px;
+	height: 44px;
+	float: none;
+	border-style: none;
+}
+p.whs3
+{
+	font-weight: bold;
+	font-size: 14pt;
+}
+li.whs3
+{
+	font-weight: bold;
+	font-size: 14pt;
+}
+p.whs4
+{
+	font-weight: normal;
+}
+li.whs4
+{
+	font-weight: normal;
+}
+p.whs5
+{
+	font-weight: normal;
+	font-size: 12pt;
+}
+li.whs5
+{
+	font-weight: normal;
+	font-size: 12pt;
+}
+img_whs6
+{
+	border: none;
+	float: none;
+	border-style: none;
+	width: 238px;
+	height: 320px;
+}
+img_whs7
+{
+	border: none;
+	width: 1096px;
+	height: 293px;
+	float: none;
+	border-style: none;
+}
+img_whs8
+{
+	border: none;
+	width: 1098px;
+	height: 289px;
+	float: none;
+	border-style: none;
+}
+
+</style>
+        <style>
+div.WebHelpPopupMenu
+{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 4;
+	visibility: hidden;
+}
+
+</style>
+        <script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">/*<![CDATA[*/
+<!--
+ if (navigator.appName !="Netscape")
+ { document.write("<link rel='stylesheet' href='default.css'>");}
+ //-->
+/*]]>*/</script> <script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">/*<![CDATA[*/
+<!--
+ function reDo() {
+ if (innerWidth != origWidth || innerHeight != origHeight)
+ location.reload();
+ }
+ if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+ origWidth = innerWidth;
+ origHeight = innerHeight;
+ onresize = reDo;
+ }
+ onerror = null; 
+ //-->
+/*]]>*/</script> <script type="text/javascript" language="javascript1.2" src="../../Archived/whmsg.js"></script> <script type="text/javascript" language="javascript" src="../../Archived/whver.js"></script> <script type="text/javascript" language="javascript1.2" src="../../Archived/whproxy.js"></script> <script type="text/javascript" language="javascript1.2" src="../../Archived/whutils.js"></script> <script type="text/javascript" language="javascript1.2" src="../../Archived/whtopic.js"></script></head>
+    <body>
+        <h3>
+            <img src="../../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />
+        </h3>
+        <h1>Filtering Projects</h1>
+        <p>To use the Project Browser, a Budget must be selected as the Source. 
+ The Project Browser, shown below, is comprised of a number of Filtering 
+ nodes. By default, a Node shown in the list below is not activated until 
+ it is Toggled on (the check- mark against the Hierarchy Node). Only then 
+ will esi.manage retrieve the items from the database that fall under that 
+ node. To make the interaction with the Project Browser as efficient as 
+ possible, only enable nodes when you want to filter against their elements.</p>
+        <ul>
+            <li class="Bullets"><span style="font-weight: bold;">Projects</span> 
+ - a list of all Projects in the selected Budget. </li>
+            <li class="Bullets"><span style="font-weight: bold;">Hierarchy</span> 
+ - your company's Hierarchy, in the tree structure as shown in the <a href="../../Project Editor/Project Details/Hierarchy.htm">Project 
+ Details</a>. </li>
+            <li class="Bullets"><span style="font-weight: bold;">Product</span> 
+ - will expand to the list of products in your configuration.</li>
+        </ul>
+        <p>The remaining nodes will each expand with appropriate entries. The image 
+ at left shows the initial configuration of the Project Browser, while 
+ the Right shows the state after turning on some Filters.</p>
+        <p>
+            <img src="../../Images/project_browser_Opening_view.png" />
+            <img src="../../Images/proj_brows_hier_filter.png" />
+        </p>
+        <p>&#160;</p>
+        <p>The various Filtering Criteria are applied against the Projects which 
+ are part of the selected Budget. The rule for combining Filtering options 
+ is:</p>
+        <ul>
+            <li class="Bullets"><span style="font-weight: bold;">Within 
+ a Node</span> - OR - using the image above, projects which have Gas 
+ OR Oil  as a Production segment would be potentially in the Projects 
+ List. &#160;Note 
+ this is not an exclusive OR where a filter with more than one of these 
+ production streams would be excluded, but rather an AND/OR logic.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Between 
+ Nodes</span> - AND - satisfy the criteria above, AND have a Forecasted 
+ Expenditures in 2015</li>
+        </ul>
+        <p>Items which have been collapsed, but have a select all Filtering applied 
+ under them, will show with a Green Check Mark (Region for example). </p>
+        <p>
+            <img src="../../Images/project_browser_select_all_below.png" style="border: none;width: 82px;height: 18px;float: none;border-style: none;border-style: none;" width="82" height="18" border="0" />
+        </p>
+        <p>Items which have select a specific Filtering applied under them, will 
+ show with a Double Green Check Mark (Region for example).</p>
+        <p>
+            <img src="../../Images/project_browser_select_specific_below.png" style="border: none;float: none;width: 101px;height: 54px;border-style: none;border-style: none;" width="101" height="54" border="0" />
+        </p>
+        <p>The Projects List will refresh with the list of Projects which match 
+ the selected criteria. For example, if the Filtering was applied to a 
+ specific Expenditure Forecast Year, all Projects that have an Expenditure 
+ that occurs in 2015 will be shown.</p>
+        <p>
+            <img src="../../Images/Project_Browser-1.png" style="border: none;float: none;border-style: none;border-style: none;" border="0" />
+        </p>
+        <p>&#160;</p>
+        <p>The Right-Click menu from the Project Browser enables you to:</p>
+        <ul>
+            <li class="Bullets">Show Active and Inactive 
+ Hierarchy Types: View hierarchy elements that are configured to not be 
+ Active or shown in the Project Browser.</li>
+            <li class="Bullets">Toggle Selections: toggle 
+ between filtered and not filtered, or toggle between static and dynamic 
+ filters.</li>
+            <li class="Bullets">Toggle Sub-Items: toggle 
+ all of the items within the current sub hierarchy.</li>
+            <li class="Bullets">Clear Sub-Items: removes 
+ all filters for Sub-Items.</li>
+            <li class="Bullets">Clear All: removes all 
+ filters.</li>
+            <li class="Bullets">Set As Active Selection: 
+ sets the selected filter as the Active Selection in the Project Browser.</li>
+        </ul>
+        <p>
+            <img src="../../Images/project_browser_Toggle.png" style="border: none;border-style: none;float: none;width: 300px;height: 213px;border-style: none;" width="300" height="213" border="0" />
+        </p>
+        <p>&#160;</p>
+        <p>You have the option of creating a <span style="font-weight: bold;">Project 
+ Set</span> from the current Filtering criteria. Click the create new project 
+ set button at top of the Project Browser window <img src="../../Images/button-make-projectset-from-active-selection.png" />. The 
+ <span style="font-weight: bold;">Project Set</span> is saved for future 
+ use and will appear in the Navigator Window.</p>
+        <p>
+            <img src="../../Images/_ProjectSetDetails.png" />
+        </p>
+    </body>
+</html>

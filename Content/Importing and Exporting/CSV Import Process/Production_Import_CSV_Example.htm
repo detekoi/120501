@@ -1,0 +1,872 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="922" MadCap:lastWidth="1796">
+    <head>
+        <link href="../../Resources/TableStyles/HelpFileTableStylesheet.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Production Import CSV Example</title>
+        <link rel="stylesheet" href="../../Resources/Stylesheets/default.css" type="text/css" />
+        <style>
+h1.whs1
+{
+	text-align: right;
+}
+li.mc-h1-Cwhs1
+{
+	text-align: right;
+}
+img_whs2
+{
+	border: none;
+	width: 36px;
+	height: 44px;
+	float: none;
+	border-style: none;
+}
+h1.whs3
+{
+	font-size: 14pt;
+}
+li.mc-h1-Cwhs3
+{
+	font-size: 14pt;
+}
+table.whs4
+{
+	x-cell-content-align: top;
+	width: 100%;
+	border-spacing: 0px;
+}
+col.whs5
+{
+	width: 7.692%;
+}
+tr.whs6
+{
+	x-cell-content-align: top;
+}
+td.whs7
+{
+	width: 7.692%;
+	background-color: #008000;
+	border-left-style: Solid;
+	border-left-color: #000000;
+	border-left-width: 1px;
+	border-top-width: 1px;
+	border-top-color: #000000;
+	border-top-style: Solid;
+	border-right-style: Solid;
+	border-right-color: #000000;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: Solid;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+p.whs8
+{
+	color: #00ff00;
+	font-weight: bold;
+	font-size: 10pt;
+}
+li.whs8
+{
+	color: #00ff00;
+	font-weight: bold;
+	font-size: 10pt;
+}
+td.whs9
+{
+	width: 7.692%;
+	background-color: #008000;
+	border-top-width: 1px;
+	border-top-color: #000000;
+	border-top-style: Solid;
+	border-right-style: Solid;
+	border-right-color: #000000;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: Solid;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+td.whs10
+{
+	width: 7.692%;
+	background-color: #ffff00;
+	border-left-style: Solid;
+	border-left-color: #000000;
+	border-left-width: 1px;
+	border-right-style: Solid;
+	border-right-color: #000000;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: Solid;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+p.whs11
+{
+	font-weight: bold;
+	font-size: 10pt;
+}
+li.whs11
+{
+	font-weight: bold;
+	font-size: 10pt;
+}
+td.whs12
+{
+	width: 7.692%;
+	border-right-style: Solid;
+	border-right-color: #000000;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: Solid;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+p.whs13
+{
+	font-size: 10pt;
+}
+li.whs13
+{
+	font-size: 10pt;
+}
+
+</style>
+        <style>
+div.WebHelpPopupMenu
+{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 4;
+	visibility: hidden;
+}
+
+</style>
+        <script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">/*<![CDATA[*/
+<!--
+ if (navigator.appName !="Netscape")
+ { document.write("<link rel='stylesheet' href='default.css'>");}
+ //-->
+/*]]>*/</script> <script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">/*<![CDATA[*/
+<!--
+ function reDo() {
+ if (innerWidth != origWidth || innerHeight != origHeight)
+ location.reload();
+ }
+ if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+ origWidth = innerWidth;
+ origHeight = innerHeight;
+ onresize = reDo;
+ }
+ onerror = null; 
+ //-->
+/*]]>*/</script> <script type="text/javascript" language="javascript1.2" src="../../Archived/whmsg.js"></script> <script type="text/javascript" language="javascript" src="../../Archived/whver.js"></script> <script type="text/javascript" language="javascript1.2" src="../../Archived/whproxy.js"></script> <script type="text/javascript" language="javascript1.2" src="../../Archived/whutils.js"></script> <script type="text/javascript" language="javascript1.2" src="../../Archived/whtopic.js"></script></head>
+    <body>
+        <h1 class="whs1" style="text-align: right;" align="right">
+            <img src="../../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />
+        </h1>
+        <h2>Production Details Import CSV Example</h2>
+        <p>The following is an example of the structure of a fully constructed 
+ CSV file ready to be imported. All the fields are in the right order and 
+ formatted correctly.</p>
+        <p>&#160;</p>
+        <table class="TableStyle-HelpFileTableStylesheet" style="mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');width: 1798;" height="236" cellspacing="0">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-Header1" valign="top" style="height: 57px;">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-Header1" width="7.856%">
+                        <p class="whs8">Type</p>
+                        <p>&#160;</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1" width="7.856%">
+                        <p class="whs8">System</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1" width="7.856%">
+                        <p class="whs8">Identifier</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1" width="4.578%">
+                        <p class="whs8">Asset</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1" width="3.705%">
+                        <p class="whs8">UWI</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1" width="8.602%">
+                        <p class="whs8">Project</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1" width="8.969%">
+                        <p class="whs8">Start</p>
+                    </th>
+                    <th colspan="1" rowspan="1" bgcolor="#008000" width="7.856%" class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p class="whs8">End</p>
+                    </th>
+                    <th colspan="1" rowspan="1" bgcolor="#008000" width="7.856%" class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p class="whs8">Product</p>
+                    </th>
+                    <th colspan="1" rowspan="1" bgcolor="#008000" width="7.856%" class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p class="whs8">Gross Volume</p>
+                    </th>
+                    <th colspan="1" rowspan="1" bgcolor="#008000" width="7.856%" class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p class="whs8">Net Volume</p>
+                    </th>
+                    <th colspan="1" rowspan="1" bgcolor="#008000" width="7.856%" class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p class="whs8">NetNet Volume</p>
+                    </th>
+                    <th colspan="1" rowspan="1" bgcolor="#008000" width="7.856%" class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p class="whs8">Volume Units</p>
+                    </th>
+                    <th colspan="1" rowspan="1" bgcolor="#008000" class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p class="whs8">Net Revenue</p>
+                    </th>
+                    <th colspan="1" rowspan="1" bgcolor="#008000" class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p class="whs8">NetNet Revenue</p>
+                    </th>
+                    <th colspan="1" rowspan="1" bgcolor="#008000" class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p class="whs8">Revenue Units</p>
+                        <p class="whs8">&#160;</p>
+                    </th>
+                    <th colspan="1" rowspan="1" bgcolor="#008000" class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p class="whs8">Product Quality</p>
+                    </th>
+                    <th colspan="1" rowspan="1" bgcolor="#008000" class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p class="whs8">Product Quality Units</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-Header1" width="23.411%">
+                        <p class="whs8">Reserve Classification</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2" valign="top">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2" width="7.856%">
+                        <p class="whs11" style="font: bold;">Forecast</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" width="7.856%">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" width="7.856%">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" width="4.578%">
+                        <p>Well 1</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" width="3.705%">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" width="8.602%">
+                        <p style="font-size: 10pt;"><span style="font-size: 10pt;">Eagle Ford A</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" width="8.969%">
+                        <p>2015-01-01</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>2015-01-31</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Oil</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>1000</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>bbl</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2" width="23.411%">
+                        <p class="whs13">1P</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td colspan="1" rowspan="1" bgcolor="#FFFF00" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p style="font-weight: bold;">Forecast</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="4.578%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="whs13">Well 1</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="3.705%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="8.602%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;"><span style="font-size: 10pt;">Eagle Ford A</span>
+                        </p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="8.969%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>2015-02-01</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>2015-02-28</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Oil</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>900</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>bbl</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="23.411%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p class="whs13">1P</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td colspan="1" rowspan="1" bgcolor="#FFFF00" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p style="font-weight: bold;">Forecast</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="4.578%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="whs13">Well 1</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="3.705%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="8.602%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Eagle Ford A</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="8.969%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>2015-03-01</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>2015-03-31</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Oil</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>800</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>bbl</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="23.411%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p class="whs13">1P</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td colspan="1" rowspan="1" bgcolor="#FFFF00" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p class="whs11" style="font: bold;">Forecast</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="4.578%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="whs13">Well 1</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="3.705%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="8.602%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Eagle Ford A</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="8.969%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>2015-01-01</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>2015-01-31</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Oil</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>1650</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>bbl</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="23.411%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>2P</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td colspan="1" rowspan="1" bgcolor="#FFFF00" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p style="font-weight: bold;">Forecast</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="4.578%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="whs13">Well 1</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="3.705%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="8.602%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Eagle Ford A</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="8.969%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>2015-02-01</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>2015-02-28</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Oil</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>1485</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>bbl</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="23.411%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p class="whs13">2P</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td colspan="1" rowspan="1" bgcolor="#FFFF00" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p class="whs11" style="font: bold;">Forecast</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="4.578%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="whs13">Well 1</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="3.705%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="8.602%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">Eagle Ford A</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="8.969%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>2015-03-01</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>2015-03-31</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Oil</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>1320</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>bbl</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="23.411%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p class="whs13">2P</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td colspan="1" rowspan="1" bgcolor="#FFFF00" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p style="font-weight: bold;">Field Est</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="whs13">Field Capture</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="whs13">EX-FC-001</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="4.578%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="3.705%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="8.602%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="8.969%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>2015-01-01</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>2015-01-31</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Oil</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>3300</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>3100</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>bbl</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="23.411%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td colspan="1" rowspan="1" bgcolor="#FFFF00" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p class="whs11" style="font: bold;">Field Est</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="whs13">Field Capture</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="whs13">EX-FC-001</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="4.578%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="3.705%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="8.602%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="8.969%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="whs13">2015-02-01</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="whs13">2015-02-28</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="whs13">Oil</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="whs13">6400</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>6200</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="whs13">bbl</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="23.411%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td colspan="1" rowspan="1" bgcolor="#FFFF00" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p class="whs11" style="font: bold;">Field Est</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="whs13">Field Capture</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="whs13">EX-FC-001</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="4.578%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="3.705%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="8.602%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="8.969%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="whs13">2015-01-01</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="whs13">2015-01-31</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="whs13">Gas</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="whs13">19000</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>17000</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="whs13">mcf</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="23.411%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td colspan="1" rowspan="1" bgcolor="#FFFF00" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body3">
+                        <p class="whs11" style="font: bold;">Field Est</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p class="whs13">Field Capture</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p class="whs13">EX-FC-001</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="4.578%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="3.705%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="8.602%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="8.969%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p class="whs13">2015-02-01</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p class="whs13">2015-02-28</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p class="whs13">Gas</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p class="whs13">18000</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p>16000</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="7.856%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p class="whs13">mcf</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="23.411%" class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body3">
+                        <p class="whs13">&#160;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p style="font-weight: bold;">Note That:</p>
+        <ol>
+            <li class="NumberedList">Production Imports 
+ will aggregate - Lines 1 and 4 will be added as their Identifiers, Dates 
+ and Products are the same. The same for Lines 2 and 5, and lines 3 and 6.</li>
+            <li class="NumberedList">The Target can 
+ also be identified by the Asset Name/UWI/Project Name combination as shown 
+ in row 6.</li>
+            <li class="NumberedList">If there is no 
+ existing Production Segment when an Import is encountered (i.e, Row 6), 
+ a Production Segment is first created and then the data imported into 
+ it.</li>
+        </ol>
+    </body>
+</html>

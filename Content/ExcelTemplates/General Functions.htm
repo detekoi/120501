@@ -1,0 +1,838 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="6" MadCap:lastHeight="2772" MadCap:lastWidth="1436">
+    <head>
+        <link href="../Resources/TableStyles/HelpFileTableStylesheet.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+        <link href="../Resources/Stylesheets/HelpFileStylesheet2.css" rel="stylesheet" />
+    </head>
+    <body>
+        <p>
+            <img src="../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />
+        </p>
+        <h2>General Functions</h2>
+        <p>***THIS FEATURE IS BEING DEPRECATED. PLEASE MIGRATE ALL EXCEL DATA LOAD TEMPLATES TO THE NEW FORMAT***</p>
+        <table style="mc-table-style: url('../Resources/TableStyles/HelpFileTableStylesheet.css');" class="TableStyle-HelpFileTableStylesheet" cellspacing="0">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-Header1"><b>Function</b>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1"><b>Description</b>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1"><b>Example</b>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-Header1"><b>Result</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>CASE</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Return a matching value from a list of matches. The first argument is the “input” which is compared to each first member of the following list of pairs.</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>CASE(2, 1, 10, 2, 20, 3, 30)</p>
+                        <p>CASE(4, 1, 10, 2, 20, 3, 30)</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>20</p>
+                        <p>(null)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>IF</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Return either of two values based on Boolean condition</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>IF(2&gt;1, “A”)</p>
+                        <p>IF(1&gt;2, “A”)</p>
+                        <p>IF(2&gt;1, “A”, “B”)</p>
+                        <p>IF(1&gt;2, “A”, “B”)</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>“A”</p>
+                        <p>(null)</p>
+                        <p>“A”</p>
+                        <p>“B”</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body2">
+                        <p>.</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2">
+                        <p>The dot (.) operator allows an alternate, and more convenient, way of expressing nested function calls</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2">
+                        <p>GET(SPLIT(“A-B-C”, “-“), 2)</p>
+                        <p>SPLIT(“A-B-C”, “-“).GET(2)</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body2">
+                        <p>“B”</p>
+                        <p>“B”</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h3><b>Date Functions</b>
+        </h3>
+        <p>For the purpose of the examples, D = “Jan 2, 2013”, DT = Jan 2, 2013 2:30 PM</p>
+        <table style="mc-table-style: url('../Resources/TableStyles/HelpFileTableStylesheet.css');" class="TableStyle-HelpFileTableStylesheet" cellspacing="0">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-Header1"><b>Function</b>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1"><b>Description</b>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1"><b>Example</b>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-Header1"><b>Result</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>ADD_YEARS</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Add the specified number of years to a Date</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>ADD_YEARS(D, 2)</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>Jan 2, 2015</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>ADD_QUARTERS</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Add the specified number of quarters to a Date</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>ADD_QUARTERS(D, 2)</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>Jul 2, 2013</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>ADD_MONTHS</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Add the specified number of months to a Date</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>ADD_MONTHS(D, 2)</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>Apr 2, 2015</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>ADD_WEEKS</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Add the specified number of weeks to a Date</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>ADD_WEEKS(D, 2)</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>Jan 16, 2015</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>ADD_DAYS</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Add the specified number of days to a Date</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>ADD_DAYS(D, 2)</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>Jan 4, 2015</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>IS_DATE</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Returns true if argument is a date or can be parsed to a date; false otherwise</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>IS_DATE(D)</p>
+                        <p>IS_DATE(7.0)</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>True</p>
+                        <p>False</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body2">
+                        <p>DATE_TO_STRING</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2">
+                        <p>Convert a Date to a String (Text) according to a specific pattern</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2">
+                        <p>DATE_TO_STRING(DT, “yyyy-MM-dd HH:mm:ss”)</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body2">
+                        <p>“2013-01-02 14:30:00”</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h3><b>Numerical Operators</b>
+        </h3>
+        <table style="mc-table-style: url('../Resources/TableStyles/HelpFileTableStylesheet.css');" class="TableStyle-HelpFileTableStylesheet" cellspacing="0">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-Header1"><b>Function</b>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1"><b>Description</b>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1"><b>Example</b>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-Header1"><b>Result</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>!=</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Not equals</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>1 != 2</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>True</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>==</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Equals</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>1 == 2</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>False</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>+</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Addition</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>1 + 2</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>3</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>-</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Subtraction</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>1 – 2</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>-1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>*</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Multiplication</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>1 * 2</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>2</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>/</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Division</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>1 / 2</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>0.5</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>&lt;</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Less Than</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>1 &lt; 2</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>True</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>&lt;=</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Less than or equal to</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>1 &lt;= 2</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>True</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>&gt;</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Greater than</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>1 &gt; 2</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>False</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>&gt;=</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Greater than or equal to</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>1 &gt;= 2</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>False</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>UMINUS</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Reverse the sign of a number</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>UMINUS(1)</p>
+                        <p>UMINUS(-1)</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>-1</p>
+                        <p>1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body3">
+                        <p>ABS</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p>Absolute value</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p>ABS(-1)</p>
+                        <p>ABS(1)</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body3">
+                        <p>1</p>
+                        <p>1</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h3><b>Boolean Operators</b>
+        </h3>
+        <table style="mc-table-style: url('../Resources/TableStyles/HelpFileTableStylesheet.css');" class="TableStyle-HelpFileTableStylesheet" cellspacing="0">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-Header1"><b>Function</b>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1"><b>Description</b>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1"><b>Example</b>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-Header1"><b>Result</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>&amp;&amp;</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Logical AND</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>1 &gt; 2 &amp;&amp; 2 &gt; 1</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>False</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>||</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Logical OR</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>1 &gt; 2 || 2 &gt; 1</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>True</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body2">
+                        <p>!</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2">
+                        <p>Logical NOT</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2">
+                        <p>!(1 &gt; 2)</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body2">
+                        <p>True</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h3><b>String Functions and Operators</b>
+        </h3>
+        <p>For the purpose of the examples, S = “Hello”, SS = “ Hello_World ”</p>
+        <table style="mc-table-style: url('../Resources/TableStyles/HelpFileTableStylesheet.css');" class="TableStyle-HelpFileTableStylesheet" cellspacing="0">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-Header1"><b>Function</b>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1"><b>Description</b>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1"><b>Example</b>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-Header1"><b>Result</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>MID</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Extract characters from middle of a string</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>MID(S, 2)</p>
+                        <p>MID(S, 2, 3)</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>“ello”</p>
+                        <p>“ell”</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>CONTAINS</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Determine if a string contains another string</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>CONTAINS(S, “ell”)</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>true</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>SPLIT</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Split a string into pieces</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>SPLIT(SS, “_”)</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>[“ Hello”, “World “]</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>TRIM</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Trim whitespace of the ends of a string</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>TRIM(SS)</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>“Hello_World”</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>LEN</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Return the length of a string</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>LEN(S)</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>5</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>STRIPCHARS</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Strip a specified number of characters of the start and end of a string</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>STRIPCHARS(S,2,1)</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>“ll”</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>REPLACE</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Replace occurrences of text within a string</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>REPLACE(S, “l”, “x”)</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>“Hexxo”</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>!=</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Not equal to</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>“Black” !=&#160; “White”</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>True</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>==</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Equal to</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>“Black” == “White”</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>False</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>+</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Concatenation</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>“Black” + “White”</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>“BlackWhite”</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>ISBLANK</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Returns true if argument is null, empty string, or just whitespace</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>ISBLANK(S)</p>
+                        <p>ISBLANK(“”)</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>False</p>
+                        <p>True</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>COALESCE_WHITESPACE</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Coalesce mixed whitespace characters between words into a single space</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>COALESCE_WHITESPACE(“&#160;&#160; Hello&#160;&#160; \n\r\t&#160;&#160; World&#160;&#160; “)</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>“Hello World”</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>STARTSWITH</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Test if a string starts with another string</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>STARTSWITH(“Hello”, “He”)</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>True</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body3">
+                        <p>ENDSWITH</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p>Test if a string ends with another string</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p>ENDSWITH(“Hello”, “lo”)</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body3">
+                        <p>True</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h3><b>Vector Functions</b>
+        </h3>
+        <p>Vector functions expect a vector as input and produce a scalar value. For the purpose of the examples, V = {0, 1, 2}j</p>
+        <table style="mc-table-style: url('../Resources/TableStyles/HelpFileTableStylesheet.css');" class="TableStyle-HelpFileTableStylesheet" cellspacing="0">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-Header1"><b>Function</b>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1"><b>Description</b>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1"><b>Example</b>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-Header1"><b>Result</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">&#160;</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>COUNT</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Return the number of elements in a Vector</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>COUNT(V)</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>3</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>GET</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Return the n-th element of a Vector</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>GET(V,2)</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>SUM</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Return the sum of the elements of a Vector</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>SUM(V)</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>3</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>AVG</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Return the average of the elements of a Vector</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>AVG(V)</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>MIN</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Return the minimum of the elements of a Vector</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>MIN(V)</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>MAX</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Return the maximum of the elements of a Vector</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>MAX(V)</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>2</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body3">
+                        <p>FIRSTNONZERO</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p>Return the first non-zero element of a Vector</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p>FIRSTNONZERO(V)</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body3">
+                        <p>1</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h3><b>Special Variables</b>
+        </h3>
+        <p>There are 6 special variables defined in the EDL.</p>
+        <ul style="list-style-type: square;margin-left: 19pt;">
+            <li style="list-style-type: square;">CDL_IMPORT_TIME: The date/time when the import job was run</li>
+            <li style="list-style-type: square;">CDL_IMPORT_USER: The user logged in when import job was run</li>
+            <li style="list-style-type: square;">CDL_TEMPLATE_OWNER: Owner of the template</li>
+            <li style="list-style-type: square;">CDL_TEMPLATE_NAME: Name of template</li>
+            <li style="list-style-type: square;">CDL_TEMPLATE_ID: Database ID of template</li>
+            <li style="list-style-type: square;">CDL_SHEET_NAME: The name of the Excel Worksheet for the current Attribute, Time-Series, or Data-Series mapping.</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 55pt;">
+            <li style="list-style-type: circle;">This variable takes on different values based on the context of where it is used (i.e. the ‘sheet’ of the mapping where it is used)</li>
+            <li style="list-style-type: circle;">For repeat-worksheet templates, this variable takes on the value of the appropriate worksheet, as the EDL iterates over the worksheet groups</li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="2583" MadCap:lastWidth="1471">
+    <head><title>Custom Burdens</title>
+        <link rel="StyleSheet" href="../../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <h2>
+            <img src="../../Images/Logo Images/3esi_manage.png" align="right" border="0" class="HeaderLogo" />
+        </h2>
+        <h1>Custom Burdens</h1>
+        <ul>
+            <li class="Bullets">Burdens are usually costs 
+ that are levied as a percentage of costs, product revenue, volume or some 
+ other measure. </li>
+            <li class="Bullets">They appear on the cashflow 
+ statement before tax but after royalty, OPEX and CAPEX has been deducted.</li>
+            <li class="Bullets">Esi.manage supports four 
+ types of custom burdens which can be applied at the asset, economic group 
+ or by Jurisdiction</li>
+        </ul>
+        <p class="Bullets">&#160;</p>
+        <ul>
+            <ol>
+                <li style="list-style: decimal;" type="1" class="Bullets">Fixed Burden (Fixed 
+ currency amount by month)</li>
+                <li style="list-style: decimal;" type="1" class="Bullets">Production Burden (currency 
+ amount per unit volume of production)</li>
+                <li style="list-style: decimal;" type="1" class="Bullets">OPEX Credit (This is 
+ a rebate on OPEX and takes an OPEX group and applies the royalty percentage 
+ to calculate the rebate. </li>
+                <li style="list-style: decimal;" type="1" class="Bullets">Composable Burden - 
+ Add together product revenue, OPEX, CAPEX or another custom burden and 
+ apply a percentage to the calculated sum. The percentage is scheduled 
+ monthly.</li>
+            </ol>
+        </ul>
+        <p>
+            <img src="../../Images/_config_burden.png" />
+        </p>
+        <p>&#160;</p>
+        <p>There are four buttons 
+ to help you configure the burdens. <img src="../../Images/custom_burdens_toolbar.PNG" style="border: none;float: none;border-style: none;border-style: none;" border="0" /></p>
+        <ul>
+            <ol>
+                <li style="list-style: decimal;" type="1" class="Bullets">Configure Burdens (opens 
+ the configure burdens screen)</li>
+                <li style="list-style: decimal;" type="1" class="Bullets">Edit Table Properties 
+ (filter which burdens are visible in the burdens table)</li>
+                <li style="list-style: decimal;" type="1" class="Bullets">Toggle between monthly 
+ and annual periods in the burden table.</li>
+                <li style="list-style: decimal;" type="1" class="Bullets">Refresh</li>
+            </ol>
+        </ul>
+        <p>
+            <img src="../../Images/_config_burden2.png" />
+        </p>
+        <p>&#160;</p>
+        <p>To create a new burden, click the drop down next 
+ to the green plus icon in the configure burdens screen and select the 
+ type of burden you wish to create.</p>
+        <p>&#160;</p>
+        <h3><span style="font-weight: bold;text-decoration: underline;">Fixed 
+ Burdens</span>
+        </h3>
+        <ul style="list-style: disc;" type="disc">
+            <li style="font-weight: normal; text-decoration: none;">Provide 
+ the burden with a name and currency.</li>
+        </ul>
+        <h3><span style="font-weight: bold;text-decoration: underline;">Production 
+ Burden</span>
+        </h3>
+        <ul style="list-style: disc;" type="disc">
+            <li style="font-weight: normal; text-decoration: none;"><span>Provide 
+ the burden with a name, product, volume unit and currency.</span>
+            </li>
+        </ul>
+        <h3><span style="font-weight: bold;text-decoration: underline;">OPEX Credit</span>
+        </h3>
+        <ul style="list-style: disc;" type="disc">
+            <li style="font-weight: normal; text-decoration: none;">Provide 
+ the burden with a name and OPEX Group.</li>
+        </ul>
+        <h3><span style="font-weight: bold;text-decoration: underline;">Composite 
+ Burden</span>
+        </h3>
+        <ul style="list-style: disc;" type="disc">
+            <li>Provide the burden with a name.</li>
+            <li>In the formula screen, click on the drop down 
+ next to the green plus and select which type of measure (OPEX, CAPEX, 
+ revenue or other burden)</li>
+            <li>For OPEX, select the weighting (ie 1.0 for 100% 
+ of the OPEX, 0.5 for 50% or 2.0 for 200% of the OPEX amount) and the <a href="../../Configuration Perspective/Budget-Project/OPEX_Groups.htm">OPEX group.</a></li>
+            <li>For revenue, select the product and the weighting.</li>
+            <li>For CAPEX, select the weighting and the <a href="../../Configuration Perspective/Budget-Project/Expenditure_Families.htm">CAPEX
+ family</a>.</li>
+            <li>For other burdens, select the weighting and the 
+ other burden.</li>
+        </ul>
+        <p>All burdens have a <i>Deduct from Income</i> flag. While the flag is checked the burden will be used in the economic calculations. If the flag is unchecked, the burden will still appear in economics, but its value will not be deducted from Net Revenue when calculating Operating Income.</p>
+        <p style="font-style: italic;">Operating Income = Net Revenue - Opex - [Deductible] Burdens</p>
+        <p>Consider for example a production burden. When deducted from income, the burden amount is shown separately, and is included in economic calculations as a Production Expense Burden. When suppressed, the burden is shown separately but is not included in the production expense burden (as shown below).</p>
+        <p>
+            <img src="../../Images/burden_analysis_par11124.png" />
+        </p>
+        <p>Once you have created your burdens, you can then 
+ return to the custom burdens main screen and enter in the percentages 
+ for each burden. By entering a percentage number, the number will 
+ automatically be populated down the monthly or annual rows until you type 
+ in a different number. It is worth noting that Burdens are now escalated using the OPEX escalation rate. Escalation is applied to the final result of the Burden, not the individual parts of the composite Burdens.</p>
+        <p>&#160;</p>
+    </body>
+</html>

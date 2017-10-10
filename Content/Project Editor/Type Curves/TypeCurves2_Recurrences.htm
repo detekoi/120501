@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="7886" MadCap:lastWidth="1571">
+    <head><title>Project Template Scheduler Overview</title>
+        <link rel="StyleSheet" href="../../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <script type="text/javascript" language="JavaScript1.2" src="../../Archived/ehlpdhtm.js">
+        </script>
+        <map name="MAP295907548" id="MAP295907548">
+            <area shape="rect" coords="815, 59, 855, 95" href="../../PopUp/DM_Project.htm" title="Project Access" target="_popup" />
+            <area shape="rect" coords="877, 57, 927, 98" href="../../PopUp/DM_DatesTypes.htm" title="Data Type and Period" target="_popup" />
+            <area shape="rect" coords="10, 80, 609, 140" href="../../PopUp/DM_Columns.htm" title="Configurable Columns" width="300" height="600" target="_popup" />
+        </map>
+        <h3>
+            <img src="../../Images/Logo Images/3esi_manage.png" align="right" border="0" class="HeaderLogo" />
+        </h3>
+        <h1>Recurrences</h1>
+        <p>The next step of making existing Type Curves usable is to create Recurrences in the project-of-choice. Recurrences are created by taking an existing Pattern and apply modifiers to the Pattern curve in order to manipulate the magnitudes of the curve values, the start date, and any delays to the modifiers to the Recurrences. Each Recurrence is tied to an asset in the project-of-choice, therefore there must be an existing asset in order to be able to create a Recurrence curve.</p>
+        <p>There are two types of Recurrences: <b>Production </b>and <b>Expenditures</b>. A Production Recurrence is based on a Production Pattern (which in turn contain a Compound Production Type Curve), whereas an Expenditure Recurrence is based on an Expenditure Pattern (which in turn contain an Expenditure Type Curve).</p>
+        <p>In order to create Recurrences, there must be existing Patterns residing in the same project-of-choice, as well as existing assets in the project. For this example, the following Patterns are created for the example project (the Pattern names describes the actual types of Patterns).</p>
+        <p>
+            <img src="../../Images/_recurrence1.png" style="width: 1320px;height: 201px;" />
+        </p>
+        <p>&#160;</p>
+        <p>To create Recurrences, open an existing project where the Patterns are created, and navigate through the Project Editor to find the tab named "Type Curves". Within the 'Type Curves' tab, click on the 'Recurrences' tab to open the page.</p>
+        <p>
+            <img src="../../Images/_recurrence2.png" style="width: 1260px;height: 427px;" />
+        </p>
+        <p>&#160;</p>
+        <p>Create a new Recurrence by selecting the 'Add Recurrence' button on the right side of the page. A new row appears in the table. The caution symbol reminds the user to provide all necessary Recurrence information to the table.</p>
+        <p>
+            <img src="../../Images/_recurrence3.png" style="width: 1199px;height: 406px;" />
+        </p>
+        <p>&#160;</p>
+        <p>The user can specify the following details for the new Recurrence:</p>
+        <ol>
+            <li><b>Asset</b>: this is an existing asset that the Recurrence created is tied to. Like adding Expenditures and Productions in the Project Editor, each item is assigned to an asset. When an Expenditure Analysis or Production Analysis is generated for a given asset, any Expenditures or Productions from Recurrences belonging to the asset is pooled and summed up into the analyses under that asset. </li>
+            <li><b>Pattern</b>: this is an existing Pattern that is either a Production Pattern or an Expenditure Pattern. The Pattern provide the basic curve that is further modified to become a Recurrence.</li>
+            <li><b>Occurrences</b>: this integer value quantifies the number of times the existing Pattern curve is "stacked" onto the Recurrence curve. Occurrences are combined with the Cycle Time modifier to specify the amount and frequency of "stacking" Patterns onto the Recurrence curve.</li>
+            <li><b>Start Date</b>: this sets the base start date of the Recurrence curve that is modified by the delay applied to the existing Pattern. </li>
+            <li><b>Cycle Time</b>(days): this integer value quantifies the days of delay between each Occurrence "stacking" event.</li>
+        </ol>
+        <h3>&#160;</h3>
+        <h3>Asset</h3>
+        <p style="font-weight: normal;">To assign an asset, double click on the Asset cell, and a dropdown menu listing the existing assets appears. For this example, the asset named "Asset 1" is to be selected as the asset that this Recurrence belongs to.</p>
+        <p>
+            <img src="../../Images/_recurrence4.png" style="width: 1215px;height: 167px;" />
+        </p>
+        <p style="font-weight: bold;">&#160;</p>
+        <h3>Pattern</h3>
+        <p style="font-weight: normal;">To assign a Pattern, double click on the Pattern cell, and a dropdown menu listing the existing Patterns appears. For this example, the Pattern named "Production Pattern" is selected as the base Pattern for this Recurrence.</p>
+        <p>
+            <img src="../../Images/_recurrence5.png" style="width: 1247px;height: 234px;" />
+        </p>
+        <p style="font-weight: bold;">&#160;</p>
+        <h3>Start Date</h3>
+        <p style="font-weight: normal;">Unlike a Pattern, the start date of a Recurrence curve can be explicitly specified by the user. The start date of the Recurrence is similar to the default start date of a Pattern, in which both start dates are subject to the delay modifier of the base Pattern. For this example, when the Recurrence start date is set as the same default start date of the Production Pattern (July 3, 2014), the resulting start date of the Recurrence curve is the same actual start date of the Production Pattern (June 3, 2014).</p>
+        <p>
+            <img src="../../Images/_recurrence6.png" style="width: 1153px;height: 580px;" />
+        </p>
+        <p style="font-weight: normal;">&#160;</p>
+        <p style="font-weight: normal;">As compared to the 'Production Pattern' curve, which shares the same start date:</p>
+        <p>
+            <img src="../../Images/_recurrence7.png" style="width: 1156px;height: 581px;" />
+        </p>
+        <p style="font-weight: normal;">*In this Recurrence curve example, the default values of 1 for Occurrences and 0 for Cycle Time are applied. in order for the graph to appear.</p>
+        <p style="font-weight: bold;">&#160;</p>
+        <h3>Occurrences and Cycle Time</h3>
+        <p style="font-weight: normal;">The shape of the Recurrence curve can be customized by "stacking" the base Pattern curve on top of itself repeatedly. The Occurrences value determines the number of times such "stacking" occurs, while the Cycle Time value determines the number of days after the start date before the stacking occurs. To demonstrate how Occurrences work, the following steps shows the transformations of the Recurrence curve as a result to various Occurrences and Cycle Time settings.</p>
+        <p style="font-weight: normal;">When the default Occurrences and Cycle Time values are applied (1 and 0, respectively), the resulting curve is identical to the base 'Production Pattern' curve with initial oil production of 240 bbl/d in both June 3, 2014 and June 3, 2015, and final oil production of 120 bbl/d in both June 2, 2014 and June 2, 2015. </p>
+        <p>
+            <img src="../../Images/_recurrence8.png" />
+        </p>
+        <p style="font-weight: normal;">&#160;</p>
+        <p style="font-weight: normal;">When the Occurrences value is changed to 3, the resulting Recurrence curve has tripled initial oil production (from 240 bbl/d to 720 bbl/d) as well as tripled final oil production (from 120 bbl/d to 360 bbl/d), while the same curve shape is maintained. This shows that at each point in time, the y-axis Production value is increased 3-fold. However, unlike the scaling factor applied to Pattern curves, the mechanism of the increase is addition, not multiplication. The application of Cycle Time demonstrates this point.</p>
+        <p>
+            <img src="../../Images/_recurrence10.png" style="width: 1052px;height: 529px;" />
+        </p>
+        <p style="font-weight: normal;">&#160;</p>
+        <p style="font-weight: normal;">When the Cycle Time value is changed to 30, the resulting Recurrence curve formed 3 distinct "layers" of the base 'Production Pattern' curve. </p>
+        <p>
+            <img src="../../Images/_recurrence9.png" style="width: 1069px;height: 536px;" />
+        </p>
+        <p style="font-weight: normal;">&#160;</p>
+        <p style="font-weight: normal;">The appearance can be described by the steps in which this Recurrence curve was constructed:</p>
+        <ol>
+            <li style="font-weight: normal;">For the first 30 days, the curve follows the base 'Production Pattern' curve, starting with an initial oil production of 240 bbl/d. This is Occurrence #1.</li>
+            <li style="font-weight: normal;">After the first 30 days, which is the same as the number of days specified in the Cycle Time modifier, an additional base 'Production Pattern' curve is added on top of the existing Production rate after 30 days. At day 31, the Production rate is equal to the Production Pattern at day 31 plus the initial Production rate of the Production Pattern. This is the start of Occurrence #2.</li>
+            <li style="font-weight: normal;">After another 30 days, another Occurrence cycle is reached. An additional base 'Production Pattern' curve is added on top of the existing Production rate after 60 days. At day 61, the Production rate is equal to the Production Pattern at day 61, plus the Production Pattern at day 31, plus the initial Production rate of the Production Pattern. This is the start of Occurrence #3, the final Occurrence of year 2014. </li>
+            <li style="font-weight: normal;">With no more Occurrences, the Recurrence curve continues its decline with each passing 30 days of Cycle Time until the Compound Production Type Curve duration of 12 months is reached. </li>
+            <li style="font-weight: normal;">After 12 months, the Recurrence curve increases by 120 bbl/d of oil production as occurred in the 'Production Pattern' curve. </li>
+            <li style="font-weight: normal;">After 30 days, an Occurrence cycle is reached. An additional base 'Production Pattern' curve is added on top of the existing Production rate after 12 months and 30 days. At 12 months and 31 days, the Production rate is equal to the existing Recurrence curve Production rate plus the Production Pattern at the end of 12 months. This is the start of Occurrence #2.</li>
+            <li style="font-weight: normal;">After another 30 days, another Occurrence cycle is reached. At 12 months and 61 days, the Production rate is again equal to the existing Recurrence curve Production rate plus the Production Pattern at the end of 12 months. This is the start of Occurrence #3, the final Occurrence of year 2015.</li>
+            <li style="font-weight: normal;">At the start of 2016, the first of the three "stacked" Patterns stops Production. Due to the delay applied by 30 days of Cycle Time, the second "stacked" Pattern stops Production 31 days into 2016, and the third and final "stacked" Pattern stops Production 61 days into 2016.</li>
+        </ol>
+        <p style="font-weight: bold;">&#160;</p>
+        <h3>Other Modifiers</h3>
+        <p style="font-weight: normal;">The user can also specify the Reserve Consolidation of the Compound Production Type Curve used to generate the base Pattern curve of the Recurrence, if different curves are created within different Reserve Consolidations of the same Compound Production Type Curve. In the case of the example, only the "TestInc - 1P" Consolidation contains a Compound Production Type Curve, therefore it must be set at that Consolidation.</p>
+        <p style="font-weight: normal;">If royalty is applied to the base Pattern of the Recurrence as a Secondary Type Curve, the following must be done:</p>
+        <ul>
+            <li style="font-weight: normal;">Select a Price Scenario where the Royalty Type Curve has assigned royalties to</li>
+            <li style="font-weight: normal;">Check the 'Apply Royalty' box</li>
+        </ul>
+        <h3>&#160;</h3>
+        <h3>Expenditure Recurrence Example</h3>
+        <p style="font-weight: normal;">Creating an Expenditure Recurrence follows the same procedure as creating a Production Recurrence. Below is an example of an Expenditure Recurrence curve:</p>
+        <p>
+            <img src="../../Images/_recurrence11.png" style="width: 1094px;height: 552px;" />
+        </p>
+        <p style="font-weight: normal;">&#160;</p>
+        <h3>Removing Recurrences</h3>
+        <p style="font-weight: normal;">To remove a Recurrence, simply select an existing Recurrence in the table, and select the 'Remove Recurrence' button at the upper right side of the screen.</p>
+        <p>
+            <img src="../../Images/_recurrence12.png" style="width: 1104px;height: 311px;" />
+        </p>
+    </body>
+</html>

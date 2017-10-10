@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1481" MadCap:lastWidth="1344">
+    <head>
+    </head>
+    <body>
+        <p>
+            <img src="../../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />
+        </p>
+        <h1>Asset Scaling</h1>
+        <p>&#160;</p>
+        <p>This is a site specific feature so must be switched on in Configuration &gt;System &gt;Miscellaneous &gt;Site-Specific Features. </p>
+        <p>
+            <img src="../../Analysis Perspective/3.png" />
+        </p>
+        <p>Asset Scaling will allow companies to Scale the contribution of Assets within a Project. Where assets represent outcomes in a project this is the probability of that outcome being achieved. When running normal economics, the user will let the default behaviour (apply scale) be used. In economics, however, the Scale will be applied late (on outputs) vs early (on inputs). Asset Scaling modifier is shown in the Analysis Case Editor and Default Economic Property Configuration. </p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../Images/_asset_scaling_econ.png" style="width: 512px;height: 177px;" />
+        </p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>When economic scale factors are being applied, the all asset-level cash flow elements are multiplied by the corresponding asset scale as the last step of calculation except for the following which are not scaled:</p>
+        <ul>
+            <li>production quality</li>
+            <li>effective price</li>
+            <li>effective price equivalence</li>
+            <li>custom</li>
+        </ul>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <h3>Set an Asset Scale</h3>
+        <p>Asset Scaling will be set within the asset tab of a project, after enabling the feature within the Site Specific features, the box in red below will be populated. This box is what will define the scale applied to the asset throughout esi.manage.</p>
+        <p>
+            <img src="../../Images/_asset_scaling.png" style="width: 1344px;height: 146px;" />
+        </p>
+        <p>&#160;</p>
+        <h3>Common Issues</h3>
+        <p>The feature is intended to support a workflow where every asset is entered multiple times, once for each possible outcome. The asset scales then serve as an outcome weight factor.When working in this way, beware of the following implications:</p>
+        <ul>
+            <li>Measure-level scaling is incompatible with all group-level and non-linear concerns such as production curtailment, tier pricing, royalties, etc.</li>
+            <li>Economics-level scaling is compatible with asset-level non-linear concerns, but is incompatible with higher-level concerns (e.g. hierarchy-level spreadsheets, UOP deprecation, curtailment, etc).</li>
+            <li>When analysis case asset-scaling in on, all economic outputs at the asset level will represent fractional assets.</li>
+            <li>All measure calculation outputs  will also only show fraction values for each asset.</li>
+        </ul>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

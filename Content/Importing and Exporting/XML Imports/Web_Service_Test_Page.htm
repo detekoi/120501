@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="3230" MadCap:lastWidth="1221">
+    <head><title>Web Service Test Page</title>
+        <link rel="StyleSheet" href="../../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <h3 style="text-align: right;" align="right">
+            <img src="../../Images/Logo Images/3esi_manage.png" border="0" class="HeaderLogo" />
+        </h3>
+        <h2>Web Service Test Page</h2>
+        <p>Once  the <a href="Using_Integration_Services.htm">Web 
+ Service</a> interface has been configured and started,  a Test Page can be accessed (follow the syntax as illustrated 
+ in the image below - i.e.; <span style="font-weight: bold;font-style: italic;">http://localhost:8080/esi.manage</span>) 
+ to view the Schemas and Sample import files, as well as using existing XML files to import and export data to and from esi.manage database.</p>
+        <p>
+            <img src="../../Images/Using_Integration_Services_5.PNG" />
+        </p>
+        <p>&#160;</p>
+        <p>Within the Web Service interface, the user can choose to perform the following tasks:</p>
+        <h4>Projects:</h4>
+        <ul>
+            <li>Export Projects into an XML document</li>
+            <li>Import Projects from an XML document</li>
+            <li>Import Project Attributes from an XML document</li>
+            <li>Shift Project start dates with an XML document</li>
+            <li>Export metadata of Projects into an XML document</li>
+        </ul>
+        <h4>Measures:</h4>
+        <ul>
+            <li>Invoke Measures export using an XML document</li>
+            <li>Export changes in Expenditure items since a given date</li>
+            <li>Import AFE data from an XML document</li>
+            <li>Import CAPEX data from an XML document</li>
+            <li>Import Production from with an XML document</li>
+            <li>Import OPEX data from a CSV document</li>
+        </ul>
+        <h4>Configuration:</h4>
+        <ul>
+            <li>Import Hierarchy elements from an XML document</li>
+            <li>Import External Identifier (EID) from an XML document</li>
+        </ul>
+        <h4>Capital Planning:</h4>
+        <ul>
+            <li>Export data from esi.manage to the Schlumberger Merak Capital Planning application</li>
+            <li>Invoke the importing of data from the Schlumberger Merak Capital Planning application using an XML document</li>
+            <li>Invoke the shifting of data from the Schlumberger Merak Capital Planning application using an XML document</li>
+        </ul>
+        <p>&#160;</p>
+        <p>Most of the importing interfaces provides access to a similar page (below is the Production Import page as an example):</p>
+        <ul>
+            <li class="Bullets"><span style="font-weight: bold;">Request 
+ XSD</span> - provides access to the particular Import.xsd file </li>
+            <li class="Bullets"><span style="font-weight: bold;">Import 
+ Schema</span> - shows the Schema Documentation for the particular import.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Sample 
+ Import</span> - provides access to documented Sample Import file.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Response</span> 
+ - shows the Schema Documentation file regarding the Response to a given 
+ import.</li>
+        </ul>
+        <p>
+            <img src="../../Images/Web_Services_Test_Page_2.PNG" />
+        </p>
+        <p>&#160;</p>
+        <p>A particularly useful feature is the <b>Sample Import</b>, which outputs a sample XML import file that follows the appropriate Schema for the particular import, from which the user can use as a template to generate a custom XML import file. Below is a snippet of a sample import file that is generated from the Production Import page:</p>
+        <p>
+            <img src="../../Images/Web_Services_Test_Page_3.PNG" />
+        </p>
+        <p>&#160;</p>
+        <p>In general, the Import Services would not be utilized via this Test 
+ Page. However, you can use this utility to test out your import file structure. 
+ Once you have created an Import File (following the prescribed schema), 
+ you can paste it into the XML to Send window and choose the Send Via Post 
+ button. This will pass the Pasted XML text to the import routine.</p>
+        <p class="note"><b>Note:</b> the <a href="../../Navigating esi.manage/Navigator/Export_Job.htm">Project Export</a> functionality 
+ is also accessible via the Integration Service. There is a set of documentation 
+ produced on that page (Project Export) which describes the calling syntax 
+ for this interface.</p>
+        <p>&#160;</p>
+    </body>
+</html>

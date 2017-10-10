@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="3" MadCap:lastHeight="1716" MadCap:lastWidth="1281">
+    <head><title>Calculations</title>
+        <link rel="StyleSheet" href="../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <h2>
+            <img src="../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />Calculations</h2>
+        <p>Within the dependencies tab, there are several calculations provided 
+ within the data view. &#160;Calculations 
+ will behave different based on dependencies that have specified. &#160;</p>
+        <p><span style="font-weight: bold;">NPD%</span> = Net Probability of Doing 
+ %</p>
+        <p><span style="font-weight: bold;">NPS%</span> = Net Probability of Success 
+ %</p>
+        <p>*the two values above are calculated automatically based on the values 
+ entered in the following 4 fields:</p>
+        <p><span style="font-weight: bold;">Activity Factor (AF%)</span> – Based 
+ on the value entered here, the NPD% and NPS% will rise and fall. &#160;</p>
+        <p>For example, in the image below, you can see that the AF% is 75% for 
+ the Completion expenditure, therefore the highest that NPD% and NPS% can 
+ be for that measure (and all subsequent measures in the dependency chain) 
+ is 75%.</p>
+        <p>&#160;<img src="../Images/27 AF calculation.png" style="border: none;float: none;width: 1161px;height: 99px;" width="1161" height="99" border="0" /></p>
+        <p>&#160;</p>
+        <p><span style="font-weight: bold;">Outcome Probability (OP%)</span> – 
+ Based on the value entered here, the NPD% and NPS% will rise and fall. 
+ &#160;</p>
+        <p>For example, in the image below, you can see that the OP% is 50% for 
+ the Equip &amp; Tie-in expenditure, therefore the NPD% and NPS% are again 
+ effected. &#160;Where 
+ previously in the image above these values were reduced to 75% because 
+ of the AF% impact, they are now further lowered to 37.5% (A result of 
+ the initial NPD% for this expenditure being 75% and subsequently multiplied 
+ by the 50% OP value for that line item).</p>
+        <p>&#160;<img src="../Images/28 OP calculation.png" style="border: none;width: 1161px;height: 99px;float: none;" width="1161" height="99" border="0" /></p>
+        <p>&#160;</p>
+        <p><span style="font-weight: bold;">Failure (Checkbox)</span> – If this 
+ value is checked, the correlated expenditure will only occur when its 
+ parent node in the dependency chain fails. Thus, any AF% of OP% values 
+ entered for this activity will only effect calculations if the parent 
+ entity fails. &#160;</p>
+        <p>For Example, the ‘Failure’ value has been specified against the two 
+ previously affected measures for the two images above. &#160;Note 
+ that the NPD% and NPS% values for those measures are now blanked, as well 
+ as any subsequent measures.</p>
+        <p>
+            <img src="../Images/29 failure calculation.png" style="border: none;width: 1281px;height: 102px;float: none;" width="1281" height="102" border="0" />
+        </p>
+        <p>&#160;</p>
+        <p><span style="font-weight: bold;">Reset NPD% (Checkbox)</span> – If this 
+ value is checked, the NPD% for that dependency chain is reset to 100% 
+ at that measure level. &#160;Previously 
+ entered values for AF%/OP% will not affect NPD% or NPS%. &#160;</p>
+        <p>&#160;<img src="../Images/30 resetNPD calculation.png" style="border: none;width: 1281px;height: 102px;float: none;" width="1281" height="102" border="0" /></p>
+        <p>&#160;</p>
+        <p><span style="font-weight: bold;">Compounded Calculations</span> – As 
+ different values are populated for AF% &amp; OP% on a line by line basis, 
+ their impact will be compounded to determine the result of NPD% &amp; 
+ NPS%. &#160;</p>
+        <p>In the example below, you’ll see different AF%/OP% values applied to 
+ 3 different expenditures. &#160;</p>
+        <p>Completion AF% = 75%</p>
+        <p>Equip &amp; Tie-in (Well A 0001) OP% = 50%</p>
+        <p>Equip &amp; Tie-in (Well A 0002) AF% = 50% &#160;</p>
+        <p>Total NPD% &amp; NPS% = 18.75% </p>
+        <p>{100% * 75% * 50% * 50% = 18.75%}</p>
+        <p>&#160;<img src="../Images/31 compound calc.png" style="border: none;width: 1244px;height: 102px;float: none;" width="1244" height="102" border="0" /></p>
+        <p>&#160;</p>
+        <p>These compounded calculations provide the accurate overall impact on 
+ NPD%&amp; NPS% based on the line-by-line variances of AF% &amp; OP%. </p>
+    </body>
+</html>

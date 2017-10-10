@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="4" MadCap:lastHeight="3051" MadCap:lastWidth="1246">
+    <head><title></title>
+        <link href="../Resources/Stylesheets/HelpFileStylesheet2.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2>
+            <img src="../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />Distinct and Merge</h2>
+        <p>The Distinct and Merge relationship is used to funnel data into a single project / attribute / node. This is useful for situations where information may be repeated, but the desired outcome is to execute the mappings only for each unique attribute. For example the following Capex table is displayed.</p>
+        <p>
+            <img src="../Resources/Images/New EDL/Distinct_Example1.png" />
+        </p>
+        <p>The desired outcome of this data would be that the Capex items on lines 2 through 4 be loaded into Example A and Capex items on lines 5 through 7 be loaded into Example B.</p>
+        <p>This is achieved by setting up a distinct node in the EDL for Project Name, then merging the Capex information into those distinct project names. Without using distinct and merge, the EDL would try to create three projects named Example A and three projects named Example B, each with one line of Capex.</p>
+        <p>
+            <img src="../Resources/Images/New EDL/Distinct_Example2.png" />
+        </p>
+        <p>The three key pieces of information highlighted are:</p>
+        <ul>
+            <li><i>Project Name Distinct</i>: The commands array has a repetition defined and a Distinct node called Project Name Distinct has been added which is a cell reference to A2. This is storing the distinct values which can then be used within an attribute. The attribute Project Name then references the distinct using <i>=ESI.VAR("Project Name Distinct")</i> so that only two projects are created.</li>
+        </ul>
+        <p>
+            <img src="../Resources/Images/New EDL/Distinct_Example3.png" />
+        </p>
+        <ul>
+            <li><i>Merge</i>: The Merge node marks the starting point of mappings that will follow the distinct functionality. The merge properties references the distinct values column.</li>
+        </ul>
+        <p>
+            <img src="../Resources/Images/New EDL/Distinct_Example4.png" />
+        </p>
+        <ul>
+            <li><i>Capex Repeat</i>: The Capex array is above the merge, so a repeat node is needed to be nested under the merge. The logic to load the Capex can then be defined and will execute first, followed by being rolled up into the distinct projects. The Amounts array will then repeat relative to the Capex Repeat and not the Capex array.</li>
+        </ul>
+        <p>
+            <img src="../Resources/Images/New EDL/Distinct_Example5.png" />
+        </p>
+        <p>For information on the rest of the mappings, please see the <MadCap:xref href="Repeats and Repetitions.htm">Repeats and Repetitions</MadCap:xref> section of the Help File.</p>
+    </body>
+</html>

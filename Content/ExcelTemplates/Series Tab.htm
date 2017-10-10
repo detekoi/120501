@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="3" MadCap:lastHeight="2227" MadCap:lastWidth="1619">
+    <head><title></title>
+        <link href="../Resources/Stylesheets/HelpFileStylesheet2.css" rel="stylesheet" />
+    </head>
+    <body>
+        <p>
+            <img src="../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />
+        </p>
+        <h2>Series Tab</h2>
+        <p>***THIS FEATURE IS BEING DEPRECATED. PLEASE MIGRATE ALL EXCEL DATA LOAD TEMPLATES TO THE NEW FORMAT***</p>
+        <p>
+            <img src="../Resources/Images/ExcelTemplates1/03000012.png" style="visibility: visible;mso-wrap-style: square;" />
+        </p>
+        <p>&#160;</p>
+        <p>The Series tab is where the tabular data is mapped from the Excel document into esi.manage. This is done by creating Time Series and Data Series to read data from Excel.&#160; </p>
+        <p>The topmost section is the Time Series table. When there are dates in Excel moving in a horizontal or vertical direction, they are defined here. </p>
+        <p>
+            <img src="../Resources/Images/ExcelTemplates1/03000013.png" style="visibility: visible;mso-wrap-style: square;" />
+        </p>
+        <p>&#160;</p>
+        <p>There are 5 buttons involved in the Time Series. The ‘x’ is used to delete a time series. The arrow pointing right creates a horizontal time series. The starting cell must be highlighted in Excel to correctly create the series. The arrow pointing down creates a vertical time series and again the starting cell must be highlighted to correctly create the series. The 4 way arrow selects a single date from Excel or specific dates highlighted within a time series, and the A1 icon is the same as the attributes A1 icon, which will deposit a highlighted cell into a selected column in esi.manage. Alternatively, the same buttons are available via right-click.</p>
+        <p>
+            <img src="../Resources/Images/ExcelTemplates1/03000014.png" style="visibility: visible;mso-wrap-style: square;" />
+        </p>
+        <p>&#160;</p>
+        <p>When a time series is correctly mapped (vertical time series shown above), most of the columns are auto populated. The Name will be defaulted to Time Series “x”, but can be renamed to accurately portray the data. The Worksheet is displayed to ensure the correct series has been pulled from the correct sheet. The Start Cell will initially be the reference cell in Excel that way highlighted at the time of creation, but can be altered. End Cell will be auto populated by the start cell, scan direction, and max size. Max Size refers to the length of the data series. Its default is unlimited, and will scan based on the start cell to find the last date in the time series. Specifying a number will define how many cells the time series will read. The Period can be defined here if not defined on the attributes page. This is useful if the time series in Excel refers to month 1, month 2, month 3, or a similar series. End Date and Format are auto populated. A Variable Name can be given to the time series to be used in other areas of the EDL.</p>
+        <p>The next section is the Data Series. </p>
+        <p>&#160;</p>
+        <p>
+            <img src="../Resources/Images/ExcelTemplates1/03000015.png" style="visibility: visible;mso-wrap-style: square;width: 215px;height: 24px;" />
+        </p>
+        <p>&#160;</p>
+        <p>When creating a first data series, only the clock and two arrow buttons are available. The clock icon creates a data series connected to the currently highlighted time series. The arrow pointing down creates a non-time based data series that is read vertically. Similarly, the arrow pointing right creates a non-time based data series that is read horizontally. It is important to select the data start cell in Excel before creating a data series. Once a data series is created (depending on what the Type is), more buttons become available. For a repeat to blank or repeat to token data series, the Configure Target Mapping is available. This opens the configuration to map the tabular data. The ‘x’ deletes selected data series, A1 pastes Excel address, and the arrows pointing up and down will shift the data series up or down. When the Type is single, validations can be added to the series using the check mark in a green circle icon.</p>
+        <p>
+            <img src="../Resources/Images/ExcelTemplates1/03000016.png" style="visibility: visible;mso-wrap-style: square;" />
+        </p>
+        <p>&#160;</p>
+        <p>The Time Series column points to the time series to which the data series is connected, provided the data series is a time-based data series. The Name of the data series can be defined to describe the data. Scan Direction is used when there are multiple rows of data. The Type field describes whether the data is a single row, or if there are multiple rows of data. The options are Single, Repeat to Blank, and Repeat to Token. Repeat to Blank will scan all the row/columns based on the scan direction until a blank cell is found. Repeat to Token will scan the row/columns until a specified token is reached, which is a string defined in the End Token column. Worksheet displays where the data is being pulled from, and the Start Cell or Formula is defaulted to the selected Excel address at creation. It should be the first cell of data. Target Mapping assigns the esi.manage data type to which the data will be mapped and is present only in a single data row type. In the figure above, Project – Multiple.Project.Assets.Production.Curves.Volumes has been selected for the Target Mapping.  For Repeat to Blank or Repeat to Token, the Target Mappings button (i.e. the bullseye) must be used to define the mappings. The Target Mapping defines what type of data is being loaded, and where it can be found in the attributes tab, as one of the ‘123’ attributes. The Default can be defined if there is empty data among populated data, if there is a logical default that can be used. Variable Name can be defined again to use the data series in a formula elsewhere in the EDL. The Time Behavior can be used to map durations or map dates. Map Dates can be used for measures such as Tax, Burdens, Royalties, or Price, when there are values coupled with specific dates. Map Durations can be used for irregular time series that do not have periodicity. The Condition column can be used to create a condition, and if true the data series will execute, and if false the data series will not execute. It is only available for single type data series, but can be found in repeating series in the Configure Target Mappings.&#160; The Product and Production Rate column are present for single data type and can be defined by entering the Excel address that houses the values. These two columns are defined by the Target Mapping and the attributes defined as tabular on the attributes tab, and will be different depending on the data type. For Repeat to Blank and Repeat to Token, these columns are not present and are defined in the Target Mapping screen. For Repeat to Token, the End Token column is used to define what the repeat will look for. Define a string in the column that will be the end token.</p>
+        <p>The Mini Preview section, as illustrated below is a good way to identify if the data is being mapped and read correctly, and ultimately if it will load into esi.manage. It will auto populate as data is mapped. The full preview gives a better overview of where data is being loaded into esi.manage.</p>
+        <p>
+            <img src="../Resources/Images/ExcelTemplates1/03000017.png" style="visibility: visible;mso-wrap-style: square;" />
+        </p>
+        <p>&#160;</p>
+    </body>
+</html>

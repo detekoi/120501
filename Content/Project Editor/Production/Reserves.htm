@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="5438" MadCap:lastWidth="1458">
+    <head><title>Reserves</title>
+        <link rel="StyleSheet" href="../../Resources/Stylesheets/default.css" />
+        <style>
+body
+{
+	background-color: #ffffff;
+}
+
+</style>
+        <style>
+p.whs1
+{
+	text-align: right;
+}
+li.whs1
+{
+	text-align: right;
+}
+img_whs2
+{
+	width: 36px;
+	height: 44px;
+	border-style: none;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+p.whs3
+{
+	font-family: Arial, sans-serif;
+	font-size: 14pt;
+}
+li.whs3
+{
+	font-family: Arial, sans-serif;
+	font-size: 14pt;
+}
+p.whs4
+{
+	font-family: Arial, sans-serif;
+	font-size: 12pt;
+}
+li.whs4
+{
+	font-family: Arial, sans-serif;
+	font-size: 12pt;
+}
+
+</style>
+        <style>
+div.WebHelpPopupMenu
+{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 4;
+	visibility: hidden;
+}
+
+</style>
+        <script type="text/javascript" language="JavaScript">/*<![CDATA[*/
+<!--
+ if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4))
+ {
+ var strNSS = "<style type='text/css'>";
+ strNSS += "img_whs2 {margin-left:1pt;margin-right:1pt; }";
+ strNSS +="<\/style>";
+ document.write(strNSS);
+ }
+ //-->
+/*]]>*/</script> <script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">/*<![CDATA[*/
+<!--
+ function reDo() {
+ if (innerWidth != origWidth || innerHeight != origHeight)
+ location.reload();
+ }
+ if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+ origWidth = innerWidth;
+ origHeight = innerHeight;
+ onresize = reDo;
+ }
+ onerror = null; 
+ //-->
+/*]]>*/</script> <script type="text/javascript" language="javascript1.2" src="../../Archived/whmsg.js"></script> <script type="text/javascript" language="javascript" src="../../Archived/whver.js"></script> <script type="text/javascript" language="javascript1.2" src="../../Archived/whproxy.js"></script> <script type="text/javascript" language="javascript1.2" src="../../Archived/whutils.js"></script> <script type="text/javascript" language="javascript1.2" src="../../Archived/whtopic.js"></script></head>
+    <body>
+        <h3>
+            <MadCap:keyword term="Project Reserves" /><strong style="font-weight: bold;">&#160;</strong>
+        </h3>
+        <img src="../../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />
+        <h1><strong style="font-weight: bold;"><MadCap:keyword term="Reserves" />Reserves</strong>
+        </h1>
+        <p><strong style="font-weight: normal;"><MadCap:keyword term="Product" />The Reserves tab is split into 3 windows that are quite similar to the Volume tab.  The top panel displays the Economic Limit Dates, as well as both the Technical and Economic Gross Reserves.  This information is displayed for every reserve consolidation you have set up in the configuration screen.  Some of the rows may have blank cells, and this is most likely because there is either a) no production associated with that consolidation or b) operational expenditures do not exceed the revenue generated at any point so the production stream is not truncated.</strong>
+        </p>
+        <p><strong style="font-weight: normal;">Technical Gross </strong>Reserves 
+ are automatically calculated from the production forecast data entered 
+ in the production editor. &#160;The 
+ Economic Limit Date can also be calculated, which will provide the Economic 
+ Gross Reserves also.</p>
+        <h3>&#160;</h3>
+        <h3><strong style="font-weight: bold;"><span style="font-weight: bold;">Technical </span>Reserves</strong>
+        </h3>
+        <ul>
+            <li class="Bullets">Technical Reserves will 
+ be initialized from the Forecast Cumulative Production, which can be viewed 
+ in the <a href="Production_Analysis.htm">Production Analysis</a> 
+ screen by displaying the entire production life for an Asset/Product.</li>
+            <li class="Bullets">Technical Reserves are 
+ typically limited by an off-stream rate or date.</li>
+        </ul>
+        <h3>&#160;</h3>
+        <h3>Economic Reserves</h3>
+        <ul>
+            <li class="Bullets">Economic Reserves are based upon the Technical Reserves, but are truncated at the point where the cumulative cash flow is at its greatest.  This will typically be the point where OPEX exceeds Revenue, however this is not always the case.</li>
+            <li class="Bullets">Economic Reserves should 
+ never be more than Technical Reserves.</li>
+            <li class="Bullets">Economic Reserves include all downtime.</li>
+        </ul>
+        <h3>&#160;</h3>
+        <h3>Economic Limit Date</h3>
+        <ul style="list-style: disc;" type="disc">
+            <li class="Bullets">This date is calculated 
+ in two ways: The Economic Limit Date for the Reserve Consolidation chosen in the Analysis Case is rigorously calculated using the Analysis Case to determine the point at which the cumulative cash flow is highest. The average daily production rate for this month is the reference rate. All other reserve consolidations will have their average daily production for each month calculated, and will be worked backwards from the end until an average daily production rate is encountered that is greater than the reference rate, at which point that month will be the estimated Economic Limit Date. If at no point an average daily production rate is encountered that is greater than the reference rate, then there is no Economic Limit Date (ie. it is uneconomic).
+ &#160;</li>
+            <li class="Bullets">This is done by clicking 
+ on the "Update Asset Economic Limit" button located in the top 
+ drop down for the Analysis Cases, shown in the image below.</li>
+            <li class="Bullets">In order for the Economic 
+ Limit Date (and therefore Economic Reserves) to be calculated, the Initial 
+ Booking Date must be filled out, as well as the Booking Schedule described 
+ below</li>
+        </ul>
+        <p class="Bullets">
+            <img src="../../Images/_analyze_reserves.png" style="width: 903px;height: 469px;" />
+        </p>
+        <p>&#160;</p>
+        <h3>Reserve Booking Schedule </h3>
+        <p style="font-weight: bold;"><span style="font-weight: normal;">The bottom left panel is the Reserve Booking Schedule.   The percentages entered here determine what percentage of the forecasted production will be booked as Reserves at a given time.  This can be time variant, so that only a portion of the Reserves needs to be booked at a time, allowing for readjustments based on the actual production stream.  This schedule allows for a Reserve Progression to be modelled over time, which can then be reported on.</span>
+        </p>
+        <p>The Reserves can be booked annually, or monthly, by selecting the "Change Tabular Periodicity" button <img src="../../Images/change_tabular_period.PNG" style="border: none;float: none;width: 21px;height: 21px;border-style: none;" width="21" height="21" border="0" />. &#160;<span style="font-weight: normal;">There is also the option to enter percentages as a total % of Reserves (eg. 50% Year 1, 80% Year 2, 100% Year 3) , or as the % change for the period (eg. 50% Year 1, 30% Year 2, 20% Year 3), by clicking </span><img src="../../Images/sigma.png" style="border: none;width: 19px;height: 20px;float: none;border-style: none;" width="19" height="20" border="0" />. 
+ &#160;<span style="font-weight: normal;">This 
+ can be toggled back and forth after values are entered, and the values 
+ will be converted for you.</span></p>
+        <p style="font-weight: normal;">These values need to be filled out for 
+ the Economic Limit Date to be calculated.</p>
+        <p style="font-weight: normal;">The percentages you enter in the booking 
+ column will determine the percentage of the "expected value" 
+ reserves you will book. &#160;The 
+ expected value is denoted in the configuration, on the <a href="../../Configuration Perspective/Budget-Project/Reserve_Classifications.htm">Reserve 
+ Classifications</a> page, by a gold star <img src="../../Images/expected_value.png" style="border: none;float: none;border-style: none;" border="0" />. &#160;The 
+ percentages you enter in the Progression columns will determine the percentage 
+ of the reserves/production entered in each respected reserve classification 
+ that is no longer in that classification. &#160;See 
+ below for an example using the following screenshots as settings.</p>
+        <p style="font-weight: normal;">Booking Schedule from Reserves tab on Production 
+ page:</p>
+        <p>
+            <img src="../../Images/prod9.png" style="border: none;border-style: none;float: none;border-style: none;" border="0" />
+        </p>
+        <p>&#160;</p>
+        <p>From Configuration of Reserve Classifications:</p>
+        <p>
+            <img src="../../Images/prod10.PNG" style="border: none;float: none;border-style: none;" border="0" />
+        </p>
+        <p>&#160;</p>
+        <p class="note"><b>Note:</b> There cannot be a NULL entry in the Reserve Consolidation of 
+ the Expected Value for Reserve Progression to work.</p>
+        <p>From Production editor:</p>
+        <p>
+            <img src="../../Images/prod11.PNG" style="border: none;float: none;border-style: none;" border="0" />
+        </p>
+        <p>&#160;</p>
+        <p>When the previous settings are applied, with the total production values shown above, the following picture is an image of the Reserve Bookings over time.</p>
+        <p>At the present day, the Reserve Bookings for 1P = Total Gross Reserves * % Reserves Booked * reserve weighting = 100,000 * 50% * 1.0 = 50,000.</p>
+        <p>The Reserve Bookings for P2 = P2 Reserves * % Reserves Booked * reserve weight= 50,000 * 50% * 0.7 = 17,500</p>
+        <p>The Reserve Bookings for P3 = P3 Reserves * % Reserves Booked * reserve weight= 50,000 * 50% * 0.3 = 7,500</p>
+        <p>In the chart the layers are stacked, and each Reserve classifications contribution to the total Reserve bookings for that year are represented by the area of the chart that is the corresponding color.  This means that the light yellow shaded color on top is 7,500, and the orange area in the middle is 17,500.  Combine these with the 50,000 on the bottom, and the total booked reserves in year one is 75,000.  The total Reserves Booked each year should equal the Expected Value multiplied by the Booking percentage.</p>
+        <p>Notice the increase in Year 2, where P1 Reserve bookings increase to 75,000, according to the Booking Schedule in Year 2, and up to 100,000 (the total Technical Reserves) when the Booking Schedule is 100%.  The same progress occurs for P3 (accounting for Reserve Classification weighting, of course).</p>
+        <p>In Year 3, all Reserves are booked 100%, and the total is the Expected Value (Swanson’s Mean).  In each of the previous years the total is also equal to the Expected Value, multiplied by the booking schedule.</p>
+        <p>
+            <img src="../../Images/prod12.PNG" style="border: none;float: none;border-style: none;" border="0" />
+        </p>
+        <p>&#160;</p>
+        <p class="note"><b>Note:</b> Reserves Progression and Reserve Booking Schedules should not both be used at the same time, except where the Reserve Booking Schedule is 100% in Year 1.</p>
+        <h3>&#160;</h3>
+        <h3>Reserve Progression</h3>
+        <p>The Reserve Progression is, in short, the percentage of the Reserves in that Classification that is no longer in that Classification after that period, but instead has become Proven (ie. 1P).  In order to set up a Reserve Progression, a few things must be done already.  There must be an EV consolidation set in the Reserve Category that you are using, and there must not be a NULL value in the weightings for that Consolidation.  Every Classification must be accounted for.  This means that a typical EV if using a Reserve Progression is a Swanson’s Mean.  Notice that the weightings below are for incremental Classifications (P1, P2, P3).</p>
+        <p>
+            <img src="../../Images/prod10.PNG" />
+        </p>
+        <p>
+            <img src="../../Images/prod13.png" />
+        </p>
+        <p>
+            <img src="../../Images/prod11.PNG" />
+        </p>
+        <p>According to the chart shown below, it should be easy to recognize that the amounts that each Reserve Classification is contributing to the total (Swanson’s Mean, the Expected Value) in Y1 is equal to the total reserves in that classification multiplied by its weight.  For example, 50,000 in P2 * 0.7 weight = 35,000.</p>
+        <p>In Y2 and later, however, the amount contributed by P2 and P3 are reduced as their Reserves are being progressed into P1.  Eventually all Reserves will have been progressed from P2 and P3 into P1, and P1 will be equal to the Swanson’s Mean, 150,000.  As Reserves progress through the Classifications, the total should remain constant.  That is to say that if you multiply the Reserves in the Classifications by their respective weights at any time, you should always arrive at 150,000.  Over time, the proportion of the total that is contributed by each Classification is what changes.</p>
+        <p>
+            <img src="../../Images/prod14.png" />
+        </p>
+        <p>&#160;</p>
+        <p>In the chart, the numbers are written so that the values are easily seen and vertical lines are drawn to separate the years.  The total for each year is 150,000, equal to the Expected Value.  The values entered in each colored section refer to the amount of reserves contributed to the total that are in that classification for that given year.</p>
+        <p>In Reserve Progression P1 does not have any Reserves progressing out, and P3 does not have any Reserves progressing in.  There is 100% progression in Y3, but in the chart there still remains some Reserves in P2.  This is because the Reserves only progress a single Classification at a time, and in Y3 the last Reserves from P3 are progressed into P2.  These cannot be progressed to P1 until Y4.</p>
+        <p>A brief explanation of the two most important points in the Reserve Progression calculations are as follows:</p>
+        <ol>
+            <li>
+                <p>The total Reserves progressed out of a particular Reserve Classification in a single period</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>ReservesP3: The starting total Reserves volume for the period, for the designated Classification</p>
+                    </li>
+                    <li>
+                        <p>b.	Progression %P3: The Reserve Progression percentage for the period, for the designated Classification</p>
+                    </li>
+                </ol>
+                <p style="text-align: center;">OutP3=ReservesP3 X Progression %P3</p>
+            </li>
+            <li>
+                <p>The total Reserves added to a particular Reserve Classification in a single period can be calculated using the following formula.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>OutP2: Total Reserves progressed out of the source Classification</p>
+                    </li>
+                    <li>
+                        <p>WP2: weighting of the Reserve Consolidation for the source Classification</p>
+                    </li>
+                    <li>
+                        <p>WP1: weighting of the Reserve Consolidation for the destination Classification</p>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+        <p>
+            <img src="../../Images/prod15.png" />
+        </p>
+        <p>Using the previous two calculations, and the information entered into esi.manage, you can manually calculate the Reserve Progression from start to finish.  It is important to remember that you progress the lower (P2 is lower than P3) Reserves first in any given period.</p>
+        <p class="note"><b>Note</b>: Reserves Progression and Reserve Booking Schedules should not both be used at the same time, except where the Reserve Booking Schedule is 100% in Year 1.</p>
+        <p>&#160;</p>
+        <h3><span style="font-weight: bold;">Reserve 
+ reporting</span>
+        </h3>
+        <p>Any report that involves Production or OPEX in a calculation (includes Sales, Reserves and Project Summaries) allows the user to report against consolidated reserves. This means that the reserve data can be reported for different classes of reserves (reserves, contingent reserves etc) and also for the different consolidations of reserves that have been configured (P10, 50 , 90, mean, Swanson etc).</p>
+        <p style="font-weight: bold;"><strong><span style="font-weight: bold;"><img src="../../Images/prod16.PNG" style="border: none;float: none;border-style: none;border-style: none;" border="0" /></span></strong>
+        </p>
+        <p>&#160;</p>
+        <p class="note"><b>Note:</b> the Report will use the selected Consolidation for the calculations. 
+ For Variance Reports, you can use two different Consolidations.</p>
+        <p>An option is available on any Report that involves Production or Reserves, 
+ called Reserve Progression. &#160;Depending 
+ on your configuration of Reserves, this toggle may or may not have an 
+ effect. &#160;This 
+ is intended to be used so that if you have a Reserve Consolidation that 
+ is an expected value, you are able to report on the progression of the 
+ Reserves from the Reserve Consolidation you choose in the Report Parameters 
+ to the expected value, over time.</p>
+        <p>There is another option available to select whether to use either the Economic or Calculated Reserve Variant.  This refers to whether or not the Production should be truncated at either the Asset Economic Limit Date or Calculated for the individual case.</p>
+        <p>&#160;</p>
+    </body>
+</html>

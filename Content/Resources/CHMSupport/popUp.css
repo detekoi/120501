@@ -1,0 +1,202 @@
+/*=(===============================================================)*/
+
+/*=(===============================================================)*/
+/*=(Created with RoboEditor.)=======================================*/
+/*=(===============================================================)*/
+
+BODY {
+	font-family: Arial;
+	background-color: #ffffff;
+}
+
+H3 {
+	font-weight: bold;
+	background-color: #874f12;
+	color: #ffffff;
+	text-indent: 0.25in;
+	margin-left: 0pt;
+	line-height: 150%;
+	border-left-style: none;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	font-size: 11pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-H3 {
+	font-weight: bold;
+	color: #ffffff;
+	text-indent: 0.25in;
+	line-height: 150%;
+	font-size: 11pt;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+H4 {
+	font-weight: bold;
+	font-size: 12.0pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-H4 {
+	font-weight: bold;
+	font-size: 12.0pt;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+H5 {
+	font-weight: bold;
+	font-size: 10.0pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-H5 {
+	font-weight: bold;
+	font-size: 10.0pt;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+H6 {
+	font-weight: bold;
+	font-size: 8.0pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-H6 {
+	font-weight: bold;
+	font-size: 8.0pt;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+P {
+	margin-top: 0pt;
+	margin-bottom: 6pt;
+	font-size: 9pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-P {
+	font-size: 9pt;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+A.expandspot {
+	cursor: hand;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	font-size: 10pt;
+	color: #400080;
+	x-on-hover: dropshadow(color=#ffffff);
+	font-weight: bold;
+	font-style: normal;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+SPAN.expandtext {
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: normal;
+	color: #339999;
+	x-text-underline: Normal;
+	/*begin!kadov{{*/ text-decoration: underline; /*}}end!kadov*/ 
+}
+
+A.dropspot {
+	cursor: hand;
+	color: #008000;
+	font-style: italic;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+A.glossterm {
+	color: #800000;
+	cursor: hand;
+	font-style: italic;
+	x-text-underline: off;
+	x-text-overline: off;
+	x-text-line-through: off;
+	/*begin!kadov{{*/ text-decoration: none none none; /*}}end!kadov*/ 
+}
+
+SPAN.glosstext {
+	font-style: italic;
+	font-weight: normal;
+	color: #0000ff;
+}
+
+OL,
+UL {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+P.Bullets {
+	list-style: disc;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-P-CBullets {
+	list-style: disc;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+P.NumberedList {
+	list-style: decimal;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-P-CNumberedList {
+	list-style: decimal;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+A.popupspot {
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: normal;
+	color: #339999;
+	x-text-underline: Off;
+	/*begin!kadov{{*/ text-decoration: none; /*}}end!kadov*/ 
+}
+
+DIV.droptext {
+	margin-left: 0.25in;
+	margin-right: 0.25in;
+	margin-top: 18px;
+}
+
+
+/*=(===============================================================)*/

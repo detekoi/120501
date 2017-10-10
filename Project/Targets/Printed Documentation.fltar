@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTargetFile
+  Version="1"
+  DefaultUrl="/Content/How_to_Use_this_File.htm"
+  OutputFile="Word.doc"
+  Type="MsWord"
+  GlossaryTermConversion="marked"
+  MasterToc="/Project/TOCs/HelpFileTOC(WordOutput).fltoc"
+  MasterStylesheet="/Content/Resources/Stylesheets/HelpFileStylesheet.css"
+  EmbedImages="true"
+  OutputFolder="C:\Users\isinclair\Desktop\Output2"
+  Medium="print">
+  <Variables />
+  <ConditionTags />
+  <PrintedOutput
+    MultiDocWordOutput="true"
+    MirrorMargins="false" />
+</CatapultTargetFile>

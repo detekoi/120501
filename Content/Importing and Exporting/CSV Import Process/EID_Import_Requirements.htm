@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="546" MadCap:lastWidth="1226">
+    <head>
+        <link href="../../Resources/TableStyles/HelpFileTableStylesheet.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>EID Import Requirements</title>
+        <link rel="StyleSheet" href="../../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <h1 style="text-align: right;" align="right">
+            <img src="../../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />
+        </h1>
+        <h2>EID Import Requirements</h2>
+        <p>External Identifiers (<span style="font-weight: bold;">EID</span>s) 
+ can be imported into esi.manage. An EID is the Identifier used in an <span style="font-weight: bold;">External 
+ System</span> (i.e., Accounting or Field Capture system). The Integration 
+ Perspective within esi.manage allows EIDs to be mapped to an esi.manage 
+ <span style="font-weight: bold;">Asset</span>. &#160;Multiple 
+ EID's can be mapped to the same Asset, which provides a more convenient 
+ mechanism to bring external data (Field Estimates, Actuals, etc.) into 
+ esi.manage and have it associated against the appropriate Asset. Refer to <a href="../../Integration Perspective/Mapped_External_Identifiers.htm">Mapped External Identifiers</a>  for how to map Assets to EID’s.</p>
+        <table style="width: 84.574%;mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');" cellspacing="0" width="84.574%" class="TableStyle-HelpFileTableStylesheet">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">NAME</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">FORMAT</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;">VALIDATION</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="29.56%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p style="font-weight: bold;">System</p>
+                    </td>
+                    <td width="20.283%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Text</p>
+                    </td>
+                    <td width="50.157%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>Mandatory</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td bgcolor="#C0C0C0" width="29.56%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p style="font-weight: bold;">Identifier</p>
+                    </td>
+                    <td width="20.283%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Text</p>
+                    </td>
+                    <td width="50.157%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>Mandatory</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="29.56%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>Context Key</p>
+                    </td>
+                    <td width="20.283%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Text</p>
+                    </td>
+                    <td width="50.157%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>Both or none. &#160;Must 
+ match an existing Context Key in esi.manage</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td bgcolor="#C0C0C0" width="29.56%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body3">
+                        <p>Context Value</p>
+                    </td>
+                    <td width="20.283%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p>Text</p>
+                    </td>
+                    <td width="50.157%" class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body3">
+                        <p>Both or none.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p><span style="font-weight: bold;">Bolded</span> items are mandatory.</p>
+        <p>&#160;</p>
+        <p>Context Key and Value are optional fields, however they must be entered 
+ as a pair. An example of a Key and Value pair are: Region (key) and Alberta 
+ (value). You can include multiple pairs of these in a single line, but 
+ they <span style="font-style: italic;">must</span> be entered as pairs, 
+ and <span style="font-style: italic;">must</span> be unique for each pair. 
+ (i.e., you could not enter a second Region key after the first one in 
+ the same import line.)</p>
+        <p>The Context Key pairs are provided to simplify the process of matching 
+ EID's to assets. You must add the Context Key string (e.g. Region) into 
+ the esi.manage Configuration.</p>
+        <p>The Context Key must already exist in the esi.manage Configuration (Configuration 
+ &gt; External Identifiers &gt; External Context Keys)</p>
+    </body>
+</html>

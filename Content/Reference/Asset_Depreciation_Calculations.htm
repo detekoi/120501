@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="2705" MadCap:lastWidth="1195">
+    <head>
+        <link href="../Resources/TableStyles/HelpFileTableStylesheet.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Asset Depreciation Calculations</title>
+        <link rel="StyleSheet" href="../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <script type="text/javascript" language="JavaScript1.2" src="../Archived/ehlpdhtm.js">
+        </script>
+        <h3>
+        </h3>
+        <h1>
+            <img src="../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />
+            <MadCap:concept term="Depreciation Calculations" />Depreciation Calculations</h1>
+        <p>Capital Depreciation is calculated on an Expenditure by Expenditure 
+ basis, and is used to calculate the After Tax amount for an Analysis Case.</p>
+        <ol>
+            <li class="NumberedList">Depreciation 
+ Models can be configured for each <span style="font-weight: bold;">Expenditure 
+ Type</span>, on a Jurisdiction by Jurisdiction basis.</li>
+            <li class="NumberedList">When the Depreciation 
+ Models have been configured, they will be calculated automatically for 
+ every expenditure during the Analysis Case run.</li>
+            <li class="NumberedList">The Default models 
+ can be overridden at the Expenditure line within a Project.</li>
+        </ol>
+        <p>&#160;</p>
+        <p>For each Expenditure/Jurisdiction pair, the values that can be entered 
+ are (note that there are equivalent, but independent options for the Tangible 
+ and Intangible portions of the Expenditure Type):</p>
+        <ul>
+            <li class="Bullets"><span style="font-weight: bold;">Type</span> 
+ - choices of Depreciation models (Declining Balance, Straight Line, Sum 
+ of Years, Unit of Production). These models determine the amount of the original capital cost 
+ that is eligible for deduction from the Net Income at the point in time 
+ as defined by the Convention.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Annual 
+ Decline %</span> - an Annual Depreciation rate (if Declining Balance is 
+ selected as the Depreciation model.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Useful 
+ Life (Years)</span> - the duration the Depreciation is applied over (the 
+ Asset is assumed to be out of service at the end of this period.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Convention</span> 
+ - defines when the Depreciation calculations are performed - Mid Month, 
+ Mid Quarter or Mid Year. </li>
+        </ul>
+        <p>The values that are defined for Depreciation in the Configuration are 
+ applied by default to any Expenditure (based on the Jurisdiction assigned 
+ to the Project). These settings can be overridden at the <span style="font-weight: bold;"><a href="../Project Editor/Expenditures/Project_Expenditure_Depreciation.htm" target="_popup">Project level</a></span>. 
+ </p>
+        <h3>&#160;</h3>
+        <h3>Useful Life</h3>
+        <p>The Useful Life establishes how many Years the Expenditure will be depreciated 
+ over. In terms of the Default Models, the Salvage value is presumed to 
+ be 0, meaning the entire amount (Tangible or Intangible) will be depreciated.</p>
+        <p>There is the Option to supply a <span style="font-weight: bold;">Salvage 
+ Value</span> against each Expenditure, in which case:</p>
+        <p style="margin-left: 40px;">Amount to be <span style="font-weight: bold;">Depreciated</span> 
+ = <span style="font-weight: bold;">Expenditure Amount</span> - <span style="font-weight: bold;">Salvage 
+ Value</span></p>
+        <h3>&#160;</h3>
+        <h3>Convention</h3>
+        <p>Depreciation is always calculated internally as a <span style="font-weight: bold;">Yearly 
+ Amount</span>, which is then allocated evenly over the Periods in the 
+ year. The <span style="font-weight: bold;">Convention</span> parameter 
+ works in conjunction with the Expenditure End Date to determine what portion 
+ of Expenditure will be depreciated in the first (and last) years. </p>
+        <ul>
+            <li class="Bullets"><span style="font-weight: bold;">Mid-Year</span> 
+ - this is the most typical convention; regardless of where the Expenditure 
+ End Date falls, 1/2 of a full year's depreciation is applied in the first, 
+ and last years. </li>
+            <li class="Bullets"><span style="font-weight: bold;">None</span> 
+ - this treats the Expenditure as having a full year's depreciation, regardless 
+ of when the Expenditure Occurs.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Mid-Month</span> 
+ - 0.5 months for the Month the Expenditure ends in, plus the remaining 
+ months of the year.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Mid-Quarter</span> 
+ - 0.5 quarters for the Quarter the Expenditure ends in, plus the remaining 
+ quarters of the year. </li>
+        </ul>
+        <p>&#160;</p>
+        <p>In the following table, the percentage represents the portion of a Full 
+ Year's depreciation amount (<span style="font-weight: bold;">Amount to 
+ be Depreciated / Useful Life</span>).</p>
+        <table style="width: 100%;mc-table-style: url('../Resources/TableStyles/HelpFileTableStylesheet.css');" cellspacing="0" width="100%" class="TableStyle-HelpFileTableStylesheet">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <thead>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th bgcolor="#800000" width="20%" class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-Header1">
+                        <p class="MLTable" style="font-weight: bold;color: #ffffff;">Expenditure End Date</p>
+                    </th>
+                    <th bgcolor="#800000" width="20%" class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p class="MLTable" style="font-weight: bold;color: #ffffff;text-align: center;" align="center">None</p>
+                    </th>
+                    <th bgcolor="#800000" width="20%" class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p class="MLTable" style="font-weight: bold;color: #ffffff;text-align: center;" align="center">Mid Month</p>
+                        <p class="MLTable" style="font-weight: bold;color: #ffffff;text-align: center;" align="center">(% based on Months)</p>
+                    </th>
+                    <th bgcolor="#800000" width="20%" class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p class="MLTable" style="font-weight: bold;color: #ffffff;text-align: center;" align="center">Mid Quarter</p>
+                        <p class="MLTable" style="font-weight: bold;color: #ffffff;text-align: center;" align="center">(% based on Quarters)</p>
+                    </th>
+                    <th bgcolor="#800000" width="20%" class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-Header1">
+                        <p class="MLTable" style="font-weight: bold;color: #ffffff;text-align: center;" align="center">Mid Year</p>
+                        <p class="MLTable" style="font-weight: bold;color: #ffffff;text-align: center;" align="center">(% based on Years)</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="20%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p class="MLTable">Feb 23, 2010</p>
+                    </td>
+                    <td width="20%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="MLTable" style="text-align: center;" align="center">12 / 12 = 100%</p>
+                    </td>
+                    <td width="20%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="MLTable" style="text-align: center;" align="center">10.5 / 12 = 87.5%</p>
+                    </td>
+                    <td width="20%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="MLTable" style="text-align: center;" align="center">3.5 / 4 = 87.5%</p>
+                    </td>
+                    <td width="20%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p class="MLTable" style="text-align: center;" align="center">1 / 2 = 50%</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td bgcolor="#C0C0C0" width="20%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p class="MLTable">April 1, 2010</p>
+                    </td>
+                    <td width="20%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="MLTable" style="text-align: center;" align="center">12 / 12 = 100%</p>
+                    </td>
+                    <td width="20%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="MLTable" style="text-align: center;" align="center">8.5 / 12 = 70.83%</p>
+                    </td>
+                    <td width="20%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="MLTable" style="text-align: center;" align="center">2.5 / 4 = 62.5%</p>
+                    </td>
+                    <td width="20%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p class="MLTable" style="text-align: center;" align="center">1 / 2 = 50%</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="20%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p class="MLTable">June 15, 2010</p>
+                    </td>
+                    <td width="20%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="MLTable" style="text-align: center;" align="center">12 / 12 = 100%</p>
+                    </td>
+                    <td width="20%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="MLTable" style="text-align: center;" align="center">6.5 / 12 = 54.17%</p>
+                    </td>
+                    <td width="20%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="MLTable" style="text-align: center;" align="center">2.5 / 4 = 62.5%</p>
+                    </td>
+                    <td width="20%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p class="MLTable" style="text-align: center;" align="center">1 / 2 = 50%</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td bgcolor="#C0C0C0" width="20%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p class="MLTable">Aug 18, 2010</p>
+                    </td>
+                    <td width="20%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="MLTable" style="text-align: center;" align="center">12 / 12 = 100%</p>
+                    </td>
+                    <td width="20%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="MLTable" style="text-align: center;" align="center">4.5 / 12 = 37.50%</p>
+                    </td>
+                    <td width="20%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="MLTable" style="text-align: center;" align="center">1.5 / 4 = 37.5%</p>
+                    </td>
+                    <td width="20%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p class="MLTable" style="text-align: center;" align="center">1 / 2 = 50%</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="20%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body2">
+                        <p class="MLTable">Oct 23, 2010</p>
+                    </td>
+                    <td width="20%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2">
+                        <p class="MLTable" style="text-align: center;" align="center">12 / 12 = 100%</p>
+                    </td>
+                    <td width="20%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2">
+                        <p class="MLTable" style="text-align: center;" align="center">2.5 / 12 = 20.83%</p>
+                    </td>
+                    <td width="20%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2">
+                        <p class="MLTable" style="text-align: center;" align="center">0.5 / 4 = 12.5%</p>
+                    </td>
+                    <td width="20%" class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body2">
+                        <p class="MLTable" style="text-align: center;" align="center">1 / 2 = 50%</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>The Convention doesn't simply adjust the Percentage for the first year. 
+ There is a Decline Amount (based on the selected method) calculated for 
+ each year of the useful life. The Convention is the mechanism by which 
+ the Economic Periods are overlaid onto the Decline profile. For example, 
+ using a Mid Year convention:</p>
+        <ol>
+            <li class="NumberedList">Economic Period 
+ 1 (the first year where Depreciation occurs) will have 1/2 of the first 
+ year's calculated Depreciation.</li>
+            <li class="NumberedList">Economic Period 
+ 2 will have 1/2 of the first year's calculated Depreciation, and 1/2 of 
+ the second year's.</li>
+        </ol>
+        <p>&#160;</p>
+        <h3>Straight Line Method</h3>
+        <p style="margin-left: 0px;">The Straight Line Method takes the Useful 
+ Life and converts it to an Annual Decline Percentage (the Annual Decline 
+ Percentage cannot be entered in the Depreciation Table):</p>
+        <p style="margin-left: 40px;">&#160;Annual 
+ Decline Percentage = 1 / Useful Life </p>
+        <p style="margin-left: 0px;">The Yearly Depreciation Amount is:</p>
+        <p style="margin-left: 40px;">Yearly Depreciation Amount = Amount to be 
+ Depreciated * Annual Decline %</p>
+        <p style="margin-left: 0px;">The yearly Depreciation Amount shown in the 
+ Cash Flow Analysis will be impacted based on the selected <span style="font-weight: bold;">Convention</span>.</p>
+        <h3>&#160;</h3>
+        <h3>Declining Balance Method</h3>
+        <p>The Declining Balance Method provides for an accelerated Decline in 
+ the early year's of the Useful Life. A Straight Line Decline is calculated 
+ in parallel (based on the amount to be depreciated at the start of each 
+ year), and switches to the Straight Line Method when it's Depreciation 
+ amount exceeds what would be calculated from the Declining Balance Method 
+ (which will never fully depreciate an Expenditure).</p>
+        <p>The Declining Balance Method requires Decline Percentage to be entered 
+ - <span style="font-weight: bold;">typically</span> double the Decline 
+ Percentage for the Straight Line Method, i.e., assuming a Useful Life 
+ of 7 years:</p>
+        <p style="margin-left: 40px;">Annual Decline % <span style="vertical-align: Sub;">straight 
+ line</span> = 1 / 7 = <span style="font-weight: bold;">14.29%</span></p>
+        <p style="margin-left: 40px;">Annual Decline % declining balance = 1 / 
+ 7 * 2 = <span style="font-weight: bold;">28.57%</span></p>
+        <p>The Annual Decline % is <span style="font-weight: bold;">not automatically 
+ calculated</span> from the Useful Life, you must enter the appropriate 
+ value.</p>
+        <p>The calculation sequence is:</p>
+        <ol>
+            <li class="NumberedList">Calculate the 
+ Depreciation Amount of the Remaining Balance:</li>
+            <ul>
+                <li class="NumberedList">Depreciation 
+ Amount <span style="vertical-align: Sub;">current year</span> = Remaining 
+ Balance <span style="vertical-align: Sub;">current year</span> * Annual 
+ Decline % <span style="vertical-align: Sub;">declining balance method</span></li>
+            </ul>
+            <li class="NumberedList">In parallel, 
+ calculate the Deprecation Amount using the Straight Line Method:</li>
+            <ol style="list-style-type: lower-roman;">
+                <li class="NumberedList">The Straight 
+ Line Annual Decline % is re-calculated based on the number of remaining 
+ years - for example, in year 5 of a 7 Year useful life, 3 would be used 
+ to calculate the Decline %.</li>
+                <li class="NumberedList">&#160;Depreciation 
+ Amount <span style="vertical-align: Sub;">current year</span> = Remaining 
+ Balance <span style="vertical-align: Sub;">current year</span> * Annual 
+ Decline % <span style="vertical-align: Sub;">straight line method</span></li>
+            </ol>
+            <li class="NumberedList">Whichever Depreciation 
+ Amount is greater will be used for the current year's depreciation.</li>
+            <ul>
+                <li class="NumberedList">The mathematics 
+ are such that once the 'switch' to the Straight Line method occurs, it 
+ will always be selected for all remaining periods.</li>
+            </ul>
+            <li class="NumberedList">Calculate the 
+ Remaining Balance </li>
+            <ul>
+                <li class="NumberedList">Remaining 
+ Balance <span style="vertical-align: Sub;">next year</span> = Remaining 
+ Balance <span style="vertical-align: Sub;">this year </span>- Depreciation 
+ Amount</li>
+            </ul>
+        </ol>
+        <p class="Heading4Reference" style="margin-left: 0px;">The yearly Depreciation Amount shown in the 
+ Cash Flow Analysis will be impacted based on the selected <span style="font-weight: bold;">Convention.</span></p>
+        <h3>&#160;</h3>
+        <h3>Sum of Years Method</h3>
+        <p>The Sum of Years is also an Accelerated Decline method. The Annual Decline 
+ % will be calculated based on the Useful Life, the Annual Decline % cannot 
+ be entered with this method.</p>
+        <ol>
+            <li class="NumberedList">Calculate the 
+ Sum of Years based on the Useful Life:</li>
+            <ol style="list-style-type: lower-roman;">
+                <li class="NumberedList">Useful Life 
+ = 7, Sum of Years = 7 + 6 + 5 + 4 + 3 + 2 + 1 = 28</li>
+                <li class="NumberedList">Useful Life 
+ = 5, Sum of Years = &#160;5 
+ + 4 + 3 + 2 + 1 = 15</li>
+            </ol>
+            <li class="NumberedList">For a particular 
+ year in the Depreciation Schedule:</li>
+            <ul>
+                <li class="NumberedList">Depreciation 
+ Amount = Amount to be Depreciated x (Years Remaining / Sum of Years)</li>
+            </ul>
+            <li class="NumberedList">For example, 
+ in the 3rd year of a 7 year useful life:</li>
+            <ul>
+                <li class="NumberedList">Depreciation 
+ Amount = Amount to be Depreciated x (5 / 28)</li>
+            </ul>
+        </ol>
+        <p style="margin-left: 0px;">The yearly Depreciation Amount shown in the 
+ Cash Flow Analysis will be impacted based on the selected <span style="font-weight: bold;">Convention.</span></p>
+        <h3>&#160;</h3>
+        <h3>Unit of Production Method</h3>
+        <p>The Unit of Production method for depreciation expresses the useful 
+ life in terms of the total number of units expected to be produced for 
+ a given Pool of Projects.</p>
+        <ol style="list-style: decimal;list-style-type: decimal;">
+            <li>Calculate the Pools’ UoP Depreciation Rate: Un-Depreciated 
+ CAPEX/ Remaining Reserves</li>
+            <li>For each period, take the UoP Rate and multiply 
+ by the production in that period.</li>
+            <li>The UoP Rate is calculated every month to account 
+ for additional CAPEX and Reserves being added to the pool.</li>
+        </ol>
+        <p>The yearly Depreciation Amount shown in the Cash Flow Analysis will 
+ be impacted based on the selected <span style="font-weight: bold;">Convention.</span></p>
+        <p>&#160;</p>
+    </body>
+</html>

@@ -1,0 +1,1939 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="6" MadCap:lastHeight="10657" MadCap:lastWidth="1226" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/HelpFileTableStylesheet.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Measure Export</title>
+        <link rel="StyleSheet" href="../../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <script type="text/javascript" language="JavaScript1.2" src="../../Archived/ehlpdhtm.js">/*<![CDATA[*/
+
+ 
+/*]]>*/</script>
+        <img src="../../Images/Logo Images/3esi_manage.png" align="right" border="0" class="HeaderLogo" />
+        <h2>Measure Export</h2>
+        <p><span style="font-weight: bold;">exportMeasure.exe</span> (found in 
+ the esi.manage.export.measure folder or your installation) allows calculated 
+ data (CAPEX, OPEX, Production, Reserves, Revenue) to be exported in a csv format.</p>
+        <p>The creation of this new application allows the export to be invoked 
+ by an external application, as part of a pre-defined workflow. While this 
+ is similar to the XML export routines, it deals only with calculated results. 
+ As it is in a csv format, it can readily be consumed by Excel for the 
+ generation of pivot tables.</p>
+        <p>This application is documented - entering:</p>
+        <p>&#160;</p>
+        <p>&gt; <span style="font-weight: bold;">exportMeasure --help</span> &#160;(<span style="font-style: italic;">from the command line in the folder - click 
+ <a href="#exportMeasure_help">here</a> if you need step by step instructions 
+ for running the command line</span>)</p>
+        <p>&#160;</p>
+        <p>exportMeasure --help will bring up a description of the parameters that 
+ can be included in the Measure Export along with their options. </p>
+        <p>In addition to exported calculated results, Grouping can also be requested. 
+ There are a number of pre-defined Groups, as well as the option to specify 
+ Hierarchy elements to be included. </p>
+        <p class="note"><b>Note:</b> a text file (i.e.; ExportProperties.txt) can be created which 
+ contains the desired results and grouping and used as part of the calling 
+ syntax.</p>
+        <p>&#160;</p>
+        <p>A Parameters File to configure a MeasureExport is broken into 4 "sections"</p>
+        <ol>
+            <li class="NumberedList"><span style="font-weight: bold;">Configuration</span>:</li>
+            <ol>
+                <li class="NumberedList"><span style="font-weight: bold;">Database 
+ connection</span>: Server, Database Name, login information, etc.</li>
+                <li class="NumberedList"><span style="font-weight: bold;">Header</span> 
+ - a switch to write out Header information for each output column</li>
+                <li class="NumberedList"><span style="font-weight: bold;">Output 
+ File</span> - name of the output file, whether to Append to the file (Replace 
+ is the default behaviour)</li>
+                <li class="NumberedList"><span style="font-weight: bold;">Pivot</span> 
+ - a switch to output all calculated results into a single column, and 
+ insert a Measure Definition column to aid in pivoting</li>
+            </ol>
+            <li style="font-weight: normal;" class="NumberedList"><b>Grouping</b>:</li>
+            <ol>
+                <li class="NumberedList"><span style="font-weight: bold;">Pre-defined 
+ Groups</span> - there is a wide collection of built-in Grouping options; 
+ Project and Asset Name, CAPEX/OPEX Category and Type, Project Code and 
+ Jurisdiction, etc.</li>
+                <li class="NumberedList"><span style="font-weight: bold;">Custom 
+ Groups</span> - Project Hierarchy, and Budget, Project or Asset Attributes</li>
+                <li class="NumberedList"><span style="font-weight: bold;">Named 
+ Groups</span> - AFE Amount, Estimate at Completion</li>
+            </ol>
+            <li class="NumberedList"><span style="font-weight: bold;">Measures</span> 
+ - each output is defined by a number of parameters</li>
+            <ol>
+                <li class="NumberedList"><span style="font-weight: bold;">Column 
+ Name</span> - the header for the output column</li>
+                <li class="NumberedList"><span style="font-weight: bold;">Measure</span> 
+ - Activity, Expenditure, OPEX, Production, Reserves, Resource Cost or 
+ Revenue</li>
+                <li class="NumberedList"><span style="font-weight: bold;">Definition</span> 
+ - one of the appropriate options found in the esi.manage Configuration 
+ (Unrisked Gross, Net Risked Sales, etc.)</li>
+                <li class="NumberedList"><span style="font-weight: bold;">Type</span> 
+ - one of the appropriate options found in the esi.manage Configuration 
+ (Forecast, Actuals, Blended, etc.)</li>
+                <li class="NumberedList"><span style="font-weight: bold;">Basis</span> 
+ - an alternative approach to represent the Definition, using Gross, Net 
+ or Net_Net in combination with Modifiers</li>
+                <li class="NumberedList"><span style="font-weight: bold;">Units</span> 
+ - the desired output unit</li>
+                <li class="NumberedList"><span style="font-weight: bold;">Filtering</span> 
+ - calculations can be 'filtered' to a desired subset (i.e., a specific 
+ Product or combination of Products)</li>
+                <li class="NumberedList"><span style="font-weight: bold;">Modifiers</span> 
+ - based on the selected Measure (for Revenue a Price File must be identified), 
+ Definition (NetRiskedRoyalty requires a Royalty Scheme) or Type (Blended 
+ requires a Last Actuals Date and a Blending Mode)</li>
+            </ol>
+            <li class="NumberedList"><b>Calculation </b><span style="font-weight: bold;">Period</span> and <span style="font-weight: bold;">Source</span></li>
+            <ol>
+                <li class="NumberedList"><span style="font-weight: bold;">Start 
+ Date</span> for calculations</li>
+                <li class="NumberedList"><span style="font-weight: bold;">Calculation 
+ Period</span> - how many calculation periods of what periodicity (Daily, 
+ Monthly, Quarterly, Annual)</li>
+                <li class="NumberedList"><span style="font-weight: bold;">Source</span> 
+ - an existing Project Set in esi.manage that provides the Projects to 
+ be calculated</li>
+            </ol>
+        </ol>
+        <p>&#160;</p>
+        <p><span style="font-weight: bold;">Notes:</span>
+        </p>
+        <ol>
+            <li class="NumberedList">The Syntax identifiers, 
+ Options and Samples are <span style="font-weight: bold;">CASE SENSITIVE</span>.</li>
+            <ol>
+                <li class="NumberedList">When the 
+ Description refers to a Configuration table within esi.manage, the String 
+ must match the Descriptor (<span style="font-weight: bold;">Name</span> 
+ or <span style="font-weight: bold;">Description</span>) that appears within 
+ your company's Configuration. </li>
+            </ol>
+            <li class="NumberedList">In the following 
+ Samples, some entries will have <span style="font-weight: bold;">Quotes 
+ (")</span> around them. If there are Spaces within the sample, the 
+ entire string must be quoted.</li>
+            <li class="NumberedList">The Database 
+ connection information should follow how your esi.manage database connection 
+ is <a href="../../Database_Connection.htm" style="font-weight: bold;">Configured</a>.</li>
+            <li class="NumberedList">Grouping options 
+ (particularly with respect to multiple grouping options) defines the pattern 
+ of the calculated data (Measures).</li>
+            <ul>
+                <li class="NumberedList">Consider 
+ relationships when specifying the sequence of the grouping options - Project.Name 
+ should likely come before Asset.Name.</li>
+            </ul>
+            <li class="NumberedList">The Grouping 
+ options, combined with the identified measures, imply an AND relationship. 
+ For example:</li>
+            <ul>
+                <li class="NumberedList">The selected 
+ Grouping options are Project.Name, Asset.Name, CAPEX.Type and Product.Name, 
+ while the selected Measures are Expenditure and Production.</li>
+                <li class="NumberedList">The output 
+ will show the same pattern of Project Name and Asset Name twice. For the 
+ first section, CAPEX Type will be populated as will the Date and Expenditure 
+ columns.</li>
+                <li class="NumberedList">The second 
+ section will have same Project Name and Asset Name values, but only the 
+ Product Name, Date and Production columns populated.</li>
+            </ul>
+            <li class="NumberedList">If the CAPEX
+ Type and Product Name grouping options are not included, there will only 
+ be one section containing Project Name, Asset Name, Dates with the Expenditure 
+ and Production columns populated.</li>
+            <li class="NumberedList">Measure Definition 
+ (<span style="font-weight: bold;">-e</span>) and Basis (<span style="font-weight: bold;">-b</span>) 
+ with Modifiers (<span style="font-weight: bold;">-R, -S,</span> etc.) 
+ are <span style="font-weight: bold;">mutually exclusive</span>. </li>
+            <ul>
+                <li class="NumberedList">Definitions 
+ are based on the available Definitions within the Configuration and are 
+ pre-defined in terms of Modifiers. </li>
+                <li class="NumberedList">The same 
+ results can be obtained by using the Basis and Modifier options, however, 
+ both cannot be defined for a single Measure calculation (-c).</li>
+            </ul>
+            <li style="font-weight: normal;" class="NumberedList"><b><span style="font-weight: normal;">Items marked with an asterisk * in the description 
+ have options that can be user configured. &#160;If 
+ these options have been renamed, then the new name must be used in place 
+ of the default.</span></b>
+            </li>
+            <li style="font-weight: normal;" class="NumberedList"><b><span style="font-weight: normal;">If using the "-t" flag to identify 
+ the measure type (eg. Forecast), it will use curtailment (as it is defined 
+ in Production Types). &#160;If 
+ you do not wish to use all the settings that come included by using the 
+ "-t" flag, you must use the other modifiers available to describe 
+ what is wanted out of the measure export. </span></b>
+            </li>
+            <li>If no consolidation setting is specified, by default the "Expected Value" consolidation is used.</li>
+        </ol>
+        <p class="NumberedList" style="font-weight: normal;"><span style="font-weight: normal;">If 
+ wanted, add other modifiers to option B (eg. risk) to return the desired 
+ value.</span>
+        </p>
+        <ol style="list-style-type: upper-alpha;">
+            <li style="font-weight: normal;"><span style="font-weight: normal;"> -c "Forecast Gross Unrisked Raw" -m PRODUCTION -e "Gross 
+ Unrisked Raw" -t Forecast -U Oil:boe -X Default --consolidation "Reserve 
+ (Cumulative):1P" --pricescenario "Current Price"</span>
+            </li>
+            <li style="font-weight: normal;">-c "Forecast Gross Unrisked Raw" 
+ -m PRODUCTION -b GROSS &#160;-v 
+ FORECAST &#160;-U 
+ Oil:boe --consolidation "Reserve (Cumulative):1P" --pricescenario 
+ "Current Price"</li>
+        </ol>
+        <table style="width: 58.907%;mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');" class="TableStyle-HelpFileTableStylesheet" cellspacing="0">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" style="width: 314px;" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" style="width: 556px;" />
+            <thead>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column1-Header1" colspan="3">CONFIGURATION</th>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-header">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-header">Syntax</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-header">Sample</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-header">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">-d</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">"SQL2008R2:1432/Smart Oil and Gas"
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p class="MLTable">Use Connection Details. Server will default to <span style="font-weight: bold;">localhost</span>. 
+ Port will default to <span style="font-weight: bold;">1433</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">-i</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">/server:127.0.0.1\sql2008 "/database:Smart Oil and Gas"
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">Use Database Instance
+</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">-n</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">Use Named Pipes
+</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">-u</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">3esiUser1:manage123
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">Use Windows Credentials and Password
+</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">-h</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">Toggle to write out column headers
+</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">-y</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p class="MLTable">Use <a href="../../Reference/Fiscal_Year.htm" style="font-weight: bold;" target="_popup">fiscal year</a> 
+ configuration when computing periods</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">-o</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">"x:/Business Operations/Monthly Reports/summary.csv"
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">The target output file. Default is to Standard Out
+</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">-A</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">Append to the named file - default is to overwrite.
+</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">-z</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">Suppress zeros
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">do not write rows where all                                          column values are zeros
+</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">-p</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">Toggle to output calculated values in a single column, and insert a column containing the Measure definition
+</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">-s</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">since date
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">include only the projects that have changed since DATE.  The site-specific feature of Project Change Logging must be enabled.
+</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">--exclude-user USERNAME
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body3">used in combination with -s option to exclude changes made by USERNAME
+</td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="width: 58.907%;mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');" class="TableStyle-HelpFileTableStylesheet" cellspacing="0">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" style="width: 84px;" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" style="width: 213px;" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" style="width: 224px;" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" style="width: 242px;" />
+            <thead>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column1-Header1" colspan="4">Grouping</th>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-header">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-header">Syntax</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-header">Options</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-header">Sample</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-header">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">-g</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">AFE.MANAGER
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">&#160;</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">AFE.NAME
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">&#160;</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">AFE.STATUS
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">&#160;</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">ASSET.NAME
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">&#160;</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">ASSET.CODE
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">&#160;</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">ASSET.RIGRELEASEDATE
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">&#160;</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">ASSET.SPUDDATE
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">&#160;</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">ASSET.UWI
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">&#160;</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">BUDGET.NAME
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">&#160;</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">CAPEX.CATEGORY
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">&#160;</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">CAPEX.SEQUENCE</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">&#160;</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">CAPEX.TYPE
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">&#160;</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">OPEX.CATEGORY
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">&#160;</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">OPEX.TYPE
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">&#160;</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">PRODUCT.NAME
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">&#160;</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">PRODUCT.CATEGORY
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">&#160;</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">PRODUCTION.SEQUENCE
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">&#160;</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">PRODUCTION.ONSTREAM
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">&#160;</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">PROJECT.CODE
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">&#160;</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">PROJECT.MANAGER
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">&#160;</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">PROJECT.NAME
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">&#160;</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">PROJECT.STATUS
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">&#160;</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <th class="TableStyle-HelpFileTableStylesheet-BodyD-Column1-Body2" colspan="4">Custom groups are defined by the custom attributes and project hierarchy in  esi.manage configuration. When grouping with a custom group supply one of  the following:
+</th>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="MLTable">CUSTOM= <span style="font-style: italic;">Hierarchy Element</span></p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">"CUSTOM=Asset Team"
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3"><a href="../../Configuration Perspective/Budget-Project/Project_Hierarchy.htm" target="_popup">Hierarchy Type <span style="font-weight: bold;">Name</span></a>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">CUSTOM=ATTRIBUTE_NAME
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">Project hierarchy attribute with name ATTRIBUTE_NAME
+</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">CUSTOM=BUDGET:ATTRIBUTE_NAME
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">"CUSTOM=BUDGET:Budget Year"
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">Budget custom attribute with name ATTRIBUTE_NAME
+</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">CUSTOM=PROJECT:ATTRIBUTE_NAME
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">"CUSTOM=PROJECT:Primary Target"
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p class="MLTable"><a href="../../Configuration Perspective/Budget-Project/Custom_Attribute_Types.htm" target="_popup">Custom Attribute <span style="font-weight: bold;">Name</span></a> Project custom attribute with name ATTRIBUTE_NAME</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">CUSTOM=ASSET:ATTRIBUTE_NAME
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">"CUSTOM=ASSET:Gross 30 day IP"
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">Asset custom attribute with name ATTRIBUTE_NAME
+</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">-x</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">-N</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">AFE</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">AFE Amount
+</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">EAC</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body3">AFE Estimate at Completion
+</td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="width: 58.907%;mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');" class="TableStyle-HelpFileTableStylesheet" cellspacing="0">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" style="width: 82px;" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" style="width: 421px;" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" style="width: 269px;" />
+            <thead>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column1-Header1" colspan="3">Measure Specific Filters    -column-filter
+</th>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-header">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column1-header" colspan="3">FILTER: is the name of a predefined filter.  The VALUE specified in the option  is a list of values that you want to appear in the report.  Each FILTER will  interpret the value list in it own way.  The supported filter are:
+</th>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-Header1" colspan="2">Syntax</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">-column-filter "CAPEX.TYPE:Completion,Equip &amp;Tie-in"
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p class="MLTable">filter EXPENDITURE to specified <span style="font-weight: bold;"><a href="../../Configuration Perspective/Budget-Project/Expenditure_Type.htm" target="_popup">Types</a></span>(Name)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">-column-filter "CAPEX.CATEGORY:Drilling"
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">&#160;</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">-column-filter "OPEX.TYPE:Gas Gathering External, Gas Processing External"
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p class="MLTable">filter OPEX to specified <span style="font-weight: bold;"><a href="../../Configuration Perspective/Budget-Project/OPEX_Type.htm" target="_popup">Types</a></span> 
+ (Name)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">-column-filter PRODUCT:Oil,Condensate,NGLs
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p class="MLTable">filter PRODUCTION, REVENUE, RESERVES to specified <span style="font-weight: bold;"><a href="../../Configuration Perspective/Budget-Project/Product.htm" target="_popup">Product(s)</a></span> 
+ (Description)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">-column-filter "PRODUCTION.SUBCATEGORY:1- Proved Developed Producing"
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p class="MLTable">filter PRODUCTION, REVENUE, RESERVES to specified <span style="font-weight: bold;">Production SubCategory(s)</span> 
+ (Description)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <th class="TableStyle-HelpFileTableStylesheet-BodyD-Column1-Body3" colspan="3">Measures</th>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2">see sections below...
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body2">&#160;</td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="width: 58.907%;mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');" class="TableStyle-HelpFileTableStylesheet" cellspacing="0">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" style="width: 84px;" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" style="width: 213px;" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" style="width: 224px;" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" style="width: 251px;" />
+            <thead>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column1-Header1" colspan="4">Calculation Period and Project Set
+</th>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-header">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-header">&#160;</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-header">Options</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-header">&#160;</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-header">&#160;</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">2010-01-01
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">Start of Calculations (yyyy-MM-dd)
+</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">480</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">Number of Periods
+</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">D, M, Q, Y
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">M</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">Abbreviation for Periods
+</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Project Set Path
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">"Private/Report Filters/TB Export Measure"
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">The Folder Structure (path) and Project Set Name
+</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2" colspan="2">2010-01-01 480 M "Private/Report Filters/TB Export Measure"
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body2">Example syntax
+</td>
+                </tr>
+            </tbody>
+        </table>
+        <h4 class="Heading4Reference">&#160;</h4>
+        <h3>Measure: &#160;EXPENDITURE</h3>
+        <table style="width: 58.907%;mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');" class="TableStyle-HelpFileTableStylesheet" cellspacing="0">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" style="width: 178px;" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" style="width: 260px;" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" style="width: 178px;" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" style="width: 169px;" />
+            <thead>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-Header1">-c</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-Header1" colspan="3">Measure</th>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-header">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-header">Syntax</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-header">Options</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-header">Sample</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-header">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">-m
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">EXPENDITURE</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">-m EXPENDITURE
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">Calculated Expenditure
+</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">-t</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Forecast, Field Est, Actuals, Blended
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">-t Actuals
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p class="MLTable" style="font-weight: bold;"><span><a href="../../Configuration Perspective/Budget-Project/Capital_Types.htm" style="font-weight: normal;" target="_popup">Capital 
+ Type</a></span><span style="font-weight: normal;"> Name*</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">-e</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">Risked Gross, Unrisked Gross, Risked Net, Unrisked Net
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">-e "Risked Net"
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">Capital Definition
+</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">-b</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">GROSS, NET
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">-b GROSS
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">&#160;</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">-R</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">-R
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">Risk
+</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">-v</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">FORECAST, FIELD_ESTIMATE, ACTUAL, BLENDED
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">-v ACTUAL
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">&#160;</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">-column-filter CAPEX.TYPE
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">-column-filter CAPEX.TYPE:Drilling
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">Filter to Expenditure Types
+</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">-l</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">-l
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">Daily Rate
+</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">-a</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">-a 2011-02-28
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">Last Actuals Date
+</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">-M</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">-M
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">Match Forecast
+</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">-E</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">Escalation File
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">-E "2010 Escalation High"
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p class="MLTable">Apply <a href="../../PopUp/Escalation.htm" style="font-weight: bold;" target="_popup">Currency Escalation</a></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">--scale-file</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Scale File</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">--scale-file "Example Scale File"</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">Apply specified Scale File</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">-U</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">Configured Currency Unit abbreviation
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">-U CAD, -U kUSD, -U EUR
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2"><a href="../../Configuration Perspective/Unit Conversions/Currency_Units.htm" style="font-weight: bold;" target="_popup"><span style="font-weight: normal;">Currency</span> 
+ Abbreviation </a>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">-X</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">currency exchange file CUREXFILE
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">-X default
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">use CUREXFILE
+</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body2">--real-base-date</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2">YEARMONTH</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2">--real-base-date 2012-01</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body2">Sets base date for real number calculation</td>
+                </tr>
+            </tbody>
+        </table>
+        <h4 class="Heading4Reference">&#160;</h4>
+        <h3>Measure: PRODUCTION</h3>
+        <table style="width: 58.907%;mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');" class="TableStyle-HelpFileTableStylesheet" cellspacing="0">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" style="width: 84px;" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" style="width: 211px;" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" style="width: 228px;" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" style="width: 240px;" />
+            <thead>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-Header1">-c</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-Header1" colspan="3">Measure</th>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-header">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-header">Syntax</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-header">Options</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-header">Sample</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-header">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p class="MLTable" style="font-weight: bold;"><span style="font-weight: normal;">-m</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">PRODUCTION</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">-m PRODUCTION
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">Calculated Production
+</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">-t</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Actuals, Blended, Field Est, Fin Actls, Fin Blend, Forecast
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">-t Forecast
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p style="font-weight: bold;"><span><a href="../../Configuration Perspective/Budget-Project/Production_Types.htm" style="font-weight: bold;" target="_popup">Production 
+ Type</a></span> Name*</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">-e</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">Gross Risked Raw, Gross Unrisked Raw, Net Risked After Royalty, Net Risked Raw, Net Risked Sales, Net Unrisked Raw, Net Unrisked Sales
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">-e "Net Risked After Royalty"
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p class="MLTable" style="font-weight: bold;"><a href="../../Configuration Perspective/Budget-Project/Production_Definitions.htm" style="font-weight: bold;" target="_popup"><span style="font-weight: normal;">Production 
+ Definition</span> Description</a>*</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">-b</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">GROSS, NET, NET_NET
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">-b NET
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">&#160;</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">-R</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">-R
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">Include Risk
+</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">-S</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">-S
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">Include Shrinkage
+</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">-D</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">NONE, UNSCHEDULED, SCHEDULED, ALL
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">-D ALL
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">Include Downtime
+</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">-T</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Medium, Low, High
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">-T Medium
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3"><span style="font-weight: normal;">Royalty 
+ Type</span> Description</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">-L</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">BASELINE_ONLY, UPLIFT_ONLY, BASELINE_AND_UPLIFT
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">-L BASELINE_AND_UPLIFT
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2"><a href="../../Archived/WorkFlow/Production_Baseline_Configuration.htm" target="_popup">Baseline Variant</a>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Curtailment  </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">--curtailment
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">Will turn on curtailment.  This is only necessary when exporting Forecast values without using the –t option.  If do not want curtailed Forecast values, must not use –t option, and use the rest of the modifiers as needed.
+</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">-v</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">FORECAST, FIELD_ESTIMATE, ACTUAL, FINANCIAL_ACTUAL, BLENDED
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">-v BLENDED
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">&#160;</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3" colspan="2">-column-filter PRODUCT:V1,V2
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">-column-filter PRODUCT:NGLs,Condensate
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">Filter to identified products
+</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">-l</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">-l
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">Daily Rate
+</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">-a</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">-a 2011-02-28
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">Last Actuals Date
+</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">-f</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">-f 2011-03-15
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">Last Field Estimates Date
+</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">-F</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">-F 2011-01-31
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">Last Financial Actuals Date
+</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">--scale-file</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">Scale File</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">--scale-file "Example Scale File"</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">Apply specified Scale File</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">-U</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Configured Production Unit abbreviation
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">-U "Gas:e3m3 (G)"
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3"><a href="../../Reference/Production_Units.htm#Production_Unit_Configuration" target="_popup">Production Unit <span style="font-weight: bold;">Abbreviation</span></a>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body2" colspan="2">--consolidation RESERVE_CONSOLIDATION
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2">--consolidation "1-Proven:1-Proved Developed Producing"
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body2">Reserve Consolidation
+</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="NumberedList" style="font-weight: normal;">&#160;</p>
+        <h3>Measure: OPEX</h3>
+        <table style="width: 58.907%;mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');" class="TableStyle-HelpFileTableStylesheet" cellspacing="0">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" style="width: 84px;" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" style="width: 211px;" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" style="width: 228px;" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" style="width: 240px;" />
+            <thead>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-Header1">-c</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-Header1" colspan="3">Measure</th>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-header">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-header">Syntax</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-header">Options</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-header">Sample</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-header">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p class="MLTable" style="font-weight: bold;">-m</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">OPEX
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">-m OPEX
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">Calculated OPEX</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">-t</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Actuals, Blended, Field Est, Fin Actls, Fin Blend, Forecast
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">-t Forecast
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p style="font-weight: bold;"><span><a href="../../Configuration Perspective/Budget-Project/Production_Types.htm" style="font-weight: bold;" target="_popup">Production 
+ Type</a></span> Name*</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">-e</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">Gross Risked Raw, Gross Unrisked Raw, Net Risked After Royalty, Net Risked Raw, Net Risked Sales, Net Unrisked Raw, Net Unrisked Sales
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">-e "Gross Unrisked Raw"
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2"><a href="../../Configuration Perspective/Budget-Project/Production_Definitions.htm" style="font-weight: bold;" target="_popup"><span style="font-weight: normal;">Production 
+ Definition</span> Description</a>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">-b</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">GROSS, NET, NET_NET
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">-b GROSS
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">&#160;</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">-R</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">-R
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">Include Risk
+</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">-T</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Medium, Low, High
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">-T High
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3"><span style="font-weight: normal;">Royalty 
+ Type</span> Description</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">-L</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">BASELINE_ONLY, UPLIFT_ONLY, BASELINE_AND_UPLIFT
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">-L UPLIFT
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2"><a href="../../Archived/WorkFlow/Production_Baseline_Configuration.htm" target="_popup">Baseline Variant</a>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">-v</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">FORECAST, FIELD_ESTIMATE, ACTUAL, FINANCIAL_ACTUAL, BLENDED
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">-v FORECAST
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">&#160;</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2" colspan="2">-column-filter OPEX.TYPE:V1,V2
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">-column-filter "OPEX.TYPE:Fuel Gas"
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p class="MLTable">Filter to <span style="font-weight: bold;"><a href="../../Configuration Perspective/Budget-Project/OPEX_Type.htm" target="_popup">Opex Type(s) Description</a></span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">-l</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">-l
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">Daily Rate
+</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">-a</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">-a 2011-02-28
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">Last Actuals Date
+</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">-f</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">-f 2011-03-15
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">Last Field Estimates Date
+</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">-F</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">-F 2011-01-31
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">Last Financial Actuals Date
+</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">-E</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Escalation File
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">-E "Escalation 2011 Low"
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p class="MLTable">Apply <a href="../../PopUp/Escalation.htm" style="font-weight: bold;" target="_popup">Currency Escalation</a></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">--scale-file</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">Scale File</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">--scale-file "Example Scale File"</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">Apply specified Scale File</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">-U</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Configured Currency Unit abbreviation
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">-U Eur
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3"><a href="../../Configuration Perspective/Unit Conversions/Currency_Units.htm" style="font-weight: bold;" target="_popup"><span style="font-weight: normal;">Currency</span> 
+ Abbreviation </a>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">-X</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">currency exchange file CUREXFILE
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">-X default
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">use CUREXFILE
+</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body3">--real-base-date</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">YEARMONTH</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">--real-base-date 2012-01</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body3">Sets base date for real number calculation</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h3>Measure: REVENUE</h3>
+        <table style="width: 58.907%;mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');" class="TableStyle-HelpFileTableStylesheet" cellspacing="0">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" style="width: 84px;" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" style="width: 211px;" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" style="width: 228px;" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" style="width: 240px;" />
+            <thead>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-Header1">-c</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-Header1" colspan="3">Measure</th>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-header">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-header">Syntax</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-header">Options</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-header">Sample</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-header">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p class="MLTable" style="font-weight: bold;">-m</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>REVENUE</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="MLTable">-m REVENUE</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p class="MLTable">Calculated Revenue</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p class="MLTable">-t</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="MLTable">Actuals, Blended, Field Est, Fin Actls, Fin Blend, Forecast</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="MLTable">-t Forecast</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p style="font-weight: bold;"><a href="../../Configuration Perspective/Budget-Project/Production_Types.htm" style="font-weight: bold;" target="_popup"><span style="font-weight: normal;">Production 
+ Type</span> Name</a>*</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p class="MLTable">-e</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="MLTable">Gross Risked Raw, Gross Unrisked Raw, Net Risked After 
+ Royalty, Net Risked Raw, Net Risked Sales, Net Unrisked Raw, Net Unrisked 
+ Sales</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="MLTable">-e "Net Risked Sales"</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p class="MLTable" style="font-weight: bold;"><a href="../../Configuration Perspective/Budget-Project/Production_Definitions.htm" style="font-weight: bold;" target="_popup"><span style="font-weight: normal;">Production 
+ Definition</span> Description</a>*</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p class="MLTable">-b</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>GROSS, NET, NET_NET</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="MLTable">-b NET</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p class="MLTable">-R</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="MLTable">-R</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p class="MLTable">Include Risk</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p class="MLTable">-S</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="MLTable">-S</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p class="MLTable">Include Shrinkage</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p class="MLTable">-D</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="MLTable">-D</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p class="MLTable">Include Downtime</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p class="MLTable">-P</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Price File</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="MLTable">-P "February 28 2010 - Canadian"</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p class="MLTable" style="font-weight: bold;"><span style="font-weight: normal;">Price 
+ File</span> Name</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p class="MLTable">-T</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Medium, Low, High</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="MLTable">-T Medium</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p class="MLTable" style="font-weight: bold;"><span style="font-weight: normal;">Royalty 
+ Type</span> Description</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p class="MLTable">-L</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>BASELINE_ONLY, UPLIFT_ONLY, BASELINE_AND_UPLIFT</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="MLTable">-L UPLIFT_ONLY</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p class="MLTable" style="font-weight: bold;"><a href="../../Archived/WorkFlow/Production_Baseline_Configuration.htm" target="_popup">Baseline Variant</a>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p class="MLTable">-v</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="MLTable">FORECAST, FIELD_ESTIMATE, ACTUAL, FINANCIAL_ACTUAL, BLENDED</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="MLTable">-v FORECAST</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p class="MLTable">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3" colspan="2">-column-filter PRODUCT:V1,V2
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">-column-filter PRODUCT:NGLs,Condensate
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">Filter to identified products
+</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p class="MLTable">-l</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="MLTable">-l</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p class="MLTable">Daily Rate</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p class="MLTable">-a</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="MLTable">-a 2011-02-28</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p class="MLTable">Last Actuals Date</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p class="MLTable">-f</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="MLTable">-f 2011-03-15</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p class="MLTable">Last Field Estimates Date</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p class="MLTable">-F</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="MLTable">-F 2011-01-31</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p class="MLTable">Last Financial Actuals Date</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p class="MLTable">-U</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Configured Currency Unit abbreviation</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="MLTable">-U USD</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p class="MLTable"><a href="../../Configuration Perspective/Unit Conversions/Currency_Units.htm" style="font-weight: bold;" target="_popup"><span style="font-weight: normal;">Currency</span> 
+ Abbreviation </a>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p class="MLTable">-X</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="MLTable">currency exchange file CUREXFILE</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="MLTable">-X default</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p class="MLTable">use CUREXFILE</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body2">--real-base-date</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2">YEARMONTH</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2">--real-base-date 2012-01</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body2">Sets base date for real number calculation</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h3>Measure: RESERVES</h3>
+        <table style="width: 58.907%;mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');" class="TableStyle-HelpFileTableStylesheet" cellspacing="0">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" style="width: 84px;" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" style="width: 211px;" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" style="width: 228px;" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" style="width: 240px;" />
+            <thead>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-Header1">-c</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-Header1" colspan="3">Measure</th>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-header">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-header">Syntax</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-header">Options</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-header">Sample</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-header">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p class="MLTable" style="font-weight: bold;">-m</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="MLTable">RESERVES</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="MLTable">-m RESERVES</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p class="MLTable">Calculated Reserves</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p class="MLTable">-t</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="MLTable">Actuals, Blended, Forecast</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="MLTable">-t Forecast</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p style="font-weight: normal;">Reserve 
+ Type <span style="font-weight: bold;">Name</span><span style="font-weight: bold;">*</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p class="MLTable">-e</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="MLTable">Gross Risked, Gross Risked Raw, Gross Unrisked, Gross 
+ Unrisked Raw, Net Risked, Net Risked After Royalty, Net Unrisked, Net 
+ Unrisked After Royalty</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="MLTable">-e "Gross Unrisked Raw"</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p class="MLTable" style="font-weight: normal;"><a href="../../Reference/Production_Definitions.htm" style="font-weight: normal;" target="_popup">Reserves 
+ Definitions <span style="font-weight: bold;">Description</span></a><span style="font-weight: bold;">*</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p class="MLTable">-b</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>GROSS, NET, NET_NET</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="MLTable">-b GROSS</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p class="MLTable">-R</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="MLTable">-R</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p class="MLTable">Include Risk</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p class="MLTable">-T</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Medium, Low, High</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="MLTable">-T High</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p class="MLTable" style="font-weight: bold;"><span style="font-weight: normal;">Royalty 
+ Type</span> Description</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p class="MLTable">-V</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>ECONOMIC, CALCULATED</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="MLTable">-V ECONOMIC</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p class="MLTable" style="font-weight: bold;"><span style="font-weight: normal;">Reserve</span> 
+ Variant</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p class="MLTable">-v</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="MLTable">FORECAST, ACTUAL, BLENDED</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="MLTable">-v FORECAST</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p class="MLTable">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2" colspan="2">-column-filter PRODUCT:V1,V2
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">-column-filter PRODUCT:Gas
+</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">Filter to identified products
+</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p class="MLTable">-a</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="MLTable">&#160;</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="MLTable">-a 2011-02-28</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p class="MLTable">Last Actuals Date</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body2">
+                        <p class="MLTable">-U</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2">
+                        <p class="MLTable">Configured Production Unit abbreviation</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2">
+                        <p class="MLTable">-U "Oil:mboe"</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body2">
+                        <p class="MLTable"><a href="../../Reference/Production_Units.htm#Production_Unit_Configuration" target="_popup">Production Unit <span style="font-weight: bold;">Abbreviation</span></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h3>Measure: RESOURCE COST</h3>
+        <table style="width: 58.907%;mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');" class="TableStyle-HelpFileTableStylesheet" cellspacing="0">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" style="width: 84px;" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" style="width: 211px;" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" style="width: 228px;" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" style="width: 240px;" />
+            <thead>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-Header1">-c</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-Header1" colspan="3">Measure</th>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-header">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-header">Syntax</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-header">Options</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-header">Sample</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-header">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p class="MLTable">-<span style="font-weight: bold;">m</span></p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="MLTable">RESOURCE_COST</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="MLTable">-m RESOURCE_COST</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p class="MLTable">Calculated Resource Cost</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p class="MLTable">-t</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="MLTable">Forecast, Actual</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="MLTable">-t Forecast</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p class="MLTable">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p class="MLTable">-e</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="MLTable">Gross, Risked</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="MLTable">-e Risked</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p class="MLTable">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p class="MLTable">-l</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="MLTable">&#160;</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="MLTable">-l</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p class="MLTable">Daily Rate</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p class="MLTable">-E</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="MLTable">Escalation File</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="MLTable">-E "2011 Standard"</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p class="MLTable">Apply <a href="../../PopUp/Escalation.htm" style="font-weight: bold;" target="_popup">Currency Escalation</a></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p class="MLTable">-X</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="MLTable">currency exchange file CUREXFILE</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="MLTable">-X default</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p class="MLTable">use CUREXFILE</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body2">
+                        <p class="MLTable">-U</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2">
+                        <p class="MLTable">Configured Currency Unit abbreviation</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2">
+                        <p class="MLTable">-U kUSD</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body2">
+                        <p class="MLTable"><a href="../../Configuration Perspective/Unit Conversions/Currency_Units.htm" style="font-weight: bold;" target="_popup"><span style="font-weight: normal;">Currency</span> 
+ Abbreviation </a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h3>Measure: ACTIVITY</h3>
+        <table style="width: 58.907%;mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');" class="TableStyle-HelpFileTableStylesheet" cellspacing="0">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" style="width: 84px;" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" style="width: 211px;" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" style="width: 228px;" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" style="width: 240px;" />
+            <thead>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-Header1">-c</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-Header1" colspan="3">Measure</th>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-header">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-header">Syntax</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-header">Options</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-header">Sample</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-header">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p class="MLTable" style="font-weight: bold;">-m</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="MLTable">ACTIVITY</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="MLTable">-m ACTIVITY</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p class="MLTable">Activity</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p class="MLTable">-t</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="MLTable">Forecast, Actuals</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="MLTable">-t Forecast</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p class="MLTable">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p class="MLTable">-e</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="MLTable">Risked Gross, Unrisked Gross, Risked Net, Unrisked Net</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="MLTable">-e "Risked Net"</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p class="MLTable">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body3">
+                        <p class="MLTable">-C</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p class="MLTable">START_OF_PERIOD, END_OF_PERIOD</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p class="MLTable">-C END_OF_PERIOD</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body3">
+                        <p class="MLTable">Report activity based on Start Date or End Date</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h3>Measure: RIG_RELEASE</h3>
+        <table style="width: 58.907%;mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');" class="TableStyle-HelpFileTableStylesheet" cellspacing="0">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" style="width: 84px;" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" style="width: 211px;" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" style="width: 228px;" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" style="width: 240px;" />
+            <thead>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-Header1">-c</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-Header1" colspan="3">Measure</th>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-header">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-header">Syntax</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-header">Options</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-header">Sample</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-header">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p class="MLTable" style="font-weight: bold;">-m</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="MLTable">RIG_RELEASE</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="MLTable">-m RIG_RELEASE</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p class="MLTable">Activity</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p class="MLTable">-t</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="MLTable">Forecast</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="MLTable">-t Forecast</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p class="MLTable">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body2">
+                        <p class="MLTable">-e</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2">
+                        <p class="MLTable">Risked Gross, Unrisked Gross, Risked Net, Unrisked Net</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2">
+                        <p class="MLTable">-e "Risked Net"</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body2">
+                        <p class="MLTable">&#160;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p><a name="exportMeasure_help"></a><span style="font-weight: bold;">"exportMeasure 
+ --help" from command line.</span>
+        </p>
+        <p>Below is a copy of the file produced when "exportMeasure --help" 
+ is run from the command line and provides all the measure export expressions.</p>
+        <ul style="list-style: disc;" type="disc">
+            <li>Click on start menu&gt;All programs&gt;Accessories&gt;Command 
+ Prompt or type cmd in the search programs and files box.</li>
+            <li>From the command prompt you need to navigate to 
+ the exportMeasure --help. To do this type the 'cd ' (change directory 
+ command) followed by the path to the 'esi.manage.export.measure' folder 
+ in the esi.manage installation files, followed by "exportMeasure 
+ --help"</li>
+        </ul>
+        <p style="font-weight: bold;">cd \ </p>
+        <p>to navigate to your systems root directory (c drive)</p>
+        <p style="font-weight: bold;">cd esi.manage\3.22\product\esi.manage.export</p>
+        <p>to navigate to the Measure export folder within the esi.manage installation 
+ files ie here the measure export folder is in the following directory:</p>
+        <p>C:\esi.manage\3.22\product\esi.manage.export.measure</p>
+        <p>Once in the measure export folder type</p>
+        <p style="font-weight: bold;">exportMeasure --help <span style="font-weight: normal;">or 
+ type </span><span>--help &gt; help.txt </span><span style="font-weight: normal;">to 
+ have the text saved directly to a text file which will appear in the esi.manage.export.measure 
+ folder.</span></p>
+        <p style="font-weight: bold;">
+            <img src="../../Images/aimage65.png" />
+        </p>
+        <p>&#160;</p>
+        <p>To copy the contents from the command prompt</p>
+        <ol style="list-style: decimal;list-style-type: decimal;">
+            <li>Right-click the title bar of the command prompt 
+ window, point to Edit, and then click Mark. </li>
+            <li>Click the beginning of the text you want to copy. 
+ </li>
+            <li>Press and hold down the SHIFT key, and then click 
+ the end of the text you want to copy (or you can click and drag the cursor 
+ to select the text). </li>
+            <li>Right-click the title bar, point to Edit, and 
+ then click Copy. </li>
+            <li>Paste the text into your new location.</li>
+        </ol>
+        <p>The text from the <a href="../exportmeasure_help.txt">exportMeasure --help file</a> <![CDATA[ ]]></p>
+        <p>&#160;</p>
+    </body>
+</html>

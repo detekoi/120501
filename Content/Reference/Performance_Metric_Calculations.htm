@@ -1,0 +1,490 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="6514.658" MadCap:lastWidth="1221">
+    <head><title>Performance Metric Calculations</title>
+        <link rel="StyleSheet" href="../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <script type="text/javascript" language="JavaScript1.2" src="../Archived/ehlpdhtm.js">
+        </script>
+        <h1>
+            <img src="../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />Performance Metric Calculations</h1>
+        <p>Project Metrics can be calculated in four locations:</p>
+        <ol>
+            <li class="NumberedList">The Key Metrics 
+ page of an individual Project.</li>
+            <li class="NumberedList">Reports such 
+ as Project Summary or Project Variance Summary</li>
+            <li class="NumberedList">As a Ranking 
+ Metric</li>
+            <li class="NumberedList">Economic Analysis as part of a Custom layout or Metrics tab</li>
+        </ol>
+        <p>Depending on where the Metric is calculated, there are different choices 
+ available for the Horizon as well as Types and Definitions.</p>
+        <ul>
+            <li class="Bullets"><span style="font-weight: bold;">Key 
+ Metrics</span> - will always be calculated in both a Net Risked, and Net 
+ Unrisked basis, over the Budget Period (Horizon). The Budget Units will 
+ define in what units a particular Metric will be calculated in.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Ranking</span> 
+ - will be calculated using the specified Ranking Units. Values will always 
+ be calculated on a Net Basis, using Blended numbers. Risk is an optional 
+ modifier for any Metric.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Reports</span> 
+ have full configuration capabilities for Types and Definitions, as well 
+ as the Units for the metric calculations.</li>
+        </ul>
+        <h3>&#160;</h3>
+        <h3>Budget Units</h3>
+        <p>Metrics are presented in “<a href="../Configuration Perspective/Budget-Project/Budget_Fields.htm" target="_popup">Budget Units</a>” 
+ as set in the Budget Configuration. Note this is distinct from reporting 
+ units, which are always selectable. &#160;</p>
+        <p>The product chosen serves as an equivalency, which production and reserves 
+ are converted to. &#160;Appropriate 
+ units for Production, Reserves, F&amp;D and Capital Efficiency are selected 
+ when creating a new budget. &#160;</p>
+        <p>These “Budget Units” are used when calculating performance metrics and 
+ displayed as such in the Project Summary. &#160;For 
+ example, when Canadian Dollars and barrels of oil are selected in the 
+ Budget Configuration, F&amp;D is measured in Canadian dollars per barrel. 
+</p>
+        <p>See <a href="../Configuration Perspective/Budget-Project/Budget_Fields.htm">Budget Units</a></p>
+        <h3>&#160;</h3>
+        <h3>Metric Time Periods</h3>
+        <p>In the metric calculation three different time periods are available:</p>
+        <ol>
+            <li class="NumberedList">TB (B stands 
+ for “Budget”) is the budget time period. &#160;Note 
+ that a budget can be any arbitrary span of time, but is typically one 
+ year. &#160;The 
+ budget start and end date are set in configuration when creating a new 
+ budget.</li>
+            <li class="NumberedList">TFS (FS stands 
+ for “First Spend”) is a one year time period starting from the earliest 
+ expenditure for a project.</li>
+            <li class="NumberedList">TOS (OS stands 
+ for “First Onstream Date”) is a one year period starting from the earliest 
+ product Onstream date for a project.</li>
+            <li class="NumberedList">Earliest Project 
+ Date</li>
+            <li class="NumberedList">First Reserves 
+ Booking</li>
+            <li class="NumberedList">First Rig Release</li>
+            <li class="NumberedList">First Spud</li>
+            <li class="NumberedList">WI stands for 
+ Working Interest</li>
+            <li class="NumberedList">NPD stands for 
+ Net Probability of Doing for Capital expenditures, Production, and OPEX.</li>
+            <li class="NumberedList">NPS stands for 
+ Net Probability of Success for Capital expenditures, Production, and OPEX.</li>
+        </ol>
+        <p>These different time periods are used to sum capital expenditures, reserves, 
+ production and operating cost. &#160;Depending 
+ on the metric, different time periods, and in some cases, multiple time 
+ periods are used in calculating the metric. &#160;In 
+ the following definitions, the time period is explicitly stated.</p>
+        <h3>&#160;</h3>
+        <h3>Metric Definitions</h3>
+        <h4><span style="color: #000000;">Capital Expenditures</span> <![CDATA[ ]]></h4>
+        <p>Capital Expenditures are the sum of a project’s expenditures over the 
+ budget interval. </p>
+        <ul>
+            <li class="Bullets"><span style="font-weight: bold;">Unrisked 
+ Gross</span> - This is the sum of the working interest, gross expenditures 
+ within the Budget period. &#160;The 
+ Unrisked Sales Capital Expenditures equation for n expenditure records 
+ is:</li>
+        </ul>
+        <p style="margin-left: 40px;">∑<span style="font-weight: bold;vertical-align: Super;">n</span> 
+ (Gross Expenditures <span style="font-weight: bold;vertical-align: Sub;">within 
+ TB</span>)</p>
+        <p>Net Sales: &#160;This 
+ is the sum of the working interest, risked expenditures within the budget 
+ period. &#160;The 
+ Risked Sales Capital Expenditures equation for n expenditure line items 
+ is:</p>
+        <p>∑ ((Gross Expenditures within TB)n * WIn * NPSn )</p>
+        <p>where NPD is the Net Probability of Doing.</p>
+        <h4 class="Heading4Reference">&#160;</h4>
+        <h4 class="Heading4Reference"><span style="color: #000000;">Reserves</span>
+        </h4>
+        <p>Reserves are the sum of project’s reserve additions booked over the 
+ budget interval.</p>
+        <p>Unrisked Sales: &#160;is 
+ a sum of working interest, gross reserves within the Budget Period. &#160;The 
+ Unrisked Sales Reserves equation for n reserve records is given by:</p>
+        <p>∑ ((Gross Reserves within TB)n * WIn)</p>
+        <p>Risked Sales: &#160;is 
+ a sum of the working interest, risked, gross reserve within the budget 
+ period. &#160;The 
+ Risked Sales Reserves equation for n reserve records is given by:</p>
+        <p>∑ ((Gross Reserves within TB)n * WIn * NPSn)</p>
+        <h4 class="Heading4Reference">&#160;</h4>
+        <h4 class="Heading4Reference"><span style="color: #000000;">Cumulative Production</span>
+        </h4>
+        <p>The cumulative production is the sum of a project’s production over 
+ the budget interval.</p>
+        <p>Unrisked Sales: &#160;is 
+ the working interest, reduced by shrinkage, before royalty, cumulative 
+ product over the budget period. &#160;The 
+ Unrisked Sales Cumulative Production equation for n production segments 
+ is:</p>
+        <p>∑ ((Gross Cumulative Production Over TB)n * WIn * (1 - Shrinkn)) 
+ </p>
+        <p>Risked Sales: &#160;is 
+ the working interest, reduced by shrinkage, before royalty, risked, cumulative 
+ product over the budget period. &#160;The 
+ Risked Sales Cumulative Production equation for n production segments 
+ is:</p>
+        <p>∑ ((Gross Cumulative Production Over TB)n * WIn * (1 - Shrinkn) 
+ * NPSn)</p>
+        <h4 class="Heading4Reference">&#160;</h4>
+        <h4 class="Heading4Reference"><span style="color: #000000;">First Spend Cumulative Production</span>
+        </h4>
+        <p>The first spend cumulative production is the sum of a project’s production 
+ for one year starting from the earliest project expenditure. </p>
+        <p>Unrisked Sales: &#160;is 
+ the working interest, reduced by shrinkage, before royalty, cumulative 
+ product from the earliest expenditure date for one year. The Unrisked 
+ Sales First Spend Cumulative Prod equation for n production segments is:</p>
+        <p>∑ ((Gross Cumulative Production Over TFS)n * WIn * (1 - Shrinkn)),</p>
+        <p>Risked Sales: &#160;is 
+ the working interest, reduced by shrinkage, before royalty, risked cumulative 
+ product from the earliest expenditure date for one year. &#160;The 
+ Risked Sales First Spend Cumulative Prod equation for n production segments 
+ is:</p>
+        <p>∑ ((Gross Cumulative Production Over TFS)n * WIn * (1 - Shrinkn) 
+ * NPSn))</p>
+        <h4 class="Heading4Reference">&#160;</h4>
+        <h4 class="Heading4Reference"><span style="color: #000000;">On-stream Cumulative Production</span>
+        </h4>
+        <p>The Onstream Cumulative Production is the sum of a project’s production 
+ for one year starting from the earliest Onstream date. &#160;</p>
+        <p>Unrisked Sales: &#160;is 
+ the working interest, reduced by shrinkage, before royalty, cumulative 
+ product from the earliest production Onstream date for one year. The Unrisked 
+ Sales Onstream Cumulative Prod equation for n production segments:</p>
+        <p>∑ ((Gross Cumulative Production Over TOS)n * WIn * (1 - Shrinkn))</p>
+        <p>Risked Sales: &#160;is 
+ the working interest, reduced by shrinkage, before royalty, risked, cumulative 
+ product from the earliest production on-stream date for one year. &#160;The 
+ Risked Sales Onstream Cumulative Prod equation for n production segments 
+ is:</p>
+        <p>∑ ((Gross Cumulative Production Over TOS)n * WIn * (1 - Shrinkn) 
+ * NPSn))</p>
+        <h4 class="Heading4Reference">&#160;</h4>
+        <h4 class="Heading4Reference"><span style="color: #000000;">Annualized Production </span>
+        </h4>
+        <p>Annualized Production is the average daily production rate over the 
+ Budget interval. &#160;</p>
+        <p>Unrisked Sales: &#160;is 
+ the working interest, reduced by shrinkage, before royalty, average daily 
+ production rate over the budget period. &#160;The 
+ Unrisked Sales Annualized Production equation for n production segments 
+ is:</p>
+        <p>∑ ((Gross Cumulative Production Over TB)n * WIn * (1 - Shrinkn) 
+ / ∆TB)</p>
+        <p>Risked Sales: &#160;is 
+ the working interest, reduced by shrinkage, before royalty, risked, average 
+ daily rate over the budget period. &#160;The 
+ Risked Sales Annualized Production equation for n production segments 
+ is:</p>
+        <p>∑ ((Gross Cumulative Production Over TB)n * WIn * (1 - Shrinkn) 
+ * NPSn / ∆TB)</p>
+        <h4 class="Heading4Reference">&#160;</h4>
+        <h4 class="Heading4Reference"><span style="color: #000000;">First Spend Annualized Production</span>
+        </h4>
+        <p>First Spend Annualized Production is the average daily production rate 
+ over a one year period starting from the earliest project expenditure.</p>
+        <p>Unrisked Sales: &#160;is 
+ the working interest, reduced by shrinkage, before royalty, cumulative 
+ product from the earliest expenditure date for one year. &#160;The 
+ Unrisked Sales First Spend Annualized Prod equation for n production segments:</p>
+        <p>∑ ((Gross Cumulative Production Over TFS)n * WIn * (1 - Shrinkn) 
+ / ∆TFS)</p>
+        <p>Risked Sales: &#160;is 
+ the working interest, reduced by shrinkage, before royalty, risked, cumulative 
+ product from the earliest expenditure date for one year. &#160;The 
+ Risked Sales First Spend Annualized Prod equation for n production segments:</p>
+        <p>∑ ((Gross Cumulative Production Over TFS)n * WIn * (1 - Shrinkn) 
+ * NPSn / ∆TFS)</p>
+        <h4 class="Heading4Reference">&#160;</h4>
+        <h4 class="Heading4Reference"><span style="color: #000000;">On-stream Annualized Production</span>
+        </h4>
+        <p>Onstream Annualized Production is the average daily rate over one year 
+ starting from the project’s earliest on-stream date. &#160;</p>
+        <p>Unrisked Sales: &#160;is 
+ the working interest, reduced by shrinkage, before royalty, cumulative 
+ product from the earliest Onstream date for one year. &#160;The 
+ Unrisked Sales Onstream Annualized Prod equation for n production segments 
+ is:</p>
+        <p>∑ ((Gross Cumulative Production Over TOS)n * WIn * (1 - Shrinkn) 
+ / ∆TOS)</p>
+        <p>Risked Sales: &#160;is 
+ the working interest, reduced by shrinkage, before royalty, risked cumulative 
+ product from the earliest on-stream date for one year. &#160;The 
+ Risked Sales Onstream Annualized Prod equation for n production segments 
+ is:</p>
+        <p>∑ ((Gross Cumulative Production Over TOS)n * WIn * (1 - Shrinkn) 
+ * NPSn / ∆TOS)</p>
+        <h4 class="Heading4Reference">&#160;</h4>
+        <h4 class="Heading4Reference"><span style="color: #000000;">Exit Rate</span>
+        </h4>
+        <p>Exit Rate is the daily production rate on the last the day of the budget. 
+ </p>
+        <p>Unrisked Sales: &#160;is 
+ the working interest, reduced by shrinkage, before royalty, production 
+ rate on the last day of the budget. &#160;The 
+ Unrisked Sales Exit Rate equation for n production records is:</p>
+        <p>∑ (Gross Daily Production Rate at last day of TB) * WI * (1 - 
+ Shrink),</p>
+        <p>Risked Sales: &#160;is 
+ the working interest, reduced by shrinkage, before royalty, risked production 
+ rate on the last day of the budget. &#160;The 
+ Risked Sales Exit Rate equation for n production records is:</p>
+        <p>∑ (Gross Daily Production Rate at last day of TB) * WI * (1 – 
+ Shrink) * NPS</p>
+        <h4 class="Heading4Reference">&#160;</h4>
+        <h4 class="Heading4Reference"><span style="color: #000000;">First Spend Exit Rate </span>
+        </h4>
+        <p>First Spend Exit Rate is the daily production rate one year after a 
+ project’s earliest expenditure.</p>
+        <p>Unrisked Sales: &#160;is 
+ the working interest, reduced by shrinkage, before royalty, daily production 
+ one year from the earliest expenditure date. &#160;The 
+ Unrisked Sales First Spend Exit Rate equation for n production records 
+ is:</p>
+        <p>∑ (Gross Daily Production Rate at last day of TFS)n * WIn * (1 
+ - Shrink)n,</p>
+        <p>Risked Sales: &#160;is 
+ the working interest, reduced by shrinkage, before royalty, risked daily 
+ production one year from the earliest expenditure date. &#160;The 
+ Risked Sales First Spend Exit Rate equation for n production records is:</p>
+        <p>∑ (Gross Daily Production Rate at last day of TFS)n * WIn * (1 
+ – Shrink)n * NPSn</p>
+        <h4 class="Heading4Reference">&#160;</h4>
+        <h4 class="Heading4Reference"><span style="color: #000000;">Onstream Exit Rate </span>
+        </h4>
+        <p>Onstream Exit Rate is the daily production rate one year after a project’s 
+ earliest production on-stream date.</p>
+        <p>Unrisked Sales: &#160;is 
+ the working interest, reduced by shrinkage, before royalty, daily production 
+ rate one year from the earliest production Onstream date. &#160;The 
+ Unrisked Sales Onstream Exit Rate equation for n production records is:</p>
+        <p>∑ (Gross Daily Production Rate at last day of TFS)n * WIn * (1 
+ - Shrink)n,</p>
+        <p>Risked Sales: &#160;is 
+ the working interest, reduced by shrinkage, before royalty, risked daily 
+ production rate one year from the earliest production Onstream date. &#160;The 
+ Risked Sales Onstream Exit Rate equation for n production records is:</p>
+        <p>∑ (Gross Daily Production Rate at last day of TFS)n * WIn * (1 
+ – Shrink)n * NPSn</p>
+        <h4 class="Heading4Reference">&#160;</h4>
+        <h4 class="Heading4Reference"><span style="color: #000000;">F and D </span>
+        </h4>
+        <p>F and D (F&amp;D) is the sum of a project’s expenditures within the 
+ budget time frame divided by the sum of project’s reserve additions booked 
+ within the budget time frame. </p>
+        <p>Unrisked Sales: &#160;is 
+ the working interest, gross expenditures over the budget period, divided 
+ by working interest gross reserves over the budget period. &#160;The 
+ Unrisked Sales F and D equation for n expenditure records and m reserve 
+ records is:</p>
+        <p>{∑ ((Gross Expenditures within TB)n * WIn)} / {∑ ((Gross 
+ Reserves within TB)m * WIm)}</p>
+        <p>Risked Sales: &#160;is 
+ the working interest, risked gross expenditures over the budget period, 
+ divided by working interest, risked gross reserves over the budget period: 
+ &#160;The Risked 
+ Sales F and D equation for n expenditure records and m reserve records 
+ is:</p>
+        <p>{∑ ((Gross Expenditures within TB)n * WIn * NPSn)} / {∑ 
+ ((Gross Reserves within TB)m * WIm * NPSm)}</p>
+        <h4 class="Heading4Reference">&#160;</h4>
+        <h4 class="Heading4Reference"><span style="color: #000000;">F and D Inverse - doesn't exist</span>
+        </h4>
+        <p>F and D Inverse (F&amp;D) is the sum of project’s reserve additions 
+ booked within the budget period divided by the sum of a project’s expenditures 
+ within the budget period. &#160;Note 
+ that this metric avoids dividing by zero when no reserves are found. &#160;</p>
+        <p>Unrisked Sales: &#160;is 
+ the working interest, gross reserves over the budget period divided by 
+ working interest, gross expenditures over the budget period. &#160;The 
+ Unrisked Sales F and D Inverse equation for n reserve records and m expenditure 
+ records is:</p>
+        <p>{∑ ((Gross Reserves within TB)n * WIn)} / {∑ ((Gross Expenditures 
+ within TB)m * WIm)}</p>
+        <p>Risked Sales: &#160;is 
+ the working interest, gross risked reserves over the budget period divided 
+ by working interest, risked, gross expenditures over the budget period. 
+ &#160;The Risked 
+ Sales F and D Inverse equation for n reserve records and m expenditure 
+ records is:</p>
+        <p>{∑ ((Gross Reserves within TB)n * WIn * NPSn)} / {∑ ((Gross 
+ Expenditures within TB)m * WIm * NPSm)}</p>
+        <h4 class="Heading4Reference">&#160;</h4>
+        <h4 class="Heading4Reference"><span style="color: #000000;">$ / Annualized Production </span>
+        </h4>
+        <p>$ / Annualized ($/boe) is the sum of a project’s expenditures within 
+ the budget period divided by the average daily production rate over the 
+ Budget interval. </p>
+        <p>Unrisked Sales: &#160;is 
+ the working interest, gross expenditures over the budget period divided 
+ by working interest, reduced by shrinkage, before royalty, average daily 
+ production rate over the budget period. &#160;The 
+ Unrisked Sales F and D equation for n expenditure records and m production 
+ records is:</p>
+        <p>{∑ ((Gross Expenditures within TB)n * WIn)} / {∑ ((Gross 
+ Cumulative Production Over TB)n * WIn * (1 - Shrinkn) / ∆TB)}</p>
+        <p>Risked Sales: &#160;is 
+ the sum of the working interest, risked, gross expenditures over the budget 
+ period divided by working interest, reduced by shrinkage, before royalty, 
+ risked, average daily production rate over the budget period. &#160;The 
+ Risked Sales $ / Annualized Production equation for n expenditure records 
+ and m production records is:</p>
+        <p>{∑ ((Gross Expenditures within TB)n * WIn * NPSn)} / {∑ 
+ ((Gross Cumulative Production Over TB)m * WIm * (1 – Shrinkm) * NPSm) 
+ / ∆TB)}</p>
+        <h4 class="Heading4Reference">&#160;</h4>
+        <h4 class="Heading4Reference"><span style="color: #000000;">$ / First Spend Annual Production</span>
+        </h4>
+        <p>$ / First Spend Ann. Prod is the sum of a project’s expenditures within 
+ the budget interval divided by the average daily production rate over 
+ a one year period starting from the earliest project expenditure. </p>
+        <p>Unrisked Sales: &#160;is 
+ the working interest, gross expenditures over the Budget Period, divided 
+ by working interest, reduced by shrinkage, before royalty, average daily 
+ production rate for one year from the earliest expenditure date. &#160;The 
+ Unrisked Sales $ / First Spend Ann. Prod equation for n expenditure records 
+ and m production records is:</p>
+        <p>{∑ ((Gross Expenditures within TB)n * WIn)} / {∑ ((Gross 
+ Cumulative Production Over TFS)m * WIm * (1 – Shrinkm)) / ∆TFS)}</p>
+        <p>Risked Sales: &#160;is 
+ the working interest, risked gross expenditures over the Budget Period, 
+ divided by working interest, reduced by shrinkage, before royalty, risked 
+ average daily production rate for one year from the earliest expenditure 
+ date. &#160;The 
+ Risked Sales $ / First Spend Ann Prod equation for n expenditure records 
+ and m production records is:</p>
+        <p>{∑ ((Gross Expenditures within TB)n * WIn * NPSn)} / {∑ 
+ ((Gross Cumulative Production Over TFS)m * WIm * (1 – Shrinkm) * NPSm) 
+ / ∆TFS)}</p>
+        <h4 class="Heading4Reference">&#160;</h4>
+        <h4 class="Heading4Reference"><span style="color: #000000;">$ / Onstream Ann. Production</span>
+        </h4>
+        <p>$ / Onstream Ann. Prod is the sum of a project’s expenditures over the 
+ budget interval divided by the average daily rate over one year starting 
+ from the project’s earliest on-stream date.</p>
+        <p>Unrisked Sales: &#160;is 
+ the working interest, gross expenditures over the Budget Period, divided 
+ by working interest, and reduced by shrinkage, before royalty, average 
+ daily production rate for one year from the earliest on-stream date. &#160;The 
+ Unrisked Sales $ / Onstream Ann. Prod equation for n expenditure records 
+ and m production records is:</p>
+        <p>{∑ ((Gross Expenditures within TB)n * WIn)} / {∑ ((Gross 
+ Cumulative Production Over TOS)m * WIm * (1 – Shrinkm)) / ∆TOS)}</p>
+        <p>Risked Sales: &#160;is 
+ the working interest, risked gross expenditures over the Budget Period, 
+ divided by working interest, reduced by shrinkage, before royalty, risked 
+ average daily production rate for one year from the first on-stream date 
+ &#160;The Risked 
+ Sales $ / Onstream Ann. Prod equation for n expenditure records and m 
+ production records is:</p>
+        <p>{∑ ((Gross Expenditures within TB)n * WIn * NPSn)} / {∑ 
+ ((Gross Cumulative Production Over TOS)m * WIm * (1 – Shrinkm) * NPSm) 
+ / ∆TOS)}</p>
+        <h4 class="Heading4Reference">&#160;</h4>
+        <h4 class="Heading4Reference"><span style="color: #000000;">$ / Exit Rate</span>
+        </h4>
+        <p>$ / Exit Rate is the sum of a project’s expenditures within the budget 
+ interval divided by the daily production rate on the last the day of the 
+ budget. </p>
+        <p>Unrisked Sales: &#160;is 
+ the working interest, gross expenditures over the Budget Period, divided 
+ by working interest, and reduced by shrinkage, before royalty, average 
+ daily production rate on the last day of the budget. &#160;The 
+ Unrisked Sales $ / Exit Rate equation for n expenditure records and m 
+ production records is:</p>
+        <p>{∑ ((Gross Expenditures within TB)n * WIn)} / {∑ ((Gross 
+ Daily Production at the last day of TB)m * WIm * (1 – Shrinkm)}</p>
+        <p>Risked Sales: &#160;is 
+ the working interest, gross, risked expenditures over the Budget Period, 
+ divided by working interest, reduced by shrinkage, before royalty, risked, 
+ average daily production rate on the last day of the budget. &#160;The 
+ Risked Sales $ / Exit Rate equation for n expenditure records and m production 
+ records is:</p>
+        <p>{∑ ((Gross Expenditures within TB)n * WIn * NPSn)} / {∑ 
+ ((Gross Daily Production at the last day of TB)m * WIm * (1 – Shrinkm) 
+ * NPSm)}</p>
+        <h4 class="Heading4Reference">&#160;</h4>
+        <h4 class="Heading4Reference"><span style="color: #000000;">$ / First Spend Exit Rate</span>
+        </h4>
+        <p>$ / First Spend Exit Rate is the sum of a project’s expenditures within 
+ the budget interval divided by the daily production rate one year after 
+ a project’s earliest expenditure. </p>
+        <p>Unrisked Sales: &#160;is 
+ the working interest, gross expenditures over the Budget Period, divided 
+ by working interest, and reduced by shrinkage, before royalty, average 
+ daily production rate one year from the earliest expenditure date. &#160;The 
+ Unrisked Sales $ / First Spend Exit Rate equation for n expenditure records 
+ and m production records is:</p>
+        <p>{∑ ((Gross Expenditures within TB)n * WIn)} / {∑ ((Gross 
+ Daily Production one year from first day of TFS)m * WIm* (1 – Shrinkm))}</p>
+        <p>Risked Sales: &#160;is 
+ the working interest, gross, risked expenditures over the Budget Period, 
+ divided by working interest, reduced by shrinkage, before royalty, risked, 
+ average daily production rate one year from the earliest expenditure date. 
+ &#160;The Unrisked 
+ Sales $ / First Spend Exit Rate equation for n expenditure records and 
+ m production records is:</p>
+        <p>{∑ ((Gross Expenditures within TB)n * WIn * NPSn)} / {∑ 
+ ((Gross Daily Production one year from the first day of TFS)m * WIm * 
+ (1 – Shrinkm) * NPSm)}</p>
+        <h4 class="Heading4Reference">&#160;</h4>
+        <h4 class="Heading4Reference"><span style="color: #000000;">$ / Onstream Exit Rate</span>
+        </h4>
+        <p>$ / Onstream Exit Rate is the sum of a project’s expenditures within 
+ the budget interval divided by the daily production rate one year after 
+ a project’s earliest production on-stream date. </p>
+        <p>Unrisked Sales: &#160;is 
+ the working interest, gross expenditures over the Budget Period, divided 
+ by working interest, and reduced by shrinkage, before royalty, average 
+ daily production rate one year from the earliest Onstream production date. 
+ &#160;The Unrisked 
+ Sales $ / Onstream Exit Rate equation for n expenditure records and m 
+ production records is:</p>
+        <p>{∑ ((Gross Expenditures within TB)n * WIn)} / {∑ ((Gross 
+ Daily Production one year from first day of TOS)m * WIm * (1 – Shrinkm))}</p>
+        <p>Risked Sales: &#160;is 
+ the working interest, risked, gross expenditures over the Budget Period, 
+ divided by working interest, reduced by shrinkage, before royalty, risked 
+ average daily production rate one year from the earliest Onstream production 
+ date. &#160;The 
+ Risked Sales $ / Onstream Exit Rate equation for n expenditure records 
+ and m production records is:</p>
+        <p>{∑ ((Gross Expenditures within TB)n * WIn * NPSn)} / {∑ 
+ ((Gross Daily Production one year from the first day of TOS)m * WIm * 
+ (1 – Shrinkm) * NPSm)}</p>
+        <h4 class="Heading4Reference">&#160;</h4>
+        <h4 class="Heading4Reference"><span style="color: #000000;">Lifting Cost</span>
+        </h4>
+        <p>Lifting cost is the sum of a project’s OPEX cost within the budget interval 
+ divided by the sum of a project’s production within the budget interval. 
+ </p>
+        <p>Unrisked Sales: &#160;is 
+ the OPEX cost over the Budget Period, divided by working interest, reduced 
+ by shrinkage, before royalty, cumulative production over the budget period. 
+ &#160;The Unrisked 
+ Sales Lifting Cost equation for n expenditure records and m production 
+ records is:</p>
+        <p>{∑ ((OPEX within TB)n * WIn)} / {∑ ((Gross Cumulative Production 
+ over TB)m * WIm)}</p>
+        <p>Risked Sales: &#160;is 
+ the risked OPEX cost over the Budget Period, divided by working interest, 
+ reduced by shrinkage, before royalty, risked cumulative production over 
+ the budget period. &#160;The 
+ Unrisked Sales Lifting Cost equation for n expenditure records and m production 
+ records is:</p>
+        <p>{∑ ((OPEX within TB)n * WIn * NPSn)} / {∑ ((Gross Cumulative 
+ Production over TB)m * WIm * NPSm)}</p>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="4413" MadCap:lastWidth="1484">
+    <head><title>Project Template Scheduler Overview</title>
+        <link rel="StyleSheet" href="../../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <script type="text/javascript" language="JavaScript1.2" src="../../Archived/ehlpdhtm.js">
+        </script>
+        <map name="MAP295907548" id="MAP295907548">
+            <area shape="rect" coords="815, 59, 855, 95" href="../../PopUp/DM_Project.htm" title="Project Access" target="_popup" />
+            <area shape="rect" coords="877, 57, 927, 98" href="../../PopUp/DM_DatesTypes.htm" title="Data Type and Period" target="_popup" />
+            <area shape="rect" coords="10, 80, 609, 140" href="../../PopUp/DM_Columns.htm" title="Configurable Columns" width="300" height="600" target="_popup" />
+        </map>
+        <h3>
+            <img src="../../Images/Logo Images/3esi_manage.png" align="right" border="0" class="HeaderLogo" />
+        </h3>
+        <h1>Using Type Curves</h1>
+        <p>In summary, there are four major steps that must be completed before the ultimate purpose of a Type Curve can be realized. They are:</p>
+        <ol>
+            <li>Creating Type Curves: this is done at the budget level, and establishes the base curves applicable to all projects in the budget.</li>
+            <li>Creating Patterns: this is done at the project level, in which modifiers are applied to existing Type Curves to create customized Patterns.</li>
+            <li>Creating Assets: this is a necessary step prior to creating Recurrences, which are tied to specific Assets in a project.</li>
+            <li>Creating Recurrences: this is done at the project level, in which modifiers are applied to existing Patterns to create customized Recurrences that represents the Production and Expenditures of designated assets in the project.</li>
+        </ol>
+        <p>When these steps are completed, Production analysis and Expenditure analysis can be generated without the need to create Productions and Expenditures within the project.</p>
+        <h3>&#160;</h3>
+        <h3>Type Curves</h3>
+        <p>Type Curves for Production, Expenditures, and Royalties are created in the Project Perspective, with the processes much like creating Production, Expenditures, and Royalties in the Project Editor. When Type Curves are created, they reside in the budget level. All curves created in a budget can be accessed by all projects within that budget. In the example below, which shows the Project Perspective under the budget named Training Forecast, each of the Type Curves listed in the table are available for any projects under Training Forecast to be used. </p>
+        <p>
+            <img src="../../Images/TypeCurves2_Using_1.png" />
+        </p>
+        <p>&#160;</p>
+        <p>For any projects in a budget that contains Type Curves, each existing Type Curve would provide a basis for any Production, Expenditure, or Royalties Pattern that uses that curve. For instance, as shown below, Type Curve 1 is a simple hyperbolic Compound Production curve that has 100 bbl/d of initial production and 50 bbl/d of final production after 12 months. </p>
+        <p>
+            <img src="../../Images/TypeCurves2_Using_2.PNG" />
+        </p>
+        <h3>&#160;</h3>
+        <h3>Patterns</h3>
+        <p>Within the Project Editor, a Type Curve Pattern can be created using an existing Type Curve. The resulting Pattern will be based on the Type Curve, as well as any modifiers applied to the Type Curve as part of creating the Pattern. In the example below, Type Curve 1 was used to create Pattern 1, a Production Pattern that has a count of 2 as a modifier. As a result, Pattern 1 is identical to two Type Curve 1 placed one after the other, with the curve spanning over 24 months.</p>
+        <p>
+            <img src="../../Images/TypeCurves2_Using_3.PNG" />
+        </p>
+        <h3>&#160;</h3>
+        <h3>Recurrences</h3>
+        <p>Within the Project Editor, a Type Curve Recurrence can be created using an existing Pattern. The resulting Recurrence will be based on the Pattern, as well as any modifiers applied to the Pattern as part of creating the Recurrence. In the example below, Pattern 1 was used to create the first Recurrence on the list, a Production Recurrence that has an occurrence of 2 as a modifier. As a result, the Recurrence has an identical curve to Pattern 1, with the values of the Recurrence curve double that of the Pattern 1 curve.</p>
+        <p>
+            <img src="../../Images/TypeCurves2_Using_4.PNG" />
+        </p>
+        <p>&#160;</p>
+        <p>With Recurrences in place (in the case of the example, a Production Recurrence), the project now has an asset with Production values tied to it, without adding anything to the Production tab. When a Production Analysis is created for the project in the example, the Production curve from the analysis result is identical to the Recurrence curve.</p>
+        <p>In the example project, a production analysis is created without any productions in place:</p>
+        <p>
+            <img src="../../Images/TypeCurves2_Using_5.png" />
+        </p>
+        <p>&#160;</p>
+        <p>The resulting production analysis shows a curve matching that of the Recurrence curve:</p>
+        <p>
+            <img src="../../Images/TypeCurves2_Using_6.PNG" />
+        </p>
+    </body>
+</html>

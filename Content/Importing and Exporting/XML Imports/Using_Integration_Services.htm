@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpCheckList.Ran Smart Index" MadCap:lastBlockDepth="8" MadCap:lastHeight="2703" MadCap:lastWidth="1440">
+    <head>
+        <link href="../../Resources/TableStyles/HelpFileTableStylesheet.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Using Integration Services</title>
+        <link rel="StyleSheet" href="../../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <img src="../../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />
+        <h2>Using the Integration Service</h2>
+        <p>esi.manage enables external processes or applications to Create or Update 
+ select data in the esi.manage database via Web Services interfaces. Data can either be exported from, or imported into, esi.manage. 
+ In most situations, this capability will be used as part of an automated 
+ process (Web Service interfaces invoked automatically, using machine generated 
+ import files or consuming esi.manage export results).</p>
+        <p>Generally the Integration Service will be run on a specific machine, 
+ which may or may not be a machine/server which runs esi.manage installation. 
+ However, the <span style="font-weight: bold;">esi.manage.integration.service</span> 
+ folder must be copied to the machine where the service is to be run. The <b>esi.manage.integration.service</b> folder contains the following:</p>
+        <p>
+            <img src="../../Images/Using_Integration_Services_1.PNG" />
+        </p>
+        <p>&#160;</p>
+        <p>In order to access the Web Services interface, the user would need to run the <b>start.cmd</b> script inside the <b>esi.manage.integration.service</b> folder. This script invokes a series of events that opens the communication channel that enables the user to access the Web Services interface, as well as the access to the esi.manage database via the Web Service interface, where data will be exported from or imported into. </p>
+        <p>To properly establish the communication channel to enable user access to Web Services, the network settings must be configured correctly. The network settings can be changed in the <b>esi.manage.xml</b> file located in the <b>esi.manage.integration.service\conf\Catalina\localhost</b> folder.</p>
+        <p>
+            <img src="../../Images/Using_Integration_Services_2.PNG" />
+        </p>
+        <p>&#160;</p>
+        <p>Open the XML file, and ensure the highlighted URL strings have the format <b>jdbc:jtds:sqlserver://<i>[esi.manage database server name]</i>:<i>[esi.manage database server port]</i>/esi.manage</b> (in the example, "localhost" is the name of the server where the esi.manage database is stored, and "1433" is the communication port for the server).</p>
+        <p>
+            <img src="../../Images/Using_Integration_Services_3.png" />
+        </p>
+        <p>&#160;</p>
+        <p>Aside from the URL strings, there are other parameters of the integration service that can be configured in the XML file:</p>
+        <table style="width: 93.289%;mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');" cellspacing="0" width="93.289%" class="TableStyle-HelpFileTableStylesheet">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" style="width: 327px;" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-Header1">Parameter</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td colspan="1" rowspan="1" bgcolor="#C0C0C0" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">name = "jdbc/[<i>name of the esi.manage database</i>]"</td>
+                    <td colspan="1" rowspan="1" width="64.269%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>name of esi.manage SQL database</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td colspan="1" rowspan="1" bgcolor="#C0C0C0" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p style="font-weight: normal;font-style: normal;">username = [<i>SQL authentication username</i>]</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="64.269%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>only required if Database Authentication is used in esi.manage</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td colspan="1" rowspan="1" bgcolor="#C0C0C0" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>password = [<i>SQL authentication password</i>]</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="64.269%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>only required if Database Authentication is used in esi.manage</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td colspan="1" rowspan="1" bgcolor="#C0C0C0" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>connectionProperties = [Name of the instance]</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="64.269%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>examples: SQL2005, SQL2008, SQL2008R2</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body2">namedPipe = [<i>true or false</i>]</td>
+                    <td width="64.269%" class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body2">turns the Named Pipe option on and off (same as the Database Settings in esi.manage)</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>After completing the network settings configuration, initiate the Web Services access procedure by running the <b>esi.manage.integration.service\start.cmd</b> script. This opens a command prompt console. When the last line reads "INFO: Server startup in xxxxx ms", the communication channel has established, and the user can proceed to access the Web Services interface.</p>
+        <p>
+            <img src="../../Images/Using_Integration_Services_4.PNG" />
+        </p>
+        <p>&#160;</p>
+        <p>To view the Schemas or sample Import Files in the Web Services interface, open a web browser (Internet Explorer, FireFox, Chrome, etc.) and go to the link <b>http://localhost:8080/esi.manage</b>, the following web page will successfully load if the communication channel has been properly established.</p>
+        <p>
+            <img src="../../Images/Using_Integration_Services_5.png" />
+        </p>
+    </body>
+</html>

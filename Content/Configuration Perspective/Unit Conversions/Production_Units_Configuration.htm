@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="2207" MadCap:lastWidth="1384">
+    <head><title>Production Units Configuration</title>
+        <link rel="StyleSheet" href="../../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <script type="text/javascript" language="JavaScript1.2" src="../../Archived/ehlpdhtm.js">
+        </script>
+        <img src="../../Images/Logo Images/3esi_manage.png" align="right" border="0" class="HeaderLogo" />
+        <h1>Production Units Configuration</h1>
+        <p>Defining the Production Units and Conversions involves multiple Configuration 
+ screens. The overall process is described in Production Units Overview. 
+ </p>
+        <p>One aspect of the configuration is defining the Production Units. For 
+ each unit you will need to provide one conversion factor. Note that the 
+ (energy) and (mass) labels are provided to indicate what the underlying 
+ Quality basis is (Gas is energy, NonGas is mass):</p>
+        <ul>
+            <li class="Bullets">For <span style="font-weight: bold;">Gas 
+ Volume</span> units - the conversion is to m3 (energy). </li>
+            <li class="Bullets">For <span style="font-weight: bold;">Gas 
+ Energy</span> units - the conversion is to J (energy).</li>
+            <li class="Bullets">For <span style="font-weight: bold;">NonGas 
+ Volume</span> units - the conversion is to m3 (mass).</li>
+            <li class="Bullets">for <span style="font-weight: bold;">NonGas 
+ Mass</span> units - the conversion is to kg (mass).</li>
+            <li class="Bullets">For <span style="font-weight: bold;">Equivalence</span> 
+ units - the conversion is to boe.</li>
+        </ul>
+        <p>The conversions provided here, combined with Production Quality and 
+ reference Product conversions enable interconversion between volume and 
+ quality for a product, as well as between products for equivalence reporting.</p>
+        <p>
+            <img src="../../Images/ProductionUnits1.png" />
+        </p>
+        <p class="NumberedList" style="font-weight: normal;">&#160;</p>
+        <p class="NumberedList" style="font-weight: normal;"><strong><span style="font-weight: normal;">The</span></strong><span style="font-weight: normal;"> 
+ fundamental units in esi.manage are:</span>
+        </p>
+        <ul>
+            <li style="font-weight: normal;">Gas</li>
+        </ul>
+        <ul style="list-style-type: circle;">
+            <li style="margin-left: 40px;">cubic metres (m3) for volume</li>
+            <li style="margin-left: 40px;">joules (J) for energy</li>
+        </ul>
+        <ul>
+            <li style="font-weight: normal;">Non-Gas</li>
+        </ul>
+        <ul style="list-style-type: circle;">
+            <li style="margin-left: 40px;">cubic metres (m3) for volume</li>
+            <li style="margin-left: 40px;">kilograms (kg) for mass</li>
+        </ul>
+        <ul>
+            <li style="font-weight: normal;">Equivalence</li>
+        </ul>
+        <ul style="list-style-type: circle;">
+            <li style="margin-left: 40px;">Barrels of oil equivalent (boe)</li>
+        </ul>
+        <p class="NumberedList" style="font-weight: normal;">&#160;</p>
+        <p class="NumberedList" style="font-weight: bold;">In esi.manage, Gas is referred to as “energy”. 
+ </p>
+        <p class="NumberedList" style="font-weight: bold;">&#160;</p>
+        <p class="NumberedList" style="font-weight: normal;">For instance, the Products configuration 
+ table has an Energy column that is used to specify whether the product 
+ is Gas or Non-Gas. Equivalence production units are used when reporting 
+ both Gas and Non-Gas products in one number. The typical equivalence production 
+ unit is boe or mboe but &#160;the 
+ user can define other equivalence production units as required.</p>
+        <p class="NumberedList" style="font-weight: normal;">Every production unit entered in the Production 
+ Units table must have a conversion factor to exactly one of the fundamental 
+ units. By and large these conversion factors are basic physical facts 
+ so finding the right conversion factor is merely a matter of looking it 
+ up in an appropriate reference. (An exception is cf to m3 conversion. 
+ It should be 3.283 (0.0283168)</p>
+        <p class="NumberedList" style="font-weight: normal;">Reading the Production Units table is 
+ intuitive. The conversion is always from one user-defined production unit 
+ to X fundamental units. E.g. 1 cf = 2.817399E-2 m3 (energy).</p>
+        <p class="NumberedList" style="font-weight: bold;">&#160;</p>
+        <p class="NumberedList" style="font-weight: bold;"><strong style="font-weight: bold;"><a href="../../PopUp/cfg_Context_Menu.htm" target="_popup">Table Options</a></strong>
+        </p>
+        <p class="note"><strong style="font-weight: normal;"><span style="font-weight: bold;">Note that</span><span style="font-weight: normal;"> 
+ a Unit can only have </span><span style="font-weight: bold;">one conversion</span><span style="font-weight: normal;"> entered, it is either a </span><span style="font-weight: bold;">Volumetric</span><span style="font-weight: normal;"> unit (converts to m3), </span><span style="font-weight: bold;">Quality</span><span style="font-weight: normal;"> (converts to J or kg), or </span><span style="font-weight: bold;">Equivalence</span><span style="font-weight: normal;"> (converts to boe). </span></strong>
+        </p>
+        <p style="font-weight: normal;"><strong style="font-weight: normal;"><span style="font-weight: normal;">The column that the conversion 
+ is entered in defines what type of Unit it is (Volumetric or Quality), 
+ and how this unit will be utilized within the conversion infrastructure. 
+ The m3 (energy) and m3 (mass) headers indicate which column to enter the 
+ Volumetric conversion factor into: a Gas unit is entered under </span><span style="font-weight: bold;">m3 (energy)</span><span style="font-weight: normal;"> 
+ and NonGas unit under </span><span style="font-weight: bold;">m3 (mass)</span><span style="font-weight: normal;">.</span></strong>
+        </p>
+        <p style="font-weight: normal;"><strong><span style="font-weight: normal;">With 
+ the exception of Equivalence units, the conversion factors entered on 
+ this page should be standard conversions. When providing Volumetric conversions, 
+ they should all use the same Reference state, i.e.; mcf and mmcf should 
+ be factors of 1000 and 1000000 to the cf conversion.</span></strong>
+        </p>
+        <p style="font-weight: normal;"><strong style="font-weight: bold;"><span style="font-weight: normal;">Equivalence units will be based on your company's 
+ practice, however, similar units (</span><span style="font-weight: bold;">mcfe</span><span style="font-weight: normal;"> and </span><span style="font-weight: bold;">mmcfe</span><span style="font-weight: normal;"> or </span><span style="font-weight: bold;">mboe</span><span style="font-weight: normal;"> and </span><span style="font-weight: bold;">mmboe</span><span style="font-weight: normal;">) should be numerically consistent.</span></strong>
+        </p>
+        <h3>&#160;</h3>
+        <h3><strong style="font-weight: bold;">To Add A Production Unit</strong>
+        </h3>
+        <ol>
+            <li style="font-family: Arial, sans-serif;" class="NumberedList"><span style="font-family: Arial, sans-serif;">Scroll 
+ to the last line in the table (it will be empty).</span>
+            </li>
+            <li style="font-family: Arial, sans-serif;" class="NumberedList"><span style="font-family: Arial, sans-serif;">Enter 
+ the Abbreviation (up to 8 characters). This is what will appear in Drop 
+ Down lists.</span>
+            </li>
+            <li style="font-family: Arial, sans-serif;" class="NumberedList">Enter 
+ the Description (up to 50 characters).</li>
+            <li style="font-family: Arial, sans-serif;" class="NumberedList">Enter 
+ the appropriate conversion:</li>
+            <ul>
+                <li style="font-family: Arial, sans-serif;" class="NumberedList"><span style="font-weight: bold;">mcf</span> is a Gas Volume unit (m3 (energy)).</li>
+                <li style="font-family: Arial, sans-serif;" class="NumberedList">The 
+ conversion factor is <span style="font-weight: bold;">From</span> mcf 
+ <span style="font-weight: bold;">To</span> m3.</li>
+                <li style="font-family: Arial, sans-serif;" class="NumberedList">btu 
+ is a Gas Energy unit (J (energy)).</li>
+                <li style="font-family: Arial, sans-serif;" class="NumberedList">The 
+ conversion factor is <span style="font-weight: bold;">From</span> btu 
+ <span style="font-weight: bold;">To</span> J.</li>
+            </ul>
+            <li style="font-family: Arial, sans-serif;" class="NumberedList"><span><span style="font-family: Arial, sans-serif;">Click 
+ outside the line to save the change.</span></span>
+            </li>
+        </ol>
+        <h3>&#160;</h3>
+        <h3>Changing an Existing Unit</h3>
+        <p>You can edit any entry in an existing row. Note that changes to a conversion 
+ factor will not propagate into existing data that is associated with that 
+ unit.</p>
+        <p><strong style="font-weight: bold;"><span style="font-weight: bold;">Deleting</span> <span style="font-weight: normal;">a Production Unit that is in use is 
+ not allowed.</span></strong>
+        </p>
+    </body>
+</html>

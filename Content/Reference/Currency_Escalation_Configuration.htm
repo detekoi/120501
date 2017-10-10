@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1157" MadCap:lastWidth="1491">
+    <head><title>Currency Escalation Configuration</title>
+        <link rel="StyleSheet" href="../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <p>
+            <img src="../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />
+        </p>
+        <h1>
+            <MadCap:concept term="Currency Escalation" />Currency Escalation Configuration</h1>
+        <p><span style="font-weight: bold;">Currency Escalation</span> is a way to 
+ represent future costs (Expenditures, OPEX, Prices) based on amounts entered 
+ in today's "dollars". </p>
+        <p>There are 3 parts to the <span style="font-weight: bold;">configuration</span> 
+ of Escalation.</p>
+        <ol>
+            <li class="NumberedList">Budget <span style="font-weight: bold;">Base Currency Date</span> - this sets the Date 
+ that the Escalation Factors are defined against. A Base Currency Date 
+ of Jan 1, 2010 means that monetary amounts have been entered in 2010 "dollars".</li>
+            <li class="NumberedList"><span style="font-weight: bold;">Currency 
+ Escalation File</span> - multiple files can be created to enable evaluation 
+ of Projects under a number of different scenarios. An Escalation file 
+ contains Measure Currency Escalation entries as described below. In order 
+ to apply Escalation to calculations, an Escalation file must be selected.</li>
+            <li class="NumberedList"><span style="font-weight: bold;">Measure 
+ Currency Escalation</span> - <span style="font-weight: bold;">Annualized</span> 
+ percentages defined for each CAPEX Category, and OPEX and Resources, on 
+ a Jurisdiction by Jurisdiction basis.</li>
+        </ol>
+        <p>&#160;</p>
+        <p>A new Currency Escalation file is created by selecting the <img src="../Images/index_add.png" /> button. You will be prompted to provide a File name which 
+ can be referenced when you want Escalation applied to esi.manage calculations. 
+ See <a href="Cost_Escalation.htm" style="font-weight: bold;">Currency Escalation Calculations</a> 
+ for a more detailed description of how the supplied values are used in 
+ calculations.</p>
+        <p>Data is entered by Jurisdiction, in a particular escalation file, for a specific measure. Each Capex type will be available for its own escalation rate, Opex is available as a single option (cannot have different escalation rates for different Opex types), and Price is also available as a single field (cannot have different escalation rates for different products).</p>
+        <p>&#160;</p>
+        <p>The Escalation Table <span style="font-weight: bold;">propagates</span> 
+ user entered values for all time periods into the future, until another 
+ user supplied value (by measure) is encountered.</p>
+        <p>There is an option to <span style="font-weight: bold;">Duplicate</span> 
+ an Escalation file, keeping much of the data the same and only modifying 
+ a select number of entries.</p>
+        <p>
+            <img src="../Images/Reference - Currency_Escalation_Configuration 1.png" />
+        </p>
+    </body>
+</html>

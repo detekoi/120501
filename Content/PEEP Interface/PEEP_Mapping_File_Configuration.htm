@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="3304" MadCap:lastWidth="1259">
+    <head><title>PEEP Mapping File &amp; Configuration</title>
+        <link rel="StyleSheet" href="../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <img src="../Images/Logo Images/3esi_manage.png" align="right" border="0" class="HeaderLogo" />
+        <h2>PEEP Mapping File &amp; Configuration</h2>
+        <p>In order for the PEEP interface to work, a mapping file must be configured 
+ which links the esi.manage measures to the measures and associated fields 
+ in PEEP. The setup of the mapping file would normally be done by a 3esi 
+ consultant.</p>
+        <p>The Mapping File specifies what information is transferred to PEEP from esi.manage and vice versa. Specific measures or project information can be toggled and manipulated, such as WI, NRI, Custom Columns/Attributes, Tax, etc..</p>
+        <p>esi.manage has to be pointed to the correct mapping file. This is done 
+ by selecting Window&gt;Preferences&gt;PEEP configuration and opening the 
+ folder icon next to 'PEEP to Manage mapping File' and selecting the mapping 
+ file.</p>
+        <p>
+            <img src="../Resources/Images/PEEP_Mapping_File_Configuration.png" />
+        </p>
+        <p>&#160;</p>
+        <p>An example of the mapping file can be found in the esi.manage installation 
+ files.</p>
+        <p>esi.manage\3.XX PackageWithPeep\Sample_Files</p>
+        <p>The mapping file is a csv file with 3 separate columns unless indicated otherwise. </p>
+        <ul>
+            <li>Column A - Mapping type.</li>
+            <li>Column B - Name of the type in PEEP.</li>
+            <li>Column C - Name of the esi.manage type. Note the type abbreviations 
+ set in the configuration have to be used in this column.</li>
+        </ul>
+        <p>
+            <img src="../Images/aimage16.gif" style="border: none;border-style: none;border-style: none;" border="0" />
+        </p>
+        <p><b>Multiple PEEP Configurations</b>
+        </p>
+        <p>esi.manage supports multiple PEEP environments. Users can now define which PEEP ODBC data sources they use, and can quickly select between them. The current source is displayed in the esi.manage status bar (which refreshes on every user initiated PEEP action).</p>
+        <p>By default esi.manage will look for file called esi.manage.peepenv placed in the same directory as the esi.manage executable (esi.manage.exe). Alternatively, users can specify a different location and different file name by using a -D3esi.peep.environments directive in the esi.manage.ini file e.g:</p>
+        <p>
+            <img src="../Resources/Images/PEEP_PAR13459_config.png" />
+        </p>
+        <p>The format of the PEEP environments file resembles that of Windows INI file. It has a mandatory section name enclosed in square brackets, with subsequent lines in the format peepOdbcSource=value.</p>
+        <p>There could be maximum on 7 peepOdbcSource lines in one section. One for each ODBC source specified in PEEP Preferences. Their names match those in PEEP Preferences, namely:</p>
+        <ul>
+            <li>Models</li>
+            <li>Cases</li>
+            <li>Global Parms</li>
+            <li>Prices</li>
+            <li>Currency</li>
+            <li>Reports</li>
+            <li>Wells</li>
+        </ul>
+        <p>One fully defined section could look like:</p>
+        <p>
+            <img src="../Resources/Images/PEEP_PAR13459_config2.png" />
+        </p>
+        <p>When the ODBC source value has same name as section, Users don't have to specify the value. As such, the previous example is functionally equivalent to:</p>
+        <p>
+            <img src="../Resources/Images/PEEP_PAR13459_config3.png" />
+        </p>
+        <p>Users can change only a portion of the ODBC sources in PEEP by using the following format:</p>
+        <p>
+            <img src="../Resources/Images/PEEP_PAR13459_config4.png" />
+        </p>
+        <p>The following is a complete example with multiple environments and comments:</p>
+        <p>
+            <img src="../Resources/Images/PEEP_PAR13459_config5.png" />
+        </p>
+        <p>esi.manage supports multiple PEEP environments and multiple models. The mapping file can now supports an "include" statement: any line that starts with an “@” sign. It is assume that what it follows an @ sign is a relative or absolute path to another mapping file. Include statements can be nested without limits.</p>
+        <p>In order to support multiple PEEP environments and multiple models, two special macros have been introduced which can be used in include statement:</p>
+        <ul>
+            <li>$PEEP_ENV$&#160;(resolves to Mapping_File_Location \ PEEP_ENV)</li>
+            <li>$PEEP_MODEL$&#160;(resolves to Mapping_File_Location \ PEEP_ENV \ PEEP_MODEL)</li>
+        </ul>
+        <p>Each model can have a separate mapping file.</p>
+        <p>Within esi.manage, the PEEP environments are accessed via the PEEP Import Jobs menu within the Navigator window. When opening a PEEP Import Job, you will be presented with a window as shown below (Import Job named “PEEP Testing”).</p>
+        <p>
+            <img src="../Resources/Images/PEEP_PAR13459.png" />
+        </p>
+    </body>
+</html>

@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpCheckList.Ran Smart Index" MadCap:lastBlockDepth="6" MadCap:lastHeight="2816" MadCap:lastWidth="1422">
+    <head><title>Database Connection</title>
+        <link rel="StyleSheet" href="Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <h3>
+            <img src="Images/Logo Images/3esi_manage.png" class="HeaderLogo" />
+        </h3>
+        <h2>Database Connection</h2>
+        <p>The Database Settings screen appears at startup until you set a database 
+ connection. You can also access this page at any time after you have connected 
+ by selecting the <span style="font-weight: bold;">Window</span> menu and 
+ choosing <span style="font-weight: bold;">Preferences.</span></p>
+        <p>
+            <img src="Images/Database_ConnectionFigure1.png" />
+        </p>
+        <p>&#160;</p>
+        <p>To connect to a database, you will need to enter the "Server", 
+ "Port" or "Instance", and "Database". You should 
+ have received these values from your IT department or 3ESI implementation 
+ engineer.</p>
+        <p>"Named Pipes" and "Use Database Authentication" 
+ should be ignored unless specified otherwise, as they are advanced options 
+ for specific security protocols on the SQL server.</p>
+        <p>A new drop down box labelled 'Database Environment' has been added. If this feature is configured, the user can select one of the pre-configured environments (note that all individual connection fields are hidden).</p>
+        <p>&#160;</p>
+        <h3>Creating the database environment file:</h3>
+        <p><i>There are two ways to configure esi.manage to use database environments:</i>
+        </p>
+        <ol>
+            <li>Create the database environment file <b>esi.manage.dbenv</b> and place it along with <b>esi.manage.exe</b></li>
+            <li>Create the database environment file with another name, place it in any location accessible to esi.manage users and define <b>3esi.db.environments</b> system property in the <b>esi.manage.ini</b> file that points to that file.<br />Example:<br />If a dbenv.txt was created within <b>W:\esi.manage</b> the user would need to add <b>-D3esi.db.environments=W:\esi.manage\dbenv.txt</b> into the esi.manage.ini file.<br /></li>
+        </ol>
+        <p>Once esi.amange is restarted the user will have a choice to select one of the database environments defined in that file.</p>
+        <p>
+            <img src="Images/Database_ConnectionFigure2.png" />
+        </p>
+        <p>&#160;</p>
+        <h3>Status Bar</h3>
+        <p>The connection status icon will change during database read (green DB&#160;disk).</p>
+        <p>
+            <img src="Images/Database_ConnectionFigure3.png" />
+        </p>
+        <p>The connection status icon will change during database write (blue DB disk).</p>
+        <p>
+            <img src="Images/Database_ConnectionFigure4.png" />
+        </p>
+        <p>&#160;</p>
+        <h3>Troubleshooting:</h3>
+        <p><span style="font-style: italic;">Here are common outcomes from the 
+ database connection phase, and solutions to the most common issues.</span>
+        </p>
+        <h4>1) Successful connection:</h4>
+        <p>Connection Status: Successfully connected</p>
+        <p>Database Version &amp; Expected Version: The same</p>
+        <p>&#160;</p>
+        <h4>2) Successful connection, mismatched database 
+ version:</h4>
+        <p>Connection Status: Connection Succeeded</p>
+        <p>Database Version &amp; Expected Version: Different</p>
+        <p>This indicates the database or client need to be upgraded to match one 
+ another.</p>
+        <p>&#160;</p>
+        <h4>3) Successful connection, unknown database 
+ version:</h4>
+        <p>Connection Status: Connection Succeeded</p>
+        <p>Database Version &amp; Expected Version: Database version unknown</p>
+        <p>This indicates the user does not have the "db_datareader" 
+ privilege but <span style="font-style: italic;">is</span> mapped as a 
+ user for the database. Check security settings.</p>
+        <p>&#160;</p>
+        <h4>4) Connection failed:</h4>
+        <p><span style="font-size: 12pt;font-weight: bold;">Connection Status: 
+ Failed</span>
+        </p>
+        <p>Database Version &amp; Expected Version: Blank</p>
+        <p>"Login failed for user DOMAIN\username"</p>
+        <p>The user is not set up with access to the server.</p>
+        <p>&#160;</p>
+        <h4>5) "You are not a recognized esi.manage 
+ user"</h4>
+        <p>Connection Status: Succeeded</p>
+        <p>Database Version and Expected Version: Same</p>
+        <p>This error occurs AFTER the database test screen. Hit OK or Apply, and 
+ a second window pops up with the error message "You are not a recognized 
+ esi.manage user, please contact your system administrator."</p>
+        <p>This means the server security is set up correctly, but the user has 
+ not been added to the Users table in configuration or their windows login 
+ has been entered incorrectly. Add them to this table <span style="font-style: italic;">from 
+ within the application</span><span> and have them log in again.</span></p>
+        <p>&#160;</p>
+        <h3>Entering Database connection information 
+ into the esi.manage.ini file:</h3>
+        <p>If you wish to automate the connection information for a database into 
+ the esi.manage.ini file, this is possible by entering the following lines 
+ into the esi.manage.ini file.</p>
+        <p>-D3esi.server=myserver</p>
+        <p>-D3esi.instance=sql2k8r2</p>
+        <p>-D3esi.database=mydatabase</p>
+        <p>&#160;</p>
+        <h3>Optional fields:</h3>
+        <p>-D3esi.port (instead of 3esi.instance)</p>
+        <p>-D3esi.namedpipe (default: false)</p>
+        <p>-D3esi.user and 3esi.password (only required if using SQL Server authentication)</p>
+    </body>
+</html>

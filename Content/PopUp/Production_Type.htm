@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="435" MadCap:lastWidth="868">
+    <head><title>Production Type</title>
+        <link rel="StyleSheet" href="../Resources/Stylesheets/popUp.css" />
+    </head>
+    <body>
+        <h3>Production Type</h3>
+        <p>There is the ability to associate four data 'sources' against a Production 
+ segment. By default they are Named:</p>
+        <ul style="list-style: disc;" type="disc">
+            <li><span style="font-weight: bold;">Forecast</span> 
+ - the Expected amount</li>
+            <li><span style="font-weight: bold;">Field Estimates</span> 
+ - measured in the Field</li>
+            <li><span style="font-weight: bold;">Actuals</span> 
+ - from the Accounting System</li>
+            <li><span style="font-weight: bold;">Financial Actuals</span> 
+ - post reconciliation</li>
+        </ul>
+        <p>These four can be combined to present two additional Types:</p>
+        <ul style="list-style: disc;" type="disc">
+            <li><span style="font-weight: bold;">Blended</span> 
+ - which combines Actuals, Field Estimates and Forecast depending on data 
+ availability</li>
+            <li><span style="font-weight: bold;">Financial Blended</span> 
+ - which combines Financial Actuals, Actuals, Field Estimates and Forecast 
+ depending on data availability</li>
+        </ul>
+        <p>If Backout calculations have been enabled: it is applied to Forecast 
+ calculations, and allows two additional Types:</p>
+        <ul style="list-style: disc;" type="disc">
+            <li><span style="font-weight: bold;">Blend + BO</span> 
+ - which subtracts the Backout component from the Blended value</li>
+            <li><span style="font-weight: bold;">Financial Blended</span> 
+ - which subtracts the Backout component from the Financial Blended value</li>
+        </ul>
+        <p>The Names shown above are modifiable in the Configuration; a company's 
+ particular esi.manage installation may show different names in locations 
+ where Production Type can be selected.</p>
+    </body>
+</html>

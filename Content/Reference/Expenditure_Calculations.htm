@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="2280" MadCap:lastWidth="1208">
+    <head><title>Expenditure Calculations</title>
+        <link rel="StyleSheet" href="../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <script type="text/javascript" language="JavaScript1.2" src="../Archived/ehlpdhtm.js">
+        </script>
+        <h1>
+            <img src="../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />
+            <MadCap:concept term="Expenditure Calculations" />Expenditure Calculations</h1>
+        <p>An Expenditure is Forecast using 3 fields:</p>
+        <ol>
+            <li class="Bullets"><span style="font-weight: bold;">Start 
+ Date</span> - when the activity is forecasted to begin.</li>
+            <li class="Bullets"><span style="font-weight: bold;">End 
+ Date</span> - when the activity is forecasted to complete</li>
+            <li class="Bullets"><span style="font-weight: bold;">Gross 
+ Amount</span> - the Total amount of the Expenditure</li>
+        </ol>
+        <p>The Start to End Dates are termed the Forecast Period. In terms of the 
+ 'duration':</p>
+        <ul>
+            <li class="Bullets">the Start Date is interpreted 
+ as occurring at 12:00:00 AM.</li>
+            <li class="Bullets">the End Date is interpreted 
+ as occurring at 11:59:59 PM</li>
+            <li class="Bullets">As a result, an Expenditure 
+ with the same start and end dates has a duration of 1 day.</li>
+        </ul>
+        <h3>&#160;</h3>
+        <h3><a name="Expenditure_Schedule"></a>Expenditure Schedule/Details</h3>
+        <p>Associated with each Expenditure is a 'Forecast Schedule'. This is the middle table on the Expenditure page. The schedule 
+ entries will be initialized based on the duration of the Expenditure. 
+ For example:</p>
+        <ol>
+            <li class="NumberedList">An Expenditure 
+ with a 1 year duration will be distributed equally over 12 monthly Schedule 
+ Entries (first of month, last of month)</li>
+            <li class="NumberedList">An Expenditure 
+ that covers multiple years will be distributed equally over yearly entries.</li>
+            <li class="NumberedList">An Expenditure 
+ with a 1 month duration will have a single entry for the entire amount.</li>
+            <li class="NumberedList">An Expenditure 
+ with less than 1 month duration will be distributed into weekly (7 day) 
+ entries, based on an average daily rate (Gross Amount/duration. If there 
+ is a resultant schedule period less than 7 days, the Gross Amount for 
+ that period will be the number of days x the daily rate.</li>
+            <li class="NumberedList">If the Forecast 
+ Period overlaps a month end, there will be Schedule entry for each month. 
+ The number of days within each month will determine the allocation of 
+ the Gross Amount.</li>
+            <li class="NumberedList">If the Forecast 
+ Period covers multiple months, entries will be created for each month, 
+ with the Gross Amount being distributed based on the number of days within 
+ any period.</li>
+        </ol>
+        <p>The Expenditure Details are Editable, and there is a feature to Expand 
+ entries into smaller duration entries, i.e., a yearly Schedule Entry can 
+ be expanded into Quarterly or Monthly entries. This is an unidirectional change. If the expected capital 
+ spend is non-uniform over the period, the schedule can be adjusted to 
+ better represent the capital profile, as well as facilitate tracking.</p>
+        <p>The following is an example of an expenditure &amp; associated expenditure schedule over a one year period.</p>
+        <p>
+            <img src="../Images/Reference - Expenditure.png" />
+        </p>
+        <p>&#160;</p>
+        <h3><a name="Periodic_Expenditure_Calculations"></a>Expenditure 
+ Calculations</h3>
+        <p>All Expenditure (CAPEX) Forecast calculations are based on the corresponding 
+ Schedule entry(s) for the period in question. How the schedule information 
+ is used is dependent on 3 factors:</p>
+        <ol>
+            <li class="NumberedList">The Date Range 
+ for the calculations.</li>
+            <li class="NumberedList">The periodicity 
+ of the calculations (monthly, quarterly, annual).</li>
+            <li class="NumberedList">The Last Actuals 
+ Date (if Blending is being used).</li>
+        </ol>
+        <p>The combination of Date Range and Periodicity will not always align 
+ with the Schedule of the Expenditures. For example:</p>
+        <ol>
+            <li class="NumberedList">An Expenditure 
+ has 4 Schedule Entries: Jan 3 to Jan 9, Jan 10 to Jan 16, Jan 17 to Jan 
+ 23 and Jan 24 to Jan 26.</li>
+            <li class="NumberedList">A weekly Report 
+ (12 period) is being generated, starting on Jan 1, which results in the 
+ following periods starting: Jan 1, Jan 8, Jan 15, Jan 22, Jan 29, Feb 
+ 4, Feb 11, etc.</li>
+            <li class="NumberedList">Each of the Schedule 
+ Entries has an average daily rate (Gross Amount for the period / duration).</li>
+            <li class="NumberedList">This daily rate 
+ is used in conjunction with the number of days that it has within a given 
+ reporting period. </li>
+        </ol>
+        <p class="example"><b>e.g.:</b> 
+ the first Schedule period (Jan 3 to Jan 9) has 5 days within reporting 
+ period 1, and 2 days within reporting period 2.</p>
+        <p>The second 
+ reporting period (beginning on Jan 8) is made of 2 days of Schedule Entry 
+ 1, and 5 days of Schedule Entry 2.</p>
+        <p>&#160;</p>
+        <h3><a name="Blended_Expenditure_Calculations"></a>Blended 
+ Calculations</h3>
+        <p>For Blended calculations, there is an additional degree of division:</p>
+        <ul>
+            <li class="NumberedList">The Last Actuals 
+ Date separates the data calculations into two portions.</li>
+            <ol>
+                <li class="NumberedList">Calculation 
+ Start to Last Actuals Date (interpreted as an End Date)</li>
+                <li class="NumberedList">Last Actuals 
+ Date + 1 to Calculation End.</li>
+            </ol>
+            <li class="NumberedList">Within Period 
+ 1, only Expenditure Data of Type Actuals is considered. </li>
+            <li class="NumberedList">Within Period 
+ 2, Forecast Data is used.</li>
+        </ul>
+        <p>Capital Actual entries are represented in the same manner as the Capital 
+ Forecast Schedule - Start and End Date, and Amount. The principles described 
+ above about calculating a Daily Rate (based on an Entry Period) and using 
+ this value in conjunction with a particular Calculation Period applied 
+ to both Actuals and Forecast entries. The Last Actuals Date simply introduces 
+ an additional transition date. </p>
+        <h3>&#160;</h3>
+        <h3><a name="Expenditure_Calculation_Modifiers"></a>Expenditure 
+ Modifiers</h3>
+        <p>There are two Modifiers that are used in Expenditure Calculations:</p>
+        <ul>
+            <li class="Bullets">WI% - used for Net Basis 
+ calculations.</li>
+            <li class="Bullets">Risk - used for Risked 
+ calculations</li>
+        </ul>
+        <p>See <a href="Risk_and_Probability_of_Success.htm#Probability_of_Doing" target="_popup">Risk</a></p>
+        <p>Risk is described by the AF% and OP% values in the <a href="../Dependencies/Dependencies.htm">Dependencies</a> tab. Note that by definition Actuals or Field Estimates have 
+ 100% probability.</p>
+        <p>Working Interest is inherited from Ownership for each Expenditure Schedule 
+ entry, Forecast, Field Estimates and Actuals. As indicated above, Expenditure 
+ Calculations are based on the data contained within the Schedule table(s). 
+ If a Net calculation is being requested, it will be based on the Net Amounts 
+ for the individual schedule entries, within the context of the Dates logic 
+ described above. </p>
+        <p>&#160;</p>
+    </body>
+</html>

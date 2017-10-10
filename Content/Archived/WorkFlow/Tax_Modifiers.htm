@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="2977" MadCap:lastWidth="896" MadCap:conditionTagExpression="exclude[Primary.Online or Primary.Print] ">
+    <head><title>Tax Modifiers</title>
+        <link rel="StyleSheet" href="../../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <h3>
+            <img src="../../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />
+        </h3>
+        <h2>Tax Modifiers</h2>
+        <ol>
+            <li class="NumberedList">Tax Modifiers 
+ are additional criteria that you can use to define additional Production 
+ or Revenue impacts within a jurisdiction.</li>
+            <li class="NumberedList">These can either 
+ be <span style="font-weight: bold;">Production,</span><span style="font-weight: bold;">Revenue 
+ </span><span>or </span><span style="font-weight: bold;">Fixed</span> Taxes.</li>
+        </ol>
+        <p>&#160;</p>
+        <h3>Production Tax</h3>
+        <p>
+            <img src="../../Images/Prod_Tax_Modifier.png" style="border: none;float: none;width: 540px;height: 450px;border-style: none;border-style: none;" width="540" height="450" border="0" />
+        </p>
+        <p>&#160;</p>
+        <ol>
+            <li class="NumberedList">A <span style="font-weight: bold;">Production 
+ Tax</span> is configured as a <span style="font-weight: bold;">Currency</span> 
+ / <span style="font-weight: bold;">Volume</span> tax. </li>
+            <li class="NumberedList">What will be 
+ entered into the Jurisdiction Table will be Amounts (corresponding to 
+ the specified Currency).</li>
+            <li class="NumberedList">The calculated 
+ tax will be the Production (in the specified volume unit) multiplied by 
+ the Amount for the corresponding time period.</li>
+            <li class="NumberedList">As such, a Production 
+ Tax is not affected by the Price File being used for calculations.</li>
+        </ol>
+        <p>&#160;</p>
+        <h3>Revenue Tax</h3>
+        <p>
+            <img src="../../Images/Rev_Tax_Modifier.png" style="border: none;width: 540px;height: 450px;float: none;border-style: none;border-style: none;" width="540" height="450" border="0" />
+        </p>
+        <p>&#160;</p>
+        <ol>
+            <li class="NumberedList">A <span style="font-weight: bold;">Revenue 
+ Tax</span> is configured as a <span style="font-weight: bold;">Percentage 
+ of Production </span>tax. </li>
+            <li class="NumberedList">What will be 
+ entered into the Jurisdiction Table will be Royalty %.</li>
+            <li class="NumberedList">The calculated 
+ tax will be the specified % of the calculated Revenue for the corresponding 
+ time period.</li>
+            <li class="NumberedList">As such, a Revenue 
+ Tax is affected by the Price File being used for calculations.</li>
+        </ol>
+        <p>&#160;</p>
+        <h3>Net Profit Royalty</h3>
+        <p>
+            <img src="../../Images/NPR_Tax.PNG" style="border: none;float: none;width: 601px;height: 503px;" width="601" height="503" border="0" />
+        </p>
+        <p>&#160;</p>
+        <ol>
+            <li class="NumberedList">A <span style="font-weight: bold;">Net 
+ Production Revenue Tax</span> is applied to revenues, minus the allowable 
+ depreciated expenditures.</li>
+            <li class="NumberedList">What will be 
+ entered into the Jurisdiction Table will be Royalty %.</li>
+            <li class="NumberedList">The calculated 
+ tax will be the specified % of the calculated Revenue for the corresponding 
+ time period.</li>
+            <li class="NumberedList">The NPR will 
+ only be applied in years in which there is a calculated profit.</li>
+        </ol>
+        <h3>&#160;</h3>
+        <h3>Fixed Tax</h3>
+        <ol style="list-style: decimal;list-style-type: decimal;">
+            <li>A <span style="font-weight: bold;">Fixed Tax </span>is 
+ independent of any cash flow.</li>
+            <li>It is computed for every month within the calculation 
+ time window, whether other cash flows are present or not.</li>
+            <li>It is input as a fixed tax amount for a specific 
+ month and the specified tax amounts will be applied for every month that 
+ lies within the calculation time window.</li>
+        </ol>
+        <p>
+            <img src="../../Images/jurisdiction_tax_config.png" style="border: none;width: 896px;height: 594px;float: none;border-style: none;border-style: none;" width="896" height="594" border="0" />
+        </p>
+    </body>
+</html>

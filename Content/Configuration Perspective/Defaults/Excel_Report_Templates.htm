@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="10" MadCap:lastHeight="5329" MadCap:lastWidth="1319">
+    <head>
+    </head>
+    <body>
+        <p>
+            <img src="../../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />
+        </p>
+        <h1>
+            <MadCap:keyword term="Excel Report Templates" />Excel <MadCap:keyword term="Report Templates" />Report Templates</h1>
+        <p>The Excel Reporting Feature allows generating reports based on the information generated in the Economics Analysis Cases in esi.manage.</p>
+        <p>Any Excel report format is possible,giving the ability to create custom Excel reports.</p>
+        <p>&#160;</p>
+        <h3>Excel Report Template Process</h3>
+        <p>There are 4 steps to create and run Excel Reports:</p>
+        <ol style="list-style-type: upper-alpha;">
+            <li>Creating and loading an empty report template</li>
+            <li>Running an Economic Analysis Case and generating the first report</li>
+            <li>Creating the custom report template</li>
+            <li>Generating custom reports</li>
+        </ol>
+        <p>&#160;</p>
+        <h3><b>Creating and loading an empty report template</b>
+        </h3>
+        <ul>
+            <li>The first step is to create a spreadsheet with the following worksheets:</li>
+        </ul>
+        <p>&#160;</p>
+        <ol style="list-style-type: upper-alpha;"><b>"ESI Summary (nominal)”</b>: contain the output of the Summary tab in the esi.manage Analysis case in Nominal numbers.<br /><br /><b>“ESI Summary (real)”</b>: contain the output of the Summary tab in the esi.manage Analysis case in Real numbers.<br /><br /><b>“ESI Cashflow (nominal)”</b>: contain the output of the Cashflow tab in the esi.manage Analysis case in Nominal numbers.<br /> <br /><b>“ESI Cashflow (real)”</b>: contain the output of the Cashflow tab in the esi.manage Analysis case in Real numbers.<br /><br /><b>“ESI Metrics (nominal)”</b>: contain the output of the Metrics tab in the esi.manage Analysis case in Nominal numbers.<br /><br /><b>“ESI Metrics (real)”</b>: contain the output of the Metrics tab in the esi.manage Analysis case in Real numbers.<br /><br /><b>“ESI Inflation”</b>: contain the cumulative inflation time series values used in the esi.manage Analysis case, based on the inputs defined in the Currency Inflation page of the Configuration Perspective.<br /><br /><b>“ESI Metadata”</b>: contain the report timestamp, user, economic node, and fiscal path of the output.
+<br /><br /><b>“ESI Prices”</b>: contain the time series values of the Price Forecast specified by the user<br /><br /><b>“ESI Projects”</b>: contain the list of projects that is part of the esi.manage Analysis case, as well as their comments and fiscal model hierarchy path.
+<br /><br />Any other tabs can be added, free worksheet name and contents. Any formula can be added referencing data in the tabs with the “ESI” prefix.
+<br /><br />Aside from the “ESI Cashflow”, “ESI Inflation”, and “ESI Prices” tabs (see <a href="../../Customizing the Excel Report Cashflow Tab.htm">Reference</a>  for details on the column header syntax to bring in user-specified measures and economic measures), spreadsheets start out blank at this stage.<br /></ol>
+        <blockquote>
+            <p>&#160;</p>
+        </blockquote>
+        <p>
+            <img src="../../Images/Excelreport1.png" />
+        </p>
+        <p>For the “ESI Cashflow” tab (applicable to both Real and Nominal), users can edit the column headers in rows 1, 2, and 3 of the sheet to specify which economic data to import and include in the report.  For any given column, row 1 would contain an “IN” value if the data type specified in rows 2 and 3 is meant to be imported, or remain a blank cell if nothing is intended to be imported into this column.  Row 2 contain the data type name that the esi.manage report engine would recognize (see Reference  for data type name syntax), and row 3 contain any additional information to specify the data type to include (such as product name, expenditure type, opex type).</p>
+        <p>
+            <img src="../../Images/Excelreport2.png" />
+        </p>
+        <p>&#160;</p>
+        <p>•	The report file needs to be added in the Configuration Attachments page in the Configuration perspective and attach the file. The Type must be specified as “Economic Report” in order for the attachment to be used as an Economic Report Template. This is a repository of Attachment files and can be found at Configuration&gt;Defaults&gt;Configuration Attachments.</p>
+        <p>
+            <img src="../../Images/AttachmentExample1.png" />
+        </p>
+        <blockquote>
+            <p>NOTE: Any file loaded to Configuration Attachments is a copy has been loaded in the esi.manage database. Changes to the source file will not affect the attached copy.</p>
+        </blockquote>
+        <ul>
+            <li>The Excel file must then be assigned into the list of Excel Reports.<ul><li>Go to <b>Configuration&gt;Defaults&gt;Except Report Templates</b></li><li>Click the + icon</li><li>Go to the last line of the list and Click on the <b>“Spreadsheet”</b> field and select the Excel file that will define the report.</li><li>Assign a name for the report in the <b>“Name”</b> field.</li></ul></li>
+        </ul>
+        <p>
+            <img src="../../Images/ExcelReportTemplate1.png" style="width: 767px;height: 461px;" />
+        </p>
+        <h3><b>Running an Economic Analysis Case and generating the first report</b>
+        </h3>
+        <ul>
+            <li>Go to the Analysis perspective and run an Economic Analysis Case.</li>
+            <li>Once an analysis has run, a report can be viewed on the Cashflow tab by right-clicking on any node in the cashflow output. Select the  “Generate Report” option and select a report to view the output. A report can also be generated from the Metrics tab in the same manner.<br /><img src="../../Images/ExcelReportTemplate2.png" style="width: 726px;height: 415px;" /></li>
+            <li>Save the file and open it in Excel.  The tabs defined in the report (the "ESI" tabs) are not populated with the values from the node that was selected on the Cashflow tab of the economic analysis.<br /><img src="../../Images/excelreport5.png" /><br />The other tabs (that will contain the custom report templates) are still blank.</li>
+        </ul>
+        <h3><b>Creating the custom report template</b>
+        </h3>
+        <ul>
+            <li>
+                <p>Once a report has been downloaded with the  “ESI” tabs of the report populated, they can be used to create a custom report on the other custom tabs using formulas referencing to the measures and metrics in the “ESI” tabs.</p>
+            </li>
+        </ul>
+        <p>Example of the custom tab referencing a blank report:</p>
+        <p>
+            <img src="../../Images/Excelreport6.png" />
+        </p>
+        <p>Example of the custom tab referencing a populated report:</p>
+        <p>
+            <img src="../../Images/Excelreport6_1.png" />
+        </p>
+        <ul>
+            <li>Once completed, it can be uploaded to esi.manage to overwrite the basic report or be uploaded as a new report.</li>
+            <li>
+            </li>
+        </ul>
+        <p class="note">Important: remember that a template is modified(any formula, format, etc) it will need to be reload it into esi.manage.<br /></p>
+        <h3><b>Generating custom reports</b>
+        </h3>
+        <p>Every time a report is run, the "ESI" tabs will be populated for the node selected in the economic analysis and the custom template tabs will be based upon that data.  The "ESI" data tabs can be hidden to avoid clutter.<br />Note that all the custom defined tabs contain not only the data but also the formulas referencing the data in the "ESI" tabs. This can be used for error checking and/or auditing.<br />The report is independent of the project sets and analysis cases used in the Analysis Case. A report can be generated for any of them.</p>
+        <p>&#160;</p>
+        <h3>Variance Analysis</h3>
+        <p>Variance analysis can be utilized by generating a report for each scenario, then comparing the reports.</p>
+        <p>&#160;</p>
+        <h3>Economics Spreadsheet</h3>
+        <p>If economics is run using a fiscal model defined in a Economics Spreadsheet (<b>Custom</b> option in the <b>Configuration&gt;Defaults&gt;Fiscal Model</b>) the Cashflow tab of the report will also contain the columns corresponding to the OUT lines of the Economics Spreadsheet.</p>
+        <p>The custom defined tabs can reference the Economics Spreadsheet generated data.</p>
+    </body>
+</html>

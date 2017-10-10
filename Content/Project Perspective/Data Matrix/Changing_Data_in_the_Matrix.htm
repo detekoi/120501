@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="2505" MadCap:lastWidth="892">
+    <head><title>Changing Data in the Matrix</title>
+        <link rel="StyleSheet" href="../../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <h3>
+            <img src="../../Images/Logo Images/3esi_manage.png" align="right" border="0" class="HeaderLogo" />
+        </h3>
+        <h2>Changing Data in the Matrix</h2>
+        <p>There are several routes to changing Project Data from within the Data 
+ Matrix.</p>
+        <p class="note"> <b>Note:</b> that whenever a value has been changed from what was obtained 
+ from the Project, the value will show in Blue.</p>
+        <p>In order to Update an entry - the Data Matrix <span style="font-weight: bold;">Display 
+ Unit</span> (bottom right corner of data matrix) must be the <span style="font-weight: bold;">same 
+ as</span> the line's <span style="font-weight: bold;">Source Unit</span>. 
+ See <a href="Data_Matrix_Filtering.htm">Columns</a> to display the Currency 
+ unit.</p>
+        <ul>
+            <li class="Bullets"><b>Direct Entry of Values</b> 
+ - simply type in a value within a Cell.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Copy/Cut 
+ and Paste</span> - select any number of cells:, multi-selection can be 
+ by dragging around a region, selecting one corner of the region and then 
+ selecting the opposite corner while holding down the Shift Key, or successively 
+ selecting cells while holding down the Ctrl key. &#160;Right 
+ click within the selection and choose Copy or Cut. Choose the location 
+ to be pasted into, and the same 'pattern' of selection will be pasted 
+ into.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Bulk 
+ Update</span> - allows you to apply either a % or new Total Amount to 
+ a selection of cells. If a Total amount is provided, this is converted 
+ to a % and each cell is updated appropriately.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Update Forecast From</span> - 
+ allows you to Update the Forecast based on CAPEX Actuals (or Field Estimates), 
+ or OPEX Forecast based on Actuals or Field Estimates. This allows you 
+ to 'Shift' Forecast amounts into Periods beyond the current date.</li>
+        </ul>
+        <p class="note"><b>Note:</b> that in the following descriptions, none of the Data within the 
+ Matrix will be saved until the main Save button (upper left corner of 
+ esi.manage) is pressed. </p>
+        <h3>&#160;</h3>
+        <h3>The Impact of Periodicity</h3>
+        <p>The Periodicity controls how the data is displayed in the Matrix.</p>
+        <ol>
+            <li class="NumberedList">If you have originally 
+ entered data on an Annual Basis and request Monthly representation in 
+ the Data Matrix, your Annual data will be apportioned over the Period. 
+ </li>
+            <li class="NumberedList">If you Edit this 
+ data and then commit it back to the Project - what is displayed in the 
+ Matrix will determine the corresponding 'Schedule' in the Project. </li>
+            <li class="NumberedList">For this reason 
+ if you have created a Monthly Expenditure schedule in a Project(s), you 
+ should Edit in the Data Matrix on a Monthly basis. </li>
+            <li class="NumberedList">If you are Editing 
+ on an Annual basis in the Matrix, and then Update values back into the 
+ Project, your Monthly schedule will be replaced with an Annual one. </li>
+        </ol>
+        <p>See Update Forecast from Actuals</p>
+        <h3>&#160;</h3>
+        <h3>Copy/Cut and Paste</h3>
+        <p>To Copy a selection of Values from one 'location' to another:</p>
+        <ol>
+            <li class="NumberedList">Highlight the 
+ 'source' cells, right click and select <span style="font-weight: bold;">Copy</span>.</li>
+        </ol>
+        <p>
+            <img src="../../Images/Data-Matrix_Copy1.png" style="border: none;float: none;border-style: none;border-style: none;" border="0" />
+        </p>
+        <p>&#160;</p>
+        <ol start="2">
+            <li class="NumberedList">Move to the upper 
+ left corner of the 'target' cells, right click and select <span style="font-weight: bold;">Paste</span>.</li>
+        </ol>
+        <p>
+            <img src="../../Images/Data-Matrix_Copy2.png" style="border: none;float: none;border-style: none;border-style: none;" border="0" />
+        </p>
+        <p>&#160;</p>
+        <ol start="3">
+            <li class="NumberedList">The 'schedule' 
+ and amounts of the 'source' cells have overwritten the 'target' (in this 
+ case the 2,100,000 value shown in the first image is where the Paste was 
+ applied).</li>
+            <li class="NumberedList">The Pasted values 
+ are shown in <span style="font-weight: bold;">Blue</span>, and the <span style="font-weight: bold;">Grand Total</span> updated based on the Pasted 
+ values.</li>
+            <li class="NumberedList">To move the values 
+ shown in the first screen earlier in the year (same Project), highlight 
+ the cells as shown in the first image. Right Click and select 'Cut'.</li>
+            <li class="NumberedList">Move to the Upper 
+ Left corner of the Target region and select Paste.</li>
+        </ol>
+        <p>
+            <img src="../../Images/Data-Matrix_Copy3.png" style="border: none;float: none;border-style: none;border-style: none;" border="0" />
+        </p>
+        <p>&#160;</p>
+        <ol start="7">
+            <li class="NumberedList">This has moved 
+ the original Expenditures two months earlier.</li>
+            <li class="NumberedList">Note that all 
+ of the values are shown in Blue - none of the changes have been updated 
+ to the Project.</li>
+            <li class="NumberedList">You can <span style="font-weight: bold;">Undo</span> all changes (one at a time) made 
+ prior to committing, or select Refresh to re-obtain the current data from 
+ the Projects.<img src="../../Images/undorefresh.png" style="border: none;width: 51px;height: 30px;float: none;" width="51" height="30" border="0" /></li>
+            <li class="NumberedList">You must select 
+ Save <img src="../../Images/button - save.png" style="border: none;width: 19px;height: 19px;float: none;border-style: none;border-style: none;" width="19" height="19" border="0" /> from the main button ribbon to commit the changes 
+ back to the Projects.</li>
+        </ol>
+        <h3>&#160;</h3>
+        <h3>Bulk Update</h3>
+        <p>The Bulk Update button allows you to update a group of cells.</p>
+        <ol>
+            <li class="NumberedList"><span style="font-weight: bold;">Select</span> 
+ the cells to be updated.</li>
+            <li class="NumberedList">Select the <span style="font-weight: bold;">Bulk Update</span> button - <img src="../../Images/gold_bars_gearwheel.png" style="border: none;border-style: none;float: none;width: 23px;height: 24px;" width="23" height="24" border="0" /></li>
+        </ol>
+        <p>
+            <img src="../../Images/Data-Matrix_BUpd.png" style="border: none;float: none;border-style: none;border-style: none;" border="0" />
+        </p>
+        <p>&#160;</p>
+        <ol start="3">
+            <li class="NumberedList">The <span style="font-weight: bold;">Total</span> 
+ for the selected cells is displayed.</li>
+            <li class="NumberedList">You can either 
+ enter an <span style="font-weight: bold;">Update Percentage</span>, or 
+ a new <span style="font-weight: bold;">Update Total</span> (which will 
+ be converted to a %).</li>
+            <li class="NumberedList">This percentage 
+ is then applied to each cell in the range.</li>
+        </ol>
+    </body>
+</html>

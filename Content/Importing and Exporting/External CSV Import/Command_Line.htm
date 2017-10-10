@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="906" MadCap:lastWidth="1195">
+    <head>
+        <link href="../../Resources/TableStyles/HelpFileTableStylesheet.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Command Line</title>
+        <link rel="StyleSheet" href="../../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <img src="../../Images/Logo Images/3esi_manage.png" align="right" border="0" class="HeaderLogo" />
+        <h2>Running Import.exe from the Command Line</h2>
+        <p>Import.exe can be invoked entirely from the command line, using various 
+ switches.</p>
+        <p>&gt;<span style="font-weight: bold;font-style: italic;">import [OPTION]... 
+ [FILE]</span></p>
+        <p class="example"><b>eg.:</b> &gt;<span style="font-weight: bold;font-style: italic;">import -t </span>opex:text/csv 
+ <span style="font-weight: bold;">-v</span><span style="font-weight: bold;">-h</span> <span style="font-weight: bold;">-d</span> 
+ localhost:1432/esimanage <span style="font-weight: bold;">-o</span> rejects.csv 
+ opex.csv</p>
+        <p>The options that are Yes/No (verify, header, usenamedpipes) don't take 
+ an argument on the command line - their presence is interpreted as a Yes. 
+ </p>
+        <p>If your database has spaces in the name (i.e., &#160;Smart 
+ Oil and Gas), quote the database name as part of the -d (<span style="font-weight: bold;">-d</span> 
+ localhost:1432/"Smart Oil and Gas"</p>
+        <table style="width: 95.814%;mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');" cellspacing="0" width="95.814%" class="TableStyle-HelpFileTableStylesheet">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-Header1">
+                        <p>&#160;</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p style="color: #ffffff;font-weight: bold;text-align: center;" align="center">Switch</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p style="color: #ffffff;font-weight: bold;text-align: center;" align="center">Options</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;text-align: center;" align="center"><span style="font-weight: bold;color: #ffffff;">Description</span>
+                        </p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-Header1">
+                        <p style="font-weight: bold;color: #ffffff;text-align: center;font-style: italic;" align="center">File Syntax (3)</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="7.221%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>Input</p>
+                    </td>
+                    <td width="4.779%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>-t</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.43%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>opex:text/csv</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="29.791%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>import OPEX in a CSV format</p>
+                    </td>
+                    <td width="21.121%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p style="font-style: italic;">Type</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td colspan="1" rowspan="1" bgcolor="#C0C0C0" width="7.221%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="4.779%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>-t</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.43%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>prices:text/csv</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="29.791%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>import Prices in a CSV format</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="21.121%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p style="font-style: italic;">Type</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="7.221%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td width="4.779%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>-h</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.43%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="29.791%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>FILE has header line or not (OPEX Only)</p>
+                    </td>
+                    <td width="21.121%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p style="font-style: italic;">Header</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td bgcolor="#C0C0C0" width="7.221%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>Output</p>
+                    </td>
+                    <td width="4.779%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>-v</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.43%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="29.791%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>verify content of FILE only (OPEX Only)</p>
+                    </td>
+                    <td width="21.121%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p style="font-style: italic;">Verify</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="7.221%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td width="4.779%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>-o</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.43%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>rejects.csv (for example)</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="29.791%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>file for rejected lines</p>
+                    </td>
+                    <td width="21.121%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p style="font-style: italic;">OutFile</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td bgcolor="#C0C0C0" width="7.221%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>Database</p>
+                    </td>
+                    <td width="4.779%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>-d</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.43%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>SERVER[:PORT]/DATABASE</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="29.791%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>the connection information (<span style="font-weight: bold;">1</span>)</p>
+                    </td>
+                    <td width="21.121%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p style="font-style: italic;">Server</p>
+                        <p style="font-style: italic;">Port</p>
+                        <p style="font-style: italic;">DatabaseName</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="7.221%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td width="4.779%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>-i</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.43%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="29.791%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>use database instance</p>
+                    </td>
+                    <td width="21.121%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p style="font-style: italic;">DatabaseInstance</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td bgcolor="#C0C0C0" width="7.221%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>&#160;</p>
+                    </td>
+                    <td width="4.779%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>-n</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.43%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="29.791%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>use named pipes</p>
+                    </td>
+                    <td width="21.121%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p style="font-style: italic;">UseNamedPipes</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="7.221%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td width="4.779%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>-u</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.43%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>USERNAME:PASSWORD</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="29.791%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>use credentials USERNAME and PASSWORD</p>
+                    </td>
+                    <td width="21.121%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p style="font-style: italic;">Username</p>
+                        <p style="font-style: italic;">Password</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td bgcolor="#C0C0C0" width="7.221%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>Miscellaneous</p>
+                    </td>
+                    <td width="4.779%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>-p</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.43%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>PROPERTIESFILE</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="29.791%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>read parameters from PROPERTIESFILE (<span style="font-weight: bold;">2</span>)</p>
+                    </td>
+                    <td width="21.121%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p style="font-style: italic;">&#160;</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td bgcolor="#C0C0C0" width="7.221%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td width="4.779%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.43%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>opex.csv (for example)</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="29.791%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td width="21.121%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p style="font-style: italic;">File</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td bgcolor="#C0C0C0" width="7.221%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body3">
+                        <p>&#160;</p>
+                    </td>
+                    <td width="4.779%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.43%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p>prices.csv (for example)</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="29.791%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                    <td width="21.121%" class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body3">
+                        <p style="font-style: italic;">File</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p><span style="font-weight: bold;">Note:</span>
+        </p>
+        <ol>
+            <li class="NumberedList">When SERVER is 
+ unspecified localhost will be assumed. When PORT is unspecified 1433 will 
+ be assumed.</li>
+            <li class="NumberedList">Each of the Switches 
+ can be represented in a <span style="font-weight: bold;"><a href="Properties_File.htm">Properties 
+ File</a></span> instead (i.e., Header=Y). Note that some options (database 
+ for example) expand to 3 lines in the Properties File.</li>
+            <li class="NumberedList">Where the same 
+ option is specified in the File and the command line the value from the 
+ command line will be preferred.</li>
+        </ol>
+
+&#160; 
+
+</body>
+</html>

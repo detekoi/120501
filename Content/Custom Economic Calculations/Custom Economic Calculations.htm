@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="8193" MadCap:lastWidth="1912">
+    <head>
+        <link href="../Resources/TableStyles/HelpFileTableStylesheet.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+        <link href="../Resources/Stylesheets/HelpFileStylesheet5.css" rel="stylesheet" />
+    </head>
+    <body>
+        <p>
+            <img src="../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />
+        </p>
+        <h2>Custom Economic Calculations</h2>
+        <p>Users are able to define hierarchy-level economic calculations by means of spreadsheets uploaded into esi.manage. Users can include and report custom economic calculations using a single input spreadsheet. </p>
+        <p>&#160;</p>
+        <p>The spreadsheet references data from an analysis case run (or ‘flowsheet’), and performs calculations before returning outputs to the flowsheet for display and further calculations that affect downstream outputs of the flowsheet (see Output Columns below for more detail).</p>
+        <p>&#160;</p>
+        <p>A spreadsheet is integrated into the general esi.manage economics calculation workflow as follows. The spreadsheet is created that conforms to certain conventions discussed in detail below. The spreadsheet describes the input data it requires to operate and the cash flow outputs that it creates for inclusion into esi.manage. It also contains formulas that transform the inputs into the outputs.</p>
+        <p>&#160;</p>
+        <h3>Creation of the Economic Calculation Spreadsheet</h3>
+        <p>Custom economic calculation spreadsheets must follow strict rules to be recognizable by esi.manage:</p>
+        <ul style="list-style-type: disc;margin-left: 13pt;">
+            <li style="list-style-type: disc;">There must be a worksheet named Calculation. While esi.manage will recalculate all sheets in the workbook, it will only transfer data into or out of the one named Calculation. The remaining rules all govern the format of that worksheet.</li>
+        </ul>
+        <p>
+            <img src="../Images/EconomicAnalysisPAR13635Calculation.png" style="visibility: visible;mso-wrap-style: square;width: 439px;height: 285px;" />
+        </p>
+        <p>&#160;</p>
+        <ul style="list-style-type: disc;margin-left: 13pt;">
+            <li style="list-style-type: disc;">The first row of the spreadsheet is reserved for dates, starting in column E. The interval between dates is always monthly as that is how esi.manage performs all economic calculations internally. During calculation, esi.manage will overwrite the date row with the actual date range in use for the analysis.</li>
+            <li style="list-style-type: disc;">Subsequent non-blank rows must start with four columns containing a type, unit, element, and title.</li>
+        </ul>
+        <p><b>COLUMN A:</b> The type column must be blank or contain one of IN, OUT, or TMP. An IN row will be overwritten during calculation to hold pre-calculated values from the flowsheet (e.g. production, revenue, etc). The element and title columns, described below, indicate which values to use. After the IN rows have been overwritten, the workbook is recalculated. After the workbook has been recalculated, the values each OUT row will be added into columns in the esi.manage flowsheet. The target columns are determined by the element and title columns described below. A TMP row is used to hold intermediate calculation results that are not displayed on the economics flowsheet. A row with a blank type is mostly ignored by esi.manage, although any formulas it contains will be recalculated in case they contribute to the final results in the OUT rows.</p>
+        <p><b>COLUMN B:</b> The unit field indicates the unit of measure for values in the row. Users are required to use only units of measure that are made available in the Configuration perspective. For IN rows, esi.manage will convert the data into the named unit. For OUT rows, esi.manage will convert the data from the named unit to the required analysis case unit. For certain combinations of elements and units, this conversion might not be possible. In that event, an error message will be issued when the analysis case is run.</p>
+        <p><b>COLUMN C:</b> The element column names the type of esi.manage data it contains. Examples include Production, ProductionEquivalence, Opex, Capex, and many others which are described fully below. Each of these identifies a corresponding column from the economics flowsheet. A blank element is a special case and is used to create new custom flowsheet columns from OUT rows.</p>
+        <p><b>COLUMN D: </b>The title column is used differently based on the row type: IN: If the title is blank, the flowsheet summary column for the corresponding element is used . If the title is not blank, then a flowsheet detail column for the corresponding element is used. For example, let's say that the element was Capex. A blank title would retrieve the summary column labelled Capex from the flowsheet. A title of Development would retrieve the detail column labelled Capex (Development) from the flowsheet. OUT: title is used in similar fashion as for an IN column, except that it specifies the flowsheet columns to receive the values from the OUT row. In the case of a blank element, a new custom flowsheet column will be created using the specified title. Such created columns do not participate in further economic calculation in esi.manage – they exist solely for the purpose of transparency in the custom calculation.</p>
+        <p><b>COLUMNS E, F, G,</b> and onward contain the actual values and formulas that comprise the calculation. The last column in the row is special, the one directly under the last date in the first row. When esi.manage overwrites the date row, it may happen that there are more dates in the analysis run then there were in the spreadsheet. In this event, the last column formula will be replicated (using "fill right") to pad the values out to the necessary number of dates. Any formulas in this last column should be written with this in mind. Similarly, if the analysis case dates are fewer in number than the dates in the spreadsheet, the excess dates and values will be cleared. This replication and clearing will only occur on rows with one of the types IN, OUT and TMP. Rows with a blank type will not be adjusted in this way.</p>
+        <p>
+            <img src="../Images/EconomicAnalysisPAR13635Errors.PNG" style="visibility: visible;mso-wrap-style: square;" />
+        </p>
+        <p>&#160;</p>
+        <h3>Spreadsheet Elements</h3>
+        <p>The following is a list of all of the valid element types that can appear in Column C:</p>
+        <table style="mc-table-style: url('../Resources/TableStyles/HelpFileTableStylesheet.css');" class="TableStyle-HelpFileTableStylesheet" cellspacing="0">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-Header1">
+                        <p>Element</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">
+                        <p>IN Title</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-Header1">
+                        <p>Notes</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>Production</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Product</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>Title cannot be blank</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>ProductionNetRoyalty</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Product</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>Title cannot be blank</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>ProductionEquivalence</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Product</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>ProductionEquivalenceNetRoyalty</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Product</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>Revenue</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Product</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>Royalty</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Product</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>Opex</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Opextype</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>OpexGroup</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Opexgrouop</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>IN rows only; title cannot be blank</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>Capex</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Capextype</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>CapexGroup</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Capex group</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>IN rows only; title cannot be blank</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>DD&amp;A</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>Title must be blank</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>Depreciation</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Fiscal model hierarchy element</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">NetRevenue		</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">&#160;</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">OperatingIncome</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">&#160;</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">TaxableIncome</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">Fiscal Model Level	</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">&#160;</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">IncomeBeforeTax</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">&#160;</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">TaxCurrent</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">Fiscal Model Level</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">&#160;</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">TaxDeferred</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Fiscal Model Level</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">&#160;</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">GrossProduction</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">Product</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">&#160;</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">GrossProductionEquivalnce</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Product</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">&#160;</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">GrossReserveEquivalence</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">Product</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">&#160;</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">GrossRevenue</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Product</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">&#160;</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">GrossOpex</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">Opex Type</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">&#160;</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">GrossOpexGroup</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Opex Group</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">&#160;</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">GrossCapex</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">Expenditure Type</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">&#160;</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">GrossCapexGroup</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Capex Group</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">&#160;</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">CalculationOnlyBurden</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">&#160;</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">&#160;</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p>Burden</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p>Burden name</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p>PriceForecast</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Global price forecast</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p>IN rows only; title cannot be blank, uses scenario from analysis case, see the note about escalation below</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body3">
+                        <p>PARAM</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body3">myvar</td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body3">
+                        <p>Parameters from the parameters spreadsheet supplied in the analysis case or environment file.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>IN Title describes the valid choices for the title column on an IN row containing that element. Any title is valid for an OUT row. Unless otherwise stated, the title for an input element may be blank. This indicates that the corresponding data item is totalled across all possible titles.</p>
+        <p>Unless otherwise stated, these elements may appear in both IN and OUT rows.</p>
+        <p>The PriceForecast element accesses the unadjusted prices from a named global price forecast file. In particular, the prices will not be subject to any configured price escalation. </p>
+        <p>SPELLING: esi.manage is sensitive to the spelling of titles. Titles must match upper/lower case exactly (as defined within Configuration) and must not contain any leading or trailing blanks unless such blanks are in the target name. </p>
+        <h3>Parameter spreadsheet</h3>
+        <p>A separate parameter spreadsheet may be created in order to decouple input parameter from the model. This allows the user to select different parameter at runtime via environment files or by selecting from the analysis case parameters.</p>
+        <p>Parameter spreadsheets follow the general layout of other calculation spreadsheets in that they have the usual columns Type, Unit, Element and Title. However, this is just for consistency. Only the Type and Title columns are used. The Type column can either be blank, or contain PARAM. Rows of blank type are ignored. On PARAM rows, the Title gives a name to the parameter. All of these parameter definitions must be on a worksheet named Parameters.</p>
+        <p>To use the parameters in the calculation spreadsheet you must use the PARAM element. They are used to indicate that the corresponding parameter row is to be copied from the parameter spreadsheet into the calculation spreadsheet. All row values in the calculation spreadsheet are discarded and replaced completely by the values from the parameter sheet row.</p>
+        <p>The following image show the connection between the parameters spreadsheet and the calculation spreadsheet.</p>
+        <p>
+            <img src="../Images/parammyvar.png" />
+        </p>
+        <p>Parameter spreadsheets must be uploaded via configuration attachments in the configurations module.</p>
+        <h3>
+            <img src="../Images/paramupload.png" />
+        </h3>
+        <h3>&#160;</h3>
+        <h3>Output Columns</h3>
+        <p>This functionality exists so that custom calculations can be performed that influence the esi.manage economics calculation. As a best practice, it is recommended that any burdens generated from a spreadsheet be given unique names that do not match any of the built-in burdens. This makes it easier to separate the calculations performed internally by esi.manage from those performed by the spreadsheet, which is useful when troubleshooting. Also, uniquely named custom burdens are automatically summed up in moving up the calculation hierarchy. This is not true for built-in burdens.</p>
+        <p>The unique naming best practice is recommended for non-burden generated elements as well.</p>
+        <h3>Unit Conversion</h3>
+        <p>Some conversions may be disallowed at analysis time. For example, production quantities cannot be freely interconverted because the relevant quality information is not maintained during the economic aggregation process. Any conversion that would require a heating value or mass density will be rejected. The workaround is either to work in equivalence units, or to ensure that the physical production units used in the spreadsheet and the analysis case match.</p>
+        <p>For similar reasons, input prices are always reported in the units of the associated configured price forecasts. The system does not permit the user to specify an alternate unit of measure when requesting prices.</p>
+        <p>Custom cash flows generated by OUT columns with a blank element name are not subject to any unit conversion. The numbers calculated by the spreadsheet are shown directly in the cash flow display as-is.</p>
+        <h3>Finding Errors</h3>
+        <p>Be sure to press the Details button for information that could help debug your economic calculation spreadsheet.</p>
+        <p>Supported Spreadsheet Functions</p>
+        <p>The following functions are supported. Note that named ranges are supported. </p>
+        <p>
+            <img src="../Images/EconomicAnalysisPAR13635SupportedFunctions.png" style="visibility: visible;mso-wrap-style: square;" />
+        </p>
+        <p>&#160;</p>
+        <p>
+            <img src="../Images/EconomicAnalysisPAR13635Errors.PNG" style="visibility: visible;mso-wrap-style: square;" />
+        </p>
+        <p>&#160;</p>
+        <h3>Configuration Setup for Custom Economic Calculation Spreadsheets</h3>
+        <p>Once satisfied that the calculations are correct, open the relevant hierarchy node within Configuration / Defaults / Fiscal Model. Select the Custom tab, and set the `Test Spreadsheet` input so that it points to the workbook file on disk. It is also useful to set the debugging folder path on the same tab.</p>
+        <p>
+            <img src="../Images/customeconomicimage.png" style="visibility: visible;mso-wrap-style: square;" />
+        </p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>Test the spreadsheet from within esi.manage by running analysis cases that exercise all of the features of the spreadsheet. If the debugging folder is set, then a copy of the spreadsheet will be saved into that folder. The copy will contain the actual esi.manage input data from the run, along with the calculated output data. This can be used to test and debug the spreadsheet.</p>
+        <p>Once satisfied that the spreadsheet works correctly, upload the spreadsheet into esi.manage from Configuration / Defaults / Configuration Attachments. Note that any type of file can be loaded here. </p>
+        <p>
+            <img src="../Resources/Images/Custom Economic Calculations/03000007.png" style="visibility: visible;mso-wrap-style: square;width: 576px;height: 360px;" />
+        </p>
+        <p>&#160;</p>
+        <p>Return to Custom tab for the fiscal model hierarchy node and select the newly uploaded spreadsheet from the Spreadsheet File dropdown. This act will publish the spreadsheet so that it affects the economics calculations of all esi.manage users. Clear out the `Test Spreadsheet` and `Debugging Folder` fields. </p>
+        <p>
+            <img src="../Images/customeconomicimage.png" style="visibility: visible;mso-wrap-style: square;" />
+        </p>
+        <p>&#160;</p>
+        <p>Should it be desirable to work on an updated version of the calculation. Repeat these steps. Whenever the `Test Spreadsheet` field points to a spreadsheet, that spreadsheet overrides the file configured in the `Spreadsheet File` dropdown – for the current user only. This is convenient for testing as other users are unaffected as the testing takes place.</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

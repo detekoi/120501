@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="2432" MadCap:lastWidth="1205">
+    <head><title>ExportMeasure.exe Arguments</title>
+        <link rel="StyleSheet" href="../../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <img src="../../Images/Logo Images/3esi_manage.png" align="right" border="0" class="HeaderLogo" />
+        <h2>ExportMeasure.exe Arguments</h2>
+        <p>The syntax for invoking the Measure Export is:</p>
+        <p>
+            <img src="../../Resources/Images/Measure_Export_Invoke.png" />
+        </p>
+        <p>Where <i>Help File Testing.txt</i> could look like:</p>
+        <p style="margin-bottom: 0pt;font-style: normal;font-size: 10pt;">-d localhost:1432/"smart oil and gas"</p>
+        <p style="margin-bottom: 0pt;font-style: normal;font-size: 10pt;">-o C:data\ouptut.csv</p>
+        <p style="margin-bottom: 0pt;font-style: normal;font-size: 10pt;">-h</p>
+        <p style="margin-bottom: 0pt;font-style: normal;font-size: 10pt;">-g BUDGET.NAME</p>
+        <p style="margin-bottom: 0pt;font-style: normal;font-size: 10pt;">-g PROJECT.NAME</p>
+        <p style="margin-bottom: 0pt;font-style: normal;font-size: 10pt;">-g ASSET.NAME</p>
+        <p style="margin-bottom: 0pt;font-style: normal;font-size: 10pt;">-g PROJECT.MANAGER</p>
+        <p style="margin-bottom: 0pt;font-style: normal;font-size: 10pt;">-g CAPEX.TYPE</p>
+        <p style="margin-bottom: 0pt;font-style: normal;font-size: 10pt;">&#160;</p>
+        <p style="margin-bottom: 0pt;font-style: normal;font-size: 10pt;">-c "Unrisked Gross Expenditure" 
+ -m expenditure -e "Unrisked Gross" -t Forecast -U CAD -X Default</p>
+        <p style="margin-bottom: 0pt;font-style: normal;font-size: 10pt;">-c "Risked Gross Expenditure" -m 
+ expenditure -e "Risked Gross" -t Forecast -U CAD -X Default 
+ -E "Current Escalation"</p>
+        <p style="margin-bottom: 0pt;font-style: normal;font-size: 10pt;">-c "Blended Gross Risked Row" -m 
+ PRODUCTION -e "Gross Risked Raw" -t Blended -U Oil:boe -X Default 
+ -a 2011-01-01 --consolidation "Reserve (Cumulative):1P" --pricescenario 
+ "Current Price"</p>
+        <p style="margin-bottom: 0pt;font-style: normal;font-size: 10pt;">-c "Forecast Gross Unrisked Raw" 
+ -m PRODUCTION -e "Gross Unrisked Raw" -t Forecast -U Oil:boe 
+ -X Default --consolidation "Reserve (Cumulative):1P" --pricescenario "Current Price"</p>
+        <p style="margin-bottom: 0pt;font-style: normal;font-size: 10pt;">-c "Forecast Gross Unrisked Raw" 
+ -m PRODUCTION -b GROSS &#160;-v 
+ FORECAST &#160;-U 
+ Oil:boe --consolidation "Reserve (Cumulative):1P" --pricescenario 
+ "Current Price"</p>
+        <p style="margin-bottom: 0pt;font-style: normal;font-size: 10pt;">-c "Activity" -m activity -e "Unrisked 
+ Gross" -t Forecast</p>
+        <p style="margin-bottom: 0pt;font-style: normal;font-size: 10pt;">-c "Forecast Gross Risked Row" 
+ -m opex -e "Gross Risked Raw" -t Forecast -U CAD -X Default 
+ --consolidation "Reserve (Cumulative):1P"</p>
+        <p style="margin-bottom: 0pt;font-style: normal;font-size: 10pt;">-c "Actuals Net Unrisked Raw" -m 
+ opex -e "Net Unrisked Raw" -t Actuals -U CAD -X Default --consolidation 
+ "Reserve (Cumulative):1P"</p>
+        <p style="margin-bottom: 0pt;font-style: normal;font-size: 10pt;">-c "FinActuals Net Unrisked After Royalty" 
+ -m opex -e "Net Unrisked After Royalty" -t "Fin Actls" 
+ -U CAD -X Default --consolidation "Reserve (Cumulative):1P" 
+ --pricescenario "Royalty - Low"</p>
+        <p style="margin-bottom: 0pt;font-style: normal;font-size: 10pt;">-c "Reserves" -m reserves -e "Net 
+ Risked Raw" -t Forecast -V CALCULATED -U oil:bbl --consolidation 
+ "Reserve (Cumulative):1P" --pricescenario "Current Price"</p>
+        <p style="margin-bottom: 0pt;font-style: normal;font-size: 10pt;">-c "Resources" -m resource_cost 
+ -e "Gross" -t Forecast -U kCAD -X Default -E "Currency 
+ Escalation"</p>
+        <p style="margin-bottom: 0pt;font-style: normal;font-size: 10pt;">-c "Revenue" -m revenue -e "Net 
+ Risked After Royalty" -t Blended -a 2015-03-31 -M --pricescenario 
+ "Current Price" -U kCAD -X Default</p>
+        <p style="margin-bottom: 0pt;font-style: normal;font-size: 10pt;">&#160;</p>
+        <p style="margin-bottom: 0pt;font-style: normal;font-size: 10pt;">2010-01-01 120 M "Private/Project Set"</p>
+        <p style="font-size: 10pt;font-style: italic;">&#160;</p>
+        <h3>Explanation of an example line</h3>
+        <p>Using<span style="font-weight: bold;"> -c "Gross CAPEX" -m 
+ capex -e "Unrisked Gross" -t Blended -a 2010-08-31 -M -U kCAD 
+ </span>as an example:</p>
+        <ol>
+            <li class="NumberedList">&#160;<span style="font-weight: bold;">-c</span> indicates 
+ that a column is required, which will be labelled "Gross CAPEX"</li>
+            <li class="NumberedList"><span style="font-weight: bold;">-m 
+ capex</span> identifies the Measure</li>
+            <li class="NumberedList"><span style="font-weight: bold;">-e 
+ "Unrisked Gross"</span> &#160;specifies 
+ the Definition (esi.manage Configuration) for this column</li>
+            <li class="NumberedList"><span style="font-weight: bold;">-t 
+ Blended</span> specifies the Type</li>
+            <li class="NumberedList"><span style="font-weight: bold;">-a 
+ 2010-08-31</span> specifies the Last Actuals date to use for Blending</li>
+            <li class="NumberedList"><span style="font-weight: bold;">-M</span> 
+ indicates that the Match Forecast option is to be used for Blending</li>
+            <li class="NumberedList"><span style="font-weight: bold;">-U 
+ kCAD</span> specifies the desired output unit for the Column</li>
+        </ol>
+        <p>The same measure can be identified several times, using different Definitions 
+ and Types. </p>
+        <p>The specified Grouping will create appropriate columns in the output 
+ file, in the order that they are specified. The Measures will be written 
+ against each of the Grouping combinations that they are valid for - this 
+ can result in the same data showing up in a given column more than one 
+ time (depending on which combinations of the Group it is applicable to).</p>
+        <p>&#160;</p>
+        <p>For more information, invoke the help file by putting it in a text file, or calling it directly into the command prompt using exportMeasure.exe --help</p>
+        <p>
+            <img src="../../Resources/Images/Measure_Export_Help.png" />
+        </p>
+    </body>
+</html>

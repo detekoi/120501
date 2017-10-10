@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="New Target"
+  Type="HtmlHelp"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  DefaultUrl="/Content/Overview.htm"
+  MasterToc="/Project/TOCs/HelpFileTOC.fltoc"
+  MasterStylesheet="/Content/Resources/Stylesheets/HelpFileStylesheet.css"
+  GetLatestBeforeCompile="true"
+  OutputFolder="\\CGYFILE1\Shared\Help File\3.25 Compiled Help v2 (Sept 30 - 720am) HTML Help - def skin">
+  <PrintedOutput
+    CollapseMargins="true" />
+</CatapultTarget>

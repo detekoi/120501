@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MsWordImport
+  PreserveSourceStyles="false"
+  KeepSourceLinks="false"
+  ConvertInlineFormatting="true"
+  AddContinuedLinks="false"
+  AddContinuedFromLinks="false"
+  ContinuedLinkFormat="(continued in {title})"
+  ContinuedFromLinkFormat="(continued from {title})"
+  UseMaxCharLimit="false"
+  UseMinCharLimit="true"
+  MaxCharLimit="10000"
+  MinCharLimit="50"
+  FilenameLength="24"
+  GeneratePageLayouts="false"
+  UseFirstHeadingAsTopicTitle="true"
+  LastCollectTime="2014-11-09T16:46:22.4967413-07:00"
+  ProjectName="Help File"
+  ProjectFolder="\\cgyfile1\Shared\Flare\"
+  AutoSync="false"
+  AutoFitTables="false"
+  Stylesheet="../../Content/Resources/Stylesheets/HelpFileStylesheet.css"
+  LastImport="2014-11-09T16:46:44.5059420-07:00">
+  <Files>
+    <Url
+      Source="../../../../Documentation/Flare/Completed Word Docs/Opex Defaults.docx"
+      AbsoluteSource="file://cgyfile1/Documentation/Flare/Completed Word Docs/Opex Defaults.docx" />
+  </Files>
+  <ExcludedFiles />
+  <CollectedSourceFiles />
+  <SkippedSourceFiles />
+  <GeneratedFiles>
+    <Url
+      Source="../../Content/Resources/Images/Opex Defaults/03000001.png"
+      TimeStamp="09/11/2014 4:46:42 PM" />
+    <Url
+      Source="../../Content/Resources/Images/Opex Defaults/03000002.png"
+      TimeStamp="09/11/2014 4:46:42 PM" />
+    <Url
+      Source="../../Content/Opex Defaults/Opex.htm"
+      TimeStamp="09/11/2014 4:46:42 PM" />
+    <Url
+      Source="../TOCs/Opex Defaults.fltoc"
+      TimeStamp="09/11/2014 4:46:42 PM" />
+    <Url
+      Source="../../Content/Resources/Stylesheets/HelpFileStylesheet3.css"
+      TimeStamp="09/11/2014 4:46:42 PM" />
+  </GeneratedFiles>
+  <ParagraphStyles>
+    <Map
+      From="Heading 2"
+      To="h2" />
+  </ParagraphStyles>
+  <CharacterStyles>
+    <Map
+      From="Hyperlink"
+      To="a.(MS Word Style)" />
+    <Map
+      From="Strong"
+      To="b" />
+  </CharacterStyles>
+  <NewTopicStyles>
+    <StyleName
+      Name="Heading 2" />
+  </NewTopicStyles>
+  <UsedParagraphStyles>
+    <StyleName
+      Name="Heading 2" />
+  </UsedParagraphStyles>
+  <UsedCharacterStyles>
+    <StyleName
+      Name="Strong" />
+  </UsedCharacterStyles>
+</MsWordImport>

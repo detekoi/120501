@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MsWordImport
+  PreserveSourceStyles="true"
+  KeepSourceLinks="true"
+  ConvertInlineFormatting="true"
+  AddContinuedLinks="false"
+  AddContinuedFromLinks="false"
+  ContinuedLinkFormat="(continued in {title})"
+  ContinuedFromLinkFormat="(continued from {title})"
+  UseMaxCharLimit="false"
+  UseMinCharLimit="true"
+  MaxCharLimit="10000"
+  MinCharLimit="50"
+  FilenameLength="24"
+  GeneratePageLayouts="false"
+  UseFirstHeadingAsTopicTitle="false"
+  LastCollectTime="2015-06-22T10:16:03.8411169-06:00"
+  ProjectName="Help File"
+  ProjectFolder="\\cgyfile1\Shared\Flare\"
+  AutoSync="false"
+  AutoFitTables="false"
+  Stylesheet="../../Content/Resources/Stylesheets/HelpFileStylesheet.css"
+  LastImport="2015-06-22T10:17:06.4173739-06:00">
+  <Files>
+    <Url
+      Source="file:///C:/Users/isinclair/Desktop/Resource Planner - Help File 1.docx"
+      AbsoluteSource="file:///C:/Users/isinclair/Desktop/Resource Planner - Help File 1.docx" />
+  </Files>
+  <ExcludedFiles />
+  <CollectedSourceFiles />
+  <SkippedSourceFiles />
+  <GeneratedFiles>
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/03000001.png"
+      TimeStamp="22/06/2015 10:16:50 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/03000002.png"
+      TimeStamp="22/06/2015 10:16:50 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/03000003.png"
+      TimeStamp="22/06/2015 10:16:50 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/03000004.png"
+      TimeStamp="22/06/2015 10:16:50 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/03000005.png"
+      TimeStamp="22/06/2015 10:16:50 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/03000006.png"
+      TimeStamp="22/06/2015 10:16:50 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/03000007.png"
+      TimeStamp="22/06/2015 10:16:50 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/03000008.png"
+      TimeStamp="22/06/2015 10:16:50 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/03000009.png"
+      TimeStamp="22/06/2015 10:16:50 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/0300000A.png"
+      TimeStamp="22/06/2015 10:16:50 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/0300000B.png"
+      TimeStamp="22/06/2015 10:16:50 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/0300000C.png"
+      TimeStamp="22/06/2015 10:16:50 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/0300000D.png"
+      TimeStamp="22/06/2015 10:16:50 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/0300000E.png"
+      TimeStamp="22/06/2015 10:16:50 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/0300000F.png"
+      TimeStamp="22/06/2015 10:16:50 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/03000010.png"
+      TimeStamp="22/06/2015 10:16:50 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/03000011.png"
+      TimeStamp="22/06/2015 10:16:50 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/03000012.png"
+      TimeStamp="22/06/2015 10:16:50 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/03000013.png"
+      TimeStamp="22/06/2015 10:16:50 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/03000014.png"
+      TimeStamp="22/06/2015 10:16:50 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/03000015.png"
+      TimeStamp="22/06/2015 10:16:50 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/03000016.png"
+      TimeStamp="22/06/2015 10:16:50 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/03000017.png"
+      TimeStamp="22/06/2015 10:16:50 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/03000018.png"
+      TimeStamp="22/06/2015 10:16:50 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/03000019.png"
+      TimeStamp="22/06/2015 10:16:50 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/0300001A.png"
+      TimeStamp="22/06/2015 10:16:50 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/0300001B.png"
+      TimeStamp="22/06/2015 10:16:50 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/0300001C.png"
+      TimeStamp="22/06/2015 10:16:50 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/0300001D.png"
+      TimeStamp="22/06/2015 10:16:50 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/0300001E.png"
+      TimeStamp="22/06/2015 10:16:50 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/0300001F.png"
+      TimeStamp="22/06/2015 10:16:50 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/03000020.png"
+      TimeStamp="22/06/2015 10:16:50 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/03000021.png"
+      TimeStamp="22/06/2015 10:16:50 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/03000022.png"
+      TimeStamp="22/06/2015 10:16:50 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/03000023.png"
+      TimeStamp="22/06/2015 10:16:50 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/03000024.png"
+      TimeStamp="22/06/2015 10:16:50 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/03000025.png"
+      TimeStamp="22/06/2015 10:16:50 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/03000026.png"
+      TimeStamp="22/06/2015 10:16:50 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/03000027.png"
+      TimeStamp="22/06/2015 10:16:50 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/03000028.png"
+      TimeStamp="22/06/2015 10:16:50 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/03000029.png"
+      TimeStamp="22/06/2015 10:16:51 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/0300002A.png"
+      TimeStamp="22/06/2015 10:16:51 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/0300002B.png"
+      TimeStamp="22/06/2015 10:16:51 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/0300002C.png"
+      TimeStamp="22/06/2015 10:16:51 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/0300002D.png"
+      TimeStamp="22/06/2015 10:16:51 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/0300002E.png"
+      TimeStamp="22/06/2015 10:16:51 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/0300002F.png"
+      TimeStamp="22/06/2015 10:16:51 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Resource Planner - Help File2/03000030.png"
+      TimeStamp="22/06/2015 10:16:51 AM" />
+    <Url
+      Source="../../Content/Resource Planner - Help File2/Contents.htm"
+      TimeStamp="22/06/2015 10:16:51 AM" />
+    <Url
+      Source="../TOCs/Resource Planner - Help File2.fltoc"
+      TimeStamp="22/06/2015 10:16:51 AM" />
+    <Url
+      Source="../../Content/Resources/Stylesheets/HelpFileStylesheet7.css"
+      TimeStamp="22/06/2015 10:16:51 AM" />
+  </GeneratedFiles>
+  <ParagraphStyles>
+    <Map
+      From="Heading 1"
+      To="h1.Heading 1" />
+    <Map
+      From="Heading 2"
+      To="h2.Heading 2" />
+    <Map
+      From="Heading 3"
+      To="h3.Heading 3" />
+  </ParagraphStyles>
+  <CharacterStyles>
+    <Map
+      From="Hyperlink"
+      To="a.(MS Word Style)" />
+  </CharacterStyles>
+  <NewTopicStyles />
+  <UsedParagraphStyles>
+    <StyleName
+      Name="Comment Text" />
+    <StyleName
+      Name="Heading 1" />
+    <StyleName
+      Name="Heading 2" />
+    <StyleName
+      Name="Heading 3" />
+    <StyleName
+      Name="li_Bullets" />
+    <StyleName
+      Name="List Paragraph" />
+    <StyleName
+      Name="Normal (Web)" />
+    <StyleName
+      Name="Numbered List" />
+    <StyleName
+      Name="p" />
+    <StyleName
+      Name="TOC 1" />
+    <StyleName
+      Name="TOC 2" />
+    <StyleName
+      Name="TOC 3" />
+    <StyleName
+      Name="TOC Heading" />
+  </UsedParagraphStyles>
+  <UsedCharacterStyles>
+    <StyleName
+      Name="Hyperlink" />
+    <StyleName
+      Name="Comment Reference" />
+    <StyleName
+      Name="span_1" />
+    <StyleName
+      Name="script" />
+  </UsedCharacterStyles>
+</MsWordImport>

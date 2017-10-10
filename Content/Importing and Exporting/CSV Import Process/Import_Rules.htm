@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="897" MadCap:lastWidth="855">
+    <head><title>Import Rules</title>
+        <link rel="stylesheet" href="../../Resources/Stylesheets/default.css" type="text/css" />
+        <style>
+h1.whs1
+{
+	text-align: right;
+}
+li.mc-h1-Cwhs1
+{
+	text-align: right;
+}
+img_whs2
+{
+	border: none;
+	width: 36px;
+	height: 44px;
+	float: none;
+	border-style: none;
+}
+h1.whs3
+{
+	font-size: 14pt;
+}
+li.mc-h1-Cwhs3
+{
+	font-size: 14pt;
+}
+ol.whs4
+{
+	list-style: decimal;
+}
+
+</style>
+        <style>
+div.WebHelpPopupMenu
+{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 4;
+	visibility: hidden;
+}
+
+</style>
+        <script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">/*<![CDATA[*/
+<!--
+ if (navigator.appName !="Netscape")
+ { document.write("<link rel='stylesheet' href='default.css'>");}
+ //-->
+/*]]>*/</script> <script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">/*<![CDATA[*/
+<!--
+ function reDo() {
+ if (innerWidth != origWidth || innerHeight != origHeight)
+ location.reload();
+ }
+ if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+ origWidth = innerWidth;
+ origHeight = innerHeight;
+ onresize = reDo;
+ }
+ onerror = null; 
+ //-->
+/*]]>*/</script> <script type="text/javascript" language="javascript1.2" src="../../Archived/whmsg.js"></script> <script type="text/javascript" language="javascript" src="../../Archived/whver.js"></script> <script type="text/javascript" language="javascript1.2" src="../../Archived/whproxy.js"></script> <script type="text/javascript" language="javascript1.2" src="../../Archived/whutils.js"></script> <script type="text/javascript" language="javascript1.2" src="../../Archived/whtopic.js"></script></head>
+    <body>
+        <img src="../../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />
+        <h2>Import Rules</h2>
+        <p>Each Import has a required format and order - see the <span style="font-weight: bold;">Requirements</span> 
+ topic of each individual Import types for specific details.</p>
+        <p>In general, there are several key aspects to the Import Process.</p>
+        <ol>
+            <li class="NumberedList">Each of the Import 
+ Types has a prescribed format which must be followed.</li>
+            <li class="NumberedList">For each import 
+ Type there is a part of each import record which identifies the corresponding 
+ esi.manage record:</li>
+            <ul>
+                <li class="NumberedList">For CAPEX
+ Headers and CAPEX Details it is the combination of Project, Line Number, 
+ Expenditure Type and Start Date.</li>
+                <li class="NumberedList">For AFE Headers 
+ and AFE Details, it is the AFE Number (AFE Name).</li>
+                <li class="NumberedList">For Production 
+ it is either the Project/Asset/UWI combination or the EID System/Identifier 
+ pair.</li>
+                <li class="NumberedList">For OPEX 
+ it is the EID System/Identifier pair.</li>
+            </ul>
+            <li class="NumberedList">CAPEX and AFE 
+ Details will not aggregate records within an import file, i.e.; two rows 
+ with the same Date periods and AFE Number will not aggregate together. 
+ </li>
+            <li class="NumberedList">Production and 
+ OPEX will aggregate records, i.e.; two rows with the same Date periods 
+ and Production Segment will add together.</li>
+            <li class="NumberedList">The Clearing 
+ step of the import process may or may not be required, depending on your 
+ desired outcome.</li>
+            <ul>
+                <li class="NumberedList">CAPEX and 
+ AFE information (Headers or Details) will overwrite the data for the corresponding 
+ esi.manage record.</li>
+                <li class="NumberedList">Production 
+ and OPEX information (Details) will 'blend' the new information into the 
+ existing data.</li>
+                <li class="NumberedList">Production 
+ Forecast import will replace ALL forecast information in the associated 
+ project.</li>
+            </ul>
+            <li class="NumberedList">Overlapping Dates 
+ will generate Import Errors.</li>
+            <ul>
+                <li class="NumberedList">For Import 
+ Types which aggregate (Production and OPEX) two records which would map 
+ to the same Project/Asset/Product but have overlapping dates (i.e., the 
+ End Date of one record is between the Start and End Date of the other 
+ record) will generate an Import Error.</li>
+                <li class="NumberedList">If Clearing 
+ is bypassed, an Import record which has an overlapping date (described 
+ in 1) with an existing esi.manage record will generate an Import Error.</li>
+            </ul>
+        </ol>
+        <p>&#160;</p>
+        <p>Dates must be entered in Excel in <span style="font-weight: bold;"><b>English 
+ UK</b></span> (yyyy-mm-dd) format. Excel may try and auto-format them 
+ to another date style. Please follow these steps to avoid this:</p>
+        <ol class="whs4">
+            <li class="NumberedList">Open the CSV 
+ in Excel.</li>
+            <li class="NumberedList">Select a Date 
+ column.</li>
+            <li class="NumberedList">Right click and 
+ select "Format Cells"</li>
+            <li class="NumberedList">Format Date</li>
+            <li class="NumberedList">Choose "English 
+ UK" from the drop-down list.</li>
+            <li class="NumberedList">The yyyy-mm-dd 
+ format will be there.</li>
+        </ol>
+        <p>&#160;</p>
+        <p>If you are receiving an "Invalid date" error on your import, 
+ this is likely the cause and solution.</p>
+    </body>
+</html>

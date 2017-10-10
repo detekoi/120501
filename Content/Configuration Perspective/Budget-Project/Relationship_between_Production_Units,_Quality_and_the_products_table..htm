@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="5454" MadCap:lastWidth="1473">
+    <head><title>Relationship between Production Units, Quality and the products table.</title>
+        <link rel="StyleSheet" href="../../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <img src="../../Images/Logo Images/3esi_manage.png" align="right" border="0" class="HeaderLogo" />
+        <h1>Relationship between Production Units, Quality and the Products Table</h1>
+        <h3>Introduction</h3>
+        <p>It is difficult to tease apart the interplay between the Production 
+ Units table, the Product Qualities table, and the Products table in Configuration. 
+ This document is an attempt to document the relationships between the 
+ entries and values in the three tables.</p>
+        <p>Each table is discussed in turn and the final section provides examples 
+ of how esi.manage uses the tables to infer calculated values.</p>
+        <p>See the <a href="../../Reference/Production_Calculations.htm">Calculations 
+ Reference Guide</a> for more information.</p>
+        <h3>&#160;</h3>
+        <h3>Production 
+ Units Table</h3>
+        <p>Users define production units in the Production Units table. The user 
+ must supply a conversion factor to one of the fundamental esi.manage units.</p>
+        <p>
+            <img src="../../Images/Relationship_between_production_units_quality_and_the_products_table1.png" />
+        </p>
+        <p>&#160;</p>
+        <p>The fundamental units in esi.manage are:</p>
+        <ul>
+            <li>Gas</li>
+        </ul>
+        <p style="margin-left: 40px;">Cubic metres (m3) for volume</p>
+        <p style="margin-left: 40px;">Joules (J) for energy</p>
+        <ul>
+            <li>Non-Gas</li>
+        </ul>
+        <p style="margin-left: 40px;">Cubic metres (m3) for volume</p>
+        <p style="margin-left: 40px;">Kilograms (kg) for mass</p>
+        <ul>
+            <li>Equivalence</li>
+        </ul>
+        <p style="margin-left: 40px;">Barrels of oil equivalent (boe)</p>
+        <p>Gas is called “energy” in esi.manage. For instance, the Products configuration 
+ table has an Energy column that one uses to specify whether the product 
+ is Gas or Non-Gas. Equivalence production units are used when reporting 
+ both Gas and Non-Gas products in one number. The typical equivalence production 
+ unit is boe or mboe but &#160;the 
+ user can define other equivalence production units as required.</p>
+        <p>Every production unit entered in the Production Units table must have 
+ a conversion factor to exactly one of the fundamental units. By and large 
+ these conversion factors are basic physical facts so finding the right 
+ conversion factor is merely a matter of looking it up in an appropriate 
+ reference. (An exception is cf to m3 conversion. It should be 3.283 (0.0283168) 
+ but in the SMOG db it is 0.02817399)</p>
+        <p>Reading the Production Units table is intuitive. The conversion is always 
+ from one user-defined production unit to X fundamental units. E.g. 1 cf 
+ = 2.817399E-2 m3 (energy).</p>
+        <h3>&#160;</h3>
+        <h3>Product 
+ Qualities Table</h3>
+        <p style="font-weight: bold;text-decoration: underline;">
+            <img src="../../Images/Relationship2.png" style="width: 1003px;height: 598px;" />
+        </p>
+        <p style="font-weight: normal;text-decoration: none;">&#160;</p>
+        <p style="font-weight: normal; text-decoration: none;">The 
+ entries in the Product Qualities table are used to convert from the fundamental 
+ esi.manage unit ratios to some user defined ratio.</p>
+        <p class="warning"><b>WARNING:</b> 
+ The Description field is merely text for descriptive purposes only. It 
+ plays no role in any calculations.</p>
+        <p style="font-weight: normal;text-decoration: none;">However, 
+ it is best practice to enter text that describes the conversion. For instance, 
+ the table claims that 37,447.9 J / m3 = 1 btu / cf. The conversion factor 
+ was calculated (and should be calculated) based on data from the Production 
+ Units table. This is how the foregoing conversion was calculated:</p>
+        <p style="font-weight: normal;text-decoration: none;">(1 
+ btu/cf)×(1055.056 J/btu)/(0.02817399 m^3/cf)=37,447.9J/m^3 </p>
+        <p style="font-weight: normal;text-decoration: none;">The 
+ J / btu and m3 / cf conversion factors come from the Production Units 
+ table. The btu / cf factor was included to make the units work out.</p>
+        <h3>&#160;</h3>
+        <h3>Products 
+ Table</h3>
+        <p style="font-weight: bold;text-decoration: underline;">
+            <img src="../../Images/Relationship3.png" style="width: 1231px;height: 435px;" />
+        </p>
+        <p style="font-weight: normal;text-decoration: none;">&#160;</p>
+        <p style="font-weight: normal;text-decoration: none;">We 
+ will use the Gas product as our example for this section. The other products 
+ follow the same rules. Working the examples below with other products 
+ is left as an exercise for the reader.</p>
+        <h3>&#160;</h3>
+        <h3>Quality</h3>
+        <p style="font-weight: normal;text-decoration: none;">The 
+ Quality Unit – btu/cf – links to the Product Qualities table entry with 
+ that description. That was the entry used in the example above. Remember 
+ that the description plays no role in the calculations. So, how does the 
+ Quality value – 1060.0 – make sense when it is unit-less?</p>
+        <p style="font-weight: normal;text-decoration: none;">It 
+ only makes sense, i.e. has a valid value and units, if one assumes that 
+ the conversion factor in the Product Qualities table was arrived at in 
+ a very specific way. That is, in the manner described in the previous 
+ section. Because of the way the conversion factor was calculated, we know:</p>
+        <p style="font-weight: normal;text-decoration: none;">1 
+ btu⁄cf=37,447.9 J⁄m3</p>
+        <p style="font-weight: normal;text-decoration: none;">Therefore, 
+ gas that has a quality value of 1060 btu / cf will have a quality value 
+ in fundamental esi.manage units of:</p>
+        <p style="font-weight: normal;text-decoration: none;">1060×37,447.9 
+ &#160;J⁄m^3 
+ =39,694,774J⁄m^3 </p>
+        <h3>&#160;</h3>
+        <h3>Boe</h3>
+        <p style="font-weight: normal;text-decoration: none;">The 
+ Units/boe value and the Unit value work together in a straight-forward 
+ manner to specify a conversion of the product to the fundamental esi.manage 
+ equivalence unit – boe. In the example screenshot above, there are 6.0 
+ mcf per boe.</p>
+        <p style="font-weight: normal;text-decoration: none;">The 
+ conversion factors in the Production Units table can be used to convert 
+ boe to other equivalence units such as mcfe. Therefore, be consistent 
+ in your choice of conversion factors because 1 mcfe should equal 1 mcf! 
+ Our examples are consistent. The Products table claims 6.0 mcf / boe and 
+ the Production Units table says 1 boe = one sixth (0.1666667) mcfe.</p>
+        <h3>&#160;</h3>
+        <h3>Gas 
+ Volume (e3m3 (G))</h3>
+        <p style="font-weight: normal;text-decoration: none;">Question: 
+ 500 cf = X e3m3 (G)</p>
+        <p style="font-weight: normal;text-decoration: none;">From 
+ the Production Units table:</p>
+        <p style="font-weight: normal;text-decoration: none;">1 
+ cf = 0.02817399 m3 (energy)</p>
+        <p style="font-weight: normal;text-decoration: none;">1 
+ e3m3 (G) = 1000.0 m3 (energy)</p>
+        <p style="font-weight: normal;text-decoration: none;">So: 
+ </p>
+        <p style="font-weight: normal;text-decoration: none;">500 
+ cf×0.02817399 &#160;m^3⁄cf÷1000.0m^3⁄(e3m3 
+ (G)=0.014087e3m3 (G))</p>
+        <h3>&#160;</h3>
+        <h3>Gas 
+ Energy (btu)</h3>
+        <p style="font-weight: normal;text-decoration: none;">Question: 
+ 500 cf of 950 Quality btu/cf gas = X btu</p>
+        <p style="font-weight: normal;text-decoration: none;">Step 
+ 1: Calculate how many m3 of gas there is:</p>
+        <p style="font-weight: normal;text-decoration: none;">From 
+ Gas Volume example above: 500 cf = 0.014087 e3m3 (G)</p>
+        <p style="font-weight: normal;text-decoration: none;">From 
+ Production Units table: 1 e3m3 (G) = 1000 m3</p>
+        <p style="font-weight: normal;text-decoration: none;">500 
+ cf = 14.087 m3</p>
+        <p style="font-weight: normal;text-decoration: none;">Step 
+ 2: Calculate the number of J / m3:</p>
+        <p style="font-weight: normal;text-decoration: none;">From 
+ Products Quality table: the btu/cf conversion factor is 37,447.9 J / m3</p>
+        <p style="font-weight: normal;text-decoration: none;">The 
+ quality number is given in the Calculator as 950</p>
+        <p style="font-weight: normal;text-decoration: none;">950 
+ * 37,447.9 J / m3 = 35,575,505 J / m3</p>
+        <p style="font-weight: normal;text-decoration: none;">Step 
+ 3: Calculate the number of btus:</p>
+        <p style="font-weight: normal;text-decoration: none;">From 
+ the Production Units table: 1 btu = 1055.05676 J</p>
+        <p style="font-weight: normal;text-decoration: none;">(14.087 
+ m3 * 35,575,505 J / m3 ) / (1055.05676 J / btu) = 475,000.3 btu</p>
+        <h3>&#160;</h3>
+        <h3>Equivalence</h3>
+        <p style="font-weight: normal;text-decoration: none;">Question: 
+ 500 cf of gas = X GJe</p>
+        <p style="font-weight: normal;text-decoration: none;">From 
+ the Products table: 6 mcf of gas = 1 boe</p>
+        <p style="font-weight: normal;text-decoration: none;">From 
+ the Production Units table:</p>
+        <p style="font-weight: normal;text-decoration: none;">We 
+ can calculate that 1 mcf = 1000 cf</p>
+        <p style="font-weight: normal;text-decoration: none;">1 
+ GJe = 5.689 boe</p>
+        <p style="font-weight: normal;text-decoration: none;">500 
+ cf *(1 mcf / 1000 cf) * (1 boe / 6 &#160;mcf) 
+ * (1 GJe / 5.689 boe) = 0.0146815 GJe</p>
+        <h3>&#160;</h3>
+        <h3>Non-gas 
+ Mass</h3>
+        <p style="font-weight: normal;text-decoration: none;">Question: 
+ 500 cf of gas = X T of condensate (metric tonnes)</p>
+        <p style="font-weight: normal;text-decoration: none;">To 
+ solve this, we need to go from a Gas Volume to a Non-gas Volume to a Non-gas 
+ mass. First, we calculate to boe of the gas. Since the condensate volume 
+ also has a boe equivalence we work backwards from boe to calculate the 
+ volume of condensate. At this point we have moved from a Gas Volume to 
+ a Non-gas Volume.</p>
+        <p style="font-weight: normal;text-decoration: none;">Now, 
+ we use the Quality of the condensate to calculate the mass of the condensate. 
+ We are now at a Non-gas mass and just need to use the conversions in the 
+ Production Units table to complete the calculation.</p>
+        <p style="font-weight: normal;text-decoration: none;">Calculated 
+ equivalences (actual calculations left as an exercise to the reader): 
+ </p>
+        <p style="font-weight: normal;text-decoration: none;">500 
+ cf = 1 / 12 boe</p>
+        <p style="font-weight: normal;text-decoration: none;">1 
+ bbl condensate = 1 boe</p>
+        <p style="font-weight: normal;text-decoration: none;">Therefore, 
+ 500 cf gas = 1 / 12 bbl condensate</p>
+        <p style="font-weight: normal;text-decoration: none;">Calculated 
+ non-gas volume (actual calculations left as an exercise to the reader):</p>
+        <p style="font-weight: normal;text-decoration: none;">1 
+ /12 bbl condensate = 0.0132489 m3</p>
+        <p style="font-weight: normal;text-decoration: none;">From 
+ the Products table:</p>
+        <p style="font-weight: normal;text-decoration: none;">Condensate 
+ quality is 650.2 for kg/m3 Product Quality</p>
+        <p style="font-weight: normal;text-decoration: none;">From 
+ the Product Quality table:</p>
+        <p style="font-weight: normal;text-decoration: none;">1 
+ kg/m3 = 1 kg/m3</p>
+        <p style="font-weight: normal;text-decoration: none;">Therefore, 
+ condensate is 650.2 kg / m3</p>
+        <p style="font-weight: normal;text-decoration: none;">Now, 
+ we can calculate the number of kilograms of condensate:</p>
+        <p style="font-weight: normal;text-decoration: none;">0.0132489 
+ m3 * 650.2 kg / m3 = 8.614462 kg</p>
+        <p style="font-weight: normal;text-decoration: none;">From 
+ the Production Units table:</p>
+        <p style="font-weight: normal;text-decoration: none;">1 
+ T = 1000 kg</p>
+        <p style="font-weight: normal;text-decoration: none;">So, 
+ 500 cf of gas = 0.008614462 T</p>
+        <h3>&#160;</h3>
+        <h3>Non-gas 
+ Volume</h3>
+        <p style="font-weight: normal;text-decoration: none;">Question: 
+ 500 cf of gas = X m3</p>
+        <p style="font-weight: normal;text-decoration: none;">The 
+ solution was already calculated as an intermediate step in the Non-gas 
+ Mass section.</p>
+    </body>
+</html>

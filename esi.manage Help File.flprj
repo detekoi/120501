@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultProject Version="1" xml:lang="en-us" MasterToc="/Project/TOCs/HelpFileTOC.fltoc" MasterStylesheet="/Content/Resources/Stylesheets/HelpFileStylesheet.css" SourceControlBound="false">
+    <Synchronize>
+        <Mapping ProjectPath="Content/Resources/Images/AggregateProjectsFigure3.png" ExternalPath="file://cgyfile1/Documentation/Flare/Images/AggregateProjectsFigure3.png" />
+    </Synchronize>
+</CatapultProject>

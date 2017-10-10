@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="2341" MadCap:lastWidth="1208">
+    <head><title>Opex Calculations</title>
+        <link rel="StyleSheet" href="../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <script type="text/javascript" language="JavaScript1.2" src="../Archived/ehlpdhtm.js">
+        </script>
+        <h1>
+            <img src="../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />
+            <MadCap:concept term="Opex Calculations" />OPEX Calculations</h1>
+        <p>There are three ways to Forecast operating Costs:</p>
+        <ul>
+            <li class="Bullets"><span style="font-weight: bold;">Fixed</span> 
+ - a one time, or recurring expense that is not dependent on Production. 
+ A Fixed OPEX entry can be related to a specific Product, which will influence 
+ the calculated <span style="font-weight: bold;">Lifting Cost</span>.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Variable</span> 
+ - expenses that are a function of the <span style="font-weight: bold;">Production</span> 
+ amount, such as processing, transmission or tariffs.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Price-Based</span> 
+ - expenses that are a function of the <span style="font-weight: bold;">Price Forecast</span> 
+ amount, per the <span style="font-weight: bold;">Price Profile</span> and Product chosen.</li>
+        </ul>
+        <p>&#160;</p>
+        <h3><a name="Opex_Calculation_Modifiers"></a>OPEX 
+ Modifiers</h3>
+        <ul>
+            <li class="Bullets"><span style="font-weight: bold;">WI%</span> 
+ - your company's share of the Operating Expense</li>
+            <li class="Bullets"><span style="font-weight: bold;">NPS%</span> 
+ - the likelihood that the Expense will be realized. Generally this applies 
+ to new wells, where the NPS% is the Likelihood that well will be successful.</li>
+        </ul>
+        <p>There are no 'specific' line item modifiers for Variable OPEX; WI%, 
+ NPS% and Royalties (NRI%) will all be based on the values for the related 
+ Production Segments.</p>
+        <h3>&#160;</h3>
+        <h3><a name="Opex_Calculation_Periods"></a>Reporting 
+ Period versus Data Period</h3>
+        <p>All OPEX Entries (Fixed or Variable) have a <span style="font-weight: bold;">Start</span> 
+ and <span style="font-weight: bold;">End Date</span>. These fields define:</p>
+        <ol>
+            <li class="NumberedList">For Fixed OPEX: 
+ the <span style="font-weight: bold;">valid</span> Period for the Expense, 
+ and how to interpret the <span style="font-weight: bold;">Gross Amount</span> 
+ in terms of the <span style="font-weight: bold;">Time Period</span>.</li>
+            <li class="NumberedList">For Variable 
+ OPEX: the <span style="font-weight: bold;">valid</span> Period for the 
+ Expense. </li>
+        </ol>
+        <p>When OPEX calculations are requested (Reports, Analysis Cases, Ranking, 
+ etc.), the Configuration defines a number of <span style="font-weight: bold;">Calculation 
+ Periods</span>. Each&#160;Period 
+ has a Start and End Date (<span style="font-weight: bold;">Calculation 
+ Start</span>, <span style="font-weight: bold;">Calculation End</span>), 
+ and a <span style="font-weight: bold;">Calculation Periodicity</span>. 
+ </p>
+        <h3>&#160;</h3>
+        <h3><a name="Fixed_Opex_Calculation_Forecast"></a>Fixed 
+ Operating Cost Calculations - Forecast</h3>
+        <p>The following fields for a Fixed OPEX entry determine the calculated 
+ Forecast OPEX for a particular Calculation Period. The key element that 
+ influences the OPEX Calculations is <span style="font-weight: bold;">Time 
+ Period </span>which specifies how the Gross Amount is to be interpreted. 
+ </p>
+        <p>For <span style="font-weight: bold;">all</span> Time Periods, the Gross 
+ Amount can be converted to an <span style="font-weight: bold;">Average 
+ Daily Rate</span>. This is used when the <span style="font-weight: bold;">Calculation 
+ Period</span> does not align with the <span style="font-weight: bold;">Valid 
+ Period</span> for the OPEX, or when the Calculation Periodicity is less 
+ than Monthly.</p>
+        <p>The Time Period choices are:</p>
+        <ul>
+            <li class="Bullets"><span style="font-weight: bold;">NULL</span> 
+ - the Gross Amount is a lump sum. It will be converted to an <span style="font-weight: bold;">Average 
+ Daily</span> rate (based on the End Date - Start Date), . </li>
+            <li class="Bullets"><span style="font-weight: bold;">Daily</span> 
+ - this is a Daily Rate.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Weekly</span> 
+ - the Gross Amount will be converted to an average Daily Rate, unless 
+ the Calculation Periodicity is Weekly.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Monthly</span> 
+ - if the <span style="font-weight: bold;">Calculation Periodicity</span> 
+ is less than Monthly, the Gross Amount will be converted to an average 
+ Daily Rate. </li>
+            <ul>
+                <li class="Bullets">If the <span style="font-weight: bold;">Periodicity</span> 
+ is Monthly or greater, the Gross Amount will be used as a Monthly amount; 
+ i.e., if the Calculation Period is <span style="font-weight: bold;">Quarterly</span>, 
+ the OPEX will be <span style="font-weight: bold;">3 x Monthly Gross Amount</span>.</li>
+            </ul>
+            <li class="Bullets"><span style="font-weight: bold;">Quarterly</span> 
+ - if the Calculation <span style="font-weight: bold;">Periodicity</span> 
+ is less than Monthly, the Gross Amount will be converted to an average 
+ Daily Rate. </li>
+            <ul>
+                <li class="Bullets">If the Calculation 
+ Periodicity is Monthly, the Gross Amount will be divided by 3 (3 months/quarter). 
+ </li>
+                <li class="Bullets">If the Calculation 
+ Periodicity is Annual, the Gross Amount will be multiplied by 4.</li>
+            </ul>
+            <li class="Bullets"><span style="font-weight: bold;">Annual</span> 
+ - if the<span style="font-weight: bold;"> </span>Calculation Periodicity 
+ is less than Monthly, the Gross Amount will be converted to an average 
+ Daily Rate.</li>
+            <ul>
+                <li class="Bullets" style="font-weight: normal;">If 
+ the Calculation Periodicity is Monthly or Quarterly, the Gross Amount 
+ will be converted to either an average Monthly rate (divided by 12) or 
+ a Quarterly Rate (divided by 4).</li>
+            </ul>
+        </ul>
+        <p>The remaining fields that influence calculations are:</p>
+        <ul>
+            <li class="Bullets"><span style="font-weight: bold;">Start Date</span>, 
+  <span style="font-weight: bold;">End Date</span>, and <span style="font-weight: bold;">Duration</span>- this defines the 
+ Period that the entry is valid for. </li>
+            <li class="Bullets"><span style="font-weight: bold;">Amount (per period)</span> - the Amount of the Expense</li>
+            <li class="Bullets"><span style="font-weight: bold;">Currency</span> 
+ - the Currency Units for the entry. Based on the Currency units conversions, 
+ the calculated amount will be converted from the <span style="font-weight: bold;">Source</span> 
+ to <span style="font-weight: bold;">Output</span> Units.</li>
+        </ul>
+        <p>Forecast OPEX calculations can be Configured to apply an Escalation 
+ file, in which case the calculated amount for a particular Calculation 
+ Period is adjusted based on the <span style="font-weight: bold;">Base 
+ Currency Date</span> (part of the Budget), and the Currency Escalation 
+ factors defined in the particular Escalation file.</p>
+        <p>See <a href="Cost_Escalation.htm" style="font-weight: bold;" target="_popup">Currency Escalation</a></p>
+        <h3>&#160;</h3>
+        <h3><a name="Variable_Opex_Calculation_Forecast"></a>Variable 
+ Operating Cost Calculations - Forecast</h3>
+        <p>The following fields for a Variable OPEX entry determine the calculated 
+ Forecast OPEX. The key elements are:</p>
+        <ul>
+            <li class="Bullets"><span style="font-weight: bold;">Amount</span> - the variable OPEX Rate ($/volume)</li>
+            <li class="Bullets"><span style="font-weight: bold;">Volume 
+ Unit</span> - the Production Unit (volume) for the Rate.</li>
+        </ul>
+        <p>The Asset and Product selections for the Variable OPEX entry identifies 
+ which Production Segments provide the Forecast Production amounts. The 
+ calculated Production volume (in the Variable OPEX volume unit) will be 
+ used to determine the OPEX amount. &#160;If 
+ Product is left blank, then all production associated with the asset is 
+ converted to an equivalence unit and the OPEX amount will be calculated 
+ on the total production in that equivalence unit.</p>
+        <p>The remaining fields that influence calculations are:</p>
+        <ul>
+            <li class="Bullets"><span style="font-weight: bold;">Start Date</span>, 
+  <span style="font-weight: bold;">End Date</span>, and <span style="font-weight: bold;">Duration</span> - this defines the 
+ Period that the entry is valid for. Production which occurs outside of 
+ the valid period will have no calculated OPEX.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Currency</span> 
+ - the Currency Units for the entry. Based on the Currency units conversions, 
+ the calculated amount will be converted from the <span style="font-weight: bold;">Source</span> 
+ to <span style="font-weight: bold;">Output</span> Units.</li>
+        </ul>
+        <p>See <a href="Cost_Escalation.htm" style="font-weight: bold;" target="_popup">Currency Escalation</a></p>
+        <p>Forecast OPEX calculations can be Configured to apply an Escalation 
+ file, in which case the calculated amount for a particular Calculation 
+ Period is adjusted based on the <span style="font-weight: bold;">Base 
+ Currency Date</span> (part of the Budget), and the Currency Escalation 
+ factors defined in the particular Escalation file.</p>
+        <h3>&#160;</h3>
+        <h3><a name="Opex_Calculations_Actuals"></a>Operating 
+ Costs - Actuals</h3>
+        <p>All 'Actuals' are represented as Fixed OPEX entries. Typically these 
+ entries have been brought into the Project via an Import process resulting 
+ in:</p>
+        <ul>
+            <li class="Bullets"><span style="font-weight: bold;">Start</span> 
+ and <span style="font-weight: bold;">End Dates</span> - Jun 1, 2010 to 
+ Jun 30, 2010</li>
+            <li class="Bullets"><span style="font-weight: bold;">Gross 
+ Amount</span> - 10000</li>
+            <li class="Bullets"><span style="font-weight: bold;">WI%</span> 
+ - 85% (whatever is appropriate for the particular Cost Center or Well)</li>
+            <li class="Bullets"><span style="font-weight: bold;">Type</span> 
+ - All Operating Costs (or any other OPEX Type)</li>
+            <li class="Bullets"><span style="font-weight: bold;">Product</span> 
+ - optional (can be set for Lifting Cost calculations)</li>
+        </ul>
+        <p>Generally the Time Period is NULL as the Actuals entry represents a 
+ lump sum for the given period. If a Time Period is selected for a particular 
+ entry, the calculation methodology described in <a href="#Fixed_Opex_Calculation_Forecast" style="font-weight: bold;">Fixed 
+ OPEX</a> calculations is applied.</p>
+        <p>Operating Expenses utilizes the Definitions, Types and Blending logic 
+ for Production.</p>
+        <p>&#160;</p>
+        <h3><a name="Opex_Calculations_Lifting_Cost"></a>Lifting 
+ Cost Calculations</h3>
+        <p>The Lifting Cost (Dollar/volume) calculation is accessible as a Project 
+ Metric, and is an optional reporting form for OPEX Reports. The basic 
+ form of the calculation is:</p>
+        <ul>
+            <li class="Bullets"><span style="font-weight: bold;">Dollar 
+ / Volume</span> = <span style="font-weight: bold;">OPEX Amount</span> 
+ / <span style="font-weight: bold;">Production</span> (in selected volume 
+ units)</li>
+        </ul>
+        <p>Fixed OPEX (Forecast and Actuals) can <span style="font-weight: bold;">optionally</span> 
+ be associated with a specific product, while for Variable OPEX the product 
+ association is mandatory.</p>
+        <p>When a Product has been identified for an OPEX entry, the corresponding 
+ Product's production is used in the calculation. </p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

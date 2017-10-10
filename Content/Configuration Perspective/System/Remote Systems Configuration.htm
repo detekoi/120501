@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="4446" MadCap:lastWidth="1371">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <img src="../../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />
+            <MadCap:keyword term="Remote Systems Configuration" />Remote Systems Configuration</h1>
+        <p>This functionality allows <MadCap:keyword term="multiple databases" />multiple databases to transfer complete projects from one database to the other. For the import to be successful, configuration of the source and target database must be identical. The <MadCap:keyword term="import" />import mechanism works off of Project Sets.</p>
+        <h3>Pre-requisites:</h3>
+        <ol>
+            <li>Configuration between source and target databases are identical</li>
+            <li>Web Services integration must be properly configured and enabled</li>
+            <li>Target database must be identified in <b>Configuration&gt;System&gt;Miscellaneous&gt;Remote Systems Configuration</b></li>
+        </ol>
+        <h3>Overview</h3>
+        <p>Once all the pre-requisite infrastructure is in place the steps to import are as follows:</p>
+        <ol>
+            <li>Identify target database, then navigate to the Configuration Perspective and open <MadCap:keyword term="Remote Systems Configuration" />Remote Systems Configuration.<br /><img src="../../Images/RemoteSystems1.png" /><br /><img src="../../Images/RemoteSystemsConfig.png" /></li>
+            <li>Select "Add" and populate all necessary information.<img src="../../Images/RemoteSystems3.png" /><ul><li><i><MadCap:keyword term="Remote System Name" />Remote System Name</i> - Text field used to identify system connection info in subsequent steps</li><li><i>Base URL</i> - URL connection info to Web&#160;Services</li><li><i>Project State Attribute</i> - Custom Project Attribute created in both databases. Used to help users identify whether projects in the source database are ready to be brought in to the target database</li><li><i>Project State Attribute Value</i> - Pick list values of custom attribute defined above.<br />**All fields are mandatory</li></ul><p><img src="../../Images/RemoteSystems4.png" /></p></li>
+            <li>Once Remote Source is configured and all other pre-requisites have been completed, open the Import Wizard through <b>File&gt;Import</b> and select <b><MadCap:keyword term="Project Imports" />Project <MadCap:keyword term="Projects From Remote" />Imports&gt;Projects From Remote</b> Service.<br /><img src="../../Images/RemoteSystems5.png" /><br /><img src="../../Images/_remoteresource_import.png" /><br /></li>
+            <li>Once the wizard is open you will be prompted to select a Remote System (defined in Step 2).<br /><img src="../../Images/_import.png" style="width: 466px;height: 197px;" /></li>
+            <li>If all the connections are properly set up, the wizard will prompt to select a Project Set and a Target Budget. Project Set selection will be populated from your source database and Target Budget selection from your target database.<br /><img src="../../Images/_import2.png" /></li>
+            <li>Projects in the selected Project Set will now appear in the wizard. Remote State shows the value of the custom attribute (defined in Step 2) per project from the source database and if applicable Local State shows the values of the custom attributes in the target database.<br /><img src="../../Images/_import3.png" /></li>
+            <li>Select Projects to be imported and press Next.<br /><img src="../../Images/RemoteSystems10.png" /><br /><img src="../../Images/RemoteSystems11.png" /><br /><img src="../../Images/_import4.png" /></li>
+            <li>Once completed a prompt containing the results appears. If import tails, an error message will prompt with what needs to be corrected.<br /><img src="../../Images/_import5.png" /></li>
+            <li>Once successful, all projects will be populated from source system into target budget defined.<br /><img src="../../Images/_import6.png" /><br /><img src="../../Images/RemoteSystems15.png" /><br /></li>
+        </ol>
+    </body>
+</html>

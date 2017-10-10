@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="3" MadCap:lastHeight="475" MadCap:lastWidth="1234">
+    <head><title>Import &amp; Export Overview</title>
+        <link rel="StyleSheet" href="../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <img src="../Images/Logo Images/3esi_manage.png" align="right" border="0" class="HeaderLogo" />
+        <h2>Import &amp; Export Overview</h2>
+        <p>esi.manage provides a number of approaches for Data Import and Export, 
+ the choice of which is dependant on the particular requirement. There 
+ are two data formats which are supported, CSV (comma separated or comma 
+ delimited) which is a flat file format, or XML. </p>
+        <p>Importing Data via the <a href="CSV Import Process/Import_Process.htm">CSV Import Process</a> 
+ is always user driven from inside of esi.manage. There is an Import Wizard 
+ that guides you through the necessary steps; selecting the Data Type (Capital, 
+ Operational, etc), Selecting and Validating the file to be Imported, potentially 
+ Clearing existing data, and then finally Importing the data into esi.manage.</p>
+        <p>esi.manage contains a Schema that represents Project data in a structured 
+ format that is typically (although a file can be constructed manually) 
+ generated or consumed by an external application. This schema is used 
+ for Exports (the Export Job), as well as for select imports. Inside of 
+ esi.manage this form is available for the <a href="XML Imports/Importing_Project_Attributes.htm">Project 
+ Hierarchy</a></p>
+        <p>In addition, esi.manage provides an <a href="XML Imports/Using_Integration_Services.htm">Integration 
+ Service</a> developed using Web Service protocols that enables an External 
+ Application (typically part of a larger overall business process) to invoked 
+ the Export and Import interfaces (using the XML schema) automatically 
+ - potentially based on a 'business process event' or 'time trigger'. An 
+ external application (Export.exe) is also part of esi.manage which allows 
+ Export Jobs to be invoked from a command line.</p>
+        <p>An additional Import approach also exists, 
+ currently for OPEX data only, as well as some configuration data (Prices &amp; Currency information). This uses an external executable (<a href="External CSV Import/External_CSV_Import.htm">import.exe</a>) 
+ that is found in the <span style="font-weight: bold;">esi.manage.imports.cmd</span> 
+ folder of your installation.</p>
+        <p>There also exists an external Export approach, primarily for 
+ calculated data. This uses an external executable (exportMeasure.exe) 
+ that is found in the esi.manage.export.measure folder of your installation.</p>
+        <p>The final means if importing data into esi.manage exists as a feature called the Excel Data Loader (EDL).  Using this tool, users can map out existing spreadsheets using templates, and import nearly every piece of data contained within an esi.manage project.  The import template mapping file that was created can then be reused to import more excel files with identical formatting.</p>
+    </body>
+</html>

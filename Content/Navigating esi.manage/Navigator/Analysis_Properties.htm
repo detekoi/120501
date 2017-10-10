@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="4698" MadCap:lastWidth="1383">
+    <head><title>Analysis Properties</title>
+        <link rel="StyleSheet" href="../../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <script type="text/javascript" language="JavaScript1.2" src="../../Archived/ehlpdhtm.js">
+        </script>
+        <p class="whs3" style="font-family: Arial, sans-serif;font-size: 14pt;font-weight: bold;">
+            <img src="../../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />
+        </p>
+        <h1><strong><span style="font-weight: bold;">Properties </span></strong><strong>Fields</strong>
+        </h1>
+        <p>As described in the <a href="Analysis_Case_Overview.htm"><span style="font-weight: bold;">Analysis Case Overview</span>,</a> companies 
+ can define any or all of the Properties within the esi.manage Configuration 
+ and decide whether to <span style="font-weight: bold;">Lock</span> any 
+ or all of the Properties in the <a href="../../Configuration Perspective/Economics/Default_Economic_Properties.htm">Configuration</a> 
+ perspective. </p>
+        <p class="whs3" style="font-family: Arial, sans-serif;">
+            <img src="../../Images/_Propertes.png" />
+        </p>
+        <p class="whs3" style="font-family: Arial, sans-serif;">&#160;</p>
+        <p class="whs3" style="font-family: Arial, sans-serif;">The Analysis Case is defined 
+ on the Properties page and is made up of 7 Sections:</p>
+        <ol>
+            <li style="font-family: Arial, sans-serif;" class="NumberedList"><b>Environment</b>- defines the sensitivity file and evaluation file to be used for the calculations. This allows the user to store and share configurations among many analysis cases and modify them all from one single location. If desired, the settings can remain in the analysis case bay leaving the values set at (none). Note that if you select either a sensitivity file or environment file, some of the settings will be disabled as the values from the corresponding file will be used.</li>
+            <li style="font-family: Arial, sans-serif;font-weight: normal;" class="NumberedList"><b>Custom Economic Calculations</b>- in this section you can select the parameters spreadsheet to be used with the spreadsheet economics engine. It may be left blank if spreadsheet economics are not being used.</li>
+            <li style="font-family: Arial, sans-serif;" class="NumberedList"><span style="font-weight: bold;">Data 
+ Truncation</span> - defines the Span (number of years) of years to use for the generated 
+ Cash Flow, and the Start Date (explicit Point Forward Date or Full Cycle of the Projects). This section also allows the User to define 
+ the Economic Truncation method (either Calculated, Asset Economic Limit Date, 
+ or No Truncation), whether to use custom user-defined truncation formula (if Calculated), and whether or not there is any Income Loss Carry Forward 
+ for tax purposes.</li>
+            <li style="font-family: Arial, sans-serif;" class="NumberedList"><span style="font-weight: bold;">Data 
+ Definition</span> - how esi.manage is to generate the Cash Flow; i.e., 
+ Forecast or &#160;Blended, 
+ Gross, Net, Net Risked; which Price Scenario to use; which Revenue Consolidation 
+ to use; whether to apply </li>
+            <li style="font-family: Arial, sans-serif;" class="NumberedList"><b>Sensitivities </b>- <span style="font-weight: normal;">if no sensitivities file is selected, here you specify which Price Scenario to use; whether to apply <b>Escalation</b>; which foreign exchange rates to use (Currency Conversions); if the measures should be scaled according to a user configured</span><a href="../../Configuration Perspective/Defaults/Measure_Scaling.htm">scaling file</a>. 
+ </li>
+            <li style="font-family: Arial, sans-serif;" class="NumberedList"><span style="font-weight: bold;">Discounting 
+ Options</span> - User defines when the start date for economic discounting; the Discount Rate to apply; whether it is to be Mid Year (only valid with Yearly discounting), and whether to Retroactively apply discounting to cashflows that occur prior to the "Economic Discounting as of" date.</li>
+            <li style="font-family: Arial, sans-serif;" class="NumberedList"><span style="font-weight: bold;">Display 
+ Settings</span> - User defines: the granularity (monthly or yearly) of the Cash Flow, and, with monthly data, whether discounting is to be applied Yearly or Monthly; the volume unit or equivalence unit to be used for reporting; and the currency in which to report.</li>
+        </ol>
+        <p class="whs3" style="font-family: Arial, sans-serif;">&#160;</p>
+        <h3>Environment</h3>
+        <p>The environment section allows you to pick from the existing sensitivity files and environment files the corresponding settings to be used for calculation. This allows the user to have a separate configuration files independent from the analysis cases and update all related cases from one single location. This section is optional as you can leave the values set at (none) and all the related configuration will be stored within the analysis case making it independent.</p>
+        <p><b>Sensitivity File</b>
+            <ul>
+                <li><b>(global)</b> – this option means that you would like to use the file specified globally in the toolbar. If you change the global sensitivity file in between runs to obtain different sensitivity conditions under the same set of parameters.</li>
+            </ul>
+        </p>
+        <p>Note that the parameters under the sensitivity section will be disabled.</p>
+        <h3>
+            <img src="../../Images/GlobalParam.png" />
+        </h3>
+        <ul>
+            <li><b>(none)</b> – use the parameters specified within the analysis case.</li>
+            <li><b>Specific Sensitivity file – The analysis case will always use the current version of the parameters in the sensitivity file.</b>
+            </li>
+        </ul>
+        <p style="font-weight: bold;">Evaluation File</p>
+        <ul>
+            <li><b>(global)</b> – this option means that you would like to use the file specified globally in the toolbar. If you change the global environment file in between runs to obtain different environment conditions under the same set of parameter</li>
+        </ul>
+        <p>Note that the parameters relevant to the environment will be disabled.</p>
+        <ul>
+            <li><b>(none)</b> – use the parameters specified within the analysis case.</li>
+            <li><b>Specific Environment file – The analysis case will always use the current version of the parameters in the environment file.</b>
+            </li>
+        </ul>
+        <p>
+            <br />
+            <h3>Custom Economic Calculations</h3>
+            <p>The models used in esi.manage’s custom economics engine can optionally have a spreadsheet with parameters as inputs to the calculation. Within this section the user is able to select the parameters spreadsheet to be delivered to the custom economics engine.</p>
+            <ul>
+                <li><b>Parameters Spreadsheet</b> – select the preloaded spreadsheet to be used for calculations in the current analysis case. This field is optional and will only have effects on the models that use the spreadsheet parameters feature.</li>
+            </ul>
+        </p>
+        <h3>&#160;</h3>
+        <h3>Data Truncation</h3>
+        <p>The Cash Flow for the Analysis Case is generated at the <span style="font-weight: bold;">Asset 
+ Level</span>. The results are then successively <span style="font-weight: bold;">aggregated 
+ up</span> - to the Project, each successive level of the Fiscal Mode, the Project Set, and finally Analysis 
+ Case. </p>
+        <p>The Analysis Schedule defines the Horizon for the calculated Cash Flow 
+ for each Asset - these settings are interpreted for each Asset based on 
+ its data.</p>
+        <ul style="list-style: disc;" type="disc">
+            <li class="Bullets" style="font-weight: bold;">Economic 
+ Truncation</li>
+            <ul style="list-style: disc;list-style-type: circle;" type="disc">
+                <li class="Bullets"><span style="font-weight: bold;">No 
+ Truncation - </span>Allows the cashflow stream defined in Economic truncation Formulas in Configuration to run past 
+ its cumulative peak value with no cutoff at the economic limit.</li>
+                <li class="Bullets"><span style="font-weight: bold;">Asset 
+ Economic Limit Date</span> - This option will use the economic limit date 
+ in the asset tab and stop Cash Flow calculations at that point.</li>
+                <li class="Bullets"><span style="font-weight: bold;">Calculated 
+ - </span><span>esi.manage will run the analysis case and will locate the date at which the cashflow stream defined in Economic Truncation Formulas in Configuration reaches is cumulative peak value for each Asset. All cashflows after this point will be truncated (for each asset). Note that an asset marked as "cost-only" in the asset tab of Project editor will not be subject to truncation.</span>
+                </li>
+            </ul>
+            <li class="Bullets"><b>Economic truncation Formula</b> - By default, this is at the point where the Cumulative Operating Income is at its maximum, however custom formulas can be defined in the Configuration.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Analysis 
+ Start - </span>The date which defines the start of the Cash Flow calculations. 
+ </li>
+            <li style="list-style: none;">
+                <ul style="list-style: disc;list-style-type: circle;" type="disc">
+                    <li class="Bullets"><span style="font-weight: bold;">Full 
+ Cycle -</span> Starts calculating results for all Projects from the earliest Project State Date of all Projects being analyzed. If two projects start 1 year apart and the analysis case is to run for 10 year span, the project that starts later will only have data for 9 years.. </li>
+                    <li class="Bullets"><span style="font-weight: bold;">Point 
+ Forward -</span> Use the Point Forward Date for data acquisition - any data prior 
+ to this date is ignored except for the purposes of establishing opening balances for depreciation and DD&amp;A pools.</li>
+                </ul>
+            </li>
+            <li class="Bullets"><span style="font-weight: bold;">Span 
+ (Years) - </span>The number of years from the determined Start Date (Asset 
+ specific) to generate the Cash Flow for, in consideration of the <span style="font-weight: bold;">Truncate</span> option. </li>
+            <li class="Bullets"><span style="font-weight: bold;">Point 
+ Forward Date</span> - If 
+ Point Forward is selected for Analysis Start, then the Point Forward Date 
+ establishes the start date for the Cash Flow. </li>
+            <ul style="list-style: disc;list-style-type: circle;" type="disc">
+                <li class="Bullets">Any Asset data (CAPEX, 
+ etc.) prior to this date is ignored.</li>
+            </ul>
+            <li class="Bullets"><span style="font-weight: bold;">Tax - </span>Toggle to enable/disable carry forward of income loss for tax purposes.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Span of Calculation - </span>The extend at which the Cash Flow statement will be calculated to.<ul style="list-style: disc;list-style-type: circle;" type="disc"><li class="Bullets"><span style="font-weight: bold;">BTAX only - </span>Cash Flow calculation stops before tax calculations.</li><li class="Bullets"><span style="font-weight: bold;">BTAX and ATAX - </span>Cash Flow calculation includes after tax calculations, but without income.</li><li class="Bullets"><span style="font-weight: bold;">BTAX, ATAX, and Income - </span>Complete Cash Flow calculation.</li></ul></li>
+        </ul>
+        <p>Based on these settings - for each Asset the <span style="font-weight: bold;">Calculation 
+ Horizon</span> is determined. </p>
+        <p><span style="font-weight: bold;">Start Date</span> (first spend or Point 
+ Forward Date) to <span style="font-weight: bold;">End Date</span> (the latest Start 
+ Date + Span), with the possibility that the End Date will be <span style="font-weight: bold;">Truncated</span> 
+ to an earlier point based on the <span style="font-weight: bold;">Economic 
+ Limit</span> being reached.</p>
+        <p>&#160;</p>
+        <h3>Data Definition</h3>
+        <p>The Data Definition section of this page defines how the Cash Flow is 
+ to be generated. The settings are effectively the same as would be seen 
+ on the individual Production, OPEX, CAPEX reports.</p>
+        <ul>
+            <li class="Bullets"><b>Version </b> <span style="font-weight: normal;">- Select between Forecast or Blended 
+ numbers</span></li>
+            <li><b>Modifiers</b>
+            </li>
+            <ul style="list-style-type: circle;">
+                <li class="Bullets"><b>Co. 
+ Share </b>- <span style="font-weight: normal;">determines whether Working 
+ Interest % is included</span></li>
+                <li class="Bullets"><b>Risked 
+ </b>- <span style="font-weight: normal;">determines whether risked or unrisked 
+ numbers are used</span></li>
+                <li class="Bullets"><b>Downtime</b> 
+ - <span style="font-weight: normal;">determines whether asset level downtime 
+ is included</span></li>
+                <li class="Bullets"><span style="font-weight: bold;">Curtailment 
+ - </span><span>determines whether group level capacities and downtimes 
+ are included</span>
+                    <br />Note:&#160;Before or After Royalties is NOT a choice when running an Analysis case. Economics are always performed on After Royalty cashflows.</li>
+            </ul>
+            <li class="Bullets"><span style="font-weight: bold;">Blending 
+ Options </span>- definitions for dates when the Version is set to blended</li>
+            <ul style="list-style-type: circle;">
+                <li class="Bullets"><b>Use 
+ Financial Actuals </b>- <span style="font-weight: normal;">selects whether 
+ Actuals or Financial Actuals are used when blending</span></li>
+                <li class="Bullets"><span style="font-weight: bold;">Actuals 
+ until</span> <span>(aka Last Actuals Date) </span>- If the Production or 
+ Capital Definition is to be Blended, this date defines the date when the 
+ data should switch from Actuals to Forecast.</li>
+                <li class="Bullets"><span style="font-weight: bold;">Field 
+ estimates until</span> (aka Last Field Estimate Date) - see Last Actuals 
+ date.</li>
+            </ul>
+            <li class="Bullets"><span style="font-weight: bold;">Reserve 
+ Consolidation</span> - Determines which reserve consolidation will be 
+ used as configured on the <a href="../../Configuration Perspective/Budget-Project/Reserve_Classifications.htm">reserves 
+ classification</a> page<ul><li class="Bullets"><span style="font-weight: bold;">Use Reserve Progression - </span>applies Reserve Progression booking schedule configured in projects.</li><li class="Bullets"><span style="font-weight: bold;">Use Enterprise Assumptions' UOP&#160;Reserve Consolidation - </span>when calculating Book DD&amp;A, if the UOP method of depreciation is used, the Reserve Consolidation selected in the Enterprise Assumption UOP depreciation settings will be used instead of the Reserve Consolidation selected for this Analysis case.</li></ul></li>
+        </ul>
+        <p>&#160;</p>
+        <h3>Sensitivities</h3>
+        <p>The output of the analysis case can be calculated under different assumptions for product price, currency escalation, currency exchange rates and generally scaling measures such as Production, Opex and Capex. This section will only be enabled if the analysis case is not using a sensitivity file or the global options.</p>
+        <ul>
+            <li><b>Price Scenario</b> - esi.manage’s price forecasts have different versions called scenarios. Chose the scenario to be used for economic calculations.</li>
+            <li><b>Escalation File</b> -  all currency inputs in esi.manage’s projects can escalate due to inflation (or other factors) according to an escalation file. Chose the desired file or (no escalation) to be used in the analysis case.</li>
+            <li><b>Exchange File</b> – Since projects can have their inputs in different currencies a currency exchange file must be provided to report the results in the same currency. Since you can have a virtually unlimited number of exchange files, this can be used to model different scenarios and the sensitivity to currency exchange rates.</li>
+            <li><b>Scale File</b> – The measures of production, Capex and Opex (fixed and variable) can have a factor applied to them at the time of calculation. Select the scale file or (no scaling) to be applied to this analysis case.</li>
+        </ul>
+        <p>&#160;</p>
+        <p>
+            <MadCap:toggler targets="t1">See Also </MadCap:toggler>
+        </p>
+        <div MadCap:targetName="t1">
+            <p><a href="../../Reference/Currency_Escalation_Configuration.htm">Currency 
+ Escalation</a>
+            </p>
+            <p><a href="../../Reference/Expenditure_Calculations.htm">Expenditure Calculations</a>
+            </p>
+            <p><a href="../../Reference/Opex_Calculations.htm">OPEX Calculations</a>
+            </p>
+            <p><a href="../../Reference/Production_Calculations.htm">Production Calculations</a>
+            </p>
+            <p><a href="../../Reference/Revenue_Calculations.htm">Revenue Calculations</a>
+            </p>
+            <p><a href="../../Configuration Perspective/Defaults/Measure_Scaling.htm">Measure Scaling</a>
+            </p>
+        </div>
+        <h3>&#160;</h3>
+        <h3>Display Settings</h3>
+        <p>In order to effectively compare the Projects/Assets on an equivalent basis within the Analysis Case, Costs and Revenue need to be generated in a consistent currency.</p>
+        <ul>
+            <li><b>Display</b> - these settings control the display periods in the Analysis, on a monthly or yearly basis. There will be rows for data that is within the Data Truncation period, but outside of the display periods.<ul style="list-style-type: circle;"><li>As described above, the <b>Analysis Schedule</b> defines the evaluation <b>Horizon</b>.</li><li>The Start Date in the Settings defines the Date for the second line in the Cash Flow Results table:<ul><li>The first entry for any results will be shown as <b>&lt;Start Date</b>. </li></ul><ul><li>	Any results (CAPEX, OPEX, Revenue, etc) that falls into this time Period will be aggregated in this row.</li></ul><ul><li>For example, using <b>Full Cycle</b> as the Analysis Start method, with a <b>Start Date</b> of Jan 1, 2010, any Project data prior to Jan 1, 2010 will be lumped (in the subsequent Analysis Views) into a single line labelled &lt;Jan-2010.</li></ul></li></ul><ul style="list-style-type: circle;"><li>The <b>Period / Duration / Discount</b> table allows different Analysis periods to be defined (the <b>+</b> and <b>-</b> symbols Add or Remove lines from this table).<ul><li>For each Line the <b>Period</b> can be Monthly or Yearly, for a given <b>Duration</b>.</li></ul><ul><li>While the underlying calculations are <b>always</b> performed on a monthly basis, any values which fall within a Yearly time period will aggregated within the corresponding year in the Cash Flow results table.</li></ul><ul><li>If the Start Date is not the beginning of the Fiscal Year, all months between the Start date and the beginning of the Fiscal Year will be locked in to be displayed as months.</li></ul></li></ul></li>
+            <li><b>Currency</b> - The currency to be used by this Analysis Case.<ul style="list-style-type: circle;"><li>All Expenditure and OPEX entries, and any calculated Revenue will be <b>converted</b> to this Currency during the analysis.</li></ul></li>
+        </ul>
+        <p>&#160;</p>
+        <ul>
+            <li><b>Equivalence Unit</b> - Changes what units are being used as the equivalent for production. Set as a default of boe.</li>
+            <li><b>Volumes</b> - Defines the units that each of your products will be reported in.</li>
+            <li><b>Real Base Date</b> - The Inflation Reference Date to be used for real value calculations.</li>
+        </ul>
+        <h3>Discounting Options</h3>
+        <p style="font-family: Arial, sans-serif;margin-top: 18px;font-weight: normal;">These parameters define how the Discounting 
+ is to be applied.</p>
+        <ul>
+            <li class="Bullets"><b>Schedule</b> - The Discounting schedule can be set to discount for a specific amount of time, on a monthly or yearly basis.</li>
+            <li class="Bullets">Mid Period discounting will only be applied (if <b>Mid-year</b> has been selected in the Discounting Options) to periods that have yearly discounting.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Economic 
+ Discounting As Of</span> - This is the Date when Discounting is to be 
+ applied. </li>
+            <ul style="list-style-type: circle;">
+                <li class="Bullets"><b>Cash Flow</b> <span style="font-weight: bold;">after</span> 
+ this date will be discounted, and if the Retroactive option is selected, 
+ Cash Flow data <span style="font-weight: bold;">prior</span> to this date 
+ will be Inflated.</li>
+            </ul>
+            <li class="Bullets"><span style="font-weight: bold;">Annual 
+ Discount Rate</span> - The percent of discount to apply. If Monthly Discounting 
+ has been selected for a given period, the Annual Rate will be converted 
+ to an equivalent Monthly rate.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Modifiers:</span>
+            </li>
+            <ul style="list-style-type: circle;">
+                <li class="Bullets"><span style="font-weight: bold;">Mid 
+ Year</span> - this option only applies to periods that have Yearly discounting. 
+ This option performs the appropriate Mid Period adjustment to the Annual 
+ rate.</li>
+                <li class="Bullets"><span style="font-weight: bold;">Retroactive</span> 
+ - As described above, this option will inflate Cash Flow Data prior to 
+ the Economic Discounting As Of date.</li>
+            </ul>
+        </ul>
+        <h3>&#160;</h3>
+        <p class="Bullets" style="margin-left: 40px;">&#160;</p>
+        <p>See <a href="../../Analysis Perspective/Analyse_Individual_Project.htm">Options for 
+ Running Economic Analysis</a></p>
+    </body>
+</html>

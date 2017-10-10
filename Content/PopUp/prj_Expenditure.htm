@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Project Relationships: Expenditures</title>
+        <link rel="StyleSheet" href="../Resources/Stylesheets/popUp.css" />
+    </head>
+    <body>
+        <h3>Expenditure</h3>
+        <p>Every Expenditure must be associated against an <span style="font-weight: bold;">Asset</span>. 
+ </p>
+        <ul>
+            <li class="Bullets">The Expenditure is <span style="font-weight: bold;font-style: italic;">initialized</span> with 
+ the WI% of the Asset</li>
+        </ul>
+        <p>Each Expenditure has a <span style="font-weight: bold;">Start</span> 
+ and <span style="font-weight: bold;">End Date</span>, an <span style="font-weight: bold;">Amount</span> 
+ and a <span style="font-weight: bold;">Probability of Doing</span> (PD%).</p>
+        <p>Expenditures can be '<span style="font-weight: bold;font-style: italic;">chained</span>' 
+ together:</p>
+        <ul>
+            <li class="Bullets">The Start Date of an Expenditure 
+ must be <span style="font-weight: bold;font-style: italic;">later than</span> 
+ the End Date of the Expenditure it is Dependent On.</li>
+            <li class="Bullets">PD% are propagated through 
+ the chain, resulting in a cumulative <span style="font-weight: bold;">Net 
+ Probability of Doing</span> (NPD%) for each Expenditure.</li>
+        </ul>
+        <p>Other Measures, as well as the Asset, can be made Dependent on an Expenditure, 
+ in which case the <span style="font-weight: bold;">NPD%</span> of that 
+ Expenditure is <span style="font-weight: bold;font-style: italic;">calculated</span> 
+ into the <span style="font-weight: bold;">Probability of Success</span> 
+ (POS%) for the Measure. </p>
+    </body>
+</html>

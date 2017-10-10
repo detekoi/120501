@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MsWordImport
+  PreserveSourceStyles="false"
+  KeepSourceLinks="false"
+  ConvertInlineFormatting="true"
+  AddContinuedLinks="false"
+  AddContinuedFromLinks="false"
+  ContinuedLinkFormat="(continued in {title})"
+  ContinuedFromLinkFormat="(continued from {title})"
+  UseMaxCharLimit="false"
+  UseMinCharLimit="true"
+  MaxCharLimit="10000"
+  MinCharLimit="50"
+  FilenameLength="24"
+  GeneratePageLayouts="false"
+  UseFirstHeadingAsTopicTitle="false"
+  LastCollectTime="2017-04-18T16:12:13.0376553-06:00"
+  ProjectName="esi.manage Help File"
+  ProjectFolder="C:\Work\Help (git)\e.m. help file v3\esi.manage Help File\"
+  AutoSync="false"
+  AutoFitTables="false"
+  UseHeaderRows="false"
+  LastImport="2017-04-18T16:15:49.9613455-06:00">
+  <Files>
+    <Url
+      Source="../../../../../../Users/cktuckey/Downloads/Allocation Module.docx"
+      AbsoluteSource="file:///C:/Users/cktuckey/Downloads/Allocation Module.docx" />
+  </Files>
+  <ExcludedFiles />
+  <CollectedSourceFiles />
+  <SkippedSourceFiles />
+  <GeneratedFiles>
+    <Url
+      Source="../../Content/Resources/Images/Allocation Module/Allocation framework.png"
+      TimeStamp="4/18/2017 4:14:06 PM" />
+    <Url
+      Source="../../Content/Resources/Images/Allocation Module/Allocation framework_1.png"
+      TimeStamp="4/18/2017 4:14:06 PM" />
+    <Url
+      Source="../../Content/Resources/Images/Allocation Module/Allocation framework_2.png"
+      TimeStamp="4/18/2017 4:14:06 PM" />
+    <Url
+      Source="../../Content/Resources/Images/Allocation Module/Allocation framework_3.png"
+      TimeStamp="4/18/2017 4:14:06 PM" />
+    <Url
+      Source="../../Content/Resources/Images/Allocation Module/Allocation framework_4.png"
+      TimeStamp="4/18/2017 4:14:06 PM" />
+    <Url
+      Source="../../Content/Resources/Images/Allocation Module/Allocation framework_5.png"
+      TimeStamp="4/18/2017 4:14:06 PM" />
+    <Url
+      Source="../../Content/Resources/Images/Allocation Module/Allocation framework_6.png"
+      TimeStamp="4/18/2017 4:14:06 PM" />
+    <Url
+      Source="../../Content/Resources/Images/Allocation Module/Allocation framework_7.png"
+      TimeStamp="4/18/2017 4:14:06 PM" />
+    <Url
+      Source="../../Content/Resources/Images/Allocation Module/Allocation framework_8.png"
+      TimeStamp="4/18/2017 4:14:06 PM" />
+    <Url
+      Source="../../Content/Resources/Images/Allocation Module/Allocation framework_9.png"
+      TimeStamp="4/18/2017 4:14:06 PM" />
+    <Url
+      Source="../../Content/Resources/Images/Allocation Module/Allocation framework_10.png"
+      TimeStamp="4/18/2017 4:14:06 PM" />
+    <Url
+      Source="../../Content/Resources/Images/Allocation Module/Allocation framework_11.png"
+      TimeStamp="4/18/2017 4:14:06 PM" />
+    <Url
+      Source="../../Content/Resources/Images/Allocation Module/Allocation framework_12.png"
+      TimeStamp="4/18/2017 4:14:06 PM" />
+    <Url
+      Source="../../Content/Allocation Module/Allocation framework.htm"
+      TimeStamp="4/18/2017 4:14:06 PM" />
+    <Url
+      Source="../TOCs/Allocation Module.fltoc"
+      TimeStamp="4/18/2017 4:14:06 PM" />
+    <Url
+      Source="../../Content/Resources/MasterPages/Allocation Module.flmsp"
+      TimeStamp="4/18/2017 4:14:06 PM" />
+    <Url
+      Source="../../Content/Resources/Stylesheets/Allocation Module.css"
+      TimeStamp="4/18/2017 4:14:06 PM" />
+  </GeneratedFiles>
+  <ParagraphStyles>
+    <Map
+      From="Heading 1"
+      To="h1.Heading 1" />
+    <Map
+      From="Heading 2"
+      To="h2.Heading 2" />
+    <Map
+      From="Heading 3"
+      To="h3.Heading 3" />
+  </ParagraphStyles>
+  <CharacterStyles>
+    <Map
+      From="Hyperlink"
+      To="a.(MS Word Style)" />
+  </CharacterStyles>
+  <NewTopicStyles />
+  <UsedParagraphStyles>
+    <StyleName
+      Name="Heading 1" />
+    <StyleName
+      Name="Heading 2" />
+    <StyleName
+      Name="List Paragraph" />
+  </UsedParagraphStyles>
+  <UsedCharacterStyles />
+</MsWordImport>

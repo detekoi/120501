@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1"
+  sourceDocument="C:\Users\isinclair\Desktop\Resource Planner - Help File 1.docx">
+  <TocEntry
+    Title="Resource Planner Perspective – landing page overview"
+    Link="/Content/Resource Planner Perspective/Resource Planner/Resource Planner - Help File 1/Contents.htm#_Toc422728959">
+    <TocEntry
+      Title="The Resource Planner"
+      Link="/Content/Resource Planner Perspective/Resource Planner/Resource Planner - Help File 1/Contents.htm#_Toc422728960">
+      <TocEntry
+        Title="Launching the Perspective the first time"
+        Link="/Content/Resource Planner Perspective/Resource Planner/Resource Planner - Help File 1/Contents.htm#_Toc422728961" />
+      <TocEntry
+        Title="Asset Selection"
+        Link="/Content/Resource Planner Perspective/Resource Planner/Resource Planner - Help File 1/Contents.htm#_Toc422728962" />
+      <TocEntry
+        Title="Budgets"
+        Link="/Content/Resource Planner Perspective/Resource Planner/Resource Planner - Help File 1/Contents.htm#_Toc422728963" />
+      <TocEntry
+        Title="Project Sets"
+        Link="/Content/Resource Planner Perspective/Resource Planner/Resource Planner - Help File 1/Contents.htm#_Toc422728964" />
+    </TocEntry>
+    <TocEntry
+      Title="Expenditure Selection"
+      Link="/Content/Resource Planner Perspective/Resource Planner/Resource Planner - Help File 1/Contents.htm#_Toc422728965">
+      <TocEntry
+        Title="Limitations between single and multi-expenditure selection"
+        Link="/Content/Resource Planner Perspective/Resource Planner/Resource Planner - Help File 1/Contents.htm#_Toc422728966" />
+      <TocEntry
+        Title="Clear Expense Durations"
+        Link="/Content/Resource Planner Perspective/Resource Planner/Resource Planner - Help File 1/Contents.htm#_Toc422728967" />
+    </TocEntry>
+    <TocEntry
+      Title="Resource Selection"
+      Link="/Content/Resource Planner Perspective/Resource Planner/Resource Planner - Help File 1/Contents.htm#_Toc422728968">
+      <TocEntry
+        Title="Resource Selection"
+        Link="/Content/Resource Planner Perspective/Resource Planner/Resource Planner - Help File 1/Contents.htm#_Toc422728969" />
+      <TocEntry
+        Title="Duration Modes"
+        Link="/Content/Resource Planner Perspective/Resource Planner/Resource Planner - Help File 1/Contents.htm#_Toc422728970" />
+      <TocEntry
+        Title="Resource Modifier Flag"
+        Link="/Content/Resource Planner Perspective/Resource Planner/Resource Planner - Help File 1/Contents.htm#_Toc422728971" />
+      <TocEntry
+        Title="Clear Resource Assignments"
+        Link="/Content/Resource Planner Perspective/Resource Planner/Resource Planner - Help File 1/Contents.htm#_Toc422728972" />
+    </TocEntry>
+    <TocEntry
+      Title="Gantt Chart-Resource Line"
+      Link="/Content/Resource Planner Perspective/Resource Planner/Resource Planner - Help File 1/Contents.htm#_Toc422728973">
+      <TocEntry
+        Title="Gantt Controls (Copy from project Gantt)"
+        Link="/Content/Resource Planner Perspective/Resource Planner/Resource Planner - Help File 1/Contents.htm#_Toc422728974" />
+      <TocEntry
+        Title="Drag and Drop options"
+        Link="/Content/Resource Planner Perspective/Resource Planner/Resource Planner - Help File 1/Contents.htm#_Toc422728975" />
+    </TocEntry>
+    <TocEntry
+      Title="Crosshairs"
+      Link="/Content/Resource Planner Perspective/Resource Planner/Resource Planner - Help File 1/Contents.htm#_Toc422728976" />
+    <TocEntry
+      Title="Timeline Controls"
+      Link="/Content/Resource Planner Perspective/Resource Planner/Resource Planner - Help File 1/Contents.htm#_Toc422728977">
+      <TocEntry
+        Title="Showing report fields on Gantt"
+        Link="/Content/Resource Planner Perspective/Resource Planner/Resource Planner - Help File 1/Contents.htm#_Toc422728978" />
+      <TocEntry
+        Title="Print Gantt"
+        Link="/Content/Resource Planner Perspective/Resource Planner/Resource Planner - Help File 1/Contents.htm#_Toc422728979" />
+    </TocEntry>
+    <TocEntry
+      Title="Schedule Builder"
+      Link="/Content/Resource Planner Perspective/Resource Planner/Resource Planner - Help File 1/Contents.htm#_Toc422728980">
+      <TocEntry
+        Title="Auto build schedule"
+        Link="/Content/Resource Planner Perspective/Resource Planner/Resource Planner - Help File 1/Contents.htm#_Toc422728981" />
+      <TocEntry
+        Title="Scheduling order"
+        Link="/Content/Resource Planner Perspective/Resource Planner/Resource Planner - Help File 1/Contents.htm#_Toc422728982" />
+      <TocEntry
+        Title="Adding and Editing attributes"
+        Link="/Content/Resource Planner Perspective/Resource Planner/Resource Planner - Help File 1/Contents.htm#_Toc422728983" />
+      <TocEntry
+        Title="Copy to Clipboard"
+        Link="/Content/Resource Planner Perspective/Resource Planner/Resource Planner - Help File 1/Contents.htm#_Toc422728984" />
+      <TocEntry
+        Title="Paste from Clipboard"
+        Link="/Content/Resource Planner Perspective/Resource Planner/Resource Planner - Help File 1/Contents.htm#_Toc422728985" />
+    </TocEntry>
+    <TocEntry
+      Title="Color coding/ Gantt Settings"
+      Link="/Content/Resource Planner Perspective/Resource Planner/Resource Planner - Help File 1/Contents.htm#_Toc422728986">
+      <TocEntry
+        Title="Bar Text"
+        Link="/Content/Resource Planner Perspective/Resource Planner/Resource Planner - Help File 1/Contents.htm#_Toc422728987" />
+      <TocEntry
+        Title="Bar Color"
+        Link="/Content/Resource Planner Perspective/Resource Planner/Resource Planner - Help File 1/Contents.htm#_Toc422728988" />
+      <TocEntry
+        Title="Bar Fill Pattern"
+        Link="/Content/Resource Planner Perspective/Resource Planner/Resource Planner - Help File 1/Contents.htm#_Toc422728989" />
+      <TocEntry
+        Title="Bar Border"
+        Link="/Content/Resource Planner Perspective/Resource Planner/Resource Planner - Help File 1/Contents.htm#_Toc422728990" />
+      <TocEntry
+        Title="Rule types"
+        Link="/Content/Resource Planner Perspective/Resource Planner/Resource Planner - Help File 1/Contents.htm#_Toc422728991" />
+    </TocEntry>
+    <TocEntry
+      Title="The Resources Tab"
+      Link="/Content/Resource Planner Perspective/Resource Planner/Resource Planner - Help File 1/Contents.htm#_Toc422728992" />
+  </TocEntry>
+</CatapultToc>

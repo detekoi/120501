@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="2537" MadCap:lastWidth="1221">
+    <head><title>Fomulaic Production</title>
+        <link rel="StyleSheet" href="../../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <h3>
+            <img src="../../Images/Logo Images/3esi_manage.png" align="right" border="0" class="HeaderLogo" />
+        </h3>
+        <h1>Compound Production</h1>
+        <p>When Compound is selected as the Decline type in the header row in the 
+ upper table, the bottom left pane (curve editor pane) is initialized. 
+ &#160;Selecting 
+ Compound production will allow you to enter either formulaic production curves 
+ (covered on this page), or <a href="Tab_Prod.htm">tabular 
+ production</a>.</p>
+        <p>
+            <img src="../../Images/prod2.PNG" style="border: none;border-style: none;float: none;" border="0" />
+        </p>
+        <p>&#160;</p>
+        <h3>Curve editor Pane showing Formula view</h3>
+        <p>&#160;The curve editor pane has separate tabs for each reserve category (reserves, contingent resources, etc). Within each reserves category are columns for the reserve classifications (Proved, probable, possible etc). Within the reserve classifications are the curve segments. Each segment is labelled as Curve 1, Curve 2....(n) etc so that each reserve classification can contain one or more curve segments.</p>
+        <ul>
+            <li>add an additional segment curve, click in the reserve category and classification and the additional column is created by clicking the  <img src="../../Images/Bulk_Edit2.png" /> icon at the top of the curve editor pane. By clicking on an existing curve, a new column will be created to the right of the existing selected column. Note that it will automatically set the start date to follow the previous end date. To delete a segment curve, click on the  <img src="../../Images/Bulk_Edit12.png" /> icon next to the green plus icon.</li>
+            <li>An overall decline curve can be created from a mix of different formulaic 
+ and <a href="Tab_Prod.htm">tabular</a>  segment curves.</li>
+            <li>As the curve editor screen can support edits to tabular and formulaic 
+ curves, the view of the pane can be changed from formula to tabular by 
+ clicking on the ‘change edit mode’ icon<img src="../../Images/prod3.PNG" />, see below for more information.</li>
+            <li>As you enter data in the reserve classification (eg 1P) column it 
+ will automatically populate the 2P and 3P with the same number. &#160;This 
+ is intended to make data input simple if you only wish to use a single 
+ curve</li>
+            <li>If you wish to add specific data to the 2P or 3P columns click on 
+ the Curve Type and select Tabular again to make the column editable (letters 
+ go black)</li>
+        </ul>
+        <h3>&#160;</h3>
+        <h3>Production 
+ Curve (Formula view)</h3>
+        <ul>
+            <li>You can select a curve type and begin filling in the details of the 
+ production curve. &#160;When 
+ esi.manage has enough information it will fill in the rest of the cells, 
+ based on the information you have provided. &#160;User 
+ provided cells are shown in white and calculated cells are shown in yellow.</li>
+            <li>As you enter production into the curves editor pane, the chart in 
+ the bottom right pane will automatically draw the completed curves. &#160;This 
+ curve does not take any capacity constraints, shrinkage or downtime into 
+ effect when it is drawn, but instead gives you an instant visualization 
+ of the curve you are creating.</li>
+        </ul>
+        <h3>&#160;</h3>
+        <h3>Fields:</h3>
+        <ul>
+            <li>Curve Type - Select from Linear, Hyperbolic, Exponential, Harmonic, 
+ or Tabular</li>
+            <li>Start Date - initialized either from the start date provided in the 
+ production segment line, or from the previous curve's end date</li>
+            <li>End Date - calculated based on the parameters provided</li>
+            <li>b-exp - required for the Hyperbolic decline curve type. &#160;This 
+ must be provided and cannot be a calculated value.</li>
+            <li>Qi - this is the initial production rate</li>
+            <li>Qf - this is the final production rate for the curve</li>
+            <li>di % - this is the annual initial decline rate (expressed as a percent)*</li>
+            <li>df % - this is the final decline rate (expressed as a percent)</li>
+            <li>Duration (mo) - the duration of the decline curve in months</li>
+            <li>Production - the total cumulative production from the curve segment</li>
+        </ul>
+        <p>&#160;</p>
+        <p>*esi.manage requires a yearly effective decline value for di%. This 
+ is the % reduction in production at the end of the 1st year. For example, 
+ &#160;if your 
+ initial production is 100 bbl/d, and you expect a 90 bbl/d production 
+ at the end of the 1st year, this represents an effective decline of 10% 
+ and di% = 10%.</p>
+        <p class="note"><b>Note: </b>that the effective decline (d) is different from a nominal 
+ decline (a) that you would use straight into an exponential function, 
+ like the ones you would find in Excel, for example. There: y=exp(-a*x). 
+ The two, expressed as % or fractions of 1, are related by the following 
+ equations: a = -ln(1-d); d = 1-exp(-a).</p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../Images/prod2.PNG" style="border: none;float: none;border-style: none;border-style: none;" border="0" />
+        </p>
+        <p>&#160;</p>
+        <p>As you enter production into the curves editor pane, the chart in the 
+ bottom right pane will automatically draw the completed curves. &#160;This 
+ curve does not take any capacity or downtime into effect when it is drawn, 
+ but instead gives you an instant visualization of the curve you are creating.</p>
+    </body>
+</html>

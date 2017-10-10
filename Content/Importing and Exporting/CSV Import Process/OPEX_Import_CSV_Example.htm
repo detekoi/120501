@@ -1,0 +1,695 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1243" MadCap:lastWidth="627">
+    <head>
+        <link href="../../Resources/TableStyles/HelpFileTableStylesheet.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>OPEX Import CSV Example</title>
+        <link rel="stylesheet" href="../../Resources/Stylesheets/default.css" type="text/css" />
+        <style>
+h1.whs1
+{
+	text-align: right;
+}
+li.mc-h1-Cwhs1
+{
+	text-align: right;
+}
+img_whs2
+{
+	border: none;
+	width: 36px;
+	height: 44px;
+	float: none;
+	border-style: none;
+}
+h1.whs3
+{
+	font-size: 14pt;
+}
+li.mc-h1-Cwhs3
+{
+	font-size: 14pt;
+}
+table.whs4
+{
+	x-cell-content-align: top;
+	width: 100%;
+	border-spacing: 0px;
+}
+col.whs5
+{
+	width: 10%;
+}
+tr.whs6
+{
+	x-cell-content-align: top;
+}
+td.whs7
+{
+	width: 10%;
+	background-color: #008000;
+	border-left-style: Solid;
+	border-left-color: #000000;
+	border-left-width: 1px;
+	border-top-width: 1px;
+	border-top-color: #000000;
+	border-top-style: Solid;
+	border-right-style: Solid;
+	border-right-color: #000000;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: Solid;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+p.whs8
+{
+	color: #00ff00;
+	font-weight: bold;
+}
+li.whs8
+{
+	color: #00ff00;
+	font-weight: bold;
+}
+td.whs9
+{
+	width: 10%;
+	background-color: #008000;
+	border-top-width: 1px;
+	border-top-color: #000000;
+	border-top-style: Solid;
+	border-right-style: Solid;
+	border-right-color: #000000;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: Solid;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+td.whs10
+{
+	width: 10%;
+	background-color: #ffff00;
+	border-left-style: Solid;
+	border-left-color: #000000;
+	border-left-width: 1px;
+	border-right-style: Solid;
+	border-right-color: #000000;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: Solid;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+p.whs11
+{
+	font-weight: bold;
+}
+li.whs11
+{
+	font-weight: bold;
+}
+td.whs12
+{
+	width: 10%;
+	border-right-style: Solid;
+	border-right-color: #000000;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: Solid;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+p.whs13
+{
+	font-size: 10pt;
+}
+li.whs13
+{
+	font-size: 10pt;
+}
+
+</style>
+        <style>
+div.WebHelpPopupMenu
+{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 4;
+	visibility: hidden;
+}
+
+</style>
+        <script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">/*<![CDATA[*/
+<!--
+ if (navigator.appName !="Netscape")
+ { document.write("<link rel='stylesheet' href='default.css'>");}
+ //-->
+/*]]>*/</script> <script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">/*<![CDATA[*/
+<!--
+ function reDo() {
+ if (innerWidth != origWidth || innerHeight != origHeight)
+ location.reload();
+ }
+ if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+ origWidth = innerWidth;
+ origHeight = innerHeight;
+ onresize = reDo;
+ }
+ onerror = null; 
+ //-->
+/*]]>*/</script> <script type="text/javascript" language="javascript1.2" src="../../Archived/whmsg.js"></script> <script type="text/javascript" language="javascript" src="../../Archived/whver.js"></script> <script type="text/javascript" language="javascript1.2" src="../../Archived/whproxy.js"></script> <script type="text/javascript" language="javascript1.2" src="../../Archived/whutils.js"></script> <script type="text/javascript" language="javascript1.2" src="../../Archived/whtopic.js"></script></head>
+    <body>
+        <img src="../../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />
+        <h2>OPEX Import CSV Example</h2>
+        <p>The following is an example of the structure of a fully constructed 
+ CSV file ready to be imported. All the fields are in the right order and 
+ formatted correctly.</p>
+        <table class="TableStyle-HelpFileTableStylesheet" style="width: 93.811%;mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');" cellspacing="0" width="93.811%">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-Header1">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-Header1">Source</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">System</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">Identifier</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">From Date</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">End Date</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">Gross Amount</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">Net Amount</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">Unit of Measure</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1">Type</th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-Header1">Product</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2" valign="top">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2" bgcolor="#FFFF00" width="10%">
+                        <p style="font-size: 10pt;font-weight: bold;">Forecast</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="18.439%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-size: 10pt;">Accounting</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" width="16.081%">
+                        <p style="font-size: 10pt;">EX-AC-001</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" width="20.143%">
+                        <p style="font-size: 10pt;">2015-05-01</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" width="17.892%">
+                        <p style="font-size: 10pt;">2015-12-31</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" width="14.644%">
+                        <p style="font-size: 10pt;">300000</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" width="16.976%">
+                        <p style="font-size: 10pt;">&#160;</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" width="10%">
+                        <p style="font-size: 10pt;">CAD</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" width="10%">
+                        <p style="font-size: 10pt;">GasProcI</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2" width="10%">
+                        <p style="font-size: 10pt;">Gas</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3" valign="top">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3" bgcolor="#FFFF00" width="10%">
+                        <p style="font-size: 10pt;font-weight: bold;">Forecast</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="18.439%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">Accounting</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3" width="16.081%">
+                        <p style="font-size: 10pt;">EX-AC-001</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3" width="20.143%">
+                        <p style="font-size: 10pt;">2015-05-01</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3" width="17.892%">
+                        <p style="font-size: 10pt;">2015-12-31</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3" width="14.644%">
+                        <p style="font-size: 10pt;">500000</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3" width="16.976%">
+                        <p style="font-size: 10pt;">&#160;</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3" width="10%">
+                        <p style="font-size: 10pt;">CAD</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3" width="10%">
+                        <p style="font-size: 10pt;">Oil Han</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3" width="10%">
+                        <p style="font-size: 10pt;">Oil</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2" valign="top">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2" bgcolor="#FFFF00" width="10%">
+                        <p style="font-size: 10pt;font-weight: bold;">Forecast</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="18.439%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-size: 10pt;">Accounting</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" width="16.081%">
+                        <p style="font-size: 10pt;">EX-AC-001</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" width="20.143%">
+                        <p style="font-size: 10pt;">2015-05-01</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" width="17.892%">
+                        <p style="font-size: 10pt;">2015-12-31</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" width="14.644%">
+                        <p style="font-size: 10pt;">50000</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" width="16.976%">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" width="10%">
+                        <p style="font-size: 10pt;">CAD</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" width="10%">
+                        <p style="font-size: 10pt;">Oil Han</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2" width="10%">
+                        <p style="font-size: 10pt;">NGLs</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td colspan="1" rowspan="1" bgcolor="#FFFF00" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p style="font-size: 10pt;font-weight: bold;">Forecast</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="18.439%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">Accounting</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="16.081%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">EX-AC-001</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.143%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">2015-05-01</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="17.892%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">2015-12-31</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="14.644%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">100</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="16.976%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">&#160;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">kCAD</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">Insurance</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p style="font-size: 10pt;">&#160;</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td colspan="1" rowspan="1" bgcolor="#FFFF00" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;font-weight: bold;">Field Est</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="18.439%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-size: 10pt;">Field Capture</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="16.081%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-size: 10pt;">EX-FC-001</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.143%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-size: 10pt;">2015-06-01</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="17.892%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-size: 10pt;">2015-06-15</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="14.644%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-size: 10pt;">9000</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="16.976%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-size: 10pt;">9000</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-size: 10pt;">CAD</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-size: 10pt;">GasProcI</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p style="font-size: 10pt;">Gas</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td colspan="1" rowspan="1" bgcolor="#FFFF00" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p style="font-size: 10pt;font-weight: bold;">Field Est</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="18.439%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">Field Capture</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="16.081%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">EX-FC-001</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.143%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">2015-06-01</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="17.892%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">2015-06-15</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="14.644%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">31000</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="16.976%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">31000</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">CAD</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">Oil Han</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p style="font-size: 10pt;">Oil</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td colspan="1" rowspan="1" bgcolor="#FFFF00" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;font-weight: bold;">Field Est</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="18.439%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-size: 10pt;">Field Capture</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="16.081%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-size: 10pt;">EX-FC-001</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.143%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-size: 10pt;">2015-06-01</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="17.892%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-size: 10pt;">2015-06-15</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="14.644%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-size: 10pt;">3300</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="16.976%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-size: 10pt;">3300</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-size: 10pt;">CAD</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-size: 10pt;">Oil Han</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p style="font-size: 10pt;">NGLs</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td colspan="1" rowspan="1" bgcolor="#FFFF00" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p style="font-size: 10pt;font-weight: bold;">Field Est</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="18.439%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">Field Capture</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="16.081%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">EX-FC-001</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.143%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">2015-06-01</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="17.892%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">2015-06-15</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="14.644%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">10000</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="16.976%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">10000</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">CAD</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">GasProcI</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p style="font-size: 10pt;">Gas</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td colspan="1" rowspan="1" bgcolor="#FFFF00" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;font-weight: bold;">Field Est</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="18.439%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-size: 10pt;">Field Capture</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="16.081%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-size: 10pt;">EX-FC-001</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.143%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-size: 10pt;">2015-06-16</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="17.892%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-size: 10pt;">2015-06-30</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="14.644%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-size: 10pt;">9000</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="16.976%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-size: 10pt;">9000</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-size: 10pt;">CAD</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-size: 10pt;">GasProcI</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p style="font-size: 10pt;">Gas</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td colspan="1" rowspan="1" bgcolor="#FFFF00" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p style="font-size: 10pt;font-weight: bold;">Field Est</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="18.439%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">Field Capture</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="16.081%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">EX-FC-001</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.143%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">2015-06-16</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="17.892%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">2015-06-30</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="14.644%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">31000</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="16.976%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">31000</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">CAD</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">Oil Han</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p style="font-size: 10pt;">Oil</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td colspan="1" rowspan="1" bgcolor="#FFFF00" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;font-weight: bold;">Field Est</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="18.439%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-size: 10pt;">Field Capture</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="16.081%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-size: 10pt;">EX-FC-001</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.143%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-size: 10pt;">2015-06-16</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="17.892%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-size: 10pt;">2015-06-30</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="14.644%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-size: 10pt;">3300</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="16.976%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-size: 10pt;">3300</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-size: 10pt;">CAD</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-size: 10pt;">Oil Han</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p style="font-size: 10pt;">NGLs</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td colspan="1" rowspan="1" bgcolor="#FFFF00" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p style="font-size: 10pt;font-weight: bold;">Actuals</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="18.439%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">Accounting</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="16.081%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">EX-AC-001</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.143%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">2015-05-01</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="17.892%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">2015-05-31</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="14.644%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">19.15</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="16.976%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">12.0645</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">kCAD</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">GasProcI</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p style="font-size: 10pt;">Gas</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td colspan="1" rowspan="1" bgcolor="#FFFF00" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p style="font-size: 10pt;font-weight: bold;">Actuals</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="18.439%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-size: 10pt;">Accounting</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="16.081%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-size: 10pt;">EX-AC-001</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.143%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-size: 10pt;">2015-05-01</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="17.892%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-size: 10pt;">2015-05-31</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="14.644%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-size: 10pt;">33.2</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="16.976%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-size: 10pt;">20.916</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-size: 10pt;">kCAD</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p style="font-size: 10pt;">Oil Han</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p style="font-size: 10pt;">Oil</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td colspan="1" rowspan="1" bgcolor="#FFFF00" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p style="font-size: 10pt;font-weight: bold;">Actuals</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="18.439%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">Accounting</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="16.081%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">EX-AC-001</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.143%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">2015-05-01</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="17.892%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">2015-05-31</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="14.644%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">0.57</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="16.976%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">0.3591</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">kCAD</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p style="font-size: 10pt;">Oil Han</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p style="font-size: 10pt;">NGLs</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td colspan="1" rowspan="1" bgcolor="#FFFF00" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body2">
+                        <p style="font-size: 10pt;font-weight: bold;">Actuals</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="18.439%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2">
+                        <p style="font-size: 10pt;">Accounting</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="16.081%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2">
+                        <p style="font-size: 10pt;">EX-AC-001</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="20.143%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2">
+                        <p style="font-size: 10pt;">2015-05-01</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="17.892%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2">
+                        <p style="font-size: 10pt;">2015-05-31</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="14.644%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2">
+                        <p style="font-size: 10pt;">12.5</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="16.976%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2">
+                        <p style="font-size: 10pt;">12.5</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2">
+                        <p style="font-size: 10pt;">kCAD</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2">
+                        <p style="font-size: 10pt;">Insurance</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10%" class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body2">
+                        <p style="font-size: 10pt;">&#160;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p style="font-weight: bold;"><span style="font-weight: bold;">Note That:</span>
+        </p>
+        <ol>
+            <li class="NumberedList">Unit of Measure 
+ (Currency) is Mandatory.</li>
+            <li class="NumberedList">Either Expenditure 
+ Type or Expenditure Type Abbreviation is acceptable for the Type.</li>
+            <li class="NumberedList">Product is not 
+ mandatory, however you will need to put a 'space' character in the corresponding 
+ cell in Excel.</li>
+            <li class="NumberedList">OPEX imports 
+ will aggregate - Lines 5 and 8 will add together to create a single entry.</li>
+        </ol>
+    </body>
+</html>

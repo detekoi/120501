@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="4" MadCap:lastHeight="940" MadCap:lastWidth="1861">
+    <head><title></title>
+        <link href="../Resources/Stylesheets/HelpFileStylesheet2.css" rel="stylesheet" />
+    </head>
+    <body>
+        <p>
+            <img src="../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />
+        </p>
+        <h2>Problems Pane</h2>
+        <p>***THIS FEATURE IS BEING DEPRECATED. PLEASE MIGRATE ALL EXCEL DATA LOAD TEMPLATES TO THE NEW FORMAT***</p>
+        <p>The problems pane resides within the EDL underneath the EDL tabs. It can be expanded to fit the screen for a better view. The problems collected here are to help the user correctly create a template, and are not always errors. For example, whenever an attribute is selected to load tabular data on the attributes tab, an error message will appear stating that ‘Tabular Attribute “X” is not defined in any Data Series - it is just a reminder to map that attribute(s) on the series tab. </p>
+        <p>
+            <img src="../Images/EDLProblems.png" style="visibility: visible;mso-wrap-style: square;" />
+        </p>
+        <p>&#160;</p>
+        <p>Some errors will appear during the template build while others will appear when attempting to import a broken template.</p>
+        <p>
+            <img src="../Resources/Images/ExcelTemplates1/0300001F.png" style="visibility: visible;mso-wrap-style: square;" />
+        </p>
+        <p>&#160;</p>
+        <p>When applicable, the Source will provide some information to help solve the error.&#160; Double clicking on the error message will take you to a location housing the error. The source will be in the form “X,Y”, where X is the location within the template, and Y is the location within the Excel document. In the example above, X is Production. By navigating to the attributes page and expanding projects&gt;assets&gt;production, the error will be attempting to load from here. This example explicitly states the production rate and is easy to navigate to, but some errors are not as clear. The Y is Column 1:B, which refers to the first column in the data series, in this case B. Once the location of the error is found, there are a couple ways to solve the problem. In the example above, the rate nbbl/d is not found. So the unit nbbl/d is not defined in esi.manage configuration and cannot enter unknown data. In this case, it would likely be a typo referring to mbbl/d. The ways to solve this would be to either:</p>
+        <ol style="list-style-type: decimal;margin-left: 37pt;" start="1">
+            <li>Directly change the Excel production rate to mbbl/d (assuming that is what is wanted)</li>
+            <li>Use the translations tab to translate nbbl/d to mbbl/d</li>
+            <li>Use the esi.manage Configuration Perspective to define a production rate as nbbl/d</li>
+        </ol>
+        <p>For a template to load, all problems must be solved. Sometimes a resolved problem will not be cleared from the problems pane until the template has been reimported.</p>
+    </body>
+</html>

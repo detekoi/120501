@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpCheckList.Ran Smart Index" MadCap:lastBlockDepth="5" MadCap:lastHeight="585" MadCap:lastWidth="1192">
+    <head><title>Import Process</title>
+        <link rel="StyleSheet" href="../../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <img src="../../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />
+        <h2>Import Process</h2>
+        <p>Importing data into esi.manage utilizes an import Wizard. Each screens of the wizard has a matching topic in this 
+ Help File. The general process is illustrated below:</p>
+        <p>Please refer to the specific import types found in this file for the 
+ process on individual areas.</p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../Images/60.png" />
+        </p>
+        <ol>
+            <li class="NumberedList">Access the Wizard 
+ by selecting File / Import Data.</li>
+            <li class="NumberedList">Select the Import 
+ Type (AFE Details, AFE Headers, CAPEX Details, CAPEX Headers, OPEX, Production, 
+ External Identifiers, or Project Hierarchy).</li>
+            <li class="NumberedList">Select the Budget 
+ the data is to be imported into (note that the Budget selection step is 
+ skipped for Hierarchy and EID imports as configuration information applies 
+ to your entire esi.manage Database).</li>
+            <li class="NumberedList">Choose the File 
+ to be imported, specify whether the First Line is a header, and Validate 
+ the selected File (i.e., the correct number of columns, columns have the 
+ correct data types).</li>
+            <ul>
+                <li class="NumberedList">If there 
+ are validation errors, the import can be cancelled or 
+ can Proceed with Valid Records only.</li>
+            </ul>
+            <li class="NumberedList">Optionally Clear 
+ Data. The import file is analyzed for the data types (Field Estimates, 
+ Forecast, Actuals, etc.), and the earliest Start Date and Latest End Date.</li>
+            <ul>
+                <li class="NumberedList">The Clear 
+ Data page is initialized to those Types and Dates. The Clear Data function 
+ will remove existing records in the database that match the type and fall 
+ within the Dates.</li>
+                <li class="NumberedList">Optionally 
+ select the Matching option, in which case the Clear (using the Types and 
+ Dates as described above) is limited to only those Projects found in the 
+ Import File (either through the mapped EID, or an identified project).</li>
+            </ul>
+            <li class="NumberedList">Import the Data 
+ into esi.manage.</li>
+            <li class="NumberedList">Press Finish 
+ which will generate a log file with the import results (number of records, 
+ valid records, errors, etc.), and esi.manage will prompt to be restarted.</li>
+        </ol>
+    </body>
+</html>

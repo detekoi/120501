@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MsWordImport
+  PreserveSourceStyles="true"
+  KeepSourceLinks="true"
+  ConvertInlineFormatting="true"
+  AddContinuedLinks="false"
+  AddContinuedFromLinks="false"
+  ContinuedLinkFormat="(continued in {title})"
+  ContinuedFromLinkFormat="(continued from {title})"
+  UseMaxCharLimit="false"
+  UseMinCharLimit="true"
+  MaxCharLimit="10000"
+  MinCharLimit="50"
+  FilenameLength="24"
+  GeneratePageLayouts="false"
+  UseFirstHeadingAsTopicTitle="true"
+  LastCollectTime="2016-05-25T07:44:46.8673538-06:00"
+  ProjectName="Help File - 3.24test"
+  ProjectFolder="\\cgyfile1\Shared\Flare\"
+  AutoSync="false"
+  AutoFitTables="false"
+  LastImport="2016-05-25T07:46:13.3083538-06:00">
+  <Files>
+    <Url
+      Source="file:///C:/Users/isinclair/Desktop/Help File Capital Constraints.docx"
+      AbsoluteSource="file:///C:/Users/isinclair/Desktop/Help File Capital Constraints.docx" />
+  </Files>
+  <ExcludedFiles />
+  <CollectedSourceFiles />
+  <SkippedSourceFiles />
+  <GeneratedFiles>
+    <Url
+      Source="../../Content/Resources/Images/Help File Capital Constraints1/03000001.png"
+      TimeStamp="25/05/2016 7:45:37 AM" />
+    <Url
+      Source="../../Content/Help File Capital Constraints1/Capital Constraints.htm"
+      TimeStamp="25/05/2016 7:45:37 AM" />
+    <Url
+      Source="../../Content/Help File Capital Constraints1/Is Active Check to use Capital.htm"
+      TimeStamp="25/05/2016 7:45:37 AM" />
+    <Url
+      Source="../../Content/Help File Capital Constraints1/Budget Start Year The year.htm"
+      TimeStamp="25/05/2016 7:45:37 AM" />
+    <Url
+      Source="../../Content/Help File Capital Constraints1/Carry Forward Unused Budget.htm"
+      TimeStamp="25/05/2016 7:45:37 AM" />
+    <Url
+      Source="../../Content/Help File Capital Constraints1/Add Free CF to Budget Allows.htm"
+      TimeStamp="25/05/2016 7:45:37 AM" />
+    <Url
+      Source="../../Content/Help File Capital Constraints1/Budget Entered As Defines.htm"
+      TimeStamp="25/05/2016 7:45:37 AM" />
+    <Url
+      Source="../../Content/Help File Capital Constraints1/Number of Years The number.htm"
+      TimeStamp="25/05/2016 7:45:37 AM" />
+    <Url
+      Source="../../Content/Help File Capital Constraints1/After Budgeted Years No budget.htm"
+      TimeStamp="25/05/2016 7:45:37 AM" />
+    <Url
+      Source="../../Content/Help File Capital Constraints1/Spread monthly To have the.htm"
+      TimeStamp="25/05/2016 7:45:37 AM" />
+    <Url
+      Source="../../Content/Help File Capital Constraints1/To set up Capital Constraints.htm"
+      TimeStamp="25/05/2016 7:45:37 AM" />
+    <Url
+      Source="../../Content/Help File Capital Constraints1/Help File Capital Constraints.htm"
+      TimeStamp="25/05/2016 7:45:37 AM" />
+    <Url
+      Source="../TOCs/Help File Capital Constraints1.fltoc"
+      TimeStamp="25/05/2016 7:45:37 AM" />
+    <Url
+      Source="../../Content/Resources/Stylesheets/Help File Capital Constraints1.css"
+      TimeStamp="25/05/2016 7:45:37 AM" />
+  </GeneratedFiles>
+  <ParagraphStyles>
+    <Map
+      From="Heading 1"
+      To="h1.Heading 1" />
+    <Map
+      From="Heading 2"
+      To="h2.Heading 2" />
+    <Map
+      From="Heading 3"
+      To="h3.Heading 3" />
+  </ParagraphStyles>
+  <CharacterStyles>
+    <Map
+      From="Hyperlink"
+      To="a.(MS Word Style)" />
+  </CharacterStyles>
+  <NewTopicStyles>
+    <StyleName
+      Name="List Paragraph" />
+  </NewTopicStyles>
+  <UsedParagraphStyles>
+    <StyleName
+      Name="List Paragraph" />
+  </UsedParagraphStyles>
+  <UsedCharacterStyles />
+</MsWordImport>

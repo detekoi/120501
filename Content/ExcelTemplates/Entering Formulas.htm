@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="4" MadCap:lastHeight="352" MadCap:lastWidth="1462">
+    <head><title></title>
+        <link href="../Resources/Stylesheets/HelpFileStylesheet2.css" rel="stylesheet" />
+    </head>
+    <body>
+        <p>
+            <img src="../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />
+        </p>
+        <h2>Entering Formulas</h2>
+        <p>***THIS FEATURE IS BEING DEPRECATED. PLEASE MIGRATE ALL EXCEL DATA LOAD TEMPLATES TO THE NEW FORMAT***</p>
+        <ul style="list-style-type: square;margin-left: 19pt;">
+            <li style="list-style-type: square;">A value that constitutes a valid Excel address (e.g. A9) will be treated as such</li>
+            <li style="list-style-type: square;">A value that starts with the equal sign (=) is treated as a formula. Such formulas may contain Excel addresses, variable references, functions, operators and constants. </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 55pt;">
+            <li style="list-style-type: circle;">Example of a numeric formula: =A7 + (MYVAR + 8.0). </li>
+            <li style="list-style-type: circle;">Example of text formula: =SPLIT(A7, “_”).GET(2). Note that string literals in formulas must be surrounded by quotes</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 19pt;">
+            <li style="list-style-type: square;">Any other value is treated as a literal (e.g. Blurg just is the constant “Blurg”)</li>
+            <li style="list-style-type: square;">Any value surrounded by quotation marks is also a literal. In particular “A9” means a literal constant “A9” and NOT an Excel address</li>
+            <li style="list-style-type: square;">Function names and Excel addresses will be automatically capitalized on data entry. This is a useful way to verify that the formula is being interpreted as you intended (e.g. no spelling mistakes in function names)</li>
+            <li style="list-style-type: square;">Two special strings ‘true’ and ‘false’ are interpreted as the Boolean values for true and false, respectively</li>
+        </ul>
+    </body>
+</html>

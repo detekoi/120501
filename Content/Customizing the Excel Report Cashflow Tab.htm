@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="3407" MadCap:lastWidth="796">
+    <head>
+        <link href="Resources/TableStyles/HelpFileTableStylesheet.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Customizing the Excel Report Cashflow Tab</h1>
+        <h3>Introduction</h3>
+        <p>The target worksheet tab of the Excel Economic Report Template file designated to hold the Cashflow data from the Analysis Case customized by the user to bring in data from any of the columns available to display in the esi.manage Analysis Cashflow tab.  In the past, it is necessary to include/exclude these columns within esi.manage first, prior to exporting the Excel report that will contain exactly the columns included.  With the Excel Report Template, the column visibility settings in esi.manage do not impact the availability of data in the Excel export.</p>
+        <h3>Available Data for Export</h3>
+        <p>Each of the Cashflow data columns listed below are available to be exported to the Excel Economic Report file:</p>
+        <p>-	Dates (and separately, corresponding duration of each period)</p>
+        <p>-	Gross production (by product)</p>
+        <p>-	Net production (by product)</p>
+        <p>-	Net production after royalties (by product)</p>
+        <p>-	Gross capex (by expenditure type)</p>
+        <p>-	Net capex (by expenditure type)</p>
+        <p>-	Gross opex (by opex type)</p>
+        <p>-	Net opex (by opex type)</p>
+        <p>-	Quality (by product)</p>
+        <p>-	Effective price (by product)</p>
+        <p>-	Burdens (by name)</p>
+        <p>-	Royalty (by product)</p>
+        <p>-	Gross revenue (by product)</p>
+        <p>-	Net revenue (by product)</p>
+        <p>-	Net revenue after royalties (by product)</p>
+        <p>-	Current tax (by asset or jurisdiction)</p>
+        <p>-	Deferred tax (by asset or jurisdiction)</p>
+        <p>-	Tax depreciation (by asset or jurisdiction)</p>
+        <p>-	Taxable income (by asset or jurisdiction)</p>
+        <p>-	Income before tax</p>
+        <p>-	Income after tax</p>
+        <p>-	Operating income</p>
+        <p>-	Net margin</p>
+        <p>-	DD&amp;A</p>
+        <p>-	BTAX cashflow (present value with no discounting)</p>
+        <p>-	ATAX cashflow (present value with no discounting)</p>
+        <p>-	BTAX present value</p>
+        <p>-	ATAX present value</p>
+        <p>-	Custom (defined in Fiscal Model &gt; Custom Economic Calculations spreadsheets)</p>
+        <p>-	Custom Cashflow (defined in Fiscal Model &gt; Custom Economic Calculations spreadsheets)</p>
+        <p>Each individual data column in esi.manage Analysis Cashflow can be mapped to columns in the Cashflow worksheet of the Excel Economic Report Template, by following the Formatting Requirements below.</p>
+        <h3>Formatting Requirements</h3>
+        <p>The worksheet tab where the Cashflow data are imported into must meet the following requirements:</p>
+        <p>-	Worksheet name must be “ESI Cashflow (nominal)” if not accounting for future currency escalations, or “ESI Cashflow (real)” if accounting for future currency escalations</p>
+        <p>-	For a given column (Column N) to be populated with data, the following requirements must be met:</p>
+        <p>o	Row 1 (Cell N1):</p>
+        <p>	For the mapping to import from esi.manage:  set Cell N1 value to IN</p>
+        <p>	To not import any values from esi.manage:  leave Cell N1 blank</p>
+        <p>
+            <img src="Images/customizecashflow.PNG" />
+        </p>
+        <p>o	Row 2 and 3 (Cells N2 and N3) – must meet the following syntax rules:</p>
+        <p>*Row 3 elements in [italics] are as defined in esi.manage configuration</p>
+        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/HelpFileTableStylesheet.css');" class="TableStyle-HelpFileTableStylesheet" cellspacing="0">
+            <col style="width: 333px;" class="TableStyle-HelpFileTableStylesheet-Column-Column1" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td style="font-weight: bold;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">Data Type</td>
+                    <td style="font-weight: bold;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p>Row 2 (Syntax)</p>
+                    </td>
+                    <td style="font-weight: bold;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">Row 3 (Wildcard Syntax)*</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3"><b>Period in Row</b>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Date</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">-</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td style="font-weight: bold;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">Number of Days in Row</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">DaysinPeriod</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">-</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td style="font-weight: bold;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">Gross Production</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">GrossProduction</td>
+                    <td style="font-style: italic;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p>[Product Name]</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td style="font-weight: bold;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">Gross Total Production
+(All products)	
+</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">GrossProductionEquivalence</td>
+                    <td style="font-style: italic;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">- </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td style="font-weight: bold;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">Net Production</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Production</td>
+                    <td style="font-style: italic;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">[Product Name]</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td style="font-weight: bold;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">Net Total Production (All Products)</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">ProductionEquivalence</td>
+                    <td style="font-style: italic;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">-</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td style="font-weight: bold;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">Net Production after Royalty</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">ProductionNetRoyalty</td>
+                    <td style="font-style: italic;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">[Product Name]</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td style="font-weight: bold;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">Net Production after Royalty (All&#160;Products)</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">ProductionEquivalenceNetRoyalty</td>
+                    <td style="font-style: italic;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">-</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td style="font-weight: bold;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">Gross Capex</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">GrossCapex</td>
+                    <td style="font-style: italic;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">[Expenditure Type]</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td style="font-weight: bold;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">Gross Total Capex</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">GrossCapex</td>
+                    <td style="font-style: italic;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">- </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td style="font-weight: bold;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">Net Capex</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Capex</td>
+                    <td style="font-style: italic;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">[Expenditure Type]</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td style="font-weight: bold;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">Net Total Capex</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">Capex</td>
+                    <td style="font-style: italic;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">-</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td style="font-weight: bold;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">Gross Opex</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">GrossOpex</td>
+                    <td style="font-style: italic;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">[Opex Type]</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td style="font-weight: bold;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">Gross Total Opex</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">GrossOpex</td>
+                    <td style="font-style: italic;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">-</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td style="font-weight: bold;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">Quality</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">ProductionQuality</td>
+                    <td style="font-style: italic;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">[Product Name]</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td style="font-weight: bold;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">Effective Price</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">EffectivePrice</td>
+                    <td style="font-style: italic;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">[Product Name]</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td style="font-weight: bold;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">Combined Effective Price (All Products)</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">EffectivePriceEquivalence</td>
+                    <td style="font-style: italic;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">-</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td style="font-weight: bold;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">Burden</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">Burden</td>
+                    <td style="font-style: italic;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">[Burden&#160;Name]</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td style="font-weight: bold;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">Royalty</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Royalty</td>
+                    <td style="font-style: italic;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">[Product Name]</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td style="font-weight: bold;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">Combined Royalty (All Products)</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">Royalty</td>
+                    <td style="font-style: italic;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">-</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td style="font-weight: bold;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">Gross Revenue</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">GrossRevenue</td>
+                    <td style="font-style: italic;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">[Product Name]</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td style="font-weight: bold;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">Gross Total Revenue (All Products)</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">GrossRevenue</td>
+                    <td style="font-style: italic;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">-</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td style="font-weight: bold;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">Net Revenue</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Revenue </td>
+                    <td style="font-style: italic;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">[Product Name]</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td style="font-weight: bold;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">Net Total&#160;Revenue (All Products)</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">Revenue</td>
+                    <td style="font-style: italic;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">-</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td style="font-weight: bold;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">Net Total Revenue after Royalty (All Products)</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">NetRevenue</td>
+                    <td style="font-style: italic;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">-</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td style="font-weight: bold;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">Current Tax (by Asset)</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">TaxCurrent</td>
+                    <td style="font-style: italic;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">Asset</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td style="font-weight: bold;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">Current Tax (by Jurisdiction)</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">TaxCurrent</td>
+                    <td style="font-style: italic;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">[Jurisdiction Name]</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td style="font-weight: bold;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">Current Tax (Combined)</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">TaxCurrent</td>
+                    <td style="font-style: italic;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">- </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td style="font-weight: bold;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">Deferred Tax (by Asset)</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">TaxDeferred</td>
+                    <td style="font-style: italic;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">Asset</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td style="font-weight: bold;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">Deferred Tax (by Jurisdiction)</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">TaxDeferred</td>
+                    <td style="font-style: italic;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">[Jurisdiction Name]</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td style="font-weight: bold;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">Deferred Tax (Combined)</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">TaxDeferred</td>
+                    <td style="font-style: italic;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">-</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td style="font-weight: bold;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">Tax Depreciation&#160;(by Asset)</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">Depreciation</td>
+                    <td style="font-style: italic;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">Asset</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td style="font-weight: bold;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">Tax Depreciation (by Jurisdiction)</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Depreciation</td>
+                    <td style="font-style: italic;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">[Jurisdiction Name]</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td style="font-weight: bold;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">Taxable Income (by&#160;Asset)</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">TaxableIncome</td>
+                    <td style="font-style: italic;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">Asset</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td style="font-weight: bold;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">Taxable Income (by Jurisdiction)</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">TaxableIncome</td>
+                    <td style="font-style: italic;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">[Jurisdiction Name]</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td style="font-weight: bold;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">Income Before Tax</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">IncomeBeforeTax</td>
+                    <td style="font-style: italic;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">-</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td style="font-weight: bold;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">Income After Tax</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">IncomeAfterTax</td>
+                    <td style="font-style: italic;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">-</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td style="font-weight: bold;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">Operating Income</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">OperatingIncome</td>
+                    <td style="font-style: italic;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">-</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td style="font-weight: bold;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">Net Margin</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">NetMargin</td>
+                    <td style="font-style: italic;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">-</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td style="font-weight: bold;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">DD&amp;A</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">DD&amp;A</td>
+                    <td style="font-style: italic;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">-</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td style="font-weight: bold;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">Cashflow (BTAX)</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">BeforeTax</td>
+                    <td style="font-style: italic;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">-</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td style="font-weight: bold;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">Cashflow (ATAX)</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">AfterTax</td>
+                    <td style="font-style: italic;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">-</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td style="font-weight: bold;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">Present Value (BTAX)</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">BeforeTax_PV</td>
+                    <td style="font-style: italic;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">-</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td style="font-weight: bold;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">Present Value (ATAX)</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">AfterTax_PV</td>
+                    <td style="font-style: italic;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">-</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td style="font-weight: bold;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">Custom (from Custom Economic Calculations spreadsheet)</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">Custom</td>
+                    <td style="font-style: italic;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">[Metric Name]</td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td style="font-weight: bold;" class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body2">CustomCashFlow</td>
+                    <td style="text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2">Custom</td>
+                    <td style="font-style: italic;text-align: center;" class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body2">[Metric Name]</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

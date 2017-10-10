@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTargetFile
+  Version="2"
+  DefaultUrl="/Content/Overview.htm"
+  Type="WebHelp"
+  GlossaryTermConversion="marked"
+  AliasFile="/Project/Advanced/esi.flali"
+  MasterStylesheet="/Content/Resources/Stylesheets/HelpFileStylesheet.css"
+  ConditionTagExpression="include[Primary.Online or Primary.Print] "
+  MasterToc="/Project/TOCs/HelpFileTOC.fltoc"
+  GetLatestBeforeCompile="true"
+  OutputFolder="C:\Work\Help (git)\outputs\New folder\WebHelp"
+  PatchHeadingLevels="false"
+  EmbedImages="true"
+  Skin="/Project/Skins/BlueSkin.flskn">
+  <Variables />
+  <ConditionTags />
+  <PrintedOutput
+    MultiDocWordOutput="true" />
+</CatapultTargetFile>

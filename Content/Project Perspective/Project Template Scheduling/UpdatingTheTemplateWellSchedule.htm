@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="3" MadCap:lastHeight="696" MadCap:lastWidth="1439">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <img src="../../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />Updating The Template Well Schedule</h1>
+        <p>When you open the template scheduler there is an option to <i>Re-use existing virtual projects and/or assets.</i></p>
+        <p>
+            <img src="../../Resources/Images/IncrementalUpdates_13264_1.png" />
+        </p>
+        <p>This option allows you choose between performing a full update or an incremental update upon saving new values to the schedule. If you choose not to reuse existing virtual projects a full update will be performed by deleting all the existing virtual projects in the schedule and create new projects to match the schedule.</p>
+        <p>On the other hand if the option is selected an incremental update will be performed. Incremental updates will leave in place any projects that are compatible with the new schedule. Any leftover projects will be reused and their dates will be shifted to the dates with less projects than the scheduled amount. Finally, if there is still a deficit in projects esi.manage will create new projects. New and leftover projects will be places (i.e. shift their start date) on a fill in the blanks basis. That means that if the selected granularity is greater than the periodicity (e.g. daily granularity, monthly periodicity) esi.manage is going to look for largest amount of time without projects and create a project there.</p>
+        <p>It’s important to note that by reusing projects the scheduled virtual projects may not be synchronized with their template project. To synchronize virtual projects to their templates please see <a href="TW_Updates.htm">Updating Virtual Projects</a>.</p>
+    </body>
+</html>

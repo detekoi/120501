@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="1262" MadCap:lastWidth="1384">
+    <head><title>Site Specific Features</title>
+        <link rel="StyleSheet" href="../../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <img src="../../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />
+        <h1>Site-Specific Features</h1>
+        <p>This Configuration screen allows you to enable several features specific 
+ to your company's preference. For example, some corporations may wish to discard production that is lost during downtime, whereas others may not, so they may prefer this feature enabled. A description of the different features can be found below:</p>
+        <p>
+            <img src="../../Images/SiteSpecificFeatures1.png" />
+        </p>
+        <ul>
+            <li class="Bullets"><span style="font-weight: bold;">Asset Scaling- </span> This toggle allows companies to Scale the contribution of Assets within a Project. Where assets represent outcomes in a project this is the probability of that outcome being achieved. </li>
+            <li class="Bullets"><span style="font-weight: bold;">Capital 
+ Planning Integration - </span>
+            </li>
+            <li class="Bullets"><span style="font-weight: bold;">Data 
+ Based Blending</span>: This enables a toggle between data and date driven 
+ blending (the previous default behaviour in the software). The new method, 
+ data driven blending, uses the best available data for each and every 
+ asset.</li>
+        </ul>
+        <ol style="list-style: disc;list-style-type: decimal;">
+            <ul style="list-style: disc;list-style-type: circle;" type="disc">
+                <li><span style="font-weight: bold;">Data Driven 
+ Last Actuals date:</span> The Last Actuals date is the last date with 
+ a non-null entry in the Actuals table. If Actuals exist, they are always 
+ used.</li>
+                <li><span style="font-weight: bold;">Data Driven 
+ Last Field Estimates date</span>: The Last Field Estimates date is the 
+ last date with a non-null entry in the Field Estimates table. If Field 
+ Estimates exist, they are used over the period (Last Actuals Date +1 to 
+ Last Field Estimates date). If there are no Actuals, then all Field Estimate 
+ values are used.</li>
+                <li><span style="font-weight: bold;">Data Driven 
+ Forecast dates</span>: If Field Estimates exist, then Forecast is used 
+ over the period (Last Actuals date +1 to the end of the Forecast). If 
+ there are no Field Estimates, then Forecast is used over the period (Last 
+ Actuals date +1 to the end of the Forecast). If there are no Actuals, 
+ then all Field Estimate values are used.</li>
+                <li><span style="font-weight: bold;">Date Driven 
+ Blending</span>: Blends numbers based on whatever data falls within a 
+ specific time set in the parameters. For example, Actuals are used to 
+ a given date, usually a month end (ie. to March 31, 2008) and Forecast 
+ numbers are used for the remaining time period (ie. April 1 - December 
+ 1, 2008).</li>
+            </ul>
+        </ol>
+        <ul>
+            <li class="Bullets"><b>Nonstandard Downtime</b>: Production will continue during downtime, but any production that is above what can be handled during the period of downtime is discarded. This also calculates the downtime in an additive fashion (ie. 50% scheduled and 50% unscheduled will have zero production in that period).</li>
+            <li style="font-weight: normal;"><b>Excel Data Loader</b>: This will turn on the Excel Data Loading feature</li>
+            <li class="Bullets"><span style="font-weight: bold;">Net 
+ Revenue Interest</span><span>: Enables the use of Net Revenue Interest 
+ in the ownership module.</span>
+            </li>
+            <li style="font-weight: bold;"><span style="font-weight: normal;"><b>Nonstandard Time-Shifting</b>: This will allow price profiles that are entered in the Project (and not Configuration) to shift in time, if the Project/Asset are date shifted. This will only happen if all of the Assets in a Project that are currently using the Price Profile are all being shifted. If two Assets use the same Price Profile, and only one is date-shifted, the Price Profile will not shift in time.</span>
+            </li>
+            <li class="Bullets"><span style="font-weight: bold;">Project 
+ Change Logging</span>:This turns project change audit logging on. If you wish to audit every change to a project turn this on, and the audit information will be stored in the dbo.projectLog table in the database.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Report 
+ Column Selection</span>: Provides you with the functionality of toggling 
+ the Asset, AFE and Comments columns on or off in the CAPEX Reports. If 
+ this option is not checked you will not see the Asset, AFE and Comment 
+ toggle buttons on the CAPEX reports.</li>
+            <li class="Bullets"><b>Serialize Write Transactions</b>: This can help prevent database deadlocks, where too many people are making too many large calculations at once. This will order the requests so that they happen sequentially and will not lock the system.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Split 
+ at Field Estimate</span>: Enables the display of Production Field Estimates 
+ in a separate column when Blended Data is being displayed.</li>
+        </ul>
+        <p>&#160;</p>
+    </body>
+</html>

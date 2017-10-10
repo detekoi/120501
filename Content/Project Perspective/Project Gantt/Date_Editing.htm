@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="484" MadCap:lastWidth="868">
+    <head><title>Date Editing</title>
+        <link rel="StyleSheet" href="../../Resources/Stylesheets/default.css" />
+        <style>
+h1.whs1
+{
+	text-align: right;
+}
+li.mc-h1-Cwhs1
+{
+	text-align: right;
+}
+img_whs2
+{
+	border: none;
+	width: 36px;
+	height: 44px;
+	float: none;
+	border-style: none;
+}
+p.whs3
+{
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+	font-size: 14pt;
+}
+li.whs3
+{
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+	font-size: 14pt;
+}
+p.whs4
+{
+	font-family: Arial, sans-serif;
+}
+li.whs4
+{
+	font-family: Arial, sans-serif;
+}
+p.whs5
+{
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+}
+li.whs5
+{
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+}
+ol.whs6
+{
+	list-style: decimal;
+}
+
+</style>
+        <style>
+div.WebHelpPopupMenu
+{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 4;
+	visibility: hidden;
+}
+
+</style>
+        <script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">/*<![CDATA[*/
+<!--
+ function reDo() {
+ if (innerWidth != origWidth || innerHeight != origHeight)
+ location.reload();
+ }
+ if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+ origWidth = innerWidth;
+ origHeight = innerHeight;
+ onresize = reDo;
+ }
+ onerror = null; 
+ //-->
+/*]]>*/</script> <script type="text/javascript" language="javascript1.2" src="../../Archived/whmsg.js"></script> <script type="text/javascript" language="javascript" src="../../Archived/whver.js"></script> <script type="text/javascript" language="javascript1.2" src="../../Archived/whproxy.js"></script> <script type="text/javascript" language="javascript1.2" src="../../Archived/whutils.js"></script> <script type="text/javascript" language="javascript1.2" src="../../Archived/whtopic.js"></script></head>
+    <body>
+        <h3>
+            <img src="../../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />
+        </h3>
+        <h2>Date Editing</h2>
+        <p>Dates can be edited through the Project Editor or through the Gantt 
+ Chart.</p>
+        <p>Forecast dates can be dragged and dropped on the Gantt to shift dates. 
+ Click the bar you want to shift, click inside the bar and hold, then drag 
+ the bar so that the start of the bar lines up with the new first date.</p>
+        <p>When moving a Project bar, all of the dates contained under that Project 
+ will shift accordingly. Refer to the "<a href="../Projects/Shift_Dates.htm">Shift 
+ Dates</a>" topic for a diagram of the rollup dependencies. You can 
+ prevent related dates from moving by using the "pin" options 
+ found in the <a href="../Projects/Shift_Date_Options.htm">Shift Date Options</a> dialogue. 
+ OPEX or CAPEX inflation factors will be directly applied to all dates 
+ contained under the shifted rollup, regardless of the direction being 
+ moved.</p>
+        <p>Moving an Expenditure with dependencies will not shift all dependant 
+ expenditures and related dates by the same amount.</p>
+        <p>Any changes made on the Gantt are reflected throughout the application.</p>
+        <h3>&#160;</h3>
+        <h3>Date Shifting Rules:</h3>
+        <ol class="whs6">
+            <li style="font-family: Arial, sans-serif;" class="NumberedList">Expenditures, 
+ OPEX, Reserves and Production must start after the Expenditure on which 
+ they are dependent ends (with no overlap).</li>
+            <li style="font-family: Arial, sans-serif;" class="NumberedList">Resource allocations 
+ must start no earlier than the Expenditure they are attached to.</li>
+        </ol>
+        <p><span style="font-family: Arial, sans-serif;">If you attempt to shift 
+ dates in a way that violates these rules, the move will be prevented.</span>
+        </p>
+    </body>
+</html>

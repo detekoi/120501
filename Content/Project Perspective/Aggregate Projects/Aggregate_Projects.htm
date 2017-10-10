@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1803" MadCap:lastWidth="1221">
+    <head><title>Aggregate Projects</title>
+        <link rel="StyleSheet" href="../../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <h2>
+            <img src="../../Images/Logo Images/3esi_manage.png" align="right" border="0" class="HeaderLogo" />
+        </h2>
+        <h2>Project Aggregator</h2>
+        <p>The project aggregation function allows you to combine multiple projects 
+ into a single project aggregating all the assets and measures (production, 
+ OPEX and CAPEX) into a new project (or projects).</p>
+        <h3>&#160;</h3>
+        <h3>Aggregation Exclusions</h3>
+        <p>Field estimates and Actuals are not part of project aggregation. Derived 
+ by products will not be aggregated.</p>
+        <h3>&#160;</h3>
+        <h3>Production Aggregation</h3>
+        <p>The following fields must be the same in production in order to aggregate 
+ them:</p>
+        <ul style="list-style: disc;" type="disc">
+            <li>Product</li>
+            <li>Production Rate</li>
+            <li>Quality Unit</li>
+            <li>The production must be monthly.</li>
+        </ul>
+        <p>The aggregated production data will be tabular. </p>
+        <p>All derived associated products will be aggregated as normal products. 
+ &#160;Derived 
+ by-products will not be aggregated</p>
+        <p>The Shrinkage, POS%, and overall quality will be calculated.</p>
+        <p>The quality from a production segment that uses equivalence units is discarded during project aggregation. As a result, for the period of time where the production segment uses equivalence units, no quality is calculated.</p>
+        <h3>&#160;</h3>
+        <h3>Production Exclusions</h3>
+        <ul style="list-style: disc;" type="disc">
+            <li>Comments, 'Dependent On' and Price Profile will 
+ not be aggregated.</li>
+            <li>Downtime will not be aggregated.</li>
+        </ul>
+        <p>&#160;</p>
+        <h3>Expenditure Aggregation</h3>
+        <p>The following fields must be the same in Expenditure in order to aggregate 
+ them:</p>
+        <ul style="list-style: disc;" type="disc">
+            <li>Type &amp; Category</li>
+            <li>Status</li>
+            <li>Currency</li>
+        </ul>
+        <p>The expenditure must be on a monthly basis.</p>
+        <p>Gross expenditure amount and PD% will be calculated.</p>
+        <p>AFE linkage, Comments, dependencies, negative started, and ended are 
+ ignored.</p>
+        <p>&#160;</p>
+        <h3>OPEX Aggregation</h3>
+        <p>The following fields must be the same in<span style="font-weight: bold;font-style: italic;"> 
+ Fixed OPEX</span> in order to aggregate them:</p>
+        <ul style="list-style: disc;" type="disc">
+            <li>Category</li>
+            <li>Type</li>
+            <li>Status</li>
+            <li>Product</li>
+            <li>Currency</li>
+        </ul>
+        <p>Time period must be monthly.</p>
+        <p>POS% and Gross amount are calculated.</p>
+        <p>&#160;</p>
+        <p>The following fields must be the same in<span style="font-weight: bold;font-style: italic;"> 
+ Variable OPEX</span> in order to aggregate them</p>
+        <ul style="list-style: disc;" type="disc">
+            <li>Category</li>
+            <li>Type</li>
+            <li>Status</li>
+            <li>Product</li>
+            <li>Currency</li>
+            <li>Production volume unit</li>
+        </ul>
+        <p>Amount per volume is calculated.</p>
+        <p>If no production, Variable OPEX will be ignored.</p>
+        <p>Status of the OPEX in aggregation result projects is always NULL.</p>
+        <p>Variable OPEX(es) are recalculated with respect to Use Sales Volume, and the flag will be always set in the result.</p>
+        <h3>&#160;</h3>
+        <h3>Ownership Aggregation</h3>
+        <p>The ownership for expenditures, production and fixed OPEX will be calculated. 
+ </p>
+        <p>Ownership is calculated at an asset level. &#160;An 
+ overall ownership is calculated for each type of measure by gradually 
+ summing with the weight corresponding to its part in the total of the 
+ measure. &#160;Ownership 
+ for a measure in a project will be ignored if there is no data for that 
+ measure.</p>
+    </body>
+</html>

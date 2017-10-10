@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="649" MadCap:lastWidth="446">
+    <head>
+        <link href="../../Resources/TableStyles/HelpFileTableStylesheet.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>AFE Import CSV Example</title>
+        <link rel="stylesheet" href="../../Resources/Stylesheets/default.css" type="text/css" />
+        <style>
+h1.whs1
+{
+	text-align: right;
+}
+li.mc-h1-Cwhs1
+{
+	text-align: right;
+}
+img_whs2
+{
+	border: none;
+	width: 36px;
+	height: 44px;
+	float: none;
+	border-style: none;
+}
+h1.whs3
+{
+	font-size: 14pt;
+}
+li.mc-h1-Cwhs3
+{
+	font-size: 14pt;
+}
+table.whs4
+{
+	x-cell-content-align: top;
+	border-spacing: 0px;
+	width: 91.667%;
+}
+col.whs5
+{
+	width: 9.091%;
+}
+tr.whs6
+{
+	x-cell-content-align: top;
+}
+td.whs7
+{
+	width: 9.091%;
+	background-color: #008000;
+	border-left-style: Solid;
+	border-left-color: #000000;
+	border-left-width: 1px;
+	border-top-width: 1px;
+	border-top-color: #000000;
+	border-top-style: Solid;
+	border-right-style: Solid;
+	border-right-color: #000000;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: Solid;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+p.whs8
+{
+	font-size: 10pt;
+	font-weight: bold;
+	color: #00ff00;
+}
+li.whs8
+{
+	font-size: 10pt;
+	font-weight: bold;
+	color: #00ff00;
+}
+td.whs9
+{
+	width: 9.091%;
+	background-color: #008000;
+	border-top-width: 1px;
+	border-top-color: #000000;
+	border-top-style: Solid;
+	border-right-style: Solid;
+	border-right-color: #000000;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: Solid;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+td.whs10
+{
+	width: 9.091%;
+	background-color: #ffff00;
+	border-left-style: Solid;
+	border-left-color: #000000;
+	border-left-width: 1px;
+	border-right-style: Solid;
+	border-right-color: #000000;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: Solid;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+p.whs11
+{
+	font-weight: bold;
+	font-size: 10pt;
+}
+li.whs11
+{
+	font-weight: bold;
+	font-size: 10pt;
+}
+td.whs12
+{
+	width: 9.091%;
+	border-right-style: Solid;
+	border-right-color: #000000;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: Solid;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+p.whs13
+{
+	font-size: 10pt;
+}
+li.whs13
+{
+	font-size: 10pt;
+}
+p.whs14
+{
+	font-size: 12pt;
+	font-family: Arial, sans-serif;
+}
+li.whs14
+{
+	font-size: 12pt;
+	font-family: Arial, sans-serif;
+}
+
+</style>
+        <style>
+div.WebHelpPopupMenu
+{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 4;
+	visibility: hidden;
+}
+
+</style>
+        <script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">/*<![CDATA[*/
+<!--
+ if (navigator.appName !="Netscape")
+ { document.write("<link rel='stylesheet' href='default.css'>");}
+ //-->
+/*]]>*/</script> <script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">/*<![CDATA[*/
+<!--
+ function reDo() {
+ if (innerWidth != origWidth || innerHeight != origHeight)
+ location.reload();
+ }
+ if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+ origWidth = innerWidth;
+ origHeight = innerHeight;
+ onresize = reDo;
+ }
+ onerror = null; 
+ //-->
+/*]]>*/</script> <script type="text/javascript" language="javascript1.2" src="../../Archived/whmsg.js"></script> <script type="text/javascript" language="javascript" src="../../Archived/whver.js"></script> <script type="text/javascript" language="javascript1.2" src="../../Archived/whproxy.js"></script> <script type="text/javascript" language="javascript1.2" src="../../Archived/whutils.js"></script> <script type="text/javascript" language="javascript1.2" src="../../Archived/whtopic.js"></script></head>
+    <body>
+        <h1 class="whs1" style="text-align: right;" align="right">
+            <img src="../../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />
+        </h1>
+        <h2>AFE Details Import CSV Example</h2>
+        <p>The following is an example of the structure of a fully constructed 
+ CSV file ready to be imported. All the fields are in the right order and 
+ formatted correctly.</p>
+        <p>&#160;</p>
+        <table class="TableStyle-HelpFileTableStylesheet" style="width: 89.301%;mc-table-style: url('../../Resources/TableStyles/HelpFileTableStylesheet.css');" cellspacing="0" width="89.301%">
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column1" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <col class="TableStyle-HelpFileTableStylesheet-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-HelpFileTableStylesheet-Head-Header1" valign="top">
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column1-Header1" bgcolor="#008000" width="19.184%">
+                        <p class="whs8">AFE#</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1" bgcolor="#008000" width="17.043%">
+                        <p class="whs8">Capital Definition</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1" bgcolor="#008000" width="11.238%">
+                        <p class="whs8">From Date</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1" bgcolor="#008000" width="12.489%">
+                        <p class="whs8">End Date</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1" bgcolor="#008000" width="15.949%">
+                        <p class="whs8">Gross Amount</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadE-Column2-Header1" bgcolor="#008000" width="13.608%">
+                        <p class="whs8">Net Amount</p>
+                    </th>
+                    <th class="TableStyle-HelpFileTableStylesheet-HeadD-Column2-Header1" bgcolor="#008000" width="10.489%">
+                        <p class="whs8">Currency</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2" valign="top">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2" bgcolor="#FFFF00" width="19.184%">
+                        <p class="whs11" style="margin-left: 0px;">Import Example 001</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" width="17.043%">
+                        <p style="font-size: 10pt;">Actuals</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" width="11.238%">
+                        <p class="whs13">2015-02-01</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" width="12.489%">
+                        <p class="whs13">2015-02-28</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" width="15.949%">
+                        <p>10000</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2" width="13.608%">
+                        <p>9000</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2" width="10.489%">
+                        <p style="font-size: 10pt;">CAD</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td colspan="1" rowspan="1" bgcolor="#FFFF00" width="19.184%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p class="whs11" style="margin-left: 0px;">Import Example 001</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="17.043%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="whs13" style="margin-left: 0px;">Actuals</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="11.238%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="whs13">2015-03-01</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="12.489%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="whs13">2015-03-31</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="15.949%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="whs13">600000</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="13.608%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="whs13">5000</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10.489%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p class="whs13">CAD</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body2">
+                    <td colspan="1" rowspan="1" bgcolor="#FFFF00" width="19.184%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body2">
+                        <p class="whs11" style="margin-left: 0px;">Import Example 001</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="17.043%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="whs13" style="margin-left: 0px;">Actuals</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="11.238%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="whs13">2015-04-01</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="12.489%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="whs13">2015-04-30</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="15.949%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="whs13">300000</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="13.608%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body2">
+                        <p class="whs13">20000</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10.489%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body2">
+                        <p class="whs13">CAD</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-HelpFileTableStylesheet-Body-Body3">
+                    <td colspan="1" rowspan="1" bgcolor="#FFFF00" width="19.184%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column1-Body3">
+                        <p class="whs11" style="margin-left: 0px;">Import Example 001</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="17.043%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="whs13" style="margin-left: 0px;">Field Est</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="11.238%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="whs13">2015-05-01</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="12.489%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="whs13">2015-05-07</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="15.949%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="whs13">150000</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="13.608%" class="TableStyle-HelpFileTableStylesheet-BodyE-Column2-Body3">
+                        <p class="whs13">100000</p>
+                    </td>
+                    <td colspan="1" rowspan="1" width="10.489%" class="TableStyle-HelpFileTableStylesheet-BodyD-Column2-Body3">
+                        <p class="whs13">CAD</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-HelpFileTableStylesheet-Body-Body2" valign="top">
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column1-Body2" bgcolor="#FFFF00" width="19.184%">
+                        <p class="whs11" style="margin-left: 0px;">Import Example 002</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2" width="17.043%">
+                        <p style="font-size: 10pt;">Field Est</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2" width="11.238%">
+                        <p class="whs13">2015-04-01</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2" width="12.489%">
+                        <p class="whs13">2015-04-01</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2" width="15.949%">
+                        <p class="whs13">200</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyB-Column2-Body2" width="13.608%">
+                        <p class="whs13">150</p>
+                    </td>
+                    <td class="TableStyle-HelpFileTableStylesheet-BodyA-Column2-Body2" width="10.489%">
+                        <p class="whs13">kCAD</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

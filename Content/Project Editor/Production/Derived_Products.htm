@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="3136" MadCap:lastWidth="1054">
+    <head><title>Derived Products</title>
+        <link rel="StyleSheet" href="../../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <script type="text/javascript" language="JavaScript1.2" src="../../Archived/ehlpdhtm.js">
+        </script>
+        <h3>
+            <img src="../../Images/Logo Images/3esi_manage.png" align="right" border="0" class="HeaderLogo" />
+        </h3>
+        <h1>Derived Products</h1>
+        <p>Derived Products is a mechanism for defining a Production segment (the 
+ Derived Product) as a Ratio to another Production segment (the Primary 
+ Product). There are several aspects of the model which should be considered 
+ when creating a Derived Segment.</p>
+        <ul>
+            <li class="Bullets">A Derived Segment is associated 
+ against an <span style="font-weight: bold;">Asset</span>, and defined 
+ in terms of a <span style="font-weight: bold;">Primary Product</span>.</li>
+            <ul style="list-style-type: circle;">
+                <li class="Bullets">The Ratio applies to 
+ <span style="font-weight: bold;">all</span> Production segments of the 
+ <span style="font-weight: bold;">Primary Product</span>, which are associated 
+ with the same <span style="font-weight: bold;">Asset</span>.</li>
+            </ul>
+            <li class="Bullets">The <span style="font-weight: bold;">Shrinkage</span> 
+ for the Primary Product segment(s) dictates <span style="font-weight: bold;">when</span> 
+ the Derived Product's production is reported.</li>
+            <ul style="list-style-type: circle;">
+                <li class="Bullets">Shrinkage &gt; 0 - 
+ the Derived Product's production is only reported for <span style="font-weight: bold;"><a href="../../Configuration Perspective/Budget-Project/Production_Definitions.htm">Sales Definitions</a></span>.</li>
+                <li class="Bullets">Shrinkage = 0 - the 
+ Derived Product's production is reported for all Production Definitions. 
+ </li>
+            </ul>
+            <li class="Bullets">There are two Ratio models:</li>
+            <ul style="list-style-type: circle;">
+                <li class="Bullets"><span style="font-weight: bold;">Fixed</span> 
+ - the Ratio does not change with time. &#160;This 
+ can be achieved by entering a single ratio into the derived production 
+ ratio table, and selecting Constant interpolation.</li>
+                <li class="Bullets"><span style="font-weight: bold;">Variable</span> 
+ - there is a time series of Ratios that can be created. This is done by 
+ entering &gt;1 ratio in the derived production ratio table.</li>
+                <li class="Bullets">Note that Shrinkage 
+ is <span style="font-weight: bold;">not time-variant</span>, using the 
+ Variable Ratio model with a non Zero shrinkage can present numerical differences 
+ when comparing results generated with different Definitions.</li>
+            </ul>
+            <li class="Bullets">There are two types of 
+ Derived Products</li>
+            <ul style="list-style: disc;list-style-type: circle;" type="disc">
+                <li class="Bullets"><span style="font-weight: bold;">By-product</span> 
+ - a secondary product derived from the primary product, which is affected 
+ by the primary products shrinkage. &#160;By-products 
+ will always have zero<br />		Gross "unshrunk" production. &#160;By-products 
+ will not appear in Production analysis unless Production definition is 
+ "shrunk".</li>
+                <li class="Bullets"><b>Associated 
+ product</b><span style="font-weight: normal;"> - A production stream that 
+ is derived as a ratio from another stream, and is unrelated to the primary 
+ products shrinkage. &#160;Associated 
+ products<br />		can have non-zero gross "unshrunk" production.</span>
+                </li>
+            </ul>
+            <li>The onstream date of the derived product can be controlled in two ways with the use of the <b>Start Event</b> parameter:</li>
+            <ul style="list-style: disc;list-style-type: circle;" type="disc">
+                <li class="Bullets"><span style="font-weight: bold;">Onstream</span> 
+				- The start date for production will be the related to the onstream date of the primary product. Variation to the onstream date of the primary product can be achieved through the use of the offset. </li>
+                <li class="Bullets"><b>Calendar</b><span style="font-weight: normal;"> - The onstream date of the derived production will start on the date specified in the field <b>Start Date</b>. Note that offsets still apply and will reference the <b>Start Date</b></span>
+                </li>
+            </ul>
+            <li class="Bullets">Defaults</li>
+            <ul style="list-style-type: circle;">
+                <li>
+                    <p>Use Defaults? toggle can be used to automatically fill the derived product ratio(s) based on defaults that are set against a hierarchy element (eg. Region) in the Configuration.</p>
+                </li>
+                <li><span style="font-weight: normal;">See the <a href="../../Configuration Perspective/Defaults/Production_Defaults.htm">Defaults</a> section for more information 
+ on setting derived production defaults in the Configuration section.</span>
+                </li>
+            </ul>
+        </ul>
+        <p class="Bullets" style="font-weight: bold;">&#160;</p>
+        <p>The Variable model is designed for situations where you want to report 
+ Yield, which may change over time with facility upgrades. In most situations, 
+ the Fixed model is appropriate and should be configured at a Ratio consistent 
+ with the Primary Product's shrinkage.</p>
+        <p>&#160;</p>
+        <p class="note"><b>Note:</b> Within this production curve editor there is a scroll bar along the bottom. Some buttons or Reserve Categories may be hidden from view due to this. &#160;</p>
+        <p>&#160;</p>
+        <h3>Creating A New Production Segment with a Derived 
+ Product(s)</h3>
+        <ol>
+            <li class="NumberedList">Create the <span style="font-weight: bold;">Primary Segment</span> - in the screen shot 
+ below this is the Gas segment.</li>
+            <li class="NumberedList">For the <span style="font-weight: bold;">Derived Segment</span> - select the <span style="font-weight: bold;">Asset</span> 
+ and <span style="font-weight: bold;">Product,</span> and choose the Decline 
+ Type as <span style="font-weight: bold;">Derived</span>. The derived product 
+ line will appear in green font.</li>
+            <li class="NumberedList">Select the Production Rate units for the Derived Segment. This selection does not specify how the Ratio will be defined.</li>
+            <li class="NumberedList">esi.manage supports 
+ the creation of one derived product from another derived Product, for 
+ example defining Gas as a Ratio to the Primary Oil production, and then 
+ Deriving Condensate from the Gas derived segment. </li>
+            <li class="NumberedList">Click away from 
+ the derived header line and then click back into it to access the derived 
+ details pane in the bottom left hand corner.</li>
+        </ol>
+        <p>
+            <img src="../../Images/_derived_products.png" />
+        </p>
+        <p>&#160;</p>
+        <p>In order to define the ratio(s), select the row you want to edit, the 
+ details will show up in the bottom left pane.</p>
+        <p>
+            <img src="../../Images/_derived_products2.png" style="width: 411px;height: 292px;" />
+        </p>
+        <p>&#160;</p>
+        <p>There are two approaches to defining the Ratio - <span style="font-weight: bold;">Fixed</span> 
+ or <span style="font-weight: bold;">Variable</span>. </p>
+        <p>A Fixed Ratio is a <span style="font-weight: bold;">single value</span> 
+ that will be applied to any Production of the Primary product, for the 
+ Asset.</p>
+        <p>If Shrinkage has been specified on the Primary Segment - the Ratio should 
+ <span style="font-weight: bold;">likely be consistent</span> with Shrinkage, 
+ in terms of the Units Conversions in your database. </p>
+        <h3>&#160;</h3>
+        <h3>Variable Model</h3>
+        <p>As described previously, the Variable model is designed for situations 
+ where you want to represent Yield changes.</p>
+        <p>
+            <img src="../../Images/_variable_model.png" style="width: 451px;height: 300px;" />
+        </p>
+        <p>&#160;</p>
+        <ol start="1" style="list-style: decimal;list-style-type: decimal;">
+            <li class="NumberedList">A <span style="font-weight: bold;">Variable 
+ Ratio</span> is a time series of Fixed Ratio's.</li>
+            <li class="NumberedList">The Offset defines 
+ when changes in the model occur. The 0 entry (shown above) would indicate 
+ the starting Ratio.</li>
+            <li class="NumberedList">The Interpolation 
+ method defines the shape of the ratio curve between two successive entries.</li>
+        </ol>
+        <p>&#160;</p>
+        <p>
+            <MadCap:toggler targets="t1">See Also Production Calculations </MadCap:toggler>
+        </p>
+        <div MadCap:targetName="t1">
+            <p><a href="../../Reference/Production_Calculations.htm">Production Calculations</a>
+            </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="2874" MadCap:lastWidth="1447">
+    <head><title>Custom Attribute Types</title>
+        <link rel="StyleSheet" href="../../Resources/Stylesheets/default.css" />
+    </head>
+    <body>
+        <script type="text/javascript" language="JavaScript1.2" src="../../Archived/ehlpdhtm.js">
+        </script>
+        <h1 style="color: #0097a9;">
+            <img src="../../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />Custom Attribute Types</h1>
+        <p>There are three types of custom attributes that can be configured for 
+ four separate areas of the application.</p>
+        <ol style="list-style: decimal;list-style-type: decimal;">
+            <li><a href="Budget_Attributes.htm">Budgets</a> / 
+ <a href="../../Navigating esi.manage/Navigator/Project_Set_Attributes.htm">Project Sets</a></li>
+            <li><a href="../../Project Editor/Project Attributes/Custom_Attributes.htm">Project</a>
+            </li>
+            <li><a href="../../Project Editor/Assets/Asset_Attributes.htm">Asset</a>
+            </li>
+        </ol>
+        <p>
+            <img src="../../Images/Custom_Attributes_Types1.png" style="width: 1117px;height: 574px;" />
+        </p>
+        <p>&#160;</p>
+        <ul style="list-style: disc;" type="disc">
+            <li>To Create a new Custom Attribute, click onto one 
+ of the custom attribute folders (Budget / Project Set, Project or Asset)</li>
+            <li>Click on the Add - Custom Attribute button on the middle of the screen.<img src="../../Images/add_new_cust_attrib_button.png" /></li>
+        </ul>
+        <p>The <span style="font-weight: bold;">Entity Type</span>: (Budget, Project 
+ or Asset) will be pre-populated, and you will be prompted to select an 
+ <span style="font-weight: bold;">Attribute Type</span> (Currency, Number, 
+ Percent, Date, Boolean, Text, Hyperlink, URL or Picklist) and enter a 
+ <span style="font-weight: bold;">Name</span>.</p>
+        <p>Click OK to create the Custom Attribute.</p>
+        <p>
+            <img src="../../Images/Add_new_custom_attribute.png" />
+        </p>
+        <h3>&#160;</h3>
+        <h3>Attribute Types</h3>
+        <ul style="list-style: disc;" type="disc">
+            <li class="Bullets"><span style="font-weight: bold;">Currency 
+ - </span>a money field, with a maximum of 4 decimal places, positive and 
+ negative values allowed.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Number</span> 
+ - a numeric field, with a maximum of 30 decimal places, positive and negative 
+ values allowed.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Percent</span> 
+ - a numeric field entered as &#160;a 
+ number (.15 = 15%) or a percent (20% = 20%)</li>
+            <li class="Bullets"><span style="font-weight: bold;">Date</span> 
+ - date entry will accept any entry that is allowed within the calendar 
+ control or select from the drop down calendar.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Boolean</span> 
+ - a checkbox field that stores true/false information only.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Text</span> 
+ - a free text field &#160;with 
+ unlimited space.</li>
+            <li><a href="Custom_Picklists.htm" style="color: #000000;font-weight: bold;text-decoration: none;"><span style="font-weight: bold;">Picklist</span></a> 
+ - a drop down list created by the administrator in the <a href="Custom_Picklists.htm">picklist</a> 
+ screen.</li>
+            <li><span style="font-weight: bold;">Hyperlink</span> 
+ - a URL to a location on the file system or a web based URL. Can be used 
+ to attach files to a project, or call a web service interface to another 
+ system from within esi.manage.A hyperlink is made up of two parts, the URL (web or file system address) and the label. Hyperlinks have 3 display modes: Display Link , Edit Hyperlink URL and Edit Hyperlink Label. It’s possible to switch between the display modes by clicking the icon next to the hyperlink.<br /><img src="../../Resources/Images/CustomAttributes_13452_3.png" /><br />When a hyperlink custom attribute is displayed within the projects table in the Project List view or the Asset Table in the Project Details view you can click on the link while holding the Alt key to follow it. Note that for the hyperlink to show up in the corresponding table the Display in Tables option must be selected.<br /><i>Hyperlink in Excel will show custom attribute label, tooltip with message and hyperlink. If label is not given, it will show URL itself.</i><br /></li>
+            <li><span style="font-weight: bold;">Multi-Select 
+ Picklist</span> - Allows you to pick multiple options from a picklist. </li>
+            <li><b>Custom Vectors</b> - 
+Allows you to store distributions as custom attributes as a single entity.</li>
+            <li><b>Time Series</b> - A relative attribute to the Asset or Project that will shift in time appropriately.</li>
+            <li><b>Absolute Time Series</b> - A fixed in time attribute that does not shift.</li>
+        </ul>
+        <p>
+            <img src="../../Resources/Images/Custom Attributes 3.26.png" style="width: 969px;height: 453px;" />
+        </p>
+        <h3>&#160;</h3>
+        <h3>Configure Attributes Properties</h3>
+        <p>Certain attribute properties (such as Rankable) will only appear for 
+ specific Attribute Types </p>
+        <ul>
+            <li class="Bullets"><span style="font-weight: bold;">Read 
+ Only</span> - a flag to make the instances of the Attribute within the 
+ Project non-modifiable.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Enabled</span> 
+ - a mechanism to hide an existing attribute from new Projects.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Category</span> 
+ - a grouping mechanism which is used the <a href="../../Project Editor/Project Attributes/Custom_Attributes.htm" target="_popup">Custom Attributes</a> 
+ page of the Project. </li>
+            <ul style="list-style-type: circle;">
+                <li class="Bullets">The Category <span style="font-weight: bold;">Name</span> must be entered for each Attribute 
+ that belongs to a particular Group.</li>
+            </ul>
+            <li class="Bullets"><span style="font-weight: bold;">Show 
+ Comment</span> - instructs a comment dialogue to be provided with the Attribute</li>
+            <li class="Bullets"><span style="font-weight: bold;">Rankable</span> 
+ - indicates that the particular Attribute value should be available as 
+ a Ranking Metric. This is typically used when Economic Metrics (NPV, DROI, 
+ etc.) are brought into an esi.manage Project or Asset from an external 
+ Economics package, and you wish to use those values as part of Project 
+ Ranking.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Display 
+ in Tables</span> - allows the specified custom attribute to be included 
+ as a sortable column in the Project List</li>
+            <li class="Bullets"><span style="font-weight: bold;">Filterable 
+ / Groupable - </span>allows the specified custom attribute to be included 
+ as a filterable and groupable item within the Reports perspective.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Decimals</span> 
+ - how many decimals to display for numeric Attributes.</li>
+            <li class="Bullets"><span style="font-weight: bold;">Default 
+ Value</span> - if you wish to provide a default value for all new instances 
+ of this attribute. </li>
+            <li class="Bullets" style="font-weight: normal;"><b>Date is Relative</b> - A flag for both Project and Asset attributes, if checked the date will be persisted as relative to the project. If custom date is relative, its value cannot precede project/asset start date. If the relative date is changed, all values for the attribute will be converted from relative to absolute value and vice versa.</li>
+            <li class="Bullets" style="font-weight: normal;"><b>Series Values Aggregation Method</b> : For Time Series and Time Series Relative To Project/Asset Start Date:<ul><li class="Bullets" style="font-weight: normal;">Non Summable - Values in series cannot be summed.</li><li class="Bullets" style="font-weight: normal;">Sum - Values in series are added together for the period.</li><li class="Bullets" style="font-weight: normal;">Average - Values in series are added together and the divided by the number of entries in the period.</li></ul></li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="4" MadCap:lastHeight="452" MadCap:lastWidth="1462">
+    <head><title></title>
+        <link href="../Resources/Stylesheets/HelpFileStylesheet2.css" rel="stylesheet" />
+    </head>
+    <body>
+        <p>
+            <img src="../Images/Logo Images/3esi_manage.png" class="HeaderLogo" />
+        </p>
+        <h2>Expression Evaluation</h2>
+        <p>***THIS FEATURE IS BEING DEPRECATED. PLEASE MIGRATE ALL EXCEL DATA LOAD TEMPLATES TO THE NEW FORMAT***</p>
+        <ul style="list-style-type: square;margin-left: 19pt;">
+            <li style="list-style-type: square;">Expressions are not type-safe and will fail at time of evaluation if incorrect types are passed to functions or operators</li>
+            <li style="list-style-type: square;">Values are of two distinct types:</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 55pt;">
+            <li style="list-style-type: circle;">Scalar values, for example constants or values extracted from a single Excel cell</li>
+            <li style="list-style-type: circle;">Vector values which are extracted via Time-Based Data Series</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 19pt;">
+            <li style="list-style-type: square;">Rules of evaluation of operators (+, -, *, /)</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 55pt;">
+            <li style="list-style-type: circle;">Scalar and Scalar: operator works as expected</li>
+            <li style="list-style-type: circle;">Scalar and Vector: operator is applied to each element of the vector, resulting in a vector</li>
+            <li style="list-style-type: circle;">Vector and Vector: operator is applied to each pair of elements in the vectors consecutively, resulting in a vector whose size is the size of the longest vector in the input</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 19pt;">
+            <li style="list-style-type: square;">The special dot (.) operator. </li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 55pt;">
+            <li style="list-style-type: circle;">As a convenience the dot (.) operator may be used as an alternate form of calling functions with multiple arguments. So, for example, GET(SPLIT(“Hi_There”, “_”), 2) is equivalent to SPLIT(“Hi_There”, “_”).GET(2). The result in both cases is “There”.</li>
+        </ul>
+    </body>
+</html>
