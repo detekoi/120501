@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<CatapultProject Version="1" xml:lang="en-us" MasterToc="/Project/TOCs/HelpFileTOC.fltoc" MasterStylesheet="/Content/Resources/Stylesheets/HelpFileStylesheet.css" SourceControlBound="false">
+<CatapultProject Version="1" xml:lang="en-us" MasterToc="/Project/TOCs/HelpFileTOC.fltoc" MasterStylesheet="/Content/Resources/Stylesheets/HelpFileStylesheet.css" SourceControlBound="true" SourceControlProviderType="Git" ProjectGuid="e85edfcd-a0c4-4ba1-91f9-8907121e0ceb">
     <Synchronize>
         <Mapping ProjectPath="Content/Resources/Images/AggregateProjectsFigure3.png" ExternalPath="file://cgyfile1/Documentation/Flare/Images/AggregateProjectsFigure3.png" />
     </Synchronize>
